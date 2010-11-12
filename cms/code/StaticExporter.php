@@ -24,7 +24,7 @@ class StaticExporter extends Controller {
 	function init() {
 		parent::init();
 		
-		$canAccess = (Director::isDev() || Director::is_cli() || Permission::check("ADMIN"));
+		$canAccess = (($_SERVER['REMOTE_ADDR'] == '127.0.0.1') || ($_SERVER['REMOTE_ADDR'] == '::1') || Director::isDev() || Director::is_cli() || Permission::check("ADMIN"));
 		if(!$canAccess) return Security::permissionFailure($this);
 	}
 		
@@ -51,23 +51,25 @@ class StaticExporter extends Controller {
 		// specify custom baseurl for publishing to other webroot
 		if(isset($_REQUEST['baseurl'])) {
 			$base = $_REQUEST['baseurl'];
-			if(substr($base,-1) != '/') $base .= '/';
-			Director::setBaseURL($base);
+			if ($base == "relative") {
+				$rewrite_urls=true;
+			} else {
+				$rewrite_urls=false;
+				if(substr($base,-1) != '/') $base .= '/';
+				Director::setBaseURL($base);
+			}
 		}
 		
 		// setup temporary folders
 		$tmpBaseFolder = TEMP_FOLDER . '/static-export';
-		$tmpFolder = (project()) ? "$tmpBaseFolder/" . project() : "$tmpBaseFolder/site";
+		$tmpFolder = "$tmpBaseFolder/html";
 		if(!file_exists($tmpFolder)) Filesystem::makeFolder($tmpFolder);
 		$baseFolderName = basename($tmpFolder);
 
-		// symlink /assets
-		$f1 = ASSETS_PATH;
-		$f2 = Director::baseFolder() . '/' . project();
-		`cd $tmpFolder; ln -s $f1; ln -s $f2`;
-
 		// iterate through all instances of SiteTree
-		$pages = DataObject::get("SiteTree");
+		Translatable::disable_locale_filter();
+		$pages = DataObject::get("SiteTree","ClassName<>'UserDefinedForm' AND ClassName<>'Forum' AND ClassName<>'ForumHolder' AND ClassName<>'ErrorPage'");
+		Translatable::enable_locale_filter();
 		foreach($pages as $page) {
 			$subfolder   = "$tmpFolder/" . trim($page->RelativeLink(null, true), '/');
 			$contentfile = "$tmpFolder/" . trim($page->RelativeLink(null, true), '/') . '/index.html';
@@ -84,14 +86,34 @@ class StaticExporter extends Controller {
 
 			// Write to file
 			if($fh = fopen($contentfile, 'w')) {
-				fwrite($fh, $response->getBody());
+				if($rewrite_urls) {
+					$replace_with='../';
+					$parent = $page->Parent;
+					while ($parent) {
+						$replace_with .= "../";
+						$parent = $parent->Parent;
+					}
+					// remove base tag (ignored by firefox 3) and instead rewrite each URL
+					// pointing to a local ressource by a relative one, appending index.html
+					// for websites-URLs (between site and anchor) so that local use works
+					// special treatment for home that would otherwise end up as /index.html
+					fwrite($fh, preg_replace('#\s*<base href.*#', '', HTTP::urlRewriter($response->getBody(), 'preg_replace(array("#^/?(?:../)*((?:assets|themes)/.*)#", "$^/([^#]*/)(#?.*)$", "$^/(#?.*)$", "#^'.Director::absoluteURL("/").'(.*)#"),array("'.$replace_with.'\$1","'.$replace_with.'\$1index.html\$2","'.$replace_with.'home/index.html\$2" ,"'.$replace_with.'\$1"), $URL)'), 1));
+				} else {
+					fwrite($fh, $response->getBody());
+				}
 				fclose($fh);
 			}
 		}
 
-		// copy homepage (URLSegment: "home") to webroot
-		copy("$tmpFolder/home/index.html", "$tmpFolder/index.html");			
-		
+		// copy homepage (URLSegment: "home") only on regular export
+		if ($rewrite_urls) {
+			if(file_exists("$tmpFolder/index.html")) {
+				if(!file_exists($tmpFolder."/home")) Filesystem::makeFolder($tmpFolder."/home");
+				rename("$tmpFolder/index.html","$tmpFolder/home/index.html");
+			}
+		} elseif (file_exists("$tmpFolder/home/index.html")) {
+			copy("$tmpFolder/home/index.html", "$tmpFolder/index.html");
+		}
 		// archive all generated files
 		`cd $tmpBaseFolder; tar -czhf $baseFolderName.tar.gz $baseFolderName`;
 		$archiveContent = file_get_contents("$tmpBaseFolder/$baseFolderName.tar.gz");
