@@ -5,10 +5,27 @@
  * It takes care of:
  *  - Including _ss_environment.php
  *  - Normalisation of $_SERVER values
- *  - Initialisation of TEMP_FOLDER, BASE_URL, BASE_PATH, and other SilverStripe defines
+ *  - Initialisation of necessary constants (mostly paths)
  *  - Checking of PHP memory limit
  *  - Including all the files needed to get the manifest built
  *  - Building and including the manifest
+ * 
+ * Initialized constants:
+ * - BASE_URL: Full URL to the webroot, e.g. "http://my-host.com/my-webroot" (no trailing slash).
+ * - BASE_PATH: Absolute path to the webroot, e.g. "/var/www/my-webroot" (no trailing slash).
+ *   See Director::baseFolder(). Can be overwritten by Director::setBaseFolder().
+ * - TEMP_FOLDER: Absolute path to temporary folder, used for manifest and template caches. Example: "/var/tmp"
+ *   See getTempFolder(). No trailing slash.
+ * - MODULES_DIR: Not used at the moment
+ * - MODULES_PATH: Not used at the moment
+ * - THEMES_DIR: Path relative to webroot, e.g. "themes"
+ * - THEMES_PATH: Absolute filepath, e.g. "/var/www/my-webroot/themes"
+ * - CMS_DIR: Path relative to webroot, e.g. "cms"
+ * - CMS_PATH: Absolute filepath, e.g. "/var/www/my-webroot/cms"
+ * - SAPPHIRE_DIR: Path relative to webroot, e.g. "sapphire"
+ * - SAPPHIRE_PATH:Absolute filepath, e.g. "/var/www/my-webroot/sapphire"
+ * - THIRDPARTY_DIR: Path relative to webroot, e.g. "sapphire/thirdparty"
+ * - THIRDPARTY_PATH: Absolute filepath, e.g. "/var/www/my-webroot/sapphire/thirdparty"
  * 
  * @todo This file currently contains a lot of bits and pieces, and its various responsibilities should probably be
  * moved into different subsystems.
@@ -189,6 +206,28 @@ set_include_path(str_replace('.' . PATH_SEPARATOR, '.' . PATH_SEPARATOR
 	. BASE_PATH . '/sapphire/thirdparty' . PATH_SEPARATOR
 	, get_include_path())); 
 
+/**
+ * Sapphire class autoloader.  Requires the ManifestBuilder to work.
+ * $_CLASS_MANIFEST must have been loaded up by ManifestBuilder for this to successfully load
+ * classes.  Classes will be loaded from any PHP file within the application.
+ * If your class contains an underscore, for example, Page_Controller, then the filename is
+ * expected to be the stuff before the underscore.  In this case, Page.php.
+ * 
+ * Class names are converted to lowercase for lookup to adhere to PHP's case-insensitive
+ * way of dealing with them.
+ */
+function sapphire_autoload($className)
+{
+	global $_CLASS_MANIFEST;
+	$lClassName = strtolower($className);
+	if(isset($_CLASS_MANIFEST[$lClassName])) include_once($_CLASS_MANIFEST[$lClassName]);
+	else if(isset($_CLASS_MANIFEST[$className])) include_once($_CLASS_MANIFEST[$className]);
+
+}
+
+spl_autoload_register('sapphire_autoload');
+
+
 require_once("core/ManifestBuilder.php");
 require_once("core/ClassInfo.php");
 require_once('core/Object.php');
@@ -282,23 +321,6 @@ function getTempFolder($base = null) {
     }
     
     return $ssTmp;
-}
-
-/**
- * Sapphire class autoloader.  Requires the ManifestBuilder to work.
- * $_CLASS_MANIFEST must have been loaded up by ManifestBuilder for this to successfully load
- * classes.  Classes will be loaded from any PHP file within the application.
- * If your class contains an underscore, for example, Page_Controller, then the filename is
- * expected to be the stuff before the underscore.  In this case, Page.php.
- * 
- * Class names are converted to lowercase for lookup to adhere to PHP's case-insensitive
- * way of dealing with them.
- */
-function __autoload($className) {
-	global $_CLASS_MANIFEST;
-	$lClassName = strtolower($className);
-	if(isset($_CLASS_MANIFEST[$lClassName])) include_once($_CLASS_MANIFEST[$lClassName]);
-	else if(isset($_CLASS_MANIFEST[$className])) include_once($_CLASS_MANIFEST[$className]);
 }
 
 /**

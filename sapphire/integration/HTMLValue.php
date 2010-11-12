@@ -45,6 +45,10 @@ class SS_HTMLValue extends ViewableData {
 	 * @return bool
 	 */
 	public function setContent($content) {
+		// Ensure that \r (carriage return) characters don't get replaced with "&#13;" entity by DOMDocument
+		// This behaviour is apparently XML spec, but we don't want this because it messes up the HTML
+		$content = str_replace(chr(13), '', $content);
+
 		return @$this->getDocument()->loadHTML(
 			'<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"></head>' .
 			"<body>$content</body></html>"

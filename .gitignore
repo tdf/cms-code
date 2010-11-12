@@ -1,5 +1,7 @@
 # assets is the directory where uploaded files end up - no need to duplicate that in the repo
-/assets/
+/assets/*
+# don't ignore htaccess to not miss vanilla changes
+!/assets/.htaccess
 # is removed after initial installation anyway
 /install.php
 

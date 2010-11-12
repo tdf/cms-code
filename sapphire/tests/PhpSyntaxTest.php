@@ -3,6 +3,8 @@
  * @package sapphire
  * @subpackage tests
  * 
+ * @group sanitychecks
+ * 
  * Test the syntax of the PHP files with various settings
  */
 class PhpSyntaxTest extends SapphireTest {
@@ -33,7 +35,11 @@ class PhpSyntaxTest extends SapphireTest {
 	
 	function getAllFiles($ext = 'php') {
 		// TODO: Unix only
-		$CLI_regexp = escapeshellarg("\.$ext\$");
-		return explode("\n", trim(`find .. | grep $CLI_regexp`));
+		$cmd = sprintf(
+			'find %s | grep %s', 
+			BASE_PATH,
+			escapeshellarg("\.$ext\$")
+		);
+		return explode("\n", trim(`$cmd`));
 	}
 }

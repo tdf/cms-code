@@ -78,6 +78,15 @@ class SearchForm extends Form {
 		$legalClasses = array_intersect($classes, array('SiteTree', 'File'));		
 		$this->classesToSearch = $legalClasses;
 	}
+	
+	/**
+	 * Get the classes to search
+	 *
+	 * @return array
+	 */
+	function getClassesToSearch() {
+		return $this->classesToSearch; 
+	}
 
 	/**
 	 * Return dataObjectSet of the results using $_REQUEST to get info from form.
@@ -117,7 +126,7 @@ class SearchForm extends Form {
 		$start = isset($_GET['start']) ? (int)$_GET['start'] : 0;
 		
 		if(strpos($keywords, '"') !== false || strpos($keywords, '+') !== false || strpos($keywords, '-') !== false || strpos($keywords, '*') !== false) {
-			$results = DB::getConn()->searchEngine($this->classesToSearch, $keywords, $start, $pageLength, "Relevance DESC", "", true);
+			$results = DB::getConn()->searchEngine($this->classesToSearch, $keywords, $start, $pageLength, "\"Relevance\" DESC", "", true);
 		} else {
 			$results = DB::getConn()->searchEngine($this->classesToSearch, $keywords, $start, $pageLength);
 		}

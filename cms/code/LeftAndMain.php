@@ -34,6 +34,12 @@ class LeftAndMain extends Controller {
 	
 	static $ForceReload;
 
+	/**
+	* The url used for the link in the Help tab in the backend
+	* Value can be overwritten if required in _config.php
+	*/
+	static $help_link = 'http://userhelp.silverstripe.org';
+
 	static $allowed_actions = array(
 		'index',
 		'ajaxupdateparent',
@@ -109,7 +115,7 @@ class LeftAndMain extends Controller {
 		CMSMenu::add_link(
 			'Help', 
 			_t('LeftAndMain.HELP', 'Help', PR_HIGH, 'Menu title'), 
-			'http://userhelp.silverstripe.org'
+			self::$help_link
 		);
 		
 		// set reading lang
@@ -160,6 +166,7 @@ class LeftAndMain extends Controller {
 		// Set default values in the config if missing.  These things can't be defined in the config
 		// file because insufficient information exists when that is being processed
 		$htmlEditorConfig = HtmlEditorConfig::get_active();
+		$htmlEditorConfig->setOption('language', i18n::get_tinymce_lang());
 		if(!$htmlEditorConfig->getOption('content_css')) {
 			$cssFiles = 'cms/css/editor.css';
 			
@@ -298,6 +305,7 @@ class LeftAndMain extends Controller {
 				THIRDPARTY_DIR . '/calendar/calendar.js',
 				THIRDPARTY_DIR . '/calendar/lang/calendar-en.js',
 				THIRDPARTY_DIR . '/calendar/calendar-setup.js',
+				CMS_DIR . "/javascript/SitetreeAccess.js",
 			)
 		);
 
@@ -861,7 +869,10 @@ JS;
 	/**
 	 * Ajax handler for updating the parent of a tree node
 	 */
-	public function ajaxupdateparent() {
+	public function ajaxupdateparent($request) {
+		// Protect against CSRF on destructive action
+		if(!SecurityToken::inst()->checkRequest($request)) return $this->httpError(400);
+		
 		$id = $_REQUEST['ID'];
 		$parentID = $_REQUEST['ParentID'];
 		if($parentID == 'root'){
@@ -910,7 +921,10 @@ JS;
 	 * $_GET[ID]: An array of node ids in the correct order
 	 * $_GET[MovedNodeID]: The node that actually got moved
 	 */
-	public function ajaxupdatesort() {
+	public function ajaxupdatesort($request) {
+		// Protect against CSRF on destructive action
+		if(!SecurityToken::inst()->checkRequest($request)) return $this->httpError(400);
+		
 		$className = $this->stat('tree_class');
 		$counter = 0;
 		$js = '';
@@ -957,7 +971,10 @@ JS;
 	/**
 	 * Delete a number of items
 	 */
-	public function deleteitems() {
+	public function deleteitems($request) {
+		// Protect against CSRF on destructive action
+		if(!SecurityToken::inst()->checkRequest($request)) return $this->httpError(400);
+		
 		$ids = split(' *, *', $_REQUEST['csvIDs']);
 
 		$script = "st = \$('sitetree'); \n";

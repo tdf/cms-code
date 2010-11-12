@@ -14,7 +14,7 @@ class FilesystemPublisherTest extends SapphireTest {
 	function setUp() {
 		parent::setUp();
 		
-		Object::add_extension("SiteTree", "FilesystemPublisher('../FilesystemPublisherTest-static-folder/')");
+		Object::add_extension("SiteTree", "FilesystemPublisher('assets/FilesystemPublisherTest-static-folder/')");
 		SiteTree::$write_homepage_map = false;
 		
 		$this->orig['domain_based_caching'] = FilesystemPublisher::$domain_based_caching;
@@ -22,12 +22,16 @@ class FilesystemPublisherTest extends SapphireTest {
 	}
 	
 	function tearDown() {
-		Object::remove_extension("SiteTree", "FilesystemPublisher('../FilesystemPublisherTest-static-folder/')");
-		SiteTree::$write_homepage_map = true;
-		
-		FilesystemPublisher::$domain_based_caching = $this->orig['domain_based_caching'];
-		
 		parent::tearDown();
+
+		Object::remove_extension("SiteTree", "FilesystemPublisher('assets/FilesystemPublisherTest-static-folder/')");
+		SiteTree::$write_homepage_map = true;
+
+		FilesystemPublisher::$domain_based_caching = $this->orig['domain_based_caching'];
+
+		if(file_exists(BASE_PATH . '/assets/FilesystemPublisherTest-static-folder')) {
+			Filesystem::removeFolder(BASE_PATH . '/assets/FilesystemPublisherTest-static-folder');
+		}
 	}
 	
 	function testUrlsToPathsWithRelativeUrls() {

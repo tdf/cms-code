@@ -38,4 +38,16 @@ class SS_HTMLValueTest extends SapphireTest {
 		}
 	}
 	
+	public function testMixedNewlines() {
+		$value = new SS_HTMLValue();
+		$eol = "\n";
+		$platformEOL = PHP_EOL; // native EOL for platform. Windows is \r\n (CR-LF). UNIX is LF
+		$value->setContent("<p>paragraph</p>{$platformEOL}<ul><li>1</li>\r\n</ul>");
+		$this->assertEquals(
+			"<p>paragraph</p>{$eol}<ul><li>1</li>{$eol}</ul>", 
+			$value->getContent(),
+			'Newlines get converted'
+		);
+	}
+	
 }
