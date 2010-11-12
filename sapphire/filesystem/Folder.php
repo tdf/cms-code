@@ -246,6 +246,7 @@ class Folder extends File {
 		}
 		
 		if (move_uploaded_file($tmpFile['tmp_name'], "$base/$file$ext")) {
+			chmod("$base/$file$ext", Filesystem::$file_create_mask);
 			// Update with the new image
 			return $this->constructChild(basename($file . $ext));
 		} else {

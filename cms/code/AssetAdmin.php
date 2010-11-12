@@ -591,7 +591,7 @@ JS;
 		$p->write();
 		
 		mkdir($p->FullPath);
-		chmod($p->FullPath, Filesystem::$file_create_mask);
+		chmod($p->FullPath, Filesystem::$folder_create_mask);
 		
 		if(isset($_REQUEST['returnID'])) {
 			return $p->ID;
