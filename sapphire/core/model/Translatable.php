@@ -243,7 +243,7 @@ class Translatable extends DataObjectDecorator implements PermissionProvider {
 			// get from GET parameter
 			self::set_current_locale($_GET['locale']);
 		} else {
-			self::set_current_locale(self::default_locale());
+			self::set_current_locale( Subsite::currentSubsite() ? Subsite::currentSubsite()->getLanguage(): self::default_locale() );
 		}
 
 		return self::$current_locale; 
