@@ -559,7 +559,11 @@ JS
 	/**
 	 * @return String
 	 */
-	function delete() {
+	function delete($request) {
+		// Protect against CSRF on destructive action
+		$token = $this->getForm()->getSecurityToken();
+		if(!$token->checkRequest($request)) return $this->httpError('400');
+		
 		if($this->Can('delete') !== true) {
 			return false;
 		}
@@ -1178,6 +1182,28 @@ JS
 		
 		return $link;
 	}
+
+	/**
+	 * Overloaded to automatically add security token.
+	 * 
+	 * @param String $action
+	 * @return String
+	 */
+	function Link($action = null) {
+		$form = $this->getForm();
+ 		if($form) {
+			$token = $form->getSecurityToken();
+			$parentUrlParts = parse_url(parent::Link($action));
+			$queryPart = (isset($parentUrlParts['query'])) ? '?' . $parentUrlParts['query'] : null;
+			// Ensure that URL actions not routed through Form->httpSubmission() are protected against CSRF attacks.
+			if($form->securityTokenEnabled()) $queryPart = $token->addtoUrl($queryPart);
+			return Controller::join_links($parentUrlParts['path'], $action, $queryPart);
+		} else {
+			// allow for instanciation of this FormField outside of a controller/form
+			// context (e.g. for unit tests)
+			return false;
+		}
+	}
 	
 	function BaseLink() {
 		user_error("TableListField::BaseLink() deprecated, use Link() instead", E_USER_NOTICE);
@@ -1414,9 +1440,13 @@ class TableListField_Item extends ViewableData {
 	}
 	
 	function Link($action = null) {
- 		if($this->parent->getForm()) {
+		$form = $this->parent->getForm();
+ 		if($form) {
+			$token = $form->getSecurityToken();
 			$parentUrlParts = parse_url($this->parent->Link());
 			$queryPart = (isset($parentUrlParts['query'])) ? '?' . $parentUrlParts['query'] : null;
+			// Ensure that URL actions not routed through Form->httpSubmission() are protected against CSRF attacks.
+			if($form->securityTokenEnabled()) $queryPart = $token->addtoUrl($queryPart);
 			return Controller::join_links($parentUrlParts['path'], 'item', $this->item->ID, $action, $queryPart);
 		} else {
 			// allow for instanciation of this FormField outside of a controller/form
@@ -1542,7 +1572,11 @@ class TableListField_ItemRequest extends RequestHandler {
 		parent::__construct();
 	}
 
-	function delete() {
+	function delete($request) {
+		// Protect against CSRF on destructive action
+		$token = $this->ctf->getForm()->getSecurityToken();
+		if(!$token->checkRequest($request)) return $this->httpError('400');
+		
 		if($this->ctf->Can('delete') !== true) {
 			return false;
 		}

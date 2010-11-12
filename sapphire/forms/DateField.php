@@ -210,8 +210,11 @@ class DateField extends TextField {
 		if(Validator::get_javascript_validator_handler() == 'none') return true;
 
 		if($this->getConfig('dmyfields')) {
-			$error = _t('DateField.VALIDATIONJS', 'Please enter a valid date format (DD/MM/YYYY).');
-			$error = 'Please enter a valid date format (DD/MM/YYYY) from dmy.';
+			$error = _t('DateField.VALIDATIONJS', 'Please enter a valid date format.');
+			// Remove hardcoded date formats from translated strings
+			$error = preg_replace('/\(.*\)/', '', $error);
+			$error .= ' (' . $this->getConfig('dateformat') .')';
+			
 			$jsFunc =<<<JS
 Behaviour.register({
 	"#$formID": {
@@ -497,6 +500,8 @@ class DateField_View_JQuery {
 	 */
 	static $locale_map = array(
 		'en_GB' => 'en-GB',
+		'en_US' => 'en', 
+		'en_NZ' => 'en-GB', 
 		'fr_CH' => 'fr-CH',
 		'pt_BR' => 'pt-BR',
 		'sr_SR' => 'sr-SR',
@@ -542,8 +547,8 @@ class DateField_View_JQuery {
 		if($this->getField()->getConfig('showcalendar')) {
 			Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
 			Requirements::javascript(SAPPHIRE_DIR . '/javascript/jquery_improvements.js');	
-			Requirements::css('http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/smoothness/jquery-ui.css');
-			Requirements::javascript('http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js');
+			Requirements::css(Director::protocol().'ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/smoothness/jquery-ui.css');
+			Requirements::javascript(Director::protocol().'ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js');
 			
 			// Include language files (if required)
 			$lang = $this->getLang();
@@ -551,7 +556,7 @@ class DateField_View_JQuery {
 				// TODO Check for existence of locale to avoid unnecessary 404s from the CDN
 				Requirements::javascript(
 					sprintf(
-						'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/i18n/jquery.ui.datepicker-%s.min.js',
+						Director::protocol().'ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/i18n/jquery.ui.datepicker-%s.min.js',
 						// can be a mix between names (e.g. 'de') and combined locales (e.g. 'zh-TW')
 						$lang
 					));
@@ -608,12 +613,18 @@ class DateField_View_JQuery {
 		  '/e/' => 'N',
 		  '/D/' => '',
 		  '/w/' => '',
+			// make single "M" lowercase
 		  '/([^M])M([^M])/' => '$1m$2',
+			// make single "M" at start of line lowercase
 		  '/^M([^M])/' => 'm$1',
+				// make single "M" at end of line lowercase
 		  '/([^M])M$/' => '$1m',
+			// match exactly three capital Ms not preceeded or followed by an M
+		  '/(?<!M)MMM(?!M)/' => 'M',
+			// match exactly two capital Ms not preceeded or followed by an M
+		  '/(?<!M)MM(?!M)/' => 'mm',
+			// match four capital Ms (maximum allowed)
 		  '/MMMM/' => 'MM',
-		  '/MMM/' => 'M',
-		  '/MM/' => 'mm',
 		  '/l/' => '',
 		  '/YYYY/' => 'yy',
 		  '/yyyy/' => 'yy',

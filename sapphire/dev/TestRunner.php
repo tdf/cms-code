@@ -4,26 +4,12 @@
  * @subpackage testing
  */
 
-// Check that PHPUnit is installed
-function hasPhpUnit() {
-	$paths = explode(PATH_SEPARATOR, ini_get('include_path'));
-	foreach($paths as $path) {
-		if(substr($path,-1) == DIRECTORY_SEPARATOR) $path = substr($path,0,-1);
-		if(@file_exists("$path/PHPUnit/Framework.php")) return true;
-	}
-	return false;
-}
-
-/**
- */
-if(hasPhpUnit()) {
-require_once 'PHPUnit/Framework.php';
-require_once 'PHPUnit/Util/Report.php';
-require_once 'PHPUnit/TextUI/TestRunner.php';
-}
-
 /**
  * Controller that executes PHPUnit tests.
+ * 
+ * Alternatively, you can also use the "phpunit" binary directly by
+ * pointing it to a file or folder containing unit tests.
+ * See phpunit.dist.xml in the webroot for configuration details.
  *
  * <h2>URL Options</h2>
  * - SkipTests: A comma-separated list of test classes to skip (useful when running dev/tests/all)
@@ -34,6 +20,7 @@ require_once 'PHPUnit/TextUI/TestRunner.php';
  * @subpackage testing
  */
 class TestRunner extends Controller {
+
 	/** @ignore */
 	private static $default_reporter;
 	
@@ -86,7 +73,7 @@ class TestRunner extends Controller {
 		
 		if (!self::$default_reporter) self::set_reporter(Director::is_cli() ? 'CliDebugView' : 'DebugView');
 		
-		if(!hasPhpUnit()) {
+		if(!PhpUnitWrapper::has_php_unit()) {
 			die("Please install PHPUnit using pear");
 		}
 	}
@@ -99,7 +86,7 @@ class TestRunner extends Controller {
 	 * Run test classes that should be run with every commit.
 	 * Currently excludes PhpSyntaxTest
 	 */
-	function all($coverage = false) {
+	function all($request, $coverage = false) {
 		ManifestBuilder::load_test_manifest();
 		$tests = ClassInfo::subclassesFor('SapphireTest');
 		array_shift($tests);
@@ -130,9 +117,7 @@ class TestRunner extends Controller {
 		}
 	
 		$this->runTests($tests);
-		
 	}
-	
 	
 	/**
 	 * Browse all enabled test cases in the environment
@@ -169,9 +154,9 @@ class TestRunner extends Controller {
 	/**
 	 * Run a coverage test across all modules
 	 */
-	function coverageAll() {
+	function coverageAll($request) {
 		ManifestBuilder::load_all_classes();
-		$this->all(true);
+		$this->all($request, true);
 	}
 	
 	/**
@@ -265,39 +250,28 @@ class TestRunner extends Controller {
 		// Remove the error handler so that PHPUnit can add its own
 		restore_error_handler();
 
-		/*, array("reportDirectory" => "/Users/sminnee/phpunit-report")*/
-		if(Director::is_cli()) $reporter = new CliTestReporter();
-		else $reporter = new SapphireTestReporter();
 
 		self::$default_reporter->writeHeader("Sapphire Test Runner");
 		if (count($classList) > 1) { 
 			self::$default_reporter->writeInfo("All Tests", "Running test cases: ",implode(", ", $classList));
-		} else {
+		} else
+		if (count($classList) == 1) { 
 			self::$default_reporter->writeInfo($classList[0], "");
-		}
-		
-		$results = new PHPUnit_Framework_TestResult();		
-		$results->addListener($reporter);
-
-		if($coverage === true) {
-			foreach(self::$coverage_filter_dirs as $dir) {
-				PHPUnit_Util_Filter::addDirectoryToFilter(BASE_PATH . '/' . $dir);
-			}
-			
-			$results->collectCodeCoverageInformation(true);
-			$suite->run($results);
-
-			if(!file_exists(ASSETS_PATH . '/coverage-report')) mkdir(ASSETS_PATH . '/coverage-report');
-			PHPUnit_Util_Report::render($results, ASSETS_PATH . '/coverage-report/');
-			$coverageApp = ASSETS_PATH . '/coverage-report/' . preg_replace('/[^A-Za-z0-9]/','_',preg_replace('/(\/$)|(^\/)/','',Director::baseFolder())) . '.html';
-			$coverageTemplates = ASSETS_PATH . '/coverage-report/' . preg_replace('/[^A-Za-z0-9]/','_',preg_replace('/(\/$)|(^\/)/','',realpath(TEMP_FOLDER))) . '.html';
-			echo "<p>Coverage reports available here:<ul>
-				<li><a href=\"$coverageApp\">Coverage report of the application</a></li>
-				<li><a href=\"$coverageTemplates\">Coverage report of the templates</a></li>
-			</ul>";
 		} else {
-			$suite->run($results);
+			// border case: no tests are available. 
+			self::$default_reporter->writeInfo("", "");
 		}
+
+		// perform unit tests (use PhpUnitWrapper or derived versions)
+		$phpunitwrapper = PhpUnitWrapper::inst();
+		$phpunitwrapper->setSuite($suite);
+		$phpunitwrapper->setCoverageStatus($coverage);
+
+		$phpunitwrapper->runTests();
+
+		// get results of the PhpUnitWrapper class
+		$reporter = $phpunitwrapper->getReporter();
+		$results = $phpunitwrapper->getFrameworkTestResults();
 		
 		if(!Director::is_cli()) echo '<div class="trace">';
 		$reporter->writeResults();
@@ -468,19 +442,5 @@ HTML;
 	function tearDown() {
 		SapphireTest::kill_temp_db();
 		DB::set_alternative_database_name(null);
-	}
-}
-
-// This class is here to help with documentation.
-if(!hasPhpUnit()) {
-	/**
-	 * PHPUnit is a testing framework that can be installed using PEAR.
-	 * It's not bundled with Sapphire, you will need to install it yourself.
-	 * 
-	 * @package sapphire
-	 * @subpackage testing
-	 */
-	class PHPUnit_Framework_TestCase {
-
 	}
 }

@@ -72,7 +72,7 @@ class File extends DataObject {
 	static $db = array(
 		"Name" => "Varchar(255)",
 		"Title" => "Varchar(255)",
-		"Filename" => "Varchar(255)",
+		"Filename" => "Text",
 		"Content" => "Text",
 		"Sort" => "Int"
 	);
@@ -98,6 +98,15 @@ class File extends DataObject {
 	
 	/**
 	 * @var array List of allowed file extensions, enforced through {@link validate()}.
+	 * 
+	 * Note: if you modify this, you should also change a configuration file in the assets directory.
+	 * Otherwise, the files will be able to be uploaded but they won't be able to be served by the
+	 * webserver.
+	 * 
+	 *  - If you are running Apahce you will need to change assets/.htaccess
+	 *  - If you are running IIS you will need to change assets/web.config 
+	 *
+	 * Instructions for the change you need to make are included in a comment in the config file.
 	 */
 	public static $allowed_extensions = array(
 		'','html','htm','xhtml','js','css',
@@ -340,18 +349,22 @@ class File extends DataObject {
 	}
 
 	/**
-	 * Event handler called before deleting from the database.
-	 * You can overload this to clean up or otherwise process data before delete this
-	 * record. 
+	 * Make sure the file has a name
 	 */
 	protected function onBeforeWrite() {
 		parent::onBeforeWrite();
 
 		// Set default name
 		if(!$this->getField('Name')) $this->Name = "new-" . strtolower($this->class);
+	}
+
+	/**
+	 * Set name on filesystem. If the current object is a "Folder", will also update references
+	 * to subfolders and contained file records (both in database and filesystem)
+	 */
+	protected function onAfterWrite() {
+		parent::onAfterWrite();
 		
-		// Set name on filesystem. If the current object is a "Folder", will also update references
-		// to subfolders and contained file records (both in database and filesystem)
 		$this->updateFilesystem();
 	}
 	
@@ -574,7 +587,7 @@ class File extends DataObject {
 	 */
 	function getRelativePath() {
 		if($this->ParentID) {
-			$p = DataObject::get_by_id('Folder', $this->ParentID);
+			$p = DataObject::get_by_id('Folder', $this->ParentID, false); // Don't use the cache, the parent has just been changed
 			if($p && $p->exists()) return $p->getRelativePath() . $this->getField("Name");
 			else return ASSETS_DIR . "/" . $this->getField("Name");
 		} else if($this->getField("Name")) {
