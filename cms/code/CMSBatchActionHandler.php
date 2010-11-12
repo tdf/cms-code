@@ -63,7 +63,9 @@ class CMSBatchActionHandler extends RequestHandler {
 		foreach($ids as $k => $v) if(!is_numeric($v)) unset($ids[$k]);
 		
 		if($ids) {
+			Translatable::disable_locale_filter();
 			$pages = DataObject::get('SiteTree', "\"SiteTree\".\"ID\" IN (" . implode(", ", $ids) . ")");
+			Translatable::enable_locale_filter();
 			
 			// If we didn't query all the pages, then find the rest on the live site
 			if(!$pages || $pages->Count() < sizeof($ids)) {

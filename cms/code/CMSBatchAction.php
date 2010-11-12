@@ -83,7 +83,9 @@ abstract class CMSBatchAction extends Object {
 		$applicableIDs = array();
 		
 		$SQL_ids = implode(', ', array_filter($ids, 'is_numeric'));
+		Translatable::disable_locale_filter();
 		$draftPages = DataObject::get("SiteTree", "\"SiteTree\".\"ID\" IN ($SQL_ids)");
+		Translatable::enable_locale_filter();
 		
 		$onlyOnLive = array_fill_keys($ids, true);
 		if($checkStagePages) {
