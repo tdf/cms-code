@@ -110,7 +110,8 @@ class FilesystemPublisher extends StaticPublisher {
 
 			if (self::$domain_based_caching) {
 				if (!$urlParts) continue; // seriously malformed url here...
-				$filename = $urlParts['host'] . '/' . $filename;
+				$port = isset($urlParts['port']) ? ':'.$urlParts['port'] : '';
+				$filename = $urlParts['host'] . $port . '/' . $filename;
 			}
 		
 			$mappedUrls[$url] = ((dirname($filename) == '/') ? '' :  (dirname($filename).'/')).basename($filename);
