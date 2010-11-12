@@ -923,7 +923,7 @@ function sapphiremce_cleanup(type, value) {
 		value = value.replace(/<[a-z0-9]+:imagedata[^>]+src="?([^> "]+)"?[^>]*>/ig,"<img src=\"$1\">");
 		
 		// Word comments
-		value = value.replace(new RegExp('<(!--)([^>]*)(--)>', 'g'), ""); 
+		//value = value.replace(new RegExp('<(!--)([^>]*)(--)>', 'g'), "");
 			
 		// kill class=mso??? and on mouse* tags  
 		value = value.replace(/([ \f\r\t\n\'\"])class=mso[a-z0-9]+[^ >]+/ig, "$1"); 
