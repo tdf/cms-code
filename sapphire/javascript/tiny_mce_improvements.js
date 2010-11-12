@@ -191,7 +191,9 @@ LinkForm.prototype = {
 			
 			case 'file':
 				href = this.elements.file.value;
-				target = '_blank';
+				if($('Form_EditorToolbarLinkForm_TargetBlank')) {
+					if($('Form_EditorToolbarLinkForm_TargetBlank').checked) target = '_blank';
+				}
 				break;
 			
 			case 'email':
@@ -375,7 +377,8 @@ LinkForm.prototype = {
 				LinkType: 'file',
 				file: RegExp.$1,
 				LinkText: linkText,
-				Description: title
+				Description: title,
+				TargetBlank: target ? true : false
 			}
 		} else if(href.match(/^#(.*)$/)) {
 			return {
