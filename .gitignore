@@ -1,0 +1,13 @@
+# assets is the directory where uploaded files end up - no need to duplicate that in the repo
+/assets/
+# is removed after initial installation anyway
+/install.php
+
+# that includes database password, recaptcha keys and the like, so sorry, not shared :-)
+/mysite/_config.php
+
+# that theme is kept in a seperate repository
+/themes/tdf/
+
+# this one is auto-generated
+/subsites/host-map.php
