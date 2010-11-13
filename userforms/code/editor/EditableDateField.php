@@ -48,7 +48,7 @@ class EditableDateField extends EditableFormField {
 		Requirements::customScript(<<<JS
 			(function(jQuery) {
 				$(document).ready(function() {
-					$('input[name^=EditableDateField]').attr('autocomplete', 'off').datepicker();	
+					$('input[name^=EditableDateField]').attr('autocomplete', 'off').datepicker({dateFormat: 'yy-mm-dd'});
 				});
 			})(jQuery);
 JS
@@ -57,9 +57,14 @@ JS
 		// css for jquery date picker
 		Requirements::css(THIRDPARTY_DIR .'/jquery-ui-themes/smoothness/jquery-ui-1.8rc3.custom.css');
 		
-		$default = ($this->getSetting('DefaultToToday')) ? date('d/m/Y') : $this->Default;
+		$default = ($this->getSetting('DefaultToToday')) ? date('Y-m-d') : $this->Default;
 		
-		return new DateField( $this->Name, $this->Title, $default);
+		// need to do multistep, as the constructor sets format according to locale,
+		// thus manually set it to iso, then set the value
+		$datefield=new DateField( $this->Name, $this->Title);
+		$datefield->setConfig('dateformat', 'YYYY-MM-dd');
+		$datefield->setValue($default);
+		return $datefield;
 	}
 	
 	/**
@@ -72,7 +77,7 @@ JS
 	 */
 	public function getValidation() {
 		return array(
-			'date' => true
+			'dateISO' => true
 		);
 	}
 }
