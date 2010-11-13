@@ -91,6 +91,10 @@ class Page_Controller extends ContentController {
 		Requirements::themedCSS('layout'); 
 		Requirements::themedCSS('typography'); 
 		Requirements::themedCSS('form'); 
+		//enable tranlate-function _t ...
+		if($this->dataRecord->hasExtension('Translatable')) {
+			i18n::set_locale($this->dataRecord->Locale);
+		}
 	}
 
 	// override get menus to add fallback to subsite's default language
