@@ -27,7 +27,7 @@ class DownloadPage_Controller extends Page_Controller {
 	}
 
 	private static function parseDownloads() {
-		exec("rsync -r rsync://rsync.documentfoundation.org/tdf-pub/ > ".TEMP_FOLDER."/rsynclist.lst");
+		exec("rsync -r --exclude \*.asc rsync://rsync.documentfoundation.org/tdf-pub/ > ".TEMP_FOLDER."/rsynclist.lst");
 		$array = file(TEMP_FOLDER."/rsynclist.lst",FILE_IGNORE_NEW_LINES);
 		if (!$array) return false;
 		$result = array();
