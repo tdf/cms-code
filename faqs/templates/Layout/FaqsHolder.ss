@@ -1,7 +1,6 @@
 <% include FaqsSideBar %>
 <div id="faqsContent" class="faqscontent typography">
     <% include BreadCrumbs %>   
-    $SearchFaqsForm
     $Content
     <% if Results %>
         <% control Results %>

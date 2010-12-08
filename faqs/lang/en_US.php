@@ -9,6 +9,7 @@ $lang['en_US']['FaqsPageEntry']['RELATEDLABEL'] = 'Related Faqs';
 
 $lang['en_US']['FaqsHolder']['SEARCHTITLE'] = 'Search';
 $lang['en_US']['FaqsHolder']['SEARCHSELCATEGORY'] = 'Category';
+$lang['en_US']['FaqsHolder']['SEARCHALLCATEGORIES'] = 'All categories';
 $lang['en_US']['FaqsHolder']['SEARCHBUTTONLABEL'] = 'Go';
 $lang['en_US']['FaqsHolder']['SEARCHRESULTS'] = 'Search results';
 

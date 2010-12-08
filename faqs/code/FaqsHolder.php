@@ -124,6 +124,14 @@ class FaqsHolder_Controller extends Page_Controller {
         Requirements::themedCSS("faqs");
     }
 
+    function Content() {
+        /* faq-search conflicts with global site search - add a property to disable sitesearch when faq-search is used */
+        $replacements=0;
+        $content = str_replace('$SearchFaqsForm', $this->SearchFaqsForm()->forTemplate(), $this->Content, &$replacements);
+        if ($replacements) $this->DisableSiteSearch=true;
+        return $content;
+    }
+
     /**
      * Get FaqsData Entries
      * @param int $limit Number of items to show for each results page
@@ -157,13 +165,19 @@ class FaqsHolder_Controller extends Page_Controller {
      * @return Form
      */
     function SearchFaqsForm() {
-        $searchText = isset($this->Query) ? $this->Query : '';
+        $searchText='';
+        $parent=1;
+        if($this->owner->request) {
+            $searchText = $this->owner->request->getVar('Search');
+            $parent = $this->owner->request->getVar('parent');
+        }
         
         /**
          * Array to holder Children of FaqsHolder for the form listbox
          * @var array
          */
         $dataToList = array();        
+        $dataToList[0] = _t('FaqsHolder.SEARCHALLCATEGORIES', 'All categories');
         
         /**
          * Get FaqsHolder Root Pages
@@ -197,7 +211,7 @@ class FaqsHolder_Controller extends Page_Controller {
         $name = "parent",
         $title = _t('FaqsHolder.SEARCHSELCATEGORY', 'Select Faqs Category'),
         $source = $dataToList,
-        $value = 1));
+        $value = $parent));
                                
         $actions = new FieldSet(new FormAction('FaqsResults', _t('FaqsHolder.SEARCHBUTTONLABEL', 'Pesquisar')));
         
@@ -218,3 +232,4 @@ class FaqsHolder_Controller extends Page_Controller {
         return $this->customise($data)->renderWith(array('FaqsHolder', 'FaqsSearchResults', 'Page'));
     }    
 }
+// vim: set ts=4 sw=4 et :
