@@ -1,0 +1,9 @@
+FaqsPage:
+    faq1:
+        Title: Faq Number 1
+        Content: FAQ1
+        URLSegment: faq1
+    faq2:
+        Title: Faq Number 2
+        Content: FAQ2
+        URLSegment: faq2
