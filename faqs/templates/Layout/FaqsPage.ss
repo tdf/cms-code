@@ -1,6 +1,6 @@
 <% include FaqsSideBar %>
+<% include BreadCrumbs %>
 <div id="faqsContent" class="faqscontent typography">
-    <% include BreadCrumbs %>
     <div class="blogEntry">
         <h1>$Title</h1>
         <p>$Content</p>
