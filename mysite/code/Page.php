@@ -137,4 +137,9 @@ class Page_Controller extends ContentController {
 	public function Menu($level = 1) {
 		return $this->getMenu($level);
 	}
+
+	public function Breadcrumbs($maxDepth = 20, $unlinked = false, $stopAtPageType = false, $showHidden = false) {
+		// show breadcrumbs also for pages not shown in menu
+		return parent::Breadcrumbs($maxDepth, $unlinked, $stopAtPageType, true);
+	}
 }
