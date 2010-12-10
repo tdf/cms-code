@@ -13,17 +13,16 @@ $(document).ready(function() {
 		platform="macintel" ;
 	} else if (navplatform == "macppc") {
 		platform = "macpp";
-	} else if (navplatform == "linux x86_64") {
-		if (navigator.userAgent.toLowerCase().indexOf("buntu") >= 0 || navigator.userAgent.toLowerCase().indexOf("debian") >= 0 ) {
-			platform= "debx86_64";
-		} else {
-			platform = "rpmx86_64";
-		}
 	} else if (navplatform.substring(0,5) == "linux") {
-		if (navigator.userAgent.toLowerCase().indexOf("buntu") >= 0 || navigator.userAgent.toLowerCase().indexOf("debian") >= 0 ) {
-			platform= "debx86";
+		var ua = navigator.userAgent.toLowerCase();
+		var pkgtype = "rpm"
+		if (ua.indexOf("buntu") >= 0 || ua.indexOf("debian") >= 0 || ua.indexOf("iceweasel") >= 0 ) {
+			pkgtype= "deb";
+		}
+		if (navplatform == "linux x86_64") {
+			platform = pkgtype+"x86_64";
 		} else {
-			platform = "rpmx86";
+			platform = pkgtype+"x86";
 		}
 	}
 	if (platform != "") {
