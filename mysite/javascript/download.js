@@ -67,12 +67,10 @@ $(document).ready(function() {
 				matches = matches + "<li>"+$(this).html()+"</li>";
 			});
 		}
-		if (matches == "") {
-			$("div#filtered").html("<p>Sorry, no package for »"+sel+"« available for »"+$("select#platform option:selected").text()+"«. Please choose another language or only download the english version</p>");
-			$("div#filtered").append("<ul>"+fullinstall+"</ul>");
-		} else {
-			$("div#filtered").html(downloadnote+"<ul>"+fullinstall+matches+"</ul>");
+		if (matches == "" && sel != "en-US") {
+			downloadnote = "<p>Sorry, no package for »"+sel+"« available for »"+$("select#platform option:selected").text()+"«. Please choose another language or only download the english version</p>";
 		}
+		$("div#filtered").html("<!-- "+downloadnote+" --><ul>"+fullinstall+matches+"</ul>");
 		}).change();
 
 	$("input#BT").change(function () {
