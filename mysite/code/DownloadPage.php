@@ -40,7 +40,7 @@ class DownloadPage_Controller extends Page_Controller {
 			if ($pathcomponents[1] == "src") {
 				$temp = explode("-", $pathcomponents[2]);
 				$version = explode(".tar",end($temp));
-				$result["src"][$version[0]][]=$pathcomponents[2];
+				$result["src"][$version[0]][] = array("size" => $pathname[1], "file" => $pathcomponents[2]);
 				continue;
 			}
 
@@ -55,9 +55,9 @@ class DownloadPage_Controller extends Page_Controller {
 			$language = $dummy[0];
 
 			if($product == "LibO-SDK") {
-				$result["SDK"][$platform] = $pathname[4];
+				$result["SDK"][$platform] = array("size" => $pathname[1], "file" => $pathname[4]);
 			} else {
-				$result["LibreOffice"][$version][$platform][$language][$type[0]] = $pathname[4];
+				$result["LibreOffice"][$version][$platform][$language][$type[0]] = array("size" => $pathname[1], "file" => $pathname[4]);
 			}
 		}
 		$result_dos = new ArrayData(array());
@@ -66,8 +66,8 @@ class DownloadPage_Controller extends Page_Controller {
 		$src  = new DataObjectSet();
 		foreach($result["src"] as $version => $linkarray) {
 			$link_dos = new DataObjectSet();
-			foreach($linkarray as $mirrorpath) {
-				$link_dos->push(new ArrayData(array("Filename" => $mirrorpath)));
+			foreach($linkarray as $entry) {
+				$link_dos->push(new ArrayData(array("Filename" => $entry["file"], "Filesize" => File::format_size($entry["size"]))));
 			}
 			$src->push(new ArrayData(array("Version" => $version, "Files" => $link_dos)));
 		}
@@ -76,8 +76,8 @@ class DownloadPage_Controller extends Page_Controller {
 
 		/* parse the SDK */
 		$sdk  = new DataObjectSet();
-		foreach($result["SDK"] as $platform => $mirrorname) {
-			$sdk->push(new ArrayData(array("Platform" => $platform, "PlatformNice" =>self::$platformnames[$platform]["Nice"], "File" => $mirrorname, "Filename"=> end(explode("/",$mirrorname)))));
+		foreach($result["SDK"] as $platform => $entry) {
+			$sdk->push(new ArrayData(array("Platform" => $platform, "PlatformNice" => self::$platformnames[$platform]["Nice"], "File" => $entry["file"], "Filename" => end(explode("/",$entry["file"])), "Filesize" => File::format_size($entry["size"]))));
 		}
 		$result_dos->SDK = $sdk;
 
@@ -90,9 +90,9 @@ class DownloadPage_Controller extends Page_Controller {
 				/* Windows is special, has multi-installer, no languagepacks */
 				if ($platform == "win/x86") {
 					$win_dos= new DataObjectSet();
-					$win_dos->push(new ArrayData(array("Type"=>"multi", "File"=>$languagearray["multi"]["install"], "Filename"=> end(explode("/",$languagearray["multi"]["install"])))));
-					$win_dos->push(new ArrayData(array("Type"=>"all",   "File"=>$languagearray["all"]["install"],   "Filename"=> end(explode("/",$languagearray["all"]["install"])))));
-					$platform_dos->push(new ArrayData(array("Platformname"=>self::$platformnames[$platform]["fortemplate"], "PlatformNice" =>self::$platformnames[$platform]["Nice"], "Links"=>$win_dos)));
+					$win_dos->push(new ArrayData(array("Type" => "multi", "File" => $languagearray["multi"]["install"]["file"], "Filename" => end(explode("/",$languagearray["multi"]["install"]["file"])), "Filesize" => File::format_size($languagearray["multi"]["install"]["size"]))));
+					$win_dos->push(new ArrayData(array("Type" => "all",   "File" => $languagearray["all"]["install"]["file"],   "Filename" => end(explode("/",$languagearray["all"]["install"]["file"])),   "Filesize" => File::format_size($languagearray["all"]["install"]["size"]))));
+					$platform_dos->push(new ArrayData(array("Platformname" => self::$platformnames[$platform]["fortemplate"], "PlatformNice" => self::$platformnames[$platform]["Nice"], "Links" => $win_dos)));
 					continue;
 				}
 				$langpacks_dos = new DataObjectSet();
@@ -102,8 +102,9 @@ class DownloadPage_Controller extends Page_Controller {
 						$langpacks_dos->push(new ArrayData(array(
 							"Language"         => $language,
 							"LanguageNiceLocal"     => i18n::get_language_name($language, true),
-							"Langpack"         => $langpack,
-							"FilenameLangpack" => end(explode("/",$langpack)))));
+							"Langpack"         => $langpack["file"],
+							"Filesize"         => File::format_size($langpack["size"]),
+							"FilenameLangpack" => end(explode("/",$langpack["file"])))));
 						/* for populating the dropdown selector TODO: make use of relations, remove duplication */
 						$langarray[] =array(
 						        "Language"         => $language,
@@ -112,7 +113,7 @@ class DownloadPage_Controller extends Page_Controller {
 					}
 				}
 				$fullinstall=$languagearray["en-US"]["install"];
-				$platform_dos->push(new ArrayData(array("Platformname" =>self::$platformnames[$platform]["fortemplate"], "Fullinstall"=>$fullinstall, "FilenameFull"=>end(explode("/", $fullinstall)), "PlatformNice" =>self::$platformnames[$platform]["Nice"], "Langpacks" => $langpacks_dos)));
+				$platform_dos->push(new ArrayData(array("Platformname" => self::$platformnames[$platform]["fortemplate"], "Fullinstall" => $fullinstall["file"], "FilenameFull" => end(explode("/", $fullinstall["file"])), "Filesize" => File::format_size($fullinstall["size"]), "PlatformNice" => self::$platformnames[$platform]["Nice"], "Langpacks" => $langpacks_dos)));
 			}
 			$platform_dos->sort("PlatformNice", "DESC");
 			$libo->push(new ArrayData(array("Version" => $version, "Data" => $platform_dos)));
