@@ -81,6 +81,7 @@ class StaticExporter extends Controller {
 			
 			// Run the page
 			Requirements::clear();
+			singleton('DataObject')->flushCache();
 			$link = Director::makeRelative($page->Link());
 			$response = Director::test($link);
 
