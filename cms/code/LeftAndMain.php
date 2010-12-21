@@ -50,7 +50,6 @@ class LeftAndMain extends Controller {
 		'getsubtree',
 		'myprofile',
 		'printable',
-		'save',
 		'show',
 		'Member_ProfileForm',
 		'EditorToolbar',
@@ -732,7 +731,8 @@ JS;
 			// Removed virtualpage test as we need to draft/published links when url is changed
 			if( (/*$record->class == 'VirtualPage' &&*/ $originalURLSegment != $record->URLSegment) ||
 				($originalClass != $record->ClassName) || self::$ForceReload == true) {
-				FormResponse::add("$('Form_EditForm').getPageFromServer($record->ID);");
+				// avoid double loading by adding a uniqueness ID
+				FormResponse::add($str = "$('Form_EditForm').getPageFromServer($record->ID);", $str);
 			}
 
 			// After reloading action
@@ -765,7 +765,8 @@ JS;
 			
 			// If there has been a change in the broken link values, reload the page
 			if ($originalBrokenLinkValues != $record->HasBrokenLink.$record->HasBrokenFile) {
-				FormResponse::add("$('Form_EditForm').getPageFromServer($record->ID);");
+				// avoid double loading by adding a uniqueness ID
+				FormResponse::add($str = "$('Form_EditForm').getPageFromServer($record->ID);", $str);
 			}
 
 			// If the 'Save & Publish' button was clicked, also publish the page

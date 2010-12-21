@@ -93,7 +93,8 @@ class Director {
 		// Validate $_FILES array before merging it with $_POST
 		foreach($_FILES as $k => $v) {
 			if(is_array($v['tmp_name'])) {
-				foreach($v['tmp_name'] as $tmpFile) {
+				$v = ArrayLib::array_values_recursive($v['tmp_name']);
+				foreach($v as $tmpFile) {
 					if($tmpFile && !is_uploaded_file($tmpFile)) {
 						user_error("File upload '$k' doesn't appear to be a valid upload", E_USER_ERROR);
 					}
@@ -650,7 +651,7 @@ class Director {
 			$destURL = str_replace('http:', 'https:', Director::absoluteURL($_SERVER['REQUEST_URI']));
 
 			// This coupling to SapphireTest is necessary to test the destination URL and to not interfere with tests
-			if(SapphireTest::is_running_test()) {
+			if(class_exists('SapphireTest', false) && SapphireTest::is_running_test()) {
 				return $destURL;
 			} else {
 				if(!headers_sent()) header("Location: $destURL");
