@@ -49,10 +49,6 @@ class i18nTest extends SapphireTest {
 		$_TEMPLATE_MANIFEST['i18nTestModuleInclude.ss'] = array(
 			'Includes' => $this->alternateBasePath . '/i18ntestmodule/templates/Includes/i18nTestModuleInclude.ss',
 		);
-		$_TEMPLATE_MANIFEST['i18nTestModule.ss'] = array(
-			'main' => $this->alternateBasePath . '/i18ntestmodule/templates/i18nTestModule.ss',
-			'Layout' => $this->alternateBasePath . '/i18ntestmodule/templates/Layout/i18nTestModule.ss',
-		);
 		
 		$this->originalLocale = i18n::get_locale();
 	}
@@ -263,6 +259,14 @@ class i18nTest extends SapphireTest {
 		i18n::unregister_plugin("testTranslator");
 
 		$lang = $oldLang;
+	}
+	
+	function testValidateLocale() {
+		$this->assertTrue(i18n::validate_locale('en_US'), 'Known locale in underscore format is valid');
+		$this->assertTrue(i18n::validate_locale('en-US'), 'Known locale in dash format is valid');
+		$this->assertFalse(i18n::validate_locale('en'), 'Short lang format is not valid');
+		$this->assertFalse(i18n::validate_locale('xx_XX'), 'Unknown locale in correct format is not valid');
+		$this->assertFalse(i18n::validate_locale(''), 'Empty string is not valid');
 	}
 
 	static function translationTestPlugin($locale) {

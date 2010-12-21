@@ -27,18 +27,17 @@ class AssetAdmin extends LeftAndMain {
 		'deletefolder',
 		'deletemarked',
 		'DeleteItemsForm',
-		'deleteUnusedThumbnails',
 		'doUpload',
 		'getfile',
 		'getsubtree',
 		'movemarked',
 		'removefile',
-		'save',
 		'savefile',
 		'sync',
 		'uploadiframe',
 		'UploadForm',
-		'deleteUnusedThumbnails' => 'ADMIN'
+		'deleteUnusedThumbnails' => 'ADMIN',
+		'SitetreeAsUL'
 	);
 	
 	/**
@@ -629,7 +628,7 @@ JS;
 	/**
 	 * Delete a folder
 	 */
-	public function deletefolder($data, $ofmr) {
+	public function deletefolder($data, $form) {
 		$ids = split(' *, *', $_REQUEST['csvIDs']);
 		
 		if(!$ids) return false;

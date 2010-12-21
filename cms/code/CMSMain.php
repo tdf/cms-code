@@ -32,8 +32,6 @@ class CMSMain extends LeftAndMain implements CurrentPageIdentifier, PermissionPr
 		'canceldraftchangesdialog',
 		'compareversions',
 		'createtranslation',
-		'delete',
-		'deletefromlive',
 		'deleteitems',
 		'DeleteItemsForm',
 		'dialog',
@@ -44,13 +42,9 @@ class CMSMain extends LeftAndMain implements CurrentPageIdentifier, PermissionPr
 		'publishall',
 		'publishitems',
 		'PublishItemsForm',
-		'restore',
-		'revert',
-		'rollback',
 		'RootForm',
 		'sidereport',
 		'submit',
-		'unpublish',
 		'versions',
 		'EditForm',
 		'AddPageOptionsForm',
@@ -1251,23 +1245,21 @@ JS;
 			$start = 0;
 			$pages = DataObject::get("SiteTree", "", "", "", "$start,30");
 			$count = 0;
-			if($pages){
-				while(true) {
-					foreach($pages as $page) {
-						if($page && !$page->canPublish()) return Security::permissionFailure($this);
-						
-						$page->doPublish();
-						$page->destroy();
-						unset($page);
-						$count++;
-						$response .= "<li>$count</li>";
-					}
-					if($pages->Count() > 29) {
-						$start += 30;
-						$pages = DataObject::get("SiteTree", "", "", "", "$start,30");
-					} else {
-						break;
-					}
+			while($pages) {
+				foreach($pages as $page) {
+					if($page && !$page->canPublish()) return Security::permissionFailure($this);
+					
+					$page->doPublish();
+					$page->destroy();
+					unset($page);
+					$count++;
+					$response .= "<li>$count</li>";
+				}
+				if($pages->Count() > 29) {
+					$start += 30;
+					$pages = DataObject::get("SiteTree", "", "", "", "$start,30");
+				} else {
+					break;
 				}
 			}
 			$response .= sprintf(_t('CMSMain.PUBPAGES',"Done: Published %d pages"), $count);
