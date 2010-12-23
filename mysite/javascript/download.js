@@ -33,6 +33,8 @@ $(document).ready(function() {
 		$("select#lang").val(userLang[0]+"-"+userLang[1]);
 	} else if ( $("select#lang option[value='"+userLang[0]+"']").length) {
 		$("select#lang").val(userLang[0]);
+	} else {
+		$("select#lang").val("en-US");
 	}
 
 	$("select#platform").change(function () {
