@@ -1,6 +1,7 @@
 /* TODO: make the messages variables passed to the script or use hidden html elements or similar */
 (function($) {
 $(document).ready(function() {
+	var multilangs = new Array("en-US","af","ar","as","be-BY","bn","bo","ca","cs","da","de","dz","el","en-GB","es","eu","fi","fr","gl","gu","he","hi","hr","hu","it","ja","ko","mr","nb","nl","nn","oc","om","or","pl","pt","pt-BR","ru","sh","si","sk","sl","sr","sv","ta","te","th","tr","ug","uk","uz","vi","xh","zh-CN","zh-TW","zu");
 	$("ul#uldown ul").hide(); /* collapse everything */
 	$("ul#uldown li:only-child > ul").show(); /* when there is no choice, don't force the user to click */
 	$("ul#uldown li#sourcedl > ul > li:first > ul").show(); /* show the latest version of sources by default */
@@ -40,11 +41,6 @@ $(document).ready(function() {
 	$("select#platform").change(function () {
 		var sel=$(this).val();
 		var matches = "";
-		if (sel=="winx86") {
-			$("select#lang").hide();
-		} else {
-			$("select#lang").show();
-		}
 		$("select#lang").trigger("change");
 		}).change();
 
@@ -53,13 +49,19 @@ $(document).ready(function() {
 		var downloadnote = "";
 		var fullinstall = "";
 		var platform = $("select#platform").val();
+		var sel=$(this).val();
 		if (platform == "winx86") {
-			downloadnote = '<p>The windows installer contains many languages. The »multi« one conains (which one does it contain?), the »all_langs« one includes all available languages. Note that helpcontent is not included in windows downloads</p>';
-			$("ul#uldown ul.winx86").each(function() {
-				matches = matches + $(this).html();
-			});
+			if ( $.inArray( sel, multilangs ) > -1 ) {
+				fullinstall = "<li>"+$("ul#uldown ul.winx86 > li.install.multi").html()+"</li>";
+			} else {
+				fullinstall = "<li>"+$("ul#uldown ul.winx86 > li.install.all").html()+"</li>";
+			}
+			var helppack = $("ul#uldown ul.winx86 ul li."+sel).length ? $("ul#uldown ul.winx86 ul li."+sel).html() : $("ul#uldown ul.winx86 ul li.en-US").html() + " (fallback)";
+			if(helppack != "") {
+				matches = matches + "<li>"+helppack+"</li>";
+			}
+
 		} else {
-			var sel=$(this).val();
 			fullinstall = "<li>"+$("ul#uldown ul."+platform+" >li:first-child").html()+"</li>";
 
 			if (sel != "en-US") {
