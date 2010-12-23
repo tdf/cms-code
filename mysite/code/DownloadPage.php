@@ -109,16 +109,16 @@ class DownloadPage_Controller extends Page_Controller {
 						if(array_key_exists("helppack", $helppackarray)) {
 							$helppack = $helppackarray["helppack"];
 							$helppacks_dos->push(new ArrayData(array(
-							"Language"         => $language,
-							"LanguageNiceLocal"     => i18n::get_language_name($language, true),
-							"Helppack"         => $helppack["file"],
-							"Filesize"         => File::format_size($helppack["size"]),
-							"FilenameHelppack" => end(explode("/",$helppack["file"])))));
+								"Language"         => $language,
+								"LanguageNiceLocal"=> ucfirst(i18n::get_language_name($language, true)),
+								"Helppack"         => $helppack["file"],
+								"Filesize"         => File::format_size($helppack["size"]),
+								"FilenameHelppack" => end(explode("/",$helppack["file"])))));
 							// see note below
 							$langarray[] =array(
 								"Language"         => $language,
-								"LanguageNiceUS"     => i18n::get_language_name($language),
-								"LanguageNiceLocal"     => i18n::get_language_name($language, true));
+								"LanguageNiceUS"   => i18n::get_language_name($language),
+								"LanguageNiceLocal"=> ucfirst(i18n::get_language_name($language, true)));
 						}
 					}
 
@@ -131,15 +131,15 @@ class DownloadPage_Controller extends Page_Controller {
 						$langpack = $filetypearray["langpack"];
 						$langpacks_dos->push(new ArrayData(array(
 							"Language"         => $language,
-							"LanguageNiceLocal"     => i18n::get_language_name($language, true),
+							"LanguageNiceLocal"=> ucfirst(i18n::get_language_name($language, true)),
 							"Langpack"         => $langpack["file"],
 							"Filesize"         => File::format_size($langpack["size"]),
 							"FilenameLangpack" => end(explode("/",$langpack["file"])))));
 						/* for populating the dropdown selector TODO: make use of relations, remove duplication */
 						$langarray[] =array(
 						        "Language"         => $language,
-							"LanguageNiceUS"     => i18n::get_language_name($language),
-							"LanguageNiceLocal"     => i18n::get_language_name($language, true));
+							"LanguageNiceUS"   => i18n::get_language_name($language),
+							"LanguageNiceLocal"=> ucfirst(i18n::get_language_name($language, true)));
 					}
 				}
 				$fullinstall=$languagearray["en-US"]["install"];
