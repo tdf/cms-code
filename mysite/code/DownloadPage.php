@@ -47,12 +47,20 @@ class DownloadPage_Controller extends Page_Controller {
 			$version = $pathcomponents[2];
 			$platform = $pathcomponents[3]."/".$pathcomponents[4];
 
+			// LibO_3.3.0rc1_Win_x86_install_all_lang.exe
+			// LibO_3.3.0rc1_Linux_x86_install-rpm_en-US.tar.gz
+			// LibO_3.3.0rc1_Linux_x86_langpack-rpm_ar.tar.gz
 			$filenamesplit = explode("_", $pathcomponents[5]);
 			$product = $filenamesplit[0];
 			$type = explode("-",$filenamesplit[4]); //langpack/install
 
 			$dummy = explode(".",$filenamesplit[5]);
 			$language = $dummy[0];
+			// workaround rc2 naming-bug - LibO_3.3.0rc1_Win_x86_all_lang.exe
+			if ($type[0] == "all") {
+				$type[0] = "install";
+				$language = "all";
+			}
 
 			if($product == "LibO-SDK") {
 				$result["SDK"][$platform] = array("size" => $pathname[1], "file" => $pathname[4]);
@@ -92,7 +100,29 @@ class DownloadPage_Controller extends Page_Controller {
 					$win_dos= new DataObjectSet();
 					$win_dos->push(new ArrayData(array("Type" => "multi", "File" => $languagearray["multi"]["install"]["file"], "Filename" => end(explode("/",$languagearray["multi"]["install"]["file"])), "Filesize" => File::format_size($languagearray["multi"]["install"]["size"]))));
 					$win_dos->push(new ArrayData(array("Type" => "all",   "File" => $languagearray["all"]["install"]["file"],   "Filename" => end(explode("/",$languagearray["all"]["install"]["file"])),   "Filesize" => File::format_size($languagearray["all"]["install"]["size"]))));
-					$platform_dos->push(new ArrayData(array("Platformname" => self::$platformnames[$platform]["fortemplate"], "PlatformNice" => self::$platformnames[$platform]["Nice"], "Links" => $win_dos)));
+
+					// helppacks
+					unset($languagearray["all"]);
+					unset($languagearray["multi"]);
+					$helppacks_dos = new DataObjectSet();
+					foreach($languagearray as $language => $helppackarray) {
+						if(array_key_exists("helppack", $helppackarray)) {
+							$helppack = $helppackarray["helppack"];
+							$helppacks_dos->push(new ArrayData(array(
+							"Language"         => $language,
+							"LanguageNiceLocal"     => i18n::get_language_name($language, true),
+							"Helppack"         => $helppack["file"],
+							"Filesize"         => File::format_size($helppack["size"]),
+							"FilenameHelppack" => end(explode("/",$helppack["file"])))));
+							// see note below
+							$langarray[] =array(
+								"Language"         => $language,
+								"LanguageNiceUS"     => i18n::get_language_name($language),
+								"LanguageNiceLocal"     => i18n::get_language_name($language, true));
+						}
+					}
+
+					$platform_dos->push(new ArrayData(array("Platformname" => self::$platformnames[$platform]["fortemplate"], "PlatformNice" => self::$platformnames[$platform]["Nice"], "Links" => $win_dos, "Helppacks" => $helppacks_dos)));
 					continue;
 				}
 				$langpacks_dos = new DataObjectSet();
@@ -133,12 +163,6 @@ class DownloadPage_Controller extends Page_Controller {
 
 		$result_dos->Timestamp=time();
 		self::$parsedresult = $result_dos;
-	}
-
-	function init () {
-		parent::init();
-		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
-		Requirements::javascript('mysite/javascript/download.js');
 	}
 
 	public function GetDownloads() {
