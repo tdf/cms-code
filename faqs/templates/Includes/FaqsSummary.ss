@@ -1,5 +1,5 @@
 <div class="faqsList">
-    <h2><a class="faqsTitle" href="$Link" title="<% _t('GOTOFAQ', 'Show Detail -') %> '$Title'">$MenuTitle</a></h2>
+    <h3><a class="faqsTitle" href="$Link" title="<% _t('GOTOFAQ', 'Show Detail -') %> '$Title'">$MenuTitle</a></h3>
               <% if Content %>
                 $Content.LimitWordCount(20)
               <% end_if %>    

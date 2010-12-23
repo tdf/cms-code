@@ -2,7 +2,7 @@
 <% include BreadCrumbs %>
 <div id="faqsContent" class="faqscontent typography">
     <div class="blogEntry">
-        <h1>$Title</h1>
+        <h2>$Title</h2>
         <p>$Content</p>
 	</div>
 	<% if FaqsRelated %>
