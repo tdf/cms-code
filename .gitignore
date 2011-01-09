@@ -10,6 +10,7 @@
 
 # that theme is kept in a seperate repository
 /themes/tdf/
+/themes/libo/
 
 # this one is auto-generated
 /subsites/host-map.php
