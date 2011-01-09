@@ -50,7 +50,7 @@ function htmlEmail($to, $from, $subject, $htmlContent, $attachedFiles = false, $
 	}
 
     
-	$subjectIsUnicode = (strpos($subject,"&#") !== false);
+	$subjectIsUnicode = (strpos($subject,"&#") !== false || $subject != iconv("UTF-8", "ASCII//IGNORE", $subject));
 	$bodyIsUnicode = (strpos($htmlContent,"&#") !== false);
     $plainEncoding = "";
 	
@@ -178,7 +178,7 @@ function plaintextEmail($to, $from, $subject, $plainContent, $attachedFiles, $cu
 		dieprintr($headers);
 	}
 
-	if(strpos($subject,"&#") !== false) $subjectIsUnicode = true;
+	if(strpos($subject,"&#") !== false || $subject != iconv("UTF-8", "ASCII//IGNORE", $subject)) $subjectIsUnicode = true;
 
 	// If the subject line contains extended characters, we must encode it
 	$subject = Convert::xml2raw($subject);
