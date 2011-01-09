@@ -2,10 +2,20 @@
 class Page extends SiteTree {
 
 	public static $db = array(
+		"IsFullWidth" => "Boolean"
 	);
 
 	public static $has_one = array(
 	);
+
+	function getCMSFields() {
+		$fields = parent::getCMSFields();
+
+		$fields->addFieldToTab('Root.Content.Main', new CheckboxField('IsFullWidth'), 'Content');
+
+		return $fields;
+	}
+
 	/**
 	 * Return a list of all the pages to cache (StaticPublisher)
 	 */
