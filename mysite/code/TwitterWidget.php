@@ -117,8 +117,14 @@ class TwitterWidget extends DataObject {
 		$this->Tweets = new DataObjectSet();
 		$numberOfTweets = 5;
 		$twitterURL = "http://search.twitter.com/search.json?q=from%3Alibreofficenews+OR+from%3Adocufoundation&rpp=" . $numberOfTweets;
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $twitterURL);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_REFERER, "http://www.libreoffice.org.org/");
+		$twitterJSON = curl_exec($ch);
+		curl_close($ch);
 		
-		if($twitterJSON = file_get_contents($twitterURL)) {
+		if($twitterJSON) {
 			$twitterJSON = json_decode($twitterJSON);
 			
 			foreach($twitterJSON->results as $tweet) {
