@@ -635,7 +635,7 @@ class i18n extends Object {
 		'af' => array('Afrikaans', 'Afrikaans'),
 		'sq' => array('Albanian', 'shqip'),
 		'ar' => array('Arabic', '&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;'),
-		'eu' => array('Basque', 'euskera'),
+		'eu' => array('Basque', 'euskara'),
 		'be' => array('Belarusian', '&#1041;&#1077;&#1083;&#1072;&#1088;&#1091;&#1089;&#1082;&#1072;&#1103; &#1084;&#1086;&#1074;&#1072;'),
 		'bn' => array('Bengali', '&#2476;&#2494;&#2434;&#2482;&#2494;'),
 		'bg' => array('Bulgarian', '&#1073;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;'),
