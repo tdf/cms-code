@@ -152,7 +152,7 @@ class DownloadPage_Controller extends Page_Controller {
 
 		$result_dos->Languages = new DataObjectSet($langarray);
 		$result_dos->Languages->removeDuplicates("Language");
-		$result_dos->Languages->sort("LanguageNiceLocal", "ASC");
+		$result_dos->Languages->sort("Language", "ASC");
 
 		$platforms = new DataObjectSet();
 		foreach(self::$platformnames as $platform) {

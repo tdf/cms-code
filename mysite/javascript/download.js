@@ -1,7 +1,7 @@
 /* TODO: make the messages variables passed to the script or use hidden html elements or similar */
 (function($) {
 $(document).ready(function() {
-	var multilangs = new Array("en-US","af","ar","as","be-BY","bn","bo","ca","cs","da","de","dz","el","en-GB","es","eu","fi","fr","gl","gu","he","hi","hr","hu","it","ja","ko","mr","nb","nl","nn","oc","om","or","pl","pt","pt-BR","ru","sh","si","sk","sl","sr","sv","ta","te","th","tr","ug","uk","uz","vi","xh","zh-CN","zh-TW","zu");
+	var multilangs = new Array("en-US","ar","ast","be-BY","bg","bn","bo","br","ca","ca-XV","cs","da","de","dz","el","en-GB","es","et","eu","fi","fr","gl","gu","he","hi","hr","hu","is","it","ja","km","kn","ko","lt","lv","mr","nb","nl","oc","om","or","pl","pt","pt-BR","ru","sh","si","sk","sl","sr","sv","te","tr","ug","vi","zh-CN","zh-TW");
 	$("ul#uldown ul").hide(); /* collapse everything */
 	$("ul#uldown li:only-child > ul").show(); /* when there is no choice, don't force the user to click */
 	$("ul#uldown li#sourcedl > ul > li:first > ul").show(); /* show the latest version of sources by default */
@@ -20,7 +20,7 @@ $(document).ready(function() {
 		if (ua.indexOf("buntu") >= 0 || ua.indexOf("debian") >= 0 || ua.indexOf("iceweasel") >= 0 ) {
 			pkgtype= "deb";
 		}
-		if (navplatform == "linux x86_64") {
+		if (navplatform.indexOf("x86_64") >= 0 ) {
 			platform = pkgtype+"x86_64";
 		} else {
 			platform = pkgtype+"x86";
