@@ -6,7 +6,7 @@
  * @subpackage i18n
  */
 
-i18n::include_locale_file('cms', 'en_US');
+i18n::include_locale_file('cmsworkflow', 'en_US');
 
 global $lang;
 
