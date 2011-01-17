@@ -126,6 +126,7 @@ class DownloadPage_Controller extends Page_Controller {
 					continue;
 				}
 				$langpacks_dos = new DataObjectSet();
+				$helppacks_dos = new DataObjectSet();
 				foreach($languagearray as $language => $filetypearray) {
 					if(array_key_exists("langpack", $filetypearray)) {
 						$langpack = $filetypearray["langpack"];
@@ -141,9 +142,23 @@ class DownloadPage_Controller extends Page_Controller {
 							"LanguageNiceUS"   => i18n::get_language_name($language),
 							"LanguageNiceLocal"=> ucfirst(i18n::get_language_name($language, true)));
 					}
+					if(array_key_exists("helppack", $filetypearray)) {
+						$langpack = $filetypearray["helppack"];
+						$helppacks_dos->push(new ArrayData(array(
+							"Language"         => $language,
+							"LanguageNiceLocal"=> ucfirst(i18n::get_language_name($language, true)),
+							"Helppack"         => $langpack["file"],
+							"Filesize"         => File::format_size($langpack["size"]),
+							"FilenameHelppack" => end(explode("/",$langpack["file"])))));
+						/* for populating the dropdown selector TODO: make use of relations, remove duplication */
+						$langarray[] =array(
+							"Language"         => $language,
+							"LanguageNiceUS"   => i18n::get_language_name($language),
+							"LanguageNiceLocal"=> ucfirst(i18n::get_language_name($language, true)));
+					}
 				}
 				$fullinstall=$languagearray["en-US"]["install"];
-				$platform_dos->push(new ArrayData(array("Platformname" => self::$platformnames[$platform]["fortemplate"], "Fullinstall" => $fullinstall["file"], "FilenameFull" => end(explode("/", $fullinstall["file"])), "Filesize" => File::format_size($fullinstall["size"]), "PlatformNice" => self::$platformnames[$platform]["Nice"], "Langpacks" => $langpacks_dos)));
+				$platform_dos->push(new ArrayData(array("Platformname" => self::$platformnames[$platform]["fortemplate"], "Fullinstall" => $fullinstall["file"], "FilenameFull" => end(explode("/", $fullinstall["file"])), "Filesize" => File::format_size($fullinstall["size"]), "PlatformNice" => self::$platformnames[$platform]["Nice"], "Langpacks" => $langpacks_dos, "Helppacks" => $helppacks_dos)));
 			}
 			$platform_dos->sort("PlatformNice", "DESC");
 			$libo->push(new ArrayData(array("Version" => $version, "Data" => $platform_dos)));
