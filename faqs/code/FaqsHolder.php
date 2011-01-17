@@ -183,7 +183,13 @@ class FaqsHolder_Controller extends Page_Controller {
          * Get FaqsHolder Root Pages
          * @var Object faqsRootHolder
          */
-        $faqsRootHolder = DataObject::get("FaqsHolder", "ParentID = 0");        
+        $faqsRootHolder = null;
+        $parent = DataObject::get_one("FaqsHolder");
+        do {
+            if ($parent->ClassName == "FaqsHolder") {
+                $faqsRootHolder = $parent;
+            }
+        } while ($parent = $parent->getParent());
   
         if (!is_null($faqsRootHolder)) {
 	        // -- Find all the Children of root FaqsHolderPages
