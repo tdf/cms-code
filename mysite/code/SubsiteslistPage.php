@@ -34,7 +34,7 @@ class SubsiteslistPage_Controller extends Page_Controller {
 			$subsite->Homepagetitle = $sitehomepage->Title;
 			$lang = i18n::get_lang_from_locale($subsite->Language);
 			// returns pt_br - but listed as pt-BR in i18n function - use manual replacement instead of regex/str-replace foo
-			$lang = ($lang == "pt_br") ? "pt-BR" : (( $lang == "zh_tw") ? "zh-TW" : $lang);
+			$lang = ($lang == "pt_br") ? "pt-BR" : (( $lang == "zh_tw") ? "zh-TW" : (( $lang == "zh_cn") ? "zh-CN" : $lang));
 			$subsite->Lang = $lang;
 			$subsite->LangEnglish = i18n::get_language_name($lang);
 			$subsite->LangNative  = ucfirst(i18n::get_language_name($lang, true));
