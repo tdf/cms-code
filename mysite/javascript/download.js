@@ -60,7 +60,11 @@ $(document).ready(function() {
 			if(helppack != "") {
 				matches = matches + "<li>"+helppack+"</li>";
 			}
-
+			if (sel == "pt-BR" ) {
+				/* special treatment for BrOffice */
+				fullinstall = fullinstall.replace(/LibO/g, "BrOffice");
+				matches = matches.replace(/LibO/g, "BrOffice");
+			}
 		} else {
 			fullinstall = "<li>"+$("ul#uldown ul."+platform+" >li:first-child").html()+"</li>";
 
@@ -96,5 +100,18 @@ $(document).ready(function() {
 		$(this).next("ul").slideToggle();
 		event.preventDefault();
 		});
+	/* handle URL-parameters to expand the list */
+	if (window.location.hash.indexOf("#sourcedl") >= 0) {
+		$("#sourcedl > a").trigger("click");
+		$("html,body").animate({ scrollTop: $("#sourcedl").offset().top }, { duration: 'slow', easing: 'swing'});
+	}
+	/* allow selecting a language by URL parameter */
+	if (window.location.search.indexOf("lang=") >= 0) {
+		var results = new RegExp('[?&]lang=([^&]*)').exec(window.location.search);
+		if (results) {
+			$("select#lang").val(results[1]);
+			$("select#lang").trigger("change");
+		}
+	}
 })
 })(jQuery);
