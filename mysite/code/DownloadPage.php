@@ -44,6 +44,9 @@ class DownloadPage_Controller extends Page_Controller {
 				continue;
 			}
 
+			if ( $pathcomponents[1] != "stable" )
+				continue;
+
 			$version = $pathcomponents[2];
 			$platform = $pathcomponents[3]."/".$pathcomponents[4];
 
