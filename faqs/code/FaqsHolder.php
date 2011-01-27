@@ -57,7 +57,7 @@ class FaqsHolder extends Page {
     	
     	// -- Build search expression
     	if(!empty($search)) { 
-            $search = "`$table`.Content LIKE '%$search%' OR `$table`.Title LIKE '%$search%'";
+            $search = "`$table`.Content LIKE '%".Convert::raw2sql($search)."%' OR `$table`.Title LIKE '%".Convert::raw2sql($search)."%'";
         }
         
         // -- If empty we are at faqsholderpage and should list children pages
@@ -139,7 +139,7 @@ class FaqsHolder_Controller extends Page_Controller {
      */
     function FaqsEntries($limit = 6) {
         $start = isset($_GET['start']) ? (int) $_GET['start'] : 0;
-        $faqsParent = isset($_GET['parent']) ? (string) $_GET['parent'] : 0;
+        $faqsParent = isset($_GET['parent']) ? (string) $_GET['parent'] : ($this->getParent()->ClassName == "FaqsHolder" ? $this->ID : 0);
         $search = isset($_GET['Search']) ? (string) $_GET['Search'] : '';
         // -- If no parent then can be a full faqspage's search
         if (empty($faqsParent)) {
@@ -184,12 +184,12 @@ class FaqsHolder_Controller extends Page_Controller {
          * @var Object faqsRootHolder
          */
         $faqsRootHolder = null;
-        $parent = DataObject::get_one("FaqsHolder");
+        $parentpage = DataObject::get_one("FaqsHolder");
         do {
-            if ($parent->ClassName == "FaqsHolder") {
-                $faqsRootHolder = $parent;
+            if ($parentpage->ClassName == "FaqsHolder") {
+                $faqsRootHolder = $parentpage;
             }
-        } while ($parent = $parent->getParent());
+        } while ($parentpage = $parentpage->getParent());
   
         if (!is_null($faqsRootHolder)) {
 	        // -- Find all the Children of root FaqsHolderPages
