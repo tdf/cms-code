@@ -2,16 +2,53 @@
 class Page extends SiteTree {
 
 	public static $db = array(
-		"IsFullWidth" => "Boolean"
+		"IsFullWidth" => "Boolean",
+		'ShufflerWidth' => 'Int',
+		'ShufflerHeight' => 'Int',
+		'PauseSeconds' => 'Decimal',
+		'FadeSeconds' => 'Decimal'
 	);
-
-	public static $has_one = array(
+	static $defaults = array(
+		'ShufflerWidth' => 400,
+		'ShufflerHeight' => 300,
+		'PauseSeconds' => 5.0,
+		'FadeSeconds' => 0.70
+	);
+	static $has_many = array (
+		'Images' => 'ImageResource'
 	);
 
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-
 		$fields->addFieldToTab('Root.Content.Main', new CheckboxField('IsFullWidth'), 'Content');
+
+		$width = new NumericField('ShufflerWidth', "Scale images to width x height (keeps aspect ratio)");
+		$height = new NumericField('ShufflerHeight', " x ");
+		$width->setMaxLength(4);
+		$height->setMaxLength(4);
+		$fields->addFieldToTab("Root.Content.PhotoShuffler",new FieldGroup($width,$height));
+
+		$pause = new NumericField('PauseSeconds', "Pause between changing images (seconds)");
+		$fade = new NumericField('FadeSeconds', " Duration of the fade (seconds) ");
+		$pause->setMaxLength(4);
+		$fade->setMaxLength(4);
+		$fields->addFieldToTab("Root.Content.PhotoShuffler",new FieldGroup($pause,$fade));
+
+		$manager = new ImageDataObjectManager(
+			$this, // Controller
+			'Images', // Source name
+			'ImageResource', // Source class
+			'Attachment', // File name on DataObject
+			array(
+				'Title' => 'Title',
+				'Caption' => 'Caption'
+			), // Headings
+			'getCMSFields_forPopup' // Detail fields
+			// Filter clause
+			// Sort clause
+			// Join clause
+		);
+		$fields->addFieldToTab("Root.Content.PhotoShuffler",$manager);
 
 		return $fields;
 	}
@@ -104,6 +141,23 @@ class Page_Controller extends ContentController {
 		//enable tranlate-function _t ...
 		if($this->dataRecord->hasExtension('Translatable')) {
 			i18n::set_locale($this->dataRecord->Locale);
+		}
+		if($this->Images()->Count()) {
+			$replacement = "";
+			foreach ($this->Images() as $imageobj) {
+				$image = $imageobj->Attachment();
+				if ($image->getDimensions("string") != $this->ShufflerWidth."x".$this->ShufflerHeight) {
+					$resized = $image->SetSize($this->ShufflerWidth,$this->ShufflerHeight);
+					$replacement.="'".$resized->Filename."',";
+				} else {
+					$replacement.="'".$image->Filename."',";
+				}
+			}
+			Requirements::javascript("mysite/javascript/photoshuffler.js");
+			Requirements::javascriptTemplate("mysite/javascript/photoshufflertemplate.js",
+				array( "imagearray"      => "new Array(".substr($replacement,0,-1).")",
+				"gblPauseSeconds" => $this->PauseSeconds,
+				"gblFadeSeconds"  => $this->FadeSeconds));
 		}
 	}
 
