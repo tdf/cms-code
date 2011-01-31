@@ -368,7 +368,7 @@ class CalendarEvent_Controller extends Page_Controller
 		parent::init();
 		
 		Requirements::css('event_calendar/css/calendar.css');
-		Requirements::javascript(THIRDPARTY_DIR.'/jquery/jquery.js');
+		Requirements::javascript(THIRDPARTY_DIR.'/jquery/jquery-packed.js');
 		Requirements::javascript('event_calendar/javascript/calendar_core.js');
 		
 	}

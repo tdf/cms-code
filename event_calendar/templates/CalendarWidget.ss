@@ -1,4 +1,4 @@
-<% require javascript(sapphire/thirdparty/jquery/jquery.js) %>
+<% require javascript(sapphire/thirdparty/jquery/jquery-packed.js) %>
 <% require javascript(event_calendar/javascript/jquery.date.js) %>
 <% require javascript(event_calendar/javascript/jquery.datePicker.js) %>
 <% require javascript(event_calendar/javascript/calendar_core.js) %>
