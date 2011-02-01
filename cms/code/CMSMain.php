@@ -51,7 +51,7 @@ class CMSMain extends LeftAndMain implements CurrentPageIdentifier, PermissionPr
 		'SiteTreeAsUL',
 		'getshowdeletedsubtree',
 		'getfilteredsubtree',
-		'batchactions'
+		'batchactions',
 	);
 	
 	/**
@@ -389,11 +389,15 @@ JS;
 	 * Get a database record to be managed by the CMS
 	 */
  	public function getRecord($id) {
-
 		$treeClass = $this->stat('tree_class');
 
 		if($id && is_numeric($id)) {
-			$record = DataObject::get_one( $treeClass, "\"$treeClass\".\"ID\" = $id");
+			$version = isset($_REQUEST['Version']) ? $_REQUEST['Version'] : null;
+			if(is_numeric($version)) {
+				$record = Versioned::get_version($treeClass, $id, $version);
+			} else {
+				$record = DataObject::get_one($treeClass, "\"$treeClass\".\"ID\" = $id");
+			}
 
 			// Then, try getting a record from the live site
 			if(!$record) {
@@ -901,10 +905,7 @@ JS;
 				'Root'
 			);
 
-			$actions = new FieldSet(
-				new FormAction("email", _t('CMSMain.EMAIL',"Email")),
-				new FormAction("rollback", _t('CMSMain.ROLLBACK',"Roll back to this version"))
-			);
+			$actions = $record->getCMSActions();
 
 			// encode the message to appear in the body of the email
 			$archiveURL = Director::absoluteBaseURL() . $record->URLSegment . '?archiveDate=' . $record->obj('LastEdited')->URLDatetime();
