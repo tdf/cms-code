@@ -30,6 +30,9 @@ $(document).ready(function() {
 		$("select#platform").val(platform);
 		}
 	var userLang = ((navigator.language) ? navigator.language : navigator.userLanguage).split("_");
+	if (userLang.length == 1) {
+		userLang = userLang[0].split("-");
+	}
 	if ( $("select#lang option[value='"+userLang[0]+"-"+userLang[1]+"']").length) {
 		$("select#lang").val(userLang[0]+"-"+userLang[1]);
 	} else if ( $("select#lang option[value='"+userLang[0]+"']").length) {
