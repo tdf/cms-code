@@ -163,7 +163,7 @@ class TwitterWidget extends DataObject {
 				$timeAgo = ($count == 1) ? '1 '.$name : "$count {$name}s ago";
 				
 				$dateURL = $authorURL . "/status/" . $tweet->id_str;
-				$replyURL = "http://www.twitter.com/?status=@" . $author . "%20&in_reply_to_status_id=" . $tweet->id_str . "&in_reply_to=" . $author;
+				$replyURL = "http://www.twitter.com/?status=@" . $author . "%20&amp;in_reply_to_status_id=" . $tweet->id_str . "&amp;in_reply_to=" . $author;
 				
 				// Cast the Text
 				$text = $tweet->text;
