@@ -142,7 +142,7 @@ class Page_Controller extends ContentController {
 		if($this->dataRecord->hasExtension('Translatable')) {
 			i18n::set_locale($this->dataRecord->Locale);
 		}
-		if($this->Images()->Count()) {
+		if($this->Images()->Count() && $this->ShufflerWidth != 0) {
 			$replacement = "";
 			foreach ($this->Images() as $imageobj) {
 				$image = $imageobj->Attachment();
