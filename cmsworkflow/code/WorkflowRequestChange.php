@@ -35,12 +35,14 @@ class WorkflowRequestChange extends DataObject {
 		'DiffLinkToLastPublished' => 'Varchar'
 	);
 	
+	public static $default_sort = "\"ID\" ASC";
+	
 	/**
 	 * @return WorkflowRequestChange
 	 */
 	function PreviousChange() {
 		//$createdDate = $this->obj('Created')->Format();
-		$changes = $this->WorkflowRequest()->Changes("Created < '{$this->Created}'", "\"Created\" DESC", null, 1);
+		$changes = $this->WorkflowRequest()->Changes("\"Created\" < '{$this->Created}'", "\"Created\" DESC", null, 1);
 		return ($changes) ? $changes->First() : null;
 	}
 	
@@ -48,7 +50,7 @@ class WorkflowRequestChange extends DataObject {
 	 * @return WorkflowRequestChange
 	 */
 	function NextChange() {
-		$changes = $this->WorkflowRequest()->Changes("Created > '{$this->Created}'", "\"Created\" DESC", null, 1);
+		$changes = $this->WorkflowRequest()->Changes("\"Created\" > '{$this->Created}'", "\"Created\" DESC", null, 1);
 		return ($changes) ? $changes->First() : null;
 	}
 	

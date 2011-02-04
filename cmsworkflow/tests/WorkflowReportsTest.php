@@ -13,11 +13,12 @@ class WorkflowReportsTest extends FunctionalTest {
 
 	protected $requiredExtensions = array(
 		'SiteTree' => array('SiteTreeCMSTwoStepWorkflow'),
+		'SiteConfig' => array('SiteConfigTwoStepWorkflow'),
 		'WorkflowRequest' => array('WorkflowTwoStepRequest'),
 	);
 
 	protected $illegalExtensions = array(
-		'SiteTree' => array('SiteTreeCMSThreeStepWorkflow'),
+		'SiteTree' => array('SiteTreeCMSThreeStepWorkflow', 'SiteTreeSubsites'),
 		'WorkflowRequest' => array('WorkflowThreeStepRequest'),
 		'LeftAndMain' => array('LeftAndMainCMSThreeStepWorkflow'),
 		'SiteConfig' => array('SiteConfigThreeStepWorkflow'),

@@ -8,6 +8,7 @@ class SiteTreeFutureStateTest extends SapphireTest {
 
 	protected $illegalExtensions = array(
 		'SiteTree' => array('SiteTreeCMSTwoStepWorkflow'),
+		'SiteConfig' => array('SiteConfigTwoStepWorkflow'),
 		'WorkflowRequest' => array('WorkflowTwoStepRequest'),
 	);
 
@@ -19,6 +20,8 @@ class SiteTreeFutureStateTest extends SapphireTest {
 	);
 
 	function testPagesWithBothEmbargoAndExpiryAreDisplayedCorrectlyInFutureState() {
+		$bt = defined('DB::USE_ANSI_SQL') ? "\"" : "`";
+
 		Versioned::reading_stage('Stage');
 		
 		$product6 = $this->objFromFixture('Page', 'embargotest');
@@ -36,24 +39,24 @@ class SiteTreeFutureStateTest extends SapphireTest {
 
 		$request->approve('Looks good.');
 		
-		$prodDraft = DataObject::get_one('SiteTree', '"URLSegment" = \'product-6\'');
+		$prodDraft = DataObject::get_one('SiteTree', "{$bt}URLSegment{$bt} = 'product-embargo'");
 		$this->assertEquals('New Title', $prodDraft->Title, 'Correct page on draft site.');
 		
-		$prodLiveNow = Versioned::get_one_by_stage('SiteTree', 'Live', '"URLSegment" = \'product-6\'');
-		$this->assertEquals('Product 6', $prodLiveNow->Title, 'Correct page on live site.');
+		$prodLiveNow = Versioned::get_one_by_stage('SiteTree', 'Live', "{$bt}URLSegment{$bt} = 'product-embargo'");
+		$this->assertEquals('Product on embargo', $prodLiveNow->Title, 'Correct page on live site.');
 		
 		SiteTreeFutureState::set_future_datetime('2020-06-01 14:00:00');
-		$prodBeforeEmbargo = DataObject::get_one('SiteTree', '"URLSegment" = \'product-6\'');
-		$this->assertEquals('Product 6', $prodBeforeEmbargo->Title, 'Correct page before embargo.');
+		$prodBeforeEmbargo = DataObject::get_one('SiteTree', "{$bt}URLSegment{$bt} = 'product-embargo'");
+		$this->assertEquals('Product on embargo', $prodBeforeEmbargo->Title, 'Correct page before embargo.');
 
 		SiteTreeFutureState::set_future_datetime('2020-06-02 16:00:00');
-		$prodAfterEmbargo = DataObject::get_one('SiteTree', '"URLSegment" = \'product-6\'');
+		$prodAfterEmbargo = DataObject::get_one('SiteTree', "{$bt}URLSegment{$bt} = 'product-embargo'");
 
 		$this->assertEquals('New Title', $prodAfterEmbargo->Title, 'Correct page after embargo.');
 		
 
 		SiteTreeFutureState::set_future_datetime('2020-06-07 16:00:00');
-		$prodAfterExpiry = DataObject::get_one('SiteTree', '"URLSegment" = \'product-6\'');
+		$prodAfterExpiry = DataObject::get_one('SiteTree', "{$bt}URLSegment{$bt} = 'product-embargo'");
 		$this->assertFalse($prodAfterExpiry, 'No page after expiry.');
 		
 		
@@ -62,18 +65,20 @@ class SiteTreeFutureStateTest extends SapphireTest {
 	}
 
 	function testTopLevelPagesArentAffectedByEmbargoedChildren() {
+		$bt = defined('DB::USE_ANSI_SQL') ? "\"" : "`";
+
 		// The top-level items have no embargo/expiry, and so should be unaffected by the embargoes
 		// of their children
 		
-		$items1 = DataObject::get("SiteTree", "\"ParentID\" = 0 AND \"ShowInMenus\" = 1")->column("Title");
+		$items1 = DataObject::get("SiteTree", "{$bt}ParentID{$bt} = 0 AND {$bt}ShowInMenus{$bt} = 1")->column("Title");
 		SiteTreeFutureState::set_future_datetime('2020-01-01 10:00:00');
-		$items2 = DataObject::get("SiteTree", "\"ParentID\" = 0 AND \"ShowInMenus\" = 1")->column("Title");
+		$items2 = DataObject::get("SiteTree", "{$bt}ParentID{$bt} = 0 AND {$bt}ShowInMenus{$bt} = 1")->column("Title");
 		SiteTreeFutureState::set_future_datetime('2020-01-01 10:59:00');
-		$items3 = DataObject::get("SiteTree", "\"ParentID\" = 0 AND \"ShowInMenus\" = 1")->column("Title");
+		$items3 = DataObject::get("SiteTree", "{$bt}ParentID{$bt} = 0 AND {$bt}ShowInMenus{$bt} = 1")->column("Title");
 		SiteTreeFutureState::set_future_datetime('2020-01-01 11:01:00');
-		$items4 = DataObject::get("SiteTree", "\"ParentID\" = 0 AND \"ShowInMenus\" = 1")->column("Title");
+		$items4 = DataObject::get("SiteTree", "{$bt}ParentID{$bt} = 0 AND {$bt}ShowInMenus{$bt} = 1")->column("Title");
 		SiteTreeFutureState::set_future_datetime('2020-01-03 11:01:00');
-		$items5 = DataObject::get("SiteTree", "\"ParentID\" = 0 AND \"ShowInMenus\" = 1")->column("Title");
+		$items5 = DataObject::get("SiteTree", "{$bt}ParentID{$bt} = 0 AND {$bt}ShowInMenus{$bt} = 1")->column("Title");
 		
 		$this->assertEquals(array('Home', 'About Us', 'Products', 'Contact Us'), $items1);
 		$this->assertEquals(array('Home', 'About Us', 'Products', 'Contact Us'), $items2);
@@ -125,8 +130,10 @@ class SiteTreeFutureStateTest extends SapphireTest {
 	 */
 	function test404PageOnFutureState() {
 		SiteTreeFutureState::set_future_datetime('2020-01-01 09:59:00');
-		
-		$errorPage = DataObject::get_one("ErrorPage", "\"ErrorCode\" = '404'");
+
+		$bt = defined('DB::USE_ANSI_SQL') ? "\"" : "`";
+
+		$errorPage = DataObject::get_one("ErrorPage", "{$bt}ErrorCode{$bt} = '404'");
 
 		$this->assertType('ErrorPage', $errorPage);
 		$this->assertEquals("Page not Found", $errorPage->Title);
@@ -141,8 +148,10 @@ class SiteTreeFutureStateTest extends SapphireTest {
 		
 		SiteTreeFutureState::set_future_datetime('2020-01-03 11:01:00');
 
-		$aboutStage = Versioned::get_one_by_stage("SiteTree", "Stage", "\"SiteTree\".\"ID\" = '$about->ID'");
-		$aboutLive = Versioned::get_one_by_stage("SiteTree", "Live", "\"SiteTree\".\"ID\" = '$about->ID'");
+		$bt = defined('DB::USE_ANSI_SQL') ? "\"" : "`";
+
+		$aboutStage = Versioned::get_one_by_stage("SiteTree", "Stage", "{$bt}SiteTree{$bt}.{$bt}ID{$bt} = '$about->ID'");
+		$aboutLive = Versioned::get_one_by_stage("SiteTree", "Live", "{$bt}SiteTree{$bt}.{$bt}ID{$bt} = '$about->ID'");
 		
 		$this->assertEquals('New About Us', $aboutStage->Title);
 		$this->assertEquals('About Us', $aboutLive->Title);
@@ -195,7 +204,7 @@ class SiteTreeFutureStateTest extends SapphireTest {
 		$this->assertTrue(in_array($this->idFromFixture('Page', 'product5'), $pages));
 		$this->assertTrue(in_array($this->idFromFixture('VirtualPage', 'vproduct5'), $pages));
 		
-		SiteTreeFutureState::set_future_datetime('2020-01-01 9:00:00');
+		SiteTreeFutureState::set_future_datetime('2020-01-01 09:00:00');
 
 		$pages = DataObject::get("SiteTree")->column("ID");
 		$this->assertTrue(in_array($this->idFromFixture('Page', 'product5'), $pages));
@@ -237,7 +246,7 @@ class SiteTreeFutureStateTest extends SapphireTest {
 		$this->assertEquals('Product 1', $vp1->Title);
 
 		// Verify the the change isn't reflected in future state prior to the embargo date
-		SiteTreeFutureState::set_future_datetime('2019-01-01 9:30:00');
+		SiteTreeFutureState::set_future_datetime('2019-01-01 09:30:00');
 		singleton('Page')->flushCache();
 
 		$p1 = $this->objFromFixture('Page', 'product1');

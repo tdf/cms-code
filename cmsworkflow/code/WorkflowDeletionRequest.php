@@ -67,6 +67,7 @@ class WorkflowDeletionRequest extends WorkflowRequest implements i18nEntityProvi
 		if(
 			!$openRequest
 			&& $page->canEdit() 
+			&& (!$page->canPublish() || self::$publisher_can_create_wf_requests)
 			//&& $page->stagesDiffer('Stage', 'Live')
 			//&& $page->isPublished()
 			&& $page->IsDeletedFromStage
