@@ -168,7 +168,7 @@ class ForumRole extends DataObjectDecorator {
 			new CheckableOption("EmailPublic", new EmailField("Email", _t('ForumRole.EMAIL','Email'))),
 			new DropdownField ('Locale','CMS Locale', i18n::get_existing_translations(), i18n::get_locale()),
 			new ConfirmedPasswordField("Password", _t('ForumRole.PASSWORD','Password')),
-			new SimpleImageField('Avatar', $avatarText)
+			new SimpleImageField('Avatar', $avatarText, null, null, null, "Avatars")
 		);
 
 		$personalDetailsFields->setID('PersonalDetailsFields');
