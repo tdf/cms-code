@@ -455,7 +455,7 @@ TreeNode.prototype = {
 				obj.fileIcon = _TREE_ICONS[className].fileIcon;
 				obj.openFolderIcon = _TREE_ICONS[className].openFolderIcon;
 				obj.closedFolderIcon = _TREE_ICONS[className].closedFolderIcon;
-				throw $break;
+				//throw $break;
 			
 			} else if(className == "Page") {
 				obj.fileIcon = null;
