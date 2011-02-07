@@ -6,7 +6,8 @@ class Page extends SiteTree {
 		'ShufflerWidth' => 'Int',
 		'ShufflerHeight' => 'Int',
 		'PauseSeconds' => 'Decimal',
-		'FadeSeconds' => 'Decimal'
+		'FadeSeconds' => 'Decimal',
+		'UseColorbox' => 'Boolean'
 	);
 	static $defaults = array(
 		'ShufflerWidth' => 400,
@@ -21,6 +22,7 @@ class Page extends SiteTree {
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->addFieldToTab('Root.Content.Main', new CheckboxField('IsFullWidth'), 'Content');
+		$fields->addFieldToTab('Root.Content.Colorbox', new CheckboxField('UseColorbox'));
 
 		$width = new NumericField('ShufflerWidth', "Scale images to width x height (keeps aspect ratio)");
 		$height = new NumericField('ShufflerHeight', " x ");
@@ -138,6 +140,38 @@ class Page_Controller extends ContentController {
 		Requirements::themedCSS('layout'); 
 		Requirements::themedCSS('typography'); 
 		Requirements::themedCSS('form'); 
+		if ($this->UseColorbox) {
+			Requirements::themedCSS('colorbox');
+			Requirements::javascript(THIRDPARTY_DIR.'/jquery/jquery-packed.js');
+			Requirements::javascript('mysite/javascript/jquery.colorbox-min.js');
+			Requirements::customScript(<<<JS
+;(function($) {
+  $(document).ready(function() {
+    $("a[rel='colorbox']").colorbox({
+      slideshow:true, slideshowAuto: false,
+      maxWidth:"100%", maxHeight:"100%",
+      transition: "fade"
+    });
+    $('img[src*="/_resampled/"]').each(function() {
+      $(this).colorbox({
+        href: function(){return $(this).attr('src').replace(/_resampled\/[^-]+-/, "");},
+        maxWidth:"100%", maxHeight:"100%", initialWidth: "100", initialHeight: "100"
+      });
+    });
+    $('img.colorbox[src*="/_resampled/"]').each(function() {
+      $(this).colorbox({
+        transition: "elastic"
+      });
+    });
+    $('div.colorbox').each(function(index) {
+      $(this).find('img[src*="/_resampled/"]').colorbox({rel: "colorbox"+index, transition: "fade"});
+    });
+  })
+})(jQuery);
+JS
+			);
+		}
+
 		//enable tranlate-function _t ...
 		if($this->dataRecord->hasExtension('Translatable')) {
 			i18n::set_locale($this->dataRecord->Locale);
