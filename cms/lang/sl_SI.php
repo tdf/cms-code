@@ -125,7 +125,7 @@ $lang['sl_SI']['CMSMain']['MENUTITLE'] = array(
 $lang['sl_SI']['CMSMain']['MENUTITLEOPT'] = 'Oznaka za krmarjenje';
 $lang['sl_SI']['CMSMain']['METADESCOPT'] = 'Opis';
 $lang['sl_SI']['CMSMain']['METAKEYWORDSOPT'] = 'Ključne besede';
-$lang['en_US']['CMSMain']['NEW'] = array(
+$lang['sl_SI']['CMSMain']['NEW'] = array(
 	'Nova ',
 	PR_MEDIUM,
 	'"Nova " sledi imeRazreda (className)'

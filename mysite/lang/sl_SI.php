@@ -9,3 +9,4 @@ $lang['sl_SI']['Downloadpage']['DLSUITE']    = 'Drugi načini prenosa pisarnišk
 $lang['sl_SI']['Donationpage']['AMOUNT'] = 'Znesek:';
 
 $lang['sl_SI']['Navigation']['GOTOPAGE'] = '"Pojdi na stran %s"';
+$lang['sl_SI']['Navigation']['TOTOPTITLE'] = 'pojdi na vrh strani';
