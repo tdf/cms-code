@@ -1437,6 +1437,9 @@ class i18n extends Object {
 		'zu' => 'zu_ZA',
 	);
 	
+	/* languages written from right to left */
+	static $rtl_langs = array('ar_EG', 'he_IL');
+
 	/**
 	 * This is the main translator function. Returns the string defined by $class and $entity according to the currently set locale.
 	 *

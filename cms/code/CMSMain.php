@@ -96,7 +96,13 @@ class CMSMain extends LeftAndMain implements CurrentPageIdentifier, PermissionPr
 		// see http://wiki.moxiecode.com/index.php/TinyMCE:Plugins/spellchecker
 		$langName = i18n::get_locale_name($this->Locale);
 		HtmlEditorConfig::get('cms')->setOption('spellchecker_languages', "+{$langName}={$this->Locale}");
-				
+		// rtl text direction in editor?
+		if (in_array($this->Locale, i18n::$rtl_langs)) {
+			HtmlEditorConfig::get_active()->setOption('directionality', 'rtl');
+			HtmlEditorConfig::get_active()->enablePlugins('directionality');
+			HtmlEditorConfig::get_active()->insertButtonsAfter('tablecontrols','ltr','rtl');
+		}
+
 		Requirements::javascript(CMS_DIR . '/javascript/CMSMain.js');
 		Requirements::javascript(CMS_DIR . '/javascript/CMSMain_left.js');
 		Requirements::javascript(CMS_DIR . '/javascript/CMSMain_right.js');
