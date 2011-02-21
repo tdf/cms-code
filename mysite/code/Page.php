@@ -195,6 +195,10 @@ JS
 		}
 	}
 
+	public function isRTL() {
+		return in_array($this->Locale, i18n::rtl_langs);
+	}
+
 	// override get menus to add fallback to subsite's default language
 	public function getMenu($level = 1) {
 		if($level == 1) {
