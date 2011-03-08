@@ -11,7 +11,7 @@ $(document).ready(function() {
 	if (navplatform == "win32") {
 		platform = "winx86";
 	} else if (navplatform == "macintel") {
-		platform="macintel" ;
+		platform="macx86" ;
 	} else if (navplatform == "macppc") {
 		platform = "macpp";
 	} else if (navplatform.substring(0,5) == "linux") {
