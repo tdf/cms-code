@@ -93,10 +93,12 @@ class UpdateDownloadsTask extends DailyTask {
 		print "got ".$dbtemp->Count()." files…";
 		print " flushing table…";
 		DB::query('TRUNCATE TABLE Download');
-		print " writing records…";
+		print " writing records…\n";
+		$i=0;
 		foreach ($dbtemp as $record) {
+			if (++$i % 10 == 0) print "#";
 			$record->write();
 		}
-		print " - Finished :-)";
+		print "\nFinished :-)\n";
 	}
 }
