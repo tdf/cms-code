@@ -7,6 +7,8 @@
 
 # that includes database password, recaptcha keys and the like, so sorry, not shared :-)
 /mysite/_config.php
+# mapping of path->hostname for commandline use, might also contain passwords
+/_ss_environment.php
 
 # that theme is kept in a seperate repository
 /themes/tdf/
@@ -14,3 +16,5 @@
 
 # this one is auto-generated
 /subsites/host-map.php
+# contains partially cached blocks
+/silverstripe-cache/
