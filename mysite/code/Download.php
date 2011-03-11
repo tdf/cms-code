@@ -41,4 +41,8 @@ class Download extends DataObject {
 	public function langForDropdown() {
 		return $this->Lang." - ".Convert::html2raw(self::NiceLang());
 	}
+	/* change default of persistent-parameter to avoid invalidating the cache on each save */
+	public function flushCache($persistent = False) {
+		parent::flushCache($persistent);
+	}
 }

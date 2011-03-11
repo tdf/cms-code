@@ -99,6 +99,8 @@ class UpdateDownloadsTask extends DailyTask {
 			if (++$i % 10 == 0) print "#";
 			$record->write();
 		}
+		/* invalidate the cache, as it's skipped when saving the individual Downloads */
+		Aggregate::flushCache('Download');
 		print "\nFinished :-)\n";
 	}
 }
