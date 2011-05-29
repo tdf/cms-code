@@ -1,3 +1,6 @@
 [submodule "cmsworkflow"]
 	path = cmsworkflow
 	url = ../silverstripe-cmsworkflow.git
+[submodule "spamprotection"]
+	path = spamprotection
+	url = ../silverstripe-spamprotection.git
