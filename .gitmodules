@@ -4,3 +4,6 @@
 [submodule "spamprotection"]
 	path = spamprotection
 	url = ../silverstripe-spamprotection.git
+[submodule "userforms"]
+	path = userforms
+	url = ../silverstripe-userforms.git
