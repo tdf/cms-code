@@ -5,6 +5,9 @@ $(document).ready(function() {
 	$("ul#uldown ul").hide(); /* collapse everything */
 	$("ul#uldown li:only-child > ul").show(); /* when there is no choice, don't force the user to click */
 	$("ul#uldown li#sourcedl > ul > li:first > ul").show(); /* show the latest version of sources by default */
+	/* remove obsolete langs from dropdown - map it in the change function instead */
+	if ($("select#lang option[value='nso']").length > 0) { $("select#lang option[value='ns']").remove(); }
+	if ($("select#lang option[value='be']").length  > 0) { $("select#lang option[value='be-BY']").remove(); }
 	/* preselect platform  default to rpm on linux TODO: Change options in html, so that platform here doesn't need any mapping */
 	var navplatform = navigator.platform.toLowerCase();
 	var platform = "";
@@ -43,59 +46,81 @@ $(document).ready(function() {
 
 	$("select#platform").change(function () {
 		var sel=$(this).val();
-		var matches = "";
 		$("select#lang").trigger("change");
 		}).change();
 
 	$("select#lang").change(function () {
-		var matches = "";
-		var downloadnote = "";
-		var fullinstall = "";
 		var platform = $("select#platform").val();
 		var sel=$(this).val();
-		if (platform == "winx86") {
-			if ( $.inArray( sel, multilangs ) > -1 ) {
-				fullinstall = "<li>"+$("ul#uldown ul.winx86 > li.install.multi").html()+"</li>";
-			} else {
-				fullinstall = "<li>"+$("ul#uldown ul.winx86 > li.install.all").html()+"</li>";
+		var filteredoutput = "";
+		$("ul#uldown > li#libodl > ul > li > a").each(function() {
+			var downloadnote = "";
+			var fullinstall = "";
+			var helppack = "";
+			var langpack = "";
+			var version = $(this).html();
+			/* nso and ns are both used - nso is preferred, be-BY and be are both used, be is preferred */
+			if (version.indexOf("3.3.") >= 0) {
+				if (sel == "nso") {
+					sel="ns";
+				} else if (sel == "be") {
+					sel="be-BY";
+				}
 			}
-			var helppack = $("ul#uldown ul.winx86 ul li."+sel).length ? $("ul#uldown ul.winx86 ul li."+sel).html() : $("ul#uldown ul.winx86 ul li.en-US").html() + " (fallback)";
-			if(helppack != "") {
-				matches = matches + "<li>"+helppack+"</li>";
-			}
-			if (sel == "pt-BR" ) {
-				/* special treatment for BrOffice */
-				fullinstall = fullinstall.replace(/LibO/g, "BrOffice");
-				matches = matches.replace(/LibO/g, "BrOffice");
-			}
-		} else {
-			fullinstall = "<li>"+$("ul#uldown ul."+platform+" >li:first-child").html()+"</li>";
 
-			if (sel != "en-US") {
-				downloadnote = '<p>For languages other than english, you need to download both the full installset (in english language), as well as the language pack that will add support for the desired language</p>';
+			if (platform == "winx86") {
+				if ( version.indexOf("3.4.") >= 0 || $.inArray( sel, multilangs ) > -1 ) {
+					fullinstall = "<li>"+$(this).next("ul").find("ul.winx86 > li.install.multi").html()+"</li>";
+				} else {
+					fullinstall = "<li>"+$(this).next("ul").find("ul.winx86 > li.install.all").html()+"</li>";
+				}
+			} else {
+				fullinstall = "<li>"+$(this).next("ul").find("ul."+platform+" >li.install").html()+"</li>";
+				if (sel != "en-US") {
+					downloadnote = '<p>For languages other than english, you need to download both the full installset (in english language), as well as the language pack that will add support for the desired language</p>';
+					langpack = "<li>"+$(this).next("ul").find("ul."+platform+" ul li.lang."+sel).html()+"</li>";
+				}
 			}
-			$("ul#uldown ul."+platform+" ul li."+sel).each(function() {
-				matches = matches + "<li>"+$(this).html()+"</li>";
-			});
+			/* fallback to en-US helppack in case there is none for the desired language */
+			helppack = (platform.indexOf("mac") >= 0) ? "" : $(this).next("ul").find("ul."+platform+" ul li.help."+sel).length ? "<li>"+$(this).next("ul").find("ul."+platform+" ul li.help."+sel).html()+"</li>" : "<li>"+$(this).next("ul").find("ul."+platform+" ul li.help.en-US").html() + " (fallback)</li>";
+			filteredoutput += "<!-- "+downloadnote+' --><ul class="'+ (version.indexOf("3.4.") >= 0 ? "warning" : "tick") +'">'+fullinstall+langpack+helppack+"</ul>";
+		});
+		if (sel == "pt-BR" && platform == "winx86") {
+			/* special treatment for BrOffice - phased out with 3.4 */
+			filteredoutput = filteredoutput.replace(/LibO_3.3/g, "BrOffice_3.3");
 		}
-		if (matches == "" && sel != "en-US") {
-			downloadnote = "<p>Sorry, no package for »"+sel+"« available for »"+$("select#platform option:selected").text()+"«. Please choose another language or only download the english version</p>";
-		}
-		$("div#filtered").html("<!-- "+downloadnote+" --><ul>"+fullinstall+matches+"</ul>");
+		$("div#filtered").html(filteredoutput);
+		$("div#filtered a").each(function() { try { piwikTracker.addListener(this); } catch(err) {} });
 		}).change();
 
 	$("input#BT").change(function () {
 		if ( $(this).is(":checked") ) {
-			$("div#filtered ul li a, ul#uldown a:not(.action)").each( function() {
+			$("div#filtered ul li > a, ul#uldown li > a:not(.action)").each( function() {
 				     $(this).attr("href", this.href + ".torrent");
 				     $(this).append(".torrent");
 				       });
 		} else {
-			$("div#filtered ul li a, ul#uldown a:not(.action)").each( function() {
+			$("div#filtered ul li > a, ul#uldown li > a:not(.action)").each( function() {
 				$(this).attr("href", this.href.replace(/\.torrent$/,""));
 				$(this).text($(this).text().replace(/\.torrent$/, ""));
 				});
 
+		}
+	}).change();
+
+	$("input#Details").change(function () {
+		if ( $(this).is(":checked") ) {
+			if ($("input#BT").is(":checked")) {
+				$("div#filtered ul li a, ul#uldown a:not(.action)").each( function() {
+					$(this).parent().append('<span class="detaillink"> <a href="' + this.href.replace(/torrent$/,"mirrorlist") +'">md5sum,…</a></span>');
+				});
+			} else {
+				$("div#filtered ul li a, ul#uldown a:not(.action)").each( function() {
+					$(this).parent().append('<span class="detaillink"> <a href="' + this.href +'.mirrorlist">md5sum,…</a></span>');
+				});
+			}
+		} else {
+			$(".detaillink").remove();
 		}
 	}).change();
 
