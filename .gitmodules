@@ -7,3 +7,6 @@
 [submodule "userforms"]
 	path = userforms
 	url = ../silverstripe-userforms.git
+[submodule "news"]
+	path = news
+	url = ../silverstripe-news.git
