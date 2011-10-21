@@ -10,3 +10,6 @@
 [submodule "news"]
 	path = news
 	url = ../silverstripe-news.git
+[submodule "sapphire"]
+	path = sapphire
+	url = ../sapphire
