@@ -16,3 +16,6 @@
 [submodule "forum"]
 	path = forum
 	url = ../silverstripe-forum
+[submodule "subsites"]
+	path = subsites
+	url = ../silverstripe-subsites
