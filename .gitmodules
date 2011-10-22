@@ -13,3 +13,6 @@
 [submodule "sapphire"]
 	path = sapphire
 	url = ../sapphire
+[submodule "forum"]
+	path = forum
+	url = ../silverstripe-forum
