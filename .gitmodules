@@ -19,3 +19,6 @@
 [submodule "subsites"]
 	path = subsites
 	url = ../silverstripe-subsites
+[submodule "cms"]
+	path = cms
+	url = ../silverstripe-cms
