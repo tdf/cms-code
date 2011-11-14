@@ -65,7 +65,7 @@ class Page extends SiteTree {
 		// depending on number of pages (note from docs)
 		Translatable::disable_locale_filter();
 		// Forms/Forum pages are dynamic,thus don't cache them
-		$pages = Subsite::get_from_all_subsites("SiteTree", "ClassName<>'UserDefinedForm' AND ClassName<>'Forum' AND ClassName<>'ForumHolder' AND ( CanViewType='Anyone' OR CanViewType='Inherit')");
+		$pages = Subsite::get_from_all_subsites("Page", "ClassName<>'UserDefinedForm' AND ClassName<>'Forum' AND ClassName<>'ForumHolder' AND ( CanViewType='Anyone' OR CanViewType='Inherit')");
 		Translatable::enable_locale_filter();
 
 		// check whether caching makes sense, and what other pages need to be taken care of
@@ -134,12 +134,12 @@ class Page_Controller extends ContentController {
 	public function init() {
 		parent::init();
 
-		// Note: you should use SS template require tags inside your templates 
-		// instead of putting Requirements calls here.  However these are 
+		// Note: you should use SS template require tags inside your templates
+		// instead of putting Requirements calls here.  However these are
 		// included so that our older themes still work
-		Requirements::themedCSS('layout'); 
-		Requirements::themedCSS('typography'); 
-		Requirements::themedCSS('form'); 
+		Requirements::themedCSS('layout');
+		Requirements::themedCSS('typography');
+		Requirements::themedCSS('form');
 		if ($this->UseColorbox) {
 			Requirements::themedCSS('colorbox');
 			Requirements::javascript(THIRDPARTY_DIR.'/jquery/jquery-packed.js');
@@ -155,15 +155,10 @@ class Page_Controller extends ContentController {
     $('img[src*="/_resampled/"]').each(function() {
       $(this).colorbox({
         href: function(){return $(this).attr('src').replace(/_resampled\/[^-]+-/, "");},
-        maxWidth:"100%", maxHeight:"100%", initialWidth: "100", initialHeight: "100"
+        maxWidth:"100%", maxHeight:"100%", initialWidth: "100", initialHeight: "100", transition: "elastic"
       });
     });
-    $('img.colorbox[src*="/_resampled/"]').each(function() {
-      $(this).colorbox({
-        transition: "elastic"
-      });
-    });
-    $('div.colorbox').each(function(index) {
+    $('div.colorbox,p.colorbox').each(function(index) {
       $(this).find('img[src*="/_resampled/"]').colorbox({rel: "colorbox"+index, transition: "fade"});
     });
   })
@@ -243,5 +238,20 @@ JS
 	public function Breadcrumbs($maxDepth = 20, $unlinked = false, $stopAtPageType = false, $showHidden = false) {
 		// show breadcrumbs also for pages not shown in menu
 		return parent::Breadcrumbs($maxDepth, $unlinked, $stopAtPageType, true);
+	}
+
+	public function getTranslations() {
+		$translations = parent::getTranslations();
+		if($translations) {
+			foreach($translations as $dataobject) {
+				$dataobject->NiceLang = $dataobject->obj(Locale)->Nice(True);
+			}
+			$translations->sort("NiceLang");
+		}
+		return $translations;
+	}
+
+	public function Banner() {
+		return new DataObjectSet(); /* return empty DataObject set to disable the banner */
 	}
 }
