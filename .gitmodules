@@ -37,3 +37,6 @@
 [submodule "uploadify"]
 	path = uploadify
 	url = ../Uploadify
+[submodule "dataobject_manager"]
+	path = dataobject_manager
+	url = ../DataObjectManager
