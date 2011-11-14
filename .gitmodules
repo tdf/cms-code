@@ -22,3 +22,6 @@
 [submodule "cms"]
 	path = cms
 	url = ../silverstripe-cms
+[submodule "recaptcha"]
+	path = recaptcha
+	url = ../silverstripe-recaptcha
