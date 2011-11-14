@@ -25,3 +25,6 @@
 [submodule "recaptcha"]
 	path = recaptcha
 	url = ../silverstripe-recaptcha
+[submodule "googlesitemaps"]
+	path = googlesitemaps
+	url = ../silverstripe-googlesitemaps
