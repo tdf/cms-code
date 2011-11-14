@@ -28,3 +28,6 @@
 [submodule "googlesitemaps"]
 	path = googlesitemaps
 	url = ../silverstripe-googlesitemaps
+[submodule "concurrentediting"]
+	path = concurrentediting
+	url = ../silverstripe-concurrentediting
