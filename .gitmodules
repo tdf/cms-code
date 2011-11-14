@@ -40,3 +40,6 @@
 [submodule "dataobject_manager"]
 	path = dataobject_manager
 	url = ../DataObjectManager
+[submodule "legacydatetimefields"]
+	path = legacydatetimefields
+	url = ../silverstripe-legacydatetimefields
