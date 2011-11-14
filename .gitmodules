@@ -34,3 +34,6 @@
 [submodule "event_calendar"]
 	path = event_calendar
 	url = ../EventCalendar
+[submodule "uploadify"]
+	path = uploadify
+	url = ../Uploadify
