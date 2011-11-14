@@ -31,3 +31,6 @@
 [submodule "concurrentediting"]
 	path = concurrentediting
 	url = ../silverstripe-concurrentediting
+[submodule "event_calendar"]
+	path = event_calendar
+	url = ../EventCalendar
