@@ -40,18 +40,18 @@ class UpdateDownloadsTask extends DailyTask {
 					'Fullpath' => $columns[4],
 					'Filename' => $pathcomponents[3])));
 				continue;
-			} elseif ($pathcomponents[1] == "src") {
-				//-rw-r--r--    35706005 2011/01/18 18:16:37 libreoffice/src/libreoffice-libs-extern-sys-3.3.0.4.tar.bz2
-				$temp = explode("-", $pathcomponents[2]);
-				$version = explode(".tar",end($temp));
+			} elseif ($pathcomponents[1] == "src" && strrpos($pathcomponents[3], "tar.bz2") === strlen($pathcomponents[3])-strlen("tar.bz2")) {
+				//-rw-r--r--    35706005 2011/01/18 18:16:37 libreoffice/src/3.3.0.4/libreoffice-libs-extern-sys-3.3.0.4.tar.bz2
+				//only accept real src tarballs, no .log/.txt stuff anymore
+				$version = $pathcomponents[2];
 				$dbtemp->push(new Download(array(
 					'Type'     => 'src',
 					'Platform' => "multi",
 					'Arch'     => "multi",
-					'Version'  => $version[0],
+					'Version'  => $version,
 					'Size'     => $columns[1],
 					'Fullpath' => $columns[4],
-					'Filename' => $pathcomponents[2])));
+					'Filename' => $pathcomponents[3])));
 				continue;
 			} elseif ($pathcomponents[1] == "stable" || $pathcomponents[1] == "testing") {
 				//-rw-r--r--     8675353 2011/02/16 14:59:45 libreoffice/stable/3.3.1/deb/x86/LibO-SDK_3.3_Linux_x86_install-deb_en-US.tar.gz

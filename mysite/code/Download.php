@@ -33,10 +33,10 @@ class Download extends DataObject {
 		return ucfirst(i18n::get_language_name($this->Lang, true));
 	}
 	public function Helppacks() {
-		return DataObject::get("Download", "Type = '".$this->Type."' AND InstallType = 'Helppack' AND Platform = '".$this->Platform."' AND Arch ='".$this->Arch."'", 'Lang');
+		return DataObject::get("Download", "Type = '".$this->Type."' AND Version = '".$this->Version."' AND InstallType = 'Helppack' AND Platform = '".$this->Platform."' AND Arch ='".$this->Arch."'", 'Lang');
 	}
 	public function Langpacks() {
-		return DataObject::get("Download", "Type = '".$this->Type."' AND InstallType = 'Languagepack' AND Platform = '".$this->Platform."' AND Arch ='".$this->Arch."'", 'Lang');
+		return DataObject::get("Download", "Type = '".$this->Type."' AND Version = '".$this->Version."' AND InstallType = 'Languagepack' AND Platform = '".$this->Platform."' AND Arch ='".$this->Arch."'", 'Lang');
 	}
 	public function langForDropdown() {
 		return $this->Lang." - ".Convert::html2raw(self::NiceLang());

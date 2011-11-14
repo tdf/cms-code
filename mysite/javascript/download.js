@@ -83,7 +83,7 @@ $(document).ready(function() {
 			}
 			/* fallback to en-US helppack in case there is none for the desired language */
 			helppack = (platform.indexOf("mac") >= 0) ? "" : $(this).next("ul").find("ul."+platform+" ul li.help."+sel).length ? "<li>"+$(this).next("ul").find("ul."+platform+" ul li.help."+sel).html()+"</li>" : "<li>"+$(this).next("ul").find("ul."+platform+" ul li.help.en-US").html() + " (fallback)</li>";
-			filteredoutput += "<!-- "+downloadnote+' --><ul class="'+ (version.indexOf("3.4.") >= 0 ? "warning" : "tick") +'">'+fullinstall+langpack+helppack+"</ul>";
+			filteredoutput += "<!-- "+downloadnote+' --><ul class="tick">'+fullinstall+langpack+helppack+"</ul>";
 		});
 		if (sel == "pt-BR" && platform == "winx86") {
 			/* special treatment for BrOffice - phased out with 3.4 */
