@@ -13,7 +13,7 @@ class Download extends DataObject {
 		'Version' => 'Varchar(20)', /* 3.3.0, 3.3.1-rc2, 3.3.0.4 (Sources),...*/
 		'Size' => 'DBFileSize',  /* varchartype not int because of dvd-isos, larger than int-type */
 		'Fullpath' => 'Varchar(256)', /* redundant, but as the scheme differs between type... */
-		'Filename' => 'Varchar', /* redundant, but as the scheme differs between type... */
+		'Filename' => 'Varchar(100)', /* redundant, but as the scheme differs between type... */
 		'InstallType' => 'Varchar(20)', /* Full, Helppack, Languagepack, SDK */
 		'Lang' => 'Varchar(10)', /* multi/all_lang (win), en-US,...pt-BR,... */ 
 		);
