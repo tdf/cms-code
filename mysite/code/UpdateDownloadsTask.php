@@ -16,55 +16,57 @@ class UpdateDownloadsTask extends DailyTask {
 			//-rw-r--r--    12063639 2010/11/11 13:31:05 libreoffice/src/libreoffice-build-3.2.99.3.tar.gz
 			$columns = preg_split("/ +/", $line);
 			$size = $columns[1];
-			$pathcomponents = explode("/", $columns[4]);
+			$path = $columns[4];
+			if ($path=="TIMESTAMP" || substr($path,-4)==".log") continue;
 
-			if ($pathcomponents[1] == "box") {
+			$pathcomponents = explode("/", $path);
+			$type = count($pathcomponents) > 1 ? $pathcomponents[1] : "";
+			$version = count($pathcomponents) > 2 ? $pathcomponents[2] : "";
+			$filename = $pathcomponents[count($pathcomponents) - 1];
+
+			if ($type == "box") {
 				//-rw-r--r--  2830882816 2011/02/10 14:17:09 libreoffice/box/3.3.0/LibO-3.3.0-1_DVD_allplatforms_de.iso
 				$dbtemp->push(new Download(array(
 					'Type'     => 'box',
 					'Platform' => "multi",
 					'Arch'     => "multi",
-					'Version'  => $pathcomponents[2],
-					'Size'     => $columns[1],
-					'Fullpath' => $columns[4],
-					'Filename' => $pathcomponents[3])));
-				continue;
-			} elseif ($pathcomponents[1] == "portable") {
+					'Version'  => $version,
+					'Size'     => $size,
+					'Fullpath' => $path,
+					'Filename' => $filename)));
+			} elseif ($type == "portable") {
 				//-rw-r--r--   123947264 2011/01/27 11:14:23 libreoffice/portable/3.3.0/LibreOfficePortable_3.3.0.paf.exe
 				$dbtemp->push(new Download(array(
 					'Type'     => 'portable',
 					'Platform' => "win",
 					'Arch'     => "x86",
-					'Version'  => $pathcomponents[2],
-					'Size'     => $columns[1],
-					'Fullpath' => $columns[4],
-					'Filename' => $pathcomponents[3])));
-				continue;
-			} elseif ($pathcomponents[1] == "src" && strrpos($pathcomponents[3], "tar.bz2") === strlen($pathcomponents[3])-strlen("tar.bz2")) {
+					'Version'  => $version,
+					'Size'     => $size,
+					'Fullpath' => $path,
+					'Filename' => $filename)));
+			} elseif ($type == "src" && (substr($filename, -8) == ".tar.bz2" || substr($filename, -7) == ".tar.gz" || substr($filename, -7) == ".tar.xz")) {
 				//-rw-r--r--    35706005 2011/01/18 18:16:37 libreoffice/src/3.3.0.4/libreoffice-libs-extern-sys-3.3.0.4.tar.bz2
 				//only accept real src tarballs, no .log/.txt stuff anymore
-				$version = $pathcomponents[2];
 				$dbtemp->push(new Download(array(
 					'Type'     => 'src',
 					'Platform' => "multi",
 					'Arch'     => "multi",
 					'Version'  => $version,
-					'Size'     => $columns[1],
-					'Fullpath' => $columns[4],
-					'Filename' => $pathcomponents[3])));
-				continue;
-			} elseif ($pathcomponents[1] == "stable" || $pathcomponents[1] == "testing") {
+					'Size'     => $size,
+					'Fullpath' => $path,
+					'Filename' => $filename)));
+			} elseif ($type == "stable" || $type == "testing") {
 				//-rw-r--r--     8675353 2011/02/16 14:59:45 libreoffice/stable/3.3.1/deb/x86/LibO-SDK_3.3_Linux_x86_install-deb_en-US.tar.gz
 				//-rw-r--r--     9085513 2011/02/16 15:01:55 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_helppack-deb_af.tar.gz
 				//-rw-r--r--   152944835 2011/02/16 15:59:47 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_install-deb_en-US.tar.gz
 				//-rw-r--r--     8377809 2011/02/16 16:53:09 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_langpack-deb_sw-TZ.tar.gz
 				//-rw-r--r--   260409206 2011/02/16 22:03:46 libreoffice/stable/3.3.1/win/x86/LibO_3.3.1_Win_x86_install_all_lang.exe
 				//-rw-r--r--   223750368 2011/02/16 23:31:06 libreoffice/stable/3.3.1/win/x86/LibO_3.3.1_Win_x86_install_multi.exe
-				if(substr($pathcomponents[5],0,8) == "LibO-SDK" || substr($pathcomponents[5],0,12) == "BrOffice-SDK") {
+				if(substr($filename,0,8) == "LibO-SDK" || substr($filename,0,12) == "BrOffice-SDK") {
 					$installtype = 'SDK';
 					$lang = 'en-US';
 				} else {
-					$temp = explode("_", $pathcomponents[5]);
+					$temp = explode("_", $filename);
 					switch (substr($temp[4],0,8)) {
 						case "helppack": $installtype='Helppack'; break;
 						case "langpack": $installtype='Languagepack'; break;
@@ -73,21 +75,20 @@ class UpdateDownloadsTask extends DailyTask {
 						default: Debug::message("Unknown install-type: ".substr($temp[4],0,8)); continue 2; //break out of switch & continue with next loop-item Send log about unknown installtype
 					}
 					$temp = explode(".", $temp[5]);
-					$lang = (substr($pathcomponents[5],0,8) == "BrOffice") ? 'pt-BR' : $temp[0];
+					$lang = (substr($filename,0,8) == "BrOffice") ? 'pt-BR' : $temp[0];
 				}
-                                $dbtemp->push(new Download(array(
-					'Type'     => $pathcomponents[1],
+				$dbtemp->push(new Download(array(
+					'Type'     => $type,
 					'Platform' => $pathcomponents[3],
 					'Arch'     => $pathcomponents[4],
-					'Version'  => $pathcomponents[2],
-					'Size'     => $columns[1],
-					'Fullpath' => $columns[4],
-					'Filename' => $pathcomponents[5],
+					'Version'  => $version,
+					'Size'     => $size,
+					'Fullpath' => $path,
+					'Filename' => $filename,
 					'InstallType' => $installtype,
 					'Lang'        => $lang)));
-                                continue;
 			} else {
-				Debug::message("Unknown install-type: ".$pathcomponents[1]);
+				Debug::message("Unknown install-type: ".$path);
 			}
 		}
 		print "got ".$dbtemp->Count()." files…";
