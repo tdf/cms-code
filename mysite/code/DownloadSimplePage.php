@@ -250,7 +250,6 @@ class DownloadSimplePage_Controller extends Page_Controller {
 			$temptype = "";
 			foreach (explode('-', $type) as $typepart)
 				$tags[] = "dltype".($temptype .= "-".$typepart);
-			print_r($tags);
 			foreach ($tags as $tag)
 				$sql[] = "concat(MetaKeywords,',') like '%".convert::raw2sql($tag).",%'";
 			$result = DataObject::get("SiteTree", "(".implode(" OR ", $sql).")", "MenuTitle");
