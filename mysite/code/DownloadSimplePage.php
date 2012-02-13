@@ -137,7 +137,7 @@ class DownloadSimplePage_Controller extends Page_Controller {
 		if (is_null($type) || ($type != "box" && $type != "src" && is_null($lang)) || is_null($version)) return new DataObjectSet();
 		
 		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("downloads" . sha1($type."-".$lang."-".$version))))||true) {
+		if (!($result = @unserialize($cache->load("downloads" . sha1($type."-".$lang."-".$version))))) {
 			$useMulti = strpos($version, "3.3.") === FALSE || in_array($lang, static::$multiLangs);
 			$rows = $type != "box" && $type != "src" ?
 				DB::query("SELECT InstallType, Fullpath, Size, Type FROM (".
