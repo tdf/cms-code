@@ -8,9 +8,9 @@ class TypeData extends ArrayData {
 		"mac-x86"      => "Mac OS X (Intel)",
 		"mac-ppc"      => "Mac OS X (PPC)",
 		"deb-x86"      => "Linux - deb (x86)",
-		"deb-x86_64"   => "Linux - deb (64-bit)",
+		"deb-x86_64"   => "Linux - deb (x86_64)",
 		"rpm-x86"      => "Linux - rpm (x86)",
-		"rpm-x86_64"   => "Linux - rpm (64-bit)",
+		"rpm-x86_64"   => "Linux - rpm (x86_64)",
 		"box"          => "CD/DVD-images",
 		"src"          => "Source code"
 		);
@@ -42,9 +42,13 @@ class LangData extends ArrayData {
 	public function getNativeName() {
 		return i18n::get_language_name($this->Lang, true);
 	}
+	public static function localeName($locale) {
+		$name = ucfirst(i18n::get_language_name($locale, false));
+		$name = _t("LocaleName.".$locale, $name);
+		return $name ? $name : $locale;
+	}
 	public function getName() {
-		$name = ucfirst(i18n::get_language_name($this->Lang, false)); 
-		return $name ? $name : $this->Lang;
+		return LangData::localeName($this->Lang);
 	}
 	public function getLink() {
 		return Controller::curr()->Link()."?".
@@ -69,8 +73,18 @@ class DownloadData extends ArrayData {
 
 class DownloadSimplePage extends Page {
 }
-class DownloadSimplePage_Controller extends Page_Controller {
+class DownloadSimplePage_Controller extends Page_Controller implements i18nEntityProvider {
 	private static $multiLangs = array("en-US","ar","ast","be-BY","bg","bn","bo","br","ca","ca-XV","cs","da","de","dz","el","en-GB","es","et","eu","fi","fr","gl","gu","he","hi","hr","hu","is","it","ja","km","kn","ko","lt","lv","mr","nb","nl","oc","om","or","pl","pt","pt-BR","ru","sh","si","sk","sl","sr","sv","te","tr","ug","vi","zh-CN","zh-TW");
+
+	function provideI18nEntities() {
+		$entities = parent::provideI18nEntities();
+		$rows = DB::query("SELECT distinct Lang FROM Download WHERE Lang NOT IN ('all','multi') ORDER BY Lang");
+		foreach ($rows as $row) {
+			$name = ucfirst(i18n::get_language_name($row["Lang"], false));
+			$entities["LocaleName.".$row["Lang"]] = array($name ? $name : $this->Lang);
+		}
+		return $entities;
+	}
 
 	private function WhereClause($type, $lang, $version) {
 		$types = explode('-', $type);
@@ -306,8 +320,9 @@ class DownloadSimplePage_Controller extends Page_Controller {
 		}
 
 		// For top of download page
-		if ($this->Type) $this->TypeName = isset(TypeData::$typenames[$this->Type]) ? TypeData::$typenames[$this->Type] : $this->Type;
-		if ($this->Lang) $this->LangName = ucfirst(i18n::get_language_name($this->Lang, false));
-		if ($this->Version) $this->VersionName = $this->Version;
+		$this->DownloadTypeVersionLang =
+			($this->Type ? isset(TypeData::$typenames[$this->Type]) ? TypeData::$typenames[$this->Type] : $this->Type : "").
+			($this->Version ? ", ".sprintf(_t("DownloadSimplePage.ss.DownloadsVersion", "version %s"), convert::raw2xml($this->Version)) : "").
+			($this->Lang ? ", ".convert::raw2xml(LangData::localeName($this->Lang)) : "");
 	}
 }
