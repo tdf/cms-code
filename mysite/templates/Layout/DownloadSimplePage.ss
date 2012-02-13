@@ -7,7 +7,7 @@
 <div class="typography">
 		<h1>$Title</h1>
 	
-		$Content
+		<%-- $Content --%>
 <style>
 table.columns {
 	border-collapse: collapse;
