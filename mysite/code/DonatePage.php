@@ -38,7 +38,7 @@ return '<p>PayPal: donations@documentfoundation.org</p>
 	<input name="return" value="http://www.documentfoundation.org" type="hidden">
 	<input name="undefined_quantity" value="0" type="hidden">
 	<input name="item_name" value="The Document Foundation" type="hidden">
-	'._t('Donationpage.AMOUNT', 'Amount:').' <input name="amount" size="4" maxlength="10" value="" style="text-align: right;" type="text">
+	'._t('Donationpage.AMOUNT', 'Amount:').' <input name="amount" size="4" maxlength="10" value="10" style="text-align: right;" type="text">
 		<select name="currency_code">
 			<option value="EUR">EUR</option>
 			<option value="USD">USD</option>
