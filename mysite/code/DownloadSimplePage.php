@@ -235,20 +235,24 @@ class DownloadSimplePage_Controller extends Page_Controller {
 		$result = $this->Downloads("src", null, $version);
 		return $result->Files;
 	}
-	public function RelatedPages($version = null) {
+	public function RelatedPages($type = null, $version = null) {
+		if (is_null($type)) $type = $this->Type;
 		if (is_null($version)) $version = $this->Version;
-		if (is_null($version)) return new DataObjectSet();
+		if (is_null($type) || is_null($version)) return new DataObjectSet();
 		
 		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("relatedpages" . sha1($version))))) {
-			$parts = explode(".", ".".str_replace("rc", ".rc", str_replace("beta", ".beta", $version)));
+		if (!($result = @unserialize($cache->load("relatedpages" . sha1($version))))||true) {
+			$tags = array("dl");
+			$parts = explode(".", str_replace("rc", ".rc", str_replace("beta", ".beta", $version)));
 			$tempver = "";
-			$sql = array();
-			for ($i = 0; $i < count($parts); $i++) {
-				$tempver .= ($i > 1 ? "." : "") . $parts[$i];
-				$sql[] = "MetaKeywords like '%download".convert::raw2sql($tempver)."'";
-				$sql[] = "MetaKeywords like '%download".convert::raw2sql($tempver).",%'";
-			}
+			for ($i = 0; $i < count($parts); $i++)
+				$tags[] = "dlver-".($tempver .= ($i > 0 ? "." : "") . $parts[$i]);
+			$temptype = "";
+			foreach (explode('-', $type) as $typepart)
+				$tags[] = "dltype".($temptype .= "-".$typepart);
+			print_r($tags);
+			foreach ($tags as $tag)
+				$sql[] = "concat(MetaKeywords,',') like '%".convert::raw2sql($tag).",%'";
 			$result = DataObject::get("SiteTree", "(".implode(" OR ", $sql).")", "MenuTitle");
 			$cache->save(serialize($result));
 		}
