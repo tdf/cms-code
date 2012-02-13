@@ -252,6 +252,7 @@ JS
 	}
 
 	public function Banner() {
-		return new DataObjectSet(); /* return empty DataObject set to disable the banner */
+		return true;
+		/*return new DataObjectSet(); return empty DataObject set to disable the banner */
 	}
 }
