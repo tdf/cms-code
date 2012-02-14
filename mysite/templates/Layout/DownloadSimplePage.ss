@@ -6,6 +6,9 @@
 <% include Translations %>
 <div class="typography">
 		<h1>$Title</h1>
+<!--
+$DebugInfo
+-->
 	
 		<%-- $Content --%>
 <style>
@@ -87,7 +90,6 @@ div.DownloadsRight a {
     border:1px solid #d9961e;
 }
 </style>
-
 <% if Downloads %><%-- Show downloads, if we have enough information --%>
 
 <% if Downloads.IsPreRelease %><div class='warning'><% _t('DownloadsPrereleaseWarning','This is a pre-release version not meant for genereal use.') %></div><% end_if %>
