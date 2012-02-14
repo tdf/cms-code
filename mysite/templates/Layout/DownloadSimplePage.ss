@@ -104,7 +104,7 @@ div.DownloadsRight a {
 <ul>
  <% control Downloads.Files %>
   <li>
-   <h2><a href='http://download.documentfoundation.org/$Fullpath'> <% if InstallType = "Full" %><% _t('DownloadsInstallTypeFull','Base installer') %><% else_if InstallType = "Languagepack" %><% _t('DownloadsInstallTypeLanguagepack','Translated user interface') %><% else_if InstallType = "Helppack" %><% _t('DownloadsInstallTypeHelppack','LibreOffice built-in help') %><% else %>$InstallType<% end_if %></a></h2>
+   <h2><a href='http://download.documentfoundation.org/$Fullpath'> <% if InstallType = "Full" %><% _t('DownloadsInstallTypeFull','Main installer') %><% else_if InstallType = "Languagepack" %><% _t('DownloadsInstallTypeLanguagepack','Translated user interface') %><% else_if InstallType = "Helppack" %><% _t('DownloadsInstallTypeHelppack','LibreOffice built-in help') %><% else %>$InstallType<% end_if %></a></h2>
    $SizeNice
    (<a href='http://download.documentfoundation.org/{$Fullpath}.torrent' title='<% _t('DownloadsTorrentTitle','Download the files using BitTorrent') %>'><% _t('DownloadsTorrentLink','Torrent') %></a>,
    <a href='http://download.documentfoundation.org/{$Fullpath}.mirrorlist' title='<% _t('DownloadsInfoTitle','See the md5sum and list of download mirrors for the file') %>'><% _t('DownloadsInfoLink','Info') %></a>)
