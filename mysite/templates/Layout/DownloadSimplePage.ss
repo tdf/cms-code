@@ -94,7 +94,7 @@ div.DownloadsRight a {
 
 <% if Downloads.IsPreRelease %><div class='warning'><% _t('DownloadsPrereleaseWarning','This is a pre-release version not meant for genereal use.') %></div><% end_if %>
 <p><% sprintf(_t('DownloadsHeader','LibreOffice <b>%s</b>. Not the version you wanted?'),$DownloadTypeVersionLang) %>
-<a href='$Link?nodetect'><% _t('DownloadsChangeLink','Change System or Language') %></a></p>
+<a href='$Link?nodetect'><% _t('DownloadsChangeLink','Change System, Version or Language') %></a></p>
 
 <div class="Downloads">
  <div  class="DownloadsLeft">

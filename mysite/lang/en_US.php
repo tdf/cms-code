@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 global $lang;
 
 $lang['en_US']['Donationpage']['AMOUNT']='Amount:';
@@ -15,7 +15,7 @@ $lang['en_US']['Navigation']['TOTOPTITLE']='scroll to top of page';
 $lang['en_US']['Navigation']['TOTOP']     ='⬆ to top';
 
 $lang['en_US']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'You need to download and install these files in order:';
-$lang['en_US']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Change System or Language';
+$lang['en_US']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Change System, Version or Language';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Developers';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Not the version you wanted?';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
