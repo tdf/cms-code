@@ -132,7 +132,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		if (is_null($type) || ($type != "box" && $type != "src" && is_null($lang))) return new DataObjectSet();
 		
 		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("versions" . sha1($type."-".$lang))))||true) {
+		if (!($result = @unserialize($cache->load("versions" . sha1($type."-".$lang))))) {
 			$rows = DB::query("SELECT distinct concat(Version, case when FullPath LIKE '%/BrOffice%' then '-br' else '' end) Version, ".
 				" CASE WHEN Type='testing' OR Version LIKE '%rc%' OR Version LIKE '%beta%' THEN 'testing' ELSE 'stable' END Type ".
 				"FROM Download WHERE 1=1 ".self::WhereClause($type != "win-x86" ? $type : null, $lang, null)."ORDER BY Type, Version DESC");
@@ -255,7 +255,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		if (is_null($type) || is_null($version)) return new DataObjectSet();
 		
 		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("relatedpages" . sha1($version))))||true) {
+		if (!($result = @unserialize($cache->load("relatedpages" . sha1($version))))) {
 			$tags = array("dl");
 			$parts = explode(".", str_replace("rc", ".rc", str_replace("beta", ".beta", $version)));
 			$tempver = "";
