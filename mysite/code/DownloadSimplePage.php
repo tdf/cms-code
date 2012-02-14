@@ -135,7 +135,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		if (!($result = @unserialize($cache->load("versions" . sha1($type."-".$lang))))) {
 			$rows = DB::query("SELECT distinct concat(Version, case when FullPath LIKE '%/BrOffice%' then '-br' else '' end) Version, ".
 				" CASE WHEN Type='testing' OR Version LIKE '%rc%' OR Version LIKE '%beta%' THEN 'testing' ELSE 'stable' END Type ".
-				"FROM Download WHERE 1=1 ".self::WhereClause($type, $lang, null)."ORDER BY Type, Version DESC");
+				"FROM Download WHERE 1=1 ".self::WhereClause(is_null($lang) ? $type : null, $lang, null)."ORDER BY Type, Version DESC");
 			$result = new DataObjectSet();
 			foreach ($rows as $row)
 				$result->push(new VersionData($row));
