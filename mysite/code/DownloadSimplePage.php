@@ -117,7 +117,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		$cache = SS_Cache::factory('DownloadSimplePageController');
 		if (!($result = @unserialize($cache->load("languages" . sha1($type))))) {
 			$rows = DB::query("SELECT distinct Lang ".
-				"FROM Download WHERE Lang NOT IN ('all','multi') ".self::WhereClause($type, null, null)."ORDER BY Lang");
+				"FROM Download WHERE Lang NOT IN ('all','multi') ".self::WhereClause($type != "win-x86" ? $type : null, null, null)."ORDER BY Lang");
 			$result = new DataObjectSet();
 			foreach ($rows as $row)
 				$result->push(new LangData($row));
