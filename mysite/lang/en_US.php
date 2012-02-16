@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 global $lang;
 
 $lang['en_US']['Donationpage']['AMOUNT']='Amount:';
@@ -15,12 +15,12 @@ $lang['en_US']['Navigation']['TOTOPTITLE']='scroll to top of page';
 $lang['en_US']['Navigation']['TOTOP']     ='⬆ to top';
 
 $lang['en_US']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'You need to download and install these files in order:';
-$lang['en_US']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Change System or Language';
+$lang['en_US']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Change System, Version or Language';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Developers';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Not the version you wanted?';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'See the md5sum and list of download mirrors for the file';
-$lang['en_US']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Base installer';
+$lang['en_US']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Main installer';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice built-in help';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Translated user interface';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s image';

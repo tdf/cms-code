@@ -117,7 +117,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		$cache = SS_Cache::factory('DownloadSimplePageController');
 		if (!($result = @unserialize($cache->load("languages" . sha1($type))))) {
 			$rows = DB::query("SELECT distinct Lang ".
-				"FROM Download WHERE Lang NOT IN ('all','multi') ".self::WhereClause($type, null, null)."ORDER BY Lang");
+				"FROM Download WHERE Lang NOT IN ('all','multi') ".self::WhereClause($type != "win-x86" ? $type : null, null, null)."ORDER BY Lang");
 			$result = new DataObjectSet();
 			foreach ($rows as $row)
 				$result->push(new LangData($row));
@@ -135,7 +135,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		if (!($result = @unserialize($cache->load("versions" . sha1($type."-".$lang))))) {
 			$rows = DB::query("SELECT distinct concat(Version, case when FullPath LIKE '%/BrOffice%' then '-br' else '' end) Version, ".
 				" CASE WHEN Type='testing' OR Version LIKE '%rc%' OR Version LIKE '%beta%' THEN 'testing' ELSE 'stable' END Type ".
-				"FROM Download WHERE 1=1 ".self::WhereClause($type, $lang, null)."ORDER BY Type, Version DESC");
+				"FROM Download WHERE 1=1 ".self::WhereClause($type != "win-x86" ? $type : null, $lang, null)."ORDER BY Type, Version DESC");
 			$result = new DataObjectSet();
 			foreach ($rows as $row)
 				$result->push(new VersionData($row));
@@ -255,7 +255,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		if (is_null($type) || is_null($version)) return new DataObjectSet();
 		
 		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("relatedpages" . sha1($version))))||true) {
+		if (!($result = @unserialize($cache->load("relatedpages" . sha1($version))))) {
 			$tags = array("dl");
 			$parts = explode(".", str_replace("rc", ".rc", str_replace("beta", ".beta", $version)));
 			$tempver = "";
@@ -279,43 +279,46 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		$this->Lang = (isset($_GET["lang"]) && $_GET["lang"] != "" ? $_GET["lang"] : null);
 		$this->Version = (isset($_GET["version"]) && $_GET["version"] != "" ? $_GET["version"] : null);
 
-		if (!$this->Type && !$this->Version && !isset($_GET["nodetect"])) {
-			// Detect platform and language
-			$fua = strtolower($_SERVER["HTTP_USER_AGENT"]);
-			$ua = strpos($fua, ")") ? substr($fua, 0, strpos($fua, ")")) : $fua;
-			$ua = strpos($ua, "(") ? substr($ua, strpos($ua, "(") + 1) : $fua;
+		// Detect platform and language
+		$fua = strtolower($_SERVER["HTTP_USER_AGENT"]);
+		$ua = strpos($fua, ")") ? substr($fua, 0, strpos($fua, ")")) : $fua;
+		$ua = strpos($ua, "(") ? substr($ua, strpos($ua, "(") + 1) : $fua;
 
-			$type = "";
+		$type = "";
+		if (strpos($ua, "windows") !== FALSE || strpos($ua, "win32") !== FALSE) $type = "win-x86";
+		elseif (strpos($ua, "macintosh") !== FALSE || strpos($ua, "mac os") !== FALSE) $type = (strpos($ua, "intel") !== FALSE ? "mac-x86" : "mac-ppc");
+		elseif (strpos($ua, "linux") !== FALSE) $type = (strpos($fua, "buntu") !== FALSE || strpos($fua, "debian") !== FALSE || strpos($fua, "iceweasel") !== FALSE ? "deb" : "rpm")."-".(strpos($ua, "x86_64") || strpos($ua, "amd64") ? "x86_64" : "x86");
+
+		// Find langauge candidates
+		$langCandidates = array();
+		if ($this->Lang) array_push($langCandidates, $this->Lang);
+		if (i18n::get_locale() != "en_US") array_push($langCandidates, i18n::get_locale());
+		foreach (explode(",", $_SERVER["HTTP_ACCEPT_LANGUAGE"]) as $value) {
+			$parts = explode(";", $value);
+			array_push($langCandidates, $parts[0]);
+		}
+		foreach (explode(";", $ua) as $value) {
+			array_push($langCandidates, $value);
+		}
+		array_push($langCandidates, i18n::get_locale());
+
+		$this->DebugInfo = htmlentities("User-Agent:$fua\nAccept-language:".$_SERVER["HTTP_ACCEPT_LANGUAGE"]."\ntype:$type\nLang:".implode("|",$langCandidates));
+
+		if ($type && !$this->Type && !$this->Version && !isset($_GET["nodetect"])) {
+			// Check langauge candidates
 			$lang = "";
-			if (strpos($ua, "windows") !== FALSE || strpos($ua, "win32") !== FALSE) $type = "win-x86";
-			elseif (strpos($ua, "macintosh") !== FALSE || strpos($ua, "mac os") !== FALSE) $type = (strpos($ua, "intel") !== FALSE ? "mac-x86" : "mac-ppc");
-			elseif (strpos($ua, "linux") !== FALSE) $type = (strpos($fua, "buntu") !== FALSE || strpos($fua, "debian") !== FALSE || strpos($fua, "iceweasel") !== FALSE ? "deb" : "rpm")."-".(strpos($ua, "x86_64") || strpos($ua, "amd64") ? "x86_64" : "x86");
-			if ($type) {
-				$langCandidates = array();
-				if ($this->Lang) array_push($langCandidates, $this->Lang);
-				if (i18n::get_locale() != "en_US") array_push($langCandidates, i18n::get_locale());
-				foreach (explode(",", $_SERVER["HTTP_ACCEPT_LANGUAGE"]) as $value) {
-					$parts = explode(";", $value);
-					array_push($langCandidates, $parts[0]);
-				}
-				foreach (explode(";", $ua) as $value) {
-					array_push($langCandidates, $value);
-				}
-				array_push($langCandidates, i18n::get_locale());
-
-				// Check candidates
-				$langs = $this->Languages($type);
-				foreach ($langCandidates as $value) {
-					$parts = explode("-", str_replace("_", "-", trim(strtolower($value))));
-					if (count($parts) > 1 && $langs->find("Lang", $parts[0]."-".strtoupper($parts[1]))) { $lang = $parts[0]."-".strtoupper($parts[1]); break; }
-					elseif ($langs->find("Lang", $parts[0])) { $lang = $value; break; }
-				}
-				$versions = $this->Versions($type, $lang);
-				if ($versions->Count()) {
-					$this->Type = $type;
-					$this->Lang = $lang;
-					$this->Version = $versions->First()->Version;
-				}
+			$langs = $this->Languages($type);
+			foreach ($langCandidates as $value) {
+				$parts = explode("-", str_replace("_", "-", trim(strtolower($value))));
+				if (count($parts) > 1 && $langs->find("Lang", $parts[0]."-".strtoupper($parts[1]))) { $lang = $parts[0]."-".strtoupper($parts[1]); break; }
+				elseif ($langs->find("Lang", $parts[0])) { $lang = $value; break; }
+			}
+			// Find newest version
+			$versions = $this->Versions($type, $lang);
+			if ($versions->Count()) {
+				$this->Type = $type;
+				$this->Lang = $lang;
+				$this->Version = $versions->First()->Version;
 			}
 		}
 

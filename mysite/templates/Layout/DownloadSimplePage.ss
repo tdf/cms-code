@@ -6,6 +6,9 @@
 <% include Translations %>
 <div class="typography">
 		<h1>$Title</h1>
+<!--
+$DebugInfo
+-->
 	
 		<%-- $Content --%>
 <style>
@@ -87,12 +90,11 @@ div.DownloadsRight a {
     border:1px solid #d9961e;
 }
 </style>
-
 <% if Downloads %><%-- Show downloads, if we have enough information --%>
 
 <% if Downloads.IsPreRelease %><div class='warning'><% _t('DownloadsPrereleaseWarning','This is a pre-release version not meant for genereal use.') %></div><% end_if %>
 <p><% sprintf(_t('DownloadsHeader','LibreOffice <b>%s</b>. Not the version you wanted?'),$DownloadTypeVersionLang) %>
-<a href='$Link?nodetect'><% _t('DownloadsChangeLink','Change System or Language') %></a></p>
+<a href='$Link?nodetect'><% _t('DownloadsChangeLink','Change System, Version or Language') %></a></p>
 
 <div class="Downloads">
  <div  class="DownloadsLeft">
@@ -102,7 +104,7 @@ div.DownloadsRight a {
 <ul>
  <% control Downloads.Files %>
   <li>
-   <h2><a href='http://download.documentfoundation.org/$Fullpath'> <% if InstallType = "Full" %><% _t('DownloadsInstallTypeFull','Base installer') %><% else_if InstallType = "Languagepack" %><% _t('DownloadsInstallTypeLanguagepack','Translated user interface') %><% else_if InstallType = "Helppack" %><% _t('DownloadsInstallTypeHelppack','LibreOffice built-in help') %><% else %>$InstallType<% end_if %></a></h2>
+   <h2><a href='http://download.documentfoundation.org/$Fullpath'> <% if InstallType = "Full" %><% _t('DownloadsInstallTypeFull','Main installer') %><% else_if InstallType = "Languagepack" %><% _t('DownloadsInstallTypeLanguagepack','Translated user interface') %><% else_if InstallType = "Helppack" %><% _t('DownloadsInstallTypeHelppack','LibreOffice built-in help') %><% else %>$InstallType<% end_if %></a></h2>
    $SizeNice
    (<a href='http://download.documentfoundation.org/{$Fullpath}.torrent' title='<% _t('DownloadsTorrentTitle','Download the files using BitTorrent') %>'><% _t('DownloadsTorrentLink','Torrent') %></a>,
    <a href='http://download.documentfoundation.org/{$Fullpath}.mirrorlist' title='<% _t('DownloadsInfoTitle','See the md5sum and list of download mirrors for the file') %>'><% _t('DownloadsInfoLink','Info') %></a>)
@@ -121,34 +123,51 @@ div.DownloadsRight a {
 </div>
 
 <% if DownloadPortables || DownloadIsos %>
-<div class="HalfBlockLeft">
-<h1><% _t('DownloadsPackagesHeader','Packages') %></h1>
-<ul class="libreoffice">
- <% control DownloadPortables %>
- <li><h2><a href="http://download.documentfoundation.org/$Fullpath"><% _t('DownloadsPortableHeader','PortableApps') %></a> $SizeNice</h2>
-     <p><% _t('DownloadsPortableText','A portable version of LibreOffice packaged in PortableApps.com Format, so you can take all your documents and everything you need to work from a USB, cloud or local drive. See <a href="http://portableapps.com/">PortableApps.com</a> for more information.') %></p></li>
- <% end_control %>
- <% control DownloadIsos %>
-  <li><h2><a href="http://download.documentfoundation.org/$Fullpath"><% sprintf(_t('DownloadsIsoHeader','%s image'),$InstallType) %></a> $SizeNice</h2>
-      <p><% _t('DownloadsIsoText','Download an ISO-file to create an installation media') %>.</p></li>
- <% end_control %>
-</ul>
-</div>
-<% end_if %>
-<% if DownloadSdks || DownloadSources %>
-<div class="HalfBlockRight">
- <h1><% _t('DownloadsDevelopersHeader','Developers') %></h1>
- <ul class="libreoffice">
- <% control DownloadSdks %>
-  <li><h2><a href='http://download.documentfoundation.org/$Fullpath'><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
-      <p><% _t('DownloadsSdkText','Download the SDK for developing extensions and external tools.') %></li>
- <% end_control %>
- <% if DownloadSources %>
-  <li><h2><a href='$Link?type=src&version=$Version'><% _t('DownloadsSrcHeader','Source code') %></a></h2>
-      <p><% _t('DownloadsSrcText','LibreOffice is an open source project and you can therefore download the source code to build your own installer.') %></li>
+ <div class="HalfBlockLeft">
+  <h1><% _t('DownloadsPackagesHeader','Packages') %></h1>
+  <ul class="libreoffice">
+   <% control DownloadPortables %>
+    <li><h2><a href="http://download.documentfoundation.org/$Fullpath"><% _t('DownloadsPortableHeader','PortableApps') %></a> $SizeNice</h2>
+        <p><% _t('DownloadsPortableText','A portable version of LibreOffice packaged in PortableApps.com Format, so you can take all your documents and everything you need to work from a USB, cloud or local drive. See <a href="http://portableapps.com/">PortableApps.com</a> for more information.') %></p></li>
+   <% end_control %>
+   <% control DownloadIsos %>
+    <li><h2><a href="http://download.documentfoundation.org/$Fullpath"><% sprintf(_t('DownloadsIsoHeader','%s image'),$InstallType) %></a> $SizeNice</h2>
+        <p><% _t('DownloadsIsoText','Download an ISO-file to create an installation media') %>.</p></li>
+   <% end_control %>
+  </ul>
+ </div>
+ <% if DownloadSdks || DownloadSources %>
+  <div class="HalfBlockRight">
+   <h1><% _t('DownloadsDevelopersHeader','Developers') %></h1>
+   <ul class="libreoffice">
+    <% control DownloadSdks %>
+     <li><h2><a href='http://download.documentfoundation.org/$Fullpath'><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
+         <p><% _t('DownloadsSdkText','Download the SDK for developing extensions and external tools.') %></li>
+    <% end_control %>
+    <% if DownloadSources %>
+     <li><h2><a href='$Link?type=src&version=$Version'><% _t('DownloadsSrcHeader','Source code') %></a></h2>
+         <p><% _t('DownloadsSrcText','LibreOffice is an open source project and you can therefore download the source code to build your own installer.') %></li>
+    <% end_if %>
+   </ul>
+  </div>
  <% end_if %>
- </ul>
-</div>
+<% else %>
+ <div class="HalfBlockLeft">
+  <ul class="libreoffice">
+   <% control DownloadSdks %>
+    <li><h2><a href='http://download.documentfoundation.org/$Fullpath'><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
+        <p><% _t('DownloadsSdkText','Download the SDK for developing extensions and external tools.') %></li>
+   <% end_control %>
+  </ul>
+ </div>
+ <div class="HalfBlockRight">
+  <ul class="libreoffice">
+   <% if DownloadSources %>
+    <li><h2><a href='$Link?type=src&version=$Version'><% _t('DownloadsSrcHeader','Source code') %></a></h2>
+        <p><% _t('DownloadsSrcText','LibreOffice is an open source project and you can therefore download the source code to build your own installer.') %></li>
+   <% end_if %>
+  </ul>
+ </div>
 <% end_if %>
 
 <% else_if Versions %><%-- else version selection, if we have enough information --%>
