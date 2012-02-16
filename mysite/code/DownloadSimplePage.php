@@ -281,6 +281,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 
 		// Detect platform and language
 		$fua = strtolower($_SERVER["HTTP_USER_AGENT"]);
+		$al = $_SERVER["HTTP_ACCEPT_LANGUAGE"];
 		$ua = strpos($fua, ")") ? substr($fua, 0, strpos($fua, ")")) : $fua;
 		$ua = strpos($ua, "(") ? substr($ua, strpos($ua, "(") + 1) : $fua;
 
@@ -293,7 +294,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		$langCandidates = array();
 		if ($this->Lang) array_push($langCandidates, $this->Lang);
 		if (i18n::get_locale() != "en_US") array_push($langCandidates, i18n::get_locale());
-		foreach (explode(",", $_SERVER["HTTP_ACCEPT_LANGUAGE"]) as $value) {
+		foreach (explode(",", $al) as $value) {
 			$parts = explode(";", $value);
 			array_push($langCandidates, $parts[0]);
 		}
@@ -302,16 +303,14 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		}
 		array_push($langCandidates, i18n::get_locale());
 
-		$this->DebugInfo = htmlentities("User-Agent:$fua\nAccept-language:".$_SERVER["HTTP_ACCEPT_LANGUAGE"]."\ntype:$type\nLang:".implode("|",$langCandidates));
-
+		$lang = "";
 		if ($type && !$this->Type && !$this->Version && !isset($_GET["nodetect"])) {
 			// Check langauge candidates
-			$lang = "";
 			$langs = $this->Languages($type);
 			foreach ($langCandidates as $value) {
 				$parts = explode("-", str_replace("_", "-", trim(strtolower($value))));
 				if (count($parts) > 1 && $langs->find("Lang", $parts[0]."-".strtoupper($parts[1]))) { $lang = $parts[0]."-".strtoupper($parts[1]); break; }
-				elseif ($langs->find("Lang", $parts[0])) { $lang = $value; break; }
+				elseif ($langs->find("Lang", $parts[0])) { $lang = $parts[0]; break; }
 			}
 			// Find newest version
 			$versions = $this->Versions($type, $lang);
@@ -321,6 +320,8 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 				$this->Version = $versions->First()->Version;
 			}
 		}
+
+		$this->DebugInfo = htmlentities("User-Agent:$fua\nAccept-language:$al\ntype:$type\nLangCand:".implode("|",$langCandidates)."\nlang:$lang");
 
 		// For top of download page
 		$this->DownloadTypeVersionLang =
