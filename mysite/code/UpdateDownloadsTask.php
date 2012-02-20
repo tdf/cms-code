@@ -77,6 +77,8 @@ class UpdateDownloadsTask extends DailyTask {
 					$temp = explode(".", $temp[5]);
 					$lang = (substr($filename,0,8) == "BrOffice") ? 'pt-BR' : $temp[0];
 				}
+				if ($lang == "ns") $lang = "nso";
+				if ($lang == "be-BY") $lang = "be";
 				$dbtemp->push(new Download(array(
 					'Type'     => $type,
 					'Platform' => $pathcomponents[3],
