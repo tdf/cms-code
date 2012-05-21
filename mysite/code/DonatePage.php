@@ -29,12 +29,12 @@ function PayPalOOoDev() {
 }
 
 function PayPalTDF() {
-return '<p>PayPal: donations@documentfoundation.org</p>
+return '<p>PayPal: paypal@documentfoundation.org</p>
 	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 	<p>
 	<input name="lc" value="'.$this->landinglang().'" type="hidden">
 	<input name="cmd" value="_donations" type="hidden">
-	<input name="business" value="donations@documentfoundation.org" type="hidden">
+	<input name="business" value="paypal@documentfoundation.org" type="hidden">
 	<input name="return" value="http://www.documentfoundation.org" type="hidden">
 	<input name="undefined_quantity" value="0" type="hidden">
 	<input name="item_name" value="The Document Foundation" type="hidden">
