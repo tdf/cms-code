@@ -29,7 +29,7 @@ $lang['en_US']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Packages';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'A portable version of LibreOffice packaged in PortableApps.com Format, so you can take all your documents and everything you need to work from a USB, cloud or local drive. See <a href="http://portableapps.com/">PortableApps.com</a> for more information.';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'This is a pre-release version not meant for genereal use.';
-$lang['en_US']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = 'Handy ressources';
+$lang['en_US']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = 'Handy resources';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsSdkHeader'] = 'Software development kit (SDK)';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsSdkText'] = 'Download the SDK for developing extensions and external tools.';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsSrcHeader'] = 'Source code';
