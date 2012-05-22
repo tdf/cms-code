@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['gd_GB']['Donationpage']['AMOUNT']='Meud:';

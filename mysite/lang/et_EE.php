@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['et_EE']['Donationpage']['AMOUNT']='Summa:';

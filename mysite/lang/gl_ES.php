@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['gl_ES']['Donationpage']['AMOUNT']='Cantidade:';

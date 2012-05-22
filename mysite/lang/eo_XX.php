@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['eo_XX']['Donationpage']['AMOUNT']='Kvanto:';

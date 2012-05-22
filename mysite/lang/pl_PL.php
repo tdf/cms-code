@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['pl_PL']['Donationpage']['AMOUNT']='Kwota:';

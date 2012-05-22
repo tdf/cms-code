@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['sr_RS']['Donationpage']['AMOUNT']='Износ:';

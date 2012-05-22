@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['zh_TW']['Donationpage']['AMOUNT']='數量：';

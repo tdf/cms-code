@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['fa_IR']['Donationpage']['AMOUNT']='مقدار:';

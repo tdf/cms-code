@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['tr_TR']['Donationpage']['AMOUNT']='Miktar:';

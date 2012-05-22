@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['nb_NO']['Donationpage']['AMOUNT']='Størrelse:';

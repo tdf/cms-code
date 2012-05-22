@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['sl_SI']['Donationpage']['AMOUNT']='Znesek:';

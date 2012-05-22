@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['he_IL']['Donationpage']['AMOUNT']='כמות:';

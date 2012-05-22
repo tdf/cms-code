@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['ast_ES']['Donationpage']['AMOUNT']='Cantidá:';

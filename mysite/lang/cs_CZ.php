@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['cs_CZ']['Donationpage']['AMOUNT']='Obnos:';

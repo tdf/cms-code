@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['nl_NL']['Donationpage']['AMOUNT']='Hoeveelheid:';

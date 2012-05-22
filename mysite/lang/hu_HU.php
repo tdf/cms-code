@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['hu_HU']['Donationpage']['AMOUNT']='Összeg:';

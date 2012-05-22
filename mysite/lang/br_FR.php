@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['br_FR']['Donationpage']['AMOUNT']='Kementad :';

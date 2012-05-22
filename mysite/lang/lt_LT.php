@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 global $lang;
 
 $lang['lt_LT']['Donationpage']['AMOUNT']='Paramos suma:';
