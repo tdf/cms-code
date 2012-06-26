@@ -255,7 +255,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		if (is_null($type) || is_null($version)) return new DataObjectSet();
 		
 		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("relatedpages" . sha1($version))))) {
+		if (!($result = @unserialize($cache->load($this->SubsiteID . "relatedpages" . sha1($version))))) {
 			$tags = array("dl");
 			$parts = explode(".", str_replace("rc", ".rc", str_replace("beta", ".beta", $version)));
 			$tempver = "";
