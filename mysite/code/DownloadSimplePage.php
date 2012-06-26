@@ -226,6 +226,25 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		}
 		return $result;
 	}
+	public function DownloadAppStores($type = null, $lang = null, $version = null) {
+		if (is_null($type)) $type = $this->Type;
+		if (is_null($lang)) $lang = $this->Lang;
+		if (is_null($version)) $version = $this->Version;
+		if (is_null($type) || is_null($lang) || is_null($version)) return new DataObjectSet();
+
+		$cache = SS_Cache::factory('DownloadSimplePageController');
+		if (!($result = @unserialize($cache->load("downloadappstore" . sha1($type."-".$lang."-".$version))))) {
+			$types = explode('-', $type);
+			$rows = DB::query("SELECT InstallType, Fullpath, Size, Type, Lang, Version, FullPath, Size FROM Download WHERE Type='appstore' ".
+				"AND Platform='".convert::raw2sql($types[0])."' ".
+				"AND Lang IN ('".convert::raw2sql($lang)."','multi')");
+			$result = new DataObjectSet();
+			foreach ($rows as $row)
+				$result->push(new DownloadData($row));
+			$cache->save(serialize($result));
+		}
+		return $result;
+	}
 	public function DownloadSdks($type = null, $lang = null, $version = null) {
 		if (is_null($type)) $type = $this->Type;
 		if (is_null($lang)) $lang = $this->Lang;
@@ -278,6 +297,24 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		$this->Type = (isset($_GET["type"]) && $_GET["type"] != "" ? $_GET["type"] : null);
 		$this->Lang = (isset($_GET["lang"]) && $_GET["lang"] != "" ? $_GET["lang"] : null);
 		$this->Version = (isset($_GET["version"]) && $_GET["version"] != "" ? $_GET["version"] : null);
+
+		// sample user agents:
+		//
+		// opensuse: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/12.0
+		// fedora:   Mozilla/5.0 (X11; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0
+		// ubuntu:   Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0
+		// Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.102011-10-16 20:23:10
+		// Mozilla/5.0 (Windows NT 6.1; WOW64; rv:7.0.1) Gecko/20100101 Firefox/7.0.12011-10-16 20:23:00
+		// Mozilla/5.0 (Linux; U; Android 2.3.3; en-au; GT-I9100 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.12011-10-16 20:22:55
+		// Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; InfoPath.2; .NET CLR 2.0.50727; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022; .NET CLR 1.1.4322)2011-10-16 20:22:33
+		// Mozilla/5.0 (Windows NT 6.1; rv:5.0) Gecko/20100101 Firefox/5.02011-10-16 20:21:42
+		// Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.202 Safari/535.12011-10-16 20:21:13
+		// Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)2011-10-16 20:21:07
+		// Mozilla/5.0 (Windows NT 6.1; WOW64; rv:7.0.1) Gecko/20100101 Firefox/7.0.12011-10-16 20:21:05
+		// Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.34 (KHTML, like Gecko) rekonq Safari/534.342011-10-16 20:21:01
+		// Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; GTB6; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3)2011-10-16 20:20:48
+		// IE 7 ? Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30)2011-10-16 20:20:09
+		// Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.23) Gecko/20110920 Firefox/3.6.23 SearchToolbar/1.22011-10-16 20:20:07
 
 		// Detect platform and language
 		$fua = strtolower($_SERVER["HTTP_USER_AGENT"]);

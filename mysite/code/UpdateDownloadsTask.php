@@ -93,6 +93,20 @@ class UpdateDownloadsTask extends DailyTask {
 				Debug::message("Unknown install-type: ".$path);
 			}
 		}
+
+		// stick in Intel AppUp version statically for the while - until someone figures out their API
+		$dbtemp->push(new Download(
+						  array(
+						      'Type'     => 'appstore',
+						      'Platform' => "win",
+						      'Arch'     => "x86",
+						      'Lang'     => "multi",
+						      'Version'  => "3.5.4",
+						      'Size'     => "136000000",
+						      'InstallType' => "AppUp",
+						      'Fullpath' => "http://www.appup.com/app-details/libreoffice",
+						      'Filename' => "libreoffice")));
+
 		print "got ".$dbtemp->Count()." files…";
 		print " flushing table…";
 		DB::query('TRUNCATE TABLE Download');

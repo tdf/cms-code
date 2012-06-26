@@ -134,6 +134,12 @@ div.DownloadsRight a {
     <li><h2><a href="http://download.documentfoundation.org/$Fullpath"><% sprintf(_t('DownloadsIsoHeader','%s image'),$InstallType) %></a> $SizeNice</h2>
         <p><% _t('DownloadsIsoText','Download an ISO-file to create an installation media') %>.</p></li>
    <% end_control %>
+   <% if DownloadAppStores %>
+    <% control DownloadAppStores %>
+     <li><h2><img src="/assets/appup24x24.png" alt="icon" align="top"> <a href="$Fullpath"><% sprintf(_t('DownloadsAppStoreHeader','%s install'),$InstallType) %></a> $SizeNice</h2>
+      <p><% sprintf(_t('DownloadsAppStoreText','Install LibreOffice %s via the Intel AppUp Center'),$Version) %>.</p></li>
+    <% end_control %>
+   <% end_if %>
   </ul>
  </div>
  <% if DownloadSdks || DownloadSources %>

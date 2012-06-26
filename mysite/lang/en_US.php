@@ -25,6 +25,8 @@ $lang['en_US']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Libre
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Translated user interface';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s image';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'Download an ISO-file to create an installation media';
+$lang['en_US']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = '%s install';
+$lang['en_US']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Install LibreOffice %s via the Intel AppUp Center.';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Packages';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'A portable version of LibreOffice packaged in PortableApps.com Format, so you can take all your documents and everything you need to work from a USB, cloud or local drive. See <a href="http://portableapps.com/">PortableApps.com</a> for more information.';
