@@ -79,6 +79,10 @@ class UpdateDownloadsTask extends DailyTask {
 				}
 				if ($lang == "ns") $lang = "nso";
 				if ($lang == "be-BY") $lang = "be";
+				if ($lang == "en-US" && $installtype == 'Languagepack') {
+					Debug::message("Ignore en-US language pack: ".$path);
+					continue;
+				}
 				$dbtemp->push(new Download(array(
 					'Type'     => $type,
 					'Platform' => $pathcomponents[3],
@@ -104,6 +108,8 @@ class UpdateDownloadsTask extends DailyTask {
 		}
 		/* invalidate the cache, as it's skipped when saving the individual Downloads */
 		Aggregate::flushCache('Download');
+		$cache = SS_Cache::factory('DownloadSimplePageController');
+		$cache->clean(Zend_Cache::CLEANING_MODE_ALL);
 		print "\nFinished :-)\n";
 	}
 }
