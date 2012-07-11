@@ -51,10 +51,15 @@ class RSSWidget2 extends DataObject {
 				$title = new Text('Title'); 
 				$title->setValue($item->get_title()); 
 
-				// Cast the description and strip 
+				// Cast the description
+				$desc_text = $item->get_description();
+				// Strip all HTML except links and breaks
+				$desc_text = strip_tags($desc_text, "<a><p><br>");
+				// Catch all plain text links (not in a link tag) and convert to HTML links
+				$desc_text = preg_replace("#(?<!href=[\"'])\s+((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "' <a href=\"$1\" target=\"_blank\">$3</a>$4'", $desc_text);
+
 				$desc = new Text('Description'); 
-				//$desc->setValue(strip_tags($item->get_description()));
-				$desc->setValue(preg_replace("# ((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "' <a href=\"$1\" target=\"_blank\">$3</a>$4'", $item->get_description()));
+				$desc->setValue($desc_text);
 
 				$this->Feed->push(new ArrayData(array( 
 								'Title'         => $title, 
