@@ -33,7 +33,7 @@ $(document).ready(function() {
                 toTop.fadeOut(1000);
         }
         $(window).scroll(function() {
-                if ($(this).scrollTop() != 0) {
+                if ($(this).scrollTop() > 0) {
                         toTop.fadeIn();
                 } else {
                         toTop.fadeOut();
@@ -44,5 +44,18 @@ $(document).ready(function() {
                 event.preventDefault();
                 $("html,body").animate({scrollTop: 0},800);
         });
+
+	$('div#translations input').show();
+	$('#langfilter').keyup(function(event){
+		var term = $(this).val();
+		// hide all
+		$('ul.translations li').stop(true,true).fadeOut();
+		// show the matching ones
+		$('ul.translations li:icontains("' + term.toUpperCase() + '")').fadeIn();
+		});
+
+	$.expr[':'].icontains = function(a, i, m) { 
+		return $(a).text().toUpperCase().indexOf(m[3]) >= 0 || $(a).attr('class').toUpperCase().indexOf(m[3]) >= 0; 
+	};
 })
-})(jQuery);
+})(jQuery.noConflict());
