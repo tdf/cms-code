@@ -9,6 +9,17 @@ $lang['he_IL']['Downloadpage']['DLSDK']     ='הורדת ה־SDK לצורך פי
 $lang['he_IL']['Downloadpage']['DLSOURCE']  ='הורדת קוד המקור כדי להכין תכנית התקנה משלך';
 $lang['he_IL']['Downloadpage']['DLSUITE']   ='דרך נוספת להורדת LibreOffice, חבילת יישומי התועלת';
 
+$lang['he_IL']['DonatePage']['BUTTON_CARD']   = 'לתרום באמצעות כרטיס אשראי ';
+$lang['he_IL']['DonatePage']['BUTTON_PAYPAL'] = 'לתרום באמצעות PayPal';
+$lang['he_IL']['DonatePage']['CHOICE_DEFAULT']= 'נא לבחור באחד מערכי בררת המחדל ';
+$lang['he_IL']['DonatePage']['CUSTOM_CHOICE'] = 'או להזין סכום ומטבע שונים (רק אלו המסומנים ב־* זמינים גם ב־PayPal)';
+$lang['he_IL']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '125';
+$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '25';
+$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '50';
+$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '100';
+$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '250';
+$lang['he_IL']['DonatePage']['DEFAULT_CURRENCY'] = 'ILS'; 
+
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['he_IL']['Navigation']['GOTOPAGE']  ='"מעבר לעמוד ה%s"';
 $lang['he_IL']['Navigation']['TOTOPTITLE']='גלילה לראש העמוד';

@@ -155,3 +155,14 @@ $lang['ca_ES']['LocaleName']['xh'] = 'Xosa';
 $lang['ca_ES']['LocaleName']['zh-CN'] = 'Xinès (simplificat)';
 $lang['ca_ES']['LocaleName']['zh-TW'] = 'Xinès (tradicional)';
 $lang['ca_ES']['LocaleName']['zu'] = 'Zulu';
+
+$lang['ca_ES']['DonatePage']['BUTTON_CARD']   = 'Donatiu amb targeta de crèdit';
+$lang['ca_ES']['DonatePage']['BUTTON_PAYPAL'] = 'Donatiu amb PayPal';
+$lang['ca_ES']['DonatePage']['CHOICE_DEFAULT']= 'Seleccioneu un dels valors predeterminats';
+$lang['ca_ES']['DonatePage']['CUSTOM_CHOICE'] = 'O introduïu una quantitat i divisa<br/>(el servei PayPal només es troba disponible en les divises marcades amb el signe *)';
+$lang['ca_ES']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
+$lang['ca_ES']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['ca_ES']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '10';
+$lang['ca_ES']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '20';
+$lang['ca_ES']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '50';
+$lang['ca_ES']['DonatePage']['DEFAULT_CURRENCY'] = 'EUR';

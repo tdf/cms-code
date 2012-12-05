@@ -3,11 +3,24 @@ global $lang;
 
 $lang['en_US']['Donationpage']['AMOUNT']='Amount:';
 
+
+$lang['en_US']['DonatePage']['BUTTON_CARD']   ='Donate via Credit Card';
+$lang['en_US']['DonatePage']['BUTTON_PAYPAL'] ='Donate via PayPal';
+$lang['en_US']['DonatePage']['CHOICE_DEFAULT']='Select one of the default values';
+$lang['en_US']['DonatePage']['CUSTOM_CHOICE'] ='Or enter a custom amount and currency<br/>(only those marked with * are also available via PayPal)';
+$lang['en_US']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['en_US']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['en_US']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['en_US']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['en_US']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['en_US']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+
 $lang['en_US']['Downloadpage']['BITTORRENT']='Download using BitTorrent';
 $lang['en_US']['Downloadpage']['DETAILLINK']='Get details (md5sum,…)';
 $lang['en_US']['Downloadpage']['DLSDK']     ='Download the SDK for developing extensions and external tools';
 $lang['en_US']['Downloadpage']['DLSOURCE']  ='Download the source code to build your own installer';
 $lang['en_US']['Downloadpage']['DLSUITE']   ='Other way to download LibreOffice, the productivity suite';
+$lang['en_US']['Downloadpage']['NOTESTBUILDS']='There are no testing builds available at the moment.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['en_US']['Navigation']['GOTOPAGE']  ='"Go to the %s page"';

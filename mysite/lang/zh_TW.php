@@ -155,3 +155,14 @@ $lang['zh_TW']['LocaleName']['xh'] = 'Xhosa';
 $lang['zh_TW']['LocaleName']['zh-CN'] = 'Chinese (simplified)';
 $lang['zh_TW']['LocaleName']['zh-TW'] = 'Chinese (traditional)';
 $lang['zh_TW']['LocaleName']['zu'] = 'Zulu';
+
+$lang['zh_TW']['DonatePage']['BUTTON_CARD']   ='透過信用卡捐款';
+$lang['zh_TW']['DonatePage']['BUTTON_PAYPAL'] ='透過 PayPal 捐款';
+$lang['zh_TW']['DonatePage']['CHOICE_DEFAULT']='請選擇下列預設金額其中一項';
+$lang['zh_TW']['DonatePage']['CUSTOM_CHOICE'] ='或是輸入您自訂的金額與貨幣';
+$lang['zh_TW']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='1000';
+$lang['zh_TW']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '100';
+$lang['zh_TW']['DonatePage']['DEFAULT_AMOUNT_EUR10']='300';
+$lang['zh_TW']['DonatePage']['DEFAULT_AMOUNT_EUR20']='500';
+$lang['zh_TW']['DonatePage']['DEFAULT_AMOUNT_EUR50']='1500';
+$lang['zh_TW']['DonatePage']['DEFAULT_CURRENCY']    ='TWD';

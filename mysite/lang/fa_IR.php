@@ -155,3 +155,14 @@ $lang['fa_IR']['LocaleName']['xh'] = 'هوسا';
 $lang['fa_IR']['LocaleName']['zh-CN'] = 'چینی (ساده شده)';
 $lang['fa_IR']['LocaleName']['zh-TW'] = 'چینی (سنتی)';
 $lang['fa_IR']['LocaleName']['zu'] = 'زولو';
+
+$lang['fa_IR']['DonatePage']['BUTTON_CARD']   = 'هدیه از طریق کارت اعتباری';
+$lang['fa_IR']['DonatePage']['BUTTON_PAYPAL'] = 'هدیه از طریق پی‌پل';
+$lang['fa_IR']['DonatePage']['CHOICE_DEFAULT']= 'لطفاً یکی از مقادیر زیر را برگزینید';
+$lang['fa_IR']['DonatePage']['CUSTOM_CHOICE'] = 'یا مقدار دلخواه و ارز را وارد کنید<br>(تنها آن‌هائی که با * مشخص شده‌اند، در پی‌پل نیز در دسترس هستند)';
+$lang['fa_IR']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
+$lang['fa_IR']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['fa_IR']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '10';
+$lang['fa_IR']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '20';
+$lang['fa_IR']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '50';
+$lang['fa_IR']['DonatePage']['DEFAULT_CURRENCY'] = 'USD';

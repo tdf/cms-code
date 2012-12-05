@@ -8,6 +8,7 @@ $lang['lt_LT']['Downloadpage']['DETAILLINK']='Rodyti saitą į išsamesnę infor
 $lang['lt_LT']['Downloadpage']['DLSDK']     ='Parsisiųsti programavimo bibliotekas (SDK) plėtinių ir papildomų priemonių kūrimui';
 $lang['lt_LT']['Downloadpage']['DLSOURCE']  ='Parsisiųsti „LibreOffice“ pradinius tekstus (programuotojams)';
 $lang['lt_LT']['Downloadpage']['DLSUITE']   ='Kitas būdas parsisiųsti „LibreOffice“ raštinės programų paketą';
+$lang['lt_LT']['Downloadpage']['NOTESTBUILDS']='Šiuo metu testuojamų versijų nėra.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['lt_LT']['Navigation']['GOTOPAGE']  ='"Eiti į tinklalapį „%s“"';
@@ -155,3 +156,14 @@ $lang['lt_LT']['LocaleName']['xh'] = 'kosų';
 $lang['lt_LT']['LocaleName']['zh-CN'] = 'kinų (supaprastintoji)';
 $lang['lt_LT']['LocaleName']['zh-TW'] = 'kinų (tradicinė)';
 $lang['lt_LT']['LocaleName']['zu'] = 'zulų';
+
+$lang['lt_LT']['DonatePage']['BUTTON_CARD']   = 'Paremti kreditine kortele';
+$lang['lt_LT']['DonatePage']['BUTTON_PAYPAL'] = 'Paremti per PayPal';
+$lang['lt_LT']['DonatePage']['CHOICE_DEFAULT']= 'Pasirinkite vieną iš numatytųjų dydžių';
+$lang['lt_LT']['DonatePage']['CUSTOM_CHOICE'] = 'Arba įveskite norimą skaičių bei valiutą<br/>(PayPal aptarnauja tik * pažymėtas valiutas)';
+$lang['lt_LT']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '75';
+$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '15';
+$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '30';
+$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '60';
+$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '150';
+$lang['lt_LT']['DonatePage']['DEFAULT_CURRENCY'] = 'LTL';

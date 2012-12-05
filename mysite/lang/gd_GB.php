@@ -155,3 +155,14 @@ $lang['gd_GB']['LocaleName']['xh'] = 'Xhosa';
 $lang['gd_GB']['LocaleName']['zh-CN'] = 'Sìnis (Shimplichte)';
 $lang['gd_GB']['LocaleName']['zh-TW'] = 'Sìnis (Thradaiseanta)';
 $lang['gd_GB']['LocaleName']['zu'] = 'Zulu';
+
+$lang['gd_GB']['DonatePage']['BUTTON_CARD']   = 'Thoir tabhartas air cairt creideis';
+$lang['gd_GB']['DonatePage']['BUTTON_PAYPAL'] = 'Thoir tabhartas air PayPal';
+$lang['gd_GB']['DonatePage']['CHOICE_DEFAULT']= 'Tagh aon dhe na suimean gu h-ìosal';
+$lang['gd_GB']['DonatePage']['CUSTOM_CHOICE'] = 'No cuir a-steach suim agus airgeadra thu fhèin<br/>(Chan eil ach an fheadhainn ris a bheil * ri làimh air PayPal)';
+$lang['gd_GB']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
+$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '10';
+$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '20';
+$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '50';
+$lang['gd_GB']['DonatePage']['DEFAULT_CURRENCY'] = 'GBP'; 

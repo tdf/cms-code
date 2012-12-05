@@ -155,3 +155,14 @@ $lang['cs_CZ']['LocaleName']['xh'] = 'xhoština';
 $lang['cs_CZ']['LocaleName']['zh-CN'] = 'čínština (zjednodušená)';
 $lang['cs_CZ']['LocaleName']['zh-TW'] = 'čínština (tradiční)';
 $lang['cs_CZ']['LocaleName']['zu'] = 'zulština';
+
+$lang['cs_CZ']['DonatePage']['BUTTON_CARD']   ='Přispět kreditní kartou';
+$lang['cs_CZ']['DonatePage']['BUTTON_PAYPAL'] ='Přispět přes PayPal';
+$lang['cs_CZ']['DonatePage']['CHOICE_DEFAULT']='Vyberte jednu z nastavených hodnot';
+$lang['cs_CZ']['DonatePage']['CUSTOM_CHOICE'] ='Nebo zadejte vlastní množství a měnu<br>(pro PayPal lze použít pouze měny označené *)';
+$lang['cs_CZ']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='500';
+$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '100';
+$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR10']='200';
+$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR20']='400';
+$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR50']='1000';
+$lang['cs_CZ']['DonatePage']['DEFAULT_CURRENCY']    ='CZK';

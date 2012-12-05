@@ -9,6 +9,17 @@ $lang['sl_SI']['Downloadpage']['DLSDK']     ='Prenesite SDK za razvijanje razši
 $lang['sl_SI']['Downloadpage']['DLSOURCE']  ='Prenesite izvorno kodo in sami izdelajte namestitveni paket';
 $lang['sl_SI']['Downloadpage']['DLSUITE']   ='Drugi načini prenosa pisarniškega paketa LibreOffice';
 
+$lang['sl_SI']['DonatePage']['BUTTON_CARD']   = 'Doniraj prek kreditne kartice';
+$lang['sl_SI']['DonatePage']['BUTTON_PAYPAL'] = 'Doniraj prek PayPal';
+$lang['sl_SI']['DonatePage']['CHOICE_DEFAULT']= 'Izberite eno od privzetih vrednosti';
+$lang['sl_SI']['DonatePage']['CUSTOM_CHOICE'] = 'Ali vnesite znesek in valuto po svoji meri<br/>(le označeni z * so na voljo tudi prek PayPal)';
+$lang['sl_SI']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
+$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '10';
+$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '20';
+$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '50';
+$lang['sl_SI']['DonatePage']['DEFAULT_CURRENCY'] = 'EUR';
+
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['sl_SI']['Navigation']['GOTOPAGE']  ='"Pojdi na stran %s"';
 $lang['sl_SI']['Navigation']['TOTOPTITLE']='pojdi na vrh strani';

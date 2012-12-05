@@ -8,6 +8,7 @@ $lang['pt_BR']['Downloadpage']['DETAILLINK']='Obter detalhes (md5sum,…)';
 $lang['pt_BR']['Downloadpage']['DLSDK']     ='Baixar SDK para desenvolvimento de extensões e ferramentas externas';
 $lang['pt_BR']['Downloadpage']['DLSOURCE']  ='Baixar o código fonte para compilar seu próprio instalador';
 $lang['pt_BR']['Downloadpage']['DLSUITE']   ='Outras formas de baixar o LibreOffice';
+$lang['pt_BR']['Downloadpage']['NOTESTBUILDS']='Não há nenhuma versão de pré-laçamento disponível no momento.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['pt_BR']['Navigation']['GOTOPAGE']  ='"Ir para a página %s"';
@@ -155,3 +156,14 @@ $lang['pt_BR']['LocaleName']['xh'] = 'Xhosa';
 $lang['pt_BR']['LocaleName']['zh-CN'] = 'Chinês (simplificado)';
 $lang['pt_BR']['LocaleName']['zh-TW'] = 'Chinês (tradicional)';
 $lang['pt_BR']['LocaleName']['zu'] = 'Zulu';
+
+$lang['pt_BR']['DonatePage']['BUTTON_CARD']   = 'Doação via cartão de crédito';
+$lang['pt_BR']['DonatePage']['BUTTON_PAYPAL'] = 'Doação via PayPal';
+$lang['pt_BR']['DonatePage']['CHOICE_DEFAULT']= 'Escolha um dos valores sugeridos';
+$lang['pt_BR']['DonatePage']['CUSTOM_CHOICE'] = 'Ou digite um valor e selecione a moeda<br/>(Somente os valores com * podem ser enviados via PayPal)';
+$lang['pt_BR']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
+$lang['pt_BR']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '15';
+$lang['pt_BR']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '25';
+$lang['pt_BR']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '50';
+$lang['pt_BR']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '100';
+$lang['pt_BR']['DonatePage']['DEFAULT_CURRENCY'] = 'BRL';

@@ -252,7 +252,24 @@ JS
 	}
 
 	public function Banner() {
-		return true;
-		/*return new DataObjectSet(); return empty DataObject set to disable the banner */
+		//return false;
+		if ($this->SubsiteID == 13) {
+			/* no donation banner for fi site */
+			return false;
+		} else {
+			/* NOT VALID FOR THE 2013 CAMPAIGN: return amount *2.3 (approx.) i.e. when 50k -> return 115; */
+			return 85;
+		}
+	}
+	public function DonationURLSegment() {
+		Subsite::disable_subsite_filter(true);
+		/* get the page with ID 2219, i.e. the english one */
+		$donateoriginal = DataObject::get_by_id('SiteTree', 2219);
+		$translation = $donateoriginal->getTranslation($this->Locale);
+		Subsite::disable_subsite_filter(false);
+		if ($translation) {
+			return $translation->URLSegment."/";
+		}
+		return false;
 	}
 }

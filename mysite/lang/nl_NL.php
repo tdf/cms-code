@@ -155,3 +155,14 @@ $lang['nl_NL']['LocaleName']['xh'] = 'Xhosa';
 $lang['nl_NL']['LocaleName']['zh-CN'] = 'Chinese (simplified)';
 $lang['nl_NL']['LocaleName']['zh-TW'] = 'Chinese (traditional)';
 $lang['nl_NL']['LocaleName']['zu'] = 'Zulu';
+
+$lang['nl_NL']['DonatePage']['BUTTON_CARD']   = 'Doneer via kredietkaart';
+$lang['nl_NL']['DonatePage']['BUTTON_PAYPAL'] = 'Doneer via PayPal';
+$lang['nl_NL']['DonatePage']['CHOICE_DEFAULT']= 'Kies een van onderstaande standaardwaarden';
+$lang['nl_NL']['DonatePage']['CUSTOM_CHOICE'] = 'Of kies zelf een bedrag en valuta<br>(enkel de opties met een * zijn ook beschikbaar via PayPal)';
+$lang['nl_NL']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
+$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '10';
+$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '20';
+$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '50';
+$lang['nl_NL']['DonatePage']['DEFAULT_CURRENCY'] = 'EUR'; 

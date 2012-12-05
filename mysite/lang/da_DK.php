@@ -155,3 +155,14 @@ $lang['da_DK']['LocaleName']['xh'] = 'Xhosa';
 $lang['da_DK']['LocaleName']['zh-CN'] = 'Kinesisk (simpel)';
 $lang['da_DK']['LocaleName']['zh-TW'] = 'Kinesisk (traditionel)';
 $lang['da_DK']['LocaleName']['zu'] = 'Zulu';
+
+$lang['da_DK']['DonatePage']['BUTTON_CARD']   = 'Bidrag med kreditkort';
+$lang['da_DK']['DonatePage']['BUTTON_PAYPAL'] = 'Bidrag med PayPal';
+$lang['da_DK']['DonatePage']['CHOICE_DEFAULT']= 'Vælg en af standardværdierne';
+$lang['da_DK']['DonatePage']['CUSTOM_CHOICE'] = 'Eller indtast et valgfrit beløb og valuta<br>(kun de valutaer, som er markeret med * kan benyttes med PayPal)';
+$lang['da_DK']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '100';
+$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '50';
+$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '100';
+$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '250';
+$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '500';
+$lang['da_DK']['DonatePage']['DEFAULT_CURRENCY'] = 'DKK';

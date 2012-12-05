@@ -13,3 +13,14 @@ $lang['ru_RU']['Downloadpage']['DLSUITE']   ='Другие способы заг
 $lang['ru_RU']['Navigation']['GOTOPAGE']  ='"Перейти на страницу %s"';
 $lang['ru_RU']['Navigation']['TOTOPTITLE']='к началу страницы';
 $lang['ru_RU']['Navigation']['TOTOP']     ='⬆ в начало';
+
+$lang['ru_RU']['DonatePage']['BUTTON_CARD']   = 'Пожертвовать с помощью банковской карты';
+$lang['ru_RU']['DonatePage']['BUTTON_PAYPAL'] = 'Пожертвовать через PayPal';
+$lang['ru_RU']['DonatePage']['CHOICE_DEFAULT']= 'Выберите предопределённую сумму';
+$lang['ru_RU']['DonatePage']['CUSTOM_CHOICE'] = 'или введите произвольную сумму<br/>(валюты, для которых доступны платежи через систему PayPal, отмечены *)';
+$lang['ru_RU']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '500';
+$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '100';
+$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '500';
+$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '1000';
+$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '2000';
+$lang['ru_RU']['DonatePage']['DEFAULT_CURRENCY'] = 'RUB';

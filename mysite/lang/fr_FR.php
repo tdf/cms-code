@@ -155,3 +155,14 @@ $lang['fr_FR']['LocaleName']['xh'] = 'Xhosa';
 $lang['fr_FR']['LocaleName']['zh-CN'] = 'Chinois (simplifié)';
 $lang['fr_FR']['LocaleName']['zh-TW'] = 'Chinois (traditionnel)';
 $lang['fr_FR']['LocaleName']['zu'] = 'Zoulou';
+
+$lang['fr_FR']['DonatePage']['BUTTON_CARD']   = 'Faire un don via une carte de crédit';
+$lang['fr_FR']['DonatePage']['BUTTON_PAYPAL'] = 'Faire un don via PayPal';
+$lang['fr_FR']['DonatePage']['CHOICE_DEFAULT']= 'Sélectionnez l\'une des valeurs par défaut';
+$lang['fr_FR']['DonatePage']['CUSTOM_CHOICE'] = 'Ou saisissez un montant personnalisé<br/>(seuls ceux marqués par une * sont disponibles via PayPayl)';
+$lang['fr_FR']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
+$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '10';
+$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '20';
+$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '50';
+$lang['fr_FR']['DonatePage']['DEFAULT_CURRENCY'] = 'EUR';

@@ -9,6 +9,17 @@ $lang['pl_PL']['Downloadpage']['DLSDK']     ='Pobierz SDK w celu tworzenia rozsz
 $lang['pl_PL']['Downloadpage']['DLSOURCE']  ='Pobierz kod źródłowy, aby zbudować własną instalację';
 $lang['pl_PL']['Downloadpage']['DLSUITE']   ='Inne sposoby pobierania pakietu biurowego LibreOffice';
 
+$lang['pl_PL']['DonatePage']['BUTTON_CARD']   = 'Wpłać przez kartę kredytową';
+$lang['pl_PL']['DonatePage']['BUTTON_PAYPAL'] = 'Użyj PayPal';
+$lang['pl_PL']['DonatePage']['CHOICE_DEFAULT']= 'Wybierz jedną z domyślnych opcji';
+$lang['pl_PL']['DonatePage']['CUSTOM_CHOICE'] = 'Lub wprowadź inną kwotę i walutę<br/>(PayPal obsługuje tylko te zaznaczone *)';
+$lang['pl_PL']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '50';
+$lang['pl_PL']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '10';
+$lang['pl_PL']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '20';
+$lang['pl_PL']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '40';
+$lang['pl_PL']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '100';
+$lang['pl_PL']['DonatePage']['DEFAULT_CURRENCY'] = 'PLN';
+
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['pl_PL']['Navigation']['GOTOPAGE']  ='"Przejdź do strony %s"';
 $lang['pl_PL']['Navigation']['TOTOPTITLE']='przewiń stronę w górę';

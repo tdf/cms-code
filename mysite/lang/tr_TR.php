@@ -46,6 +46,17 @@ $lang['tr_TR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Dağıtı
 $lang['tr_TR']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Aşağıda LibreOffice\'in sonraki sürümünün bir dağıtım adayını incelemek, test etmek  gibi nedenlerle indirebilirsiniz. Bu sürümler genel kullanım için değildir.';
 $lang['tr_TR']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Tavsiye edilen';
 
+$lang['tr_TR']['DonatePage']['BUTTON_CARD']   ='Kredi Kartı ile Bağışta Bulunun';
+$lang['tr_TR']['DonatePage']['BUTTON_PAYPAL'] ='PayPal ile Bağışta Bulunun';
+$lang['tr_TR']['DonatePage']['CHOICE_DEFAULT']   ='Aşağıdaki tutarlardan birini seçebilirsiniz';
+$lang['tr_TR']['DonatePage']['CUSTOM_CHOICE'] ='Veya farklı bir tutar ve döviz cinsi girebilirsiniz<br/>(* işaretiyle belirtilen döviz cinsleri PayPal ödeme aracıyla da kullanılabilir)';
+$lang['tr_TR']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['tr_TR']['DonatePage']['DEFAULT_AMOUNT_EUR05'] ='5';
+$lang['tr_TR']['DonatePage']['DEFAULT_AMOUNT_EUR10'] ='10';
+$lang['tr_TR']['DonatePage']['DEFAULT_AMOUNT_EUR20'] ='20';
+$lang['tr_TR']['DonatePage']['DEFAULT_AMOUNT_EUR50'] ='50';
+$lang['tr_TR']['DonatePage']['DEFAULT_CURRENCY'] ='TRY';
+
 $lang['tr_TR']['LocaleName']['af'] = 'Afrikaca';
 $lang['tr_TR']['LocaleName']['ar'] = 'Arapça';
 $lang['tr_TR']['LocaleName']['as'] = 'Assamese';
