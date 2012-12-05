@@ -95,7 +95,8 @@ div.DownloadsRight a {
 <% if Downloads.IsPreRelease %><div class='warning'><% _t('DownloadsPrereleaseWarning','This is a pre-release version not meant for genereal use.') %></div><% end_if %>
 <p><% sprintf(_t('DownloadsHeader','LibreOffice <b>%s</b>. Not the version you wanted?'),$DownloadTypeVersionLang) %>
 <a href='$Link?nodetect'><% _t('DownloadsChangeLink','Change System, Version or Language') %></a></p>
-
+<!-- warning goes here --><% if IsDotZero %><!-- is dot zero -->$dot_zero_warning<% else_if IsDotOne %><!-- is dot one -->$dot_one_warning<% end_if %>
+<% if SubsiteID = 3 %><%-- english donation text --%><p>LibreOffice is made available by volunteers around the globe, backed by a charitable Foundation.<br><a href="http://donate.libreoffice.org" target="_blank"><b>Please support our efforts:</b> Your donation helps us to deliver a better product!</a></p><% else_if SubsiteID = 2 %><%-- german donation text --%><p>LibreOffice wird durch ehrenamtlich Engagierte in aller Welt m&ouml;glich gemacht, getragen durch eine gemeinn&uuml;tzige Stiftung.<br><a href="http://donate.libreoffice.org/de/" target="_blank"><b>Bitte unterst&uuml;tzen Sie unsere Arbeit:</b> Ihre Spende hilft uns dabei, ein noch besseres Produkt anzubieten!</a></p><% end_if %> 
 <div class="Downloads">
  <div  class="DownloadsLeft">
 <% if Type != "src" %><% if Type != "box" %>
@@ -104,9 +105,9 @@ div.DownloadsRight a {
 <ul>
  <% control Downloads.Files %>
   <li>
-   <h2><a href='http://download.documentfoundation.org/$Fullpath'> <% if InstallType = "Full" %><% _t('DownloadsInstallTypeFull','Main installer') %><% else_if InstallType = "Languagepack" %><% _t('DownloadsInstallTypeLanguagepack','Translated user interface') %><% else_if InstallType = "Helppack" %><% _t('DownloadsInstallTypeHelppack','LibreOffice built-in help') %><% else %>$InstallType<% end_if %></a></h2>
+   <h2><a href='http://download.documentfoundation.org/$Fullpath' class="piwik_download"> <% if InstallType = "Full" %><% _t('DownloadsInstallTypeFull','Main installer') %><% else_if InstallType = "Languagepack" %><% _t('DownloadsInstallTypeLanguagepack','Translated user interface') %><% else_if InstallType = "Helppack" %><% _t('DownloadsInstallTypeHelppack','LibreOffice built-in help') %><% else %>$InstallType<% end_if %></a></h2>
    $SizeNice
-   (<a href='http://download.documentfoundation.org/{$Fullpath}.torrent' title='<% _t('DownloadsTorrentTitle','Download the files using BitTorrent') %>'><% _t('DownloadsTorrentLink','Torrent') %></a>,
+   (<a href='http://download.documentfoundation.org/{$Fullpath}.torrent' class="piwik_download" title='<% _t('DownloadsTorrentTitle','Download the files using BitTorrent') %>'><% _t('DownloadsTorrentLink','Torrent') %></a>,
    <a href='http://download.documentfoundation.org/{$Fullpath}.mirrorlist' title='<% _t('DownloadsInfoTitle','See the md5sum and list of download mirrors for the file') %>'><% _t('DownloadsInfoLink','Info') %></a>)
    </li>
  <% end_control %>
@@ -127,19 +128,17 @@ div.DownloadsRight a {
   <h1><% _t('DownloadsPackagesHeader','Packages') %></h1>
   <ul class="libreoffice">
    <% control DownloadPortables %>
-    <li><h2><a href="http://download.documentfoundation.org/$Fullpath"><% _t('DownloadsPortableHeader','PortableApps') %></a> $SizeNice</h2>
+    <li><h2><a href="http://download.documentfoundation.org/$Fullpath" class="piwik_download"><% _t('DownloadsPortableHeader','PortableApps') %></a> $SizeNice</h2>
         <p><% _t('DownloadsPortableText','A portable version of LibreOffice packaged in PortableApps.com Format, so you can take all your documents and everything you need to work from a USB, cloud or local drive. See <a href="http://portableapps.com/">PortableApps.com</a> for more information.') %></p></li>
    <% end_control %>
    <% control DownloadIsos %>
-    <li><h2><a href="http://download.documentfoundation.org/$Fullpath"><% sprintf(_t('DownloadsIsoHeader','%s image'),$InstallType) %></a> $SizeNice</h2>
+    <li><h2><a href="http://download.documentfoundation.org/$Fullpath" class="piwik_download"><% sprintf(_t('DownloadsIsoHeader','%s image'),$InstallType) %></a> $SizeNice</h2>
         <p><% _t('DownloadsIsoText','Download an ISO-file to create an installation media') %>.</p></li>
    <% end_control %>
-   <% if DownloadAppStores %>
-    <% control DownloadAppStores %>
-     <li><h2><img src="/assets/appup24x24.png" alt="icon" align="top"> <a href="$Fullpath"><% sprintf(_t('DownloadsAppStoreHeader','%s install'),$InstallType) %></a> $SizeNice</h2>
-      <p><% sprintf(_t('DownloadsAppStoreText','Install LibreOffice %s via the Intel AppUp Center'),$Version) %>.</p></li>
-    <% end_control %>
-   <% end_if %>
+   <% control DownloadAppStores %>
+    <li><h2><img src="/assets/appup24x24.png" alt="icon" align="top"> <a href="$Fullpath" class="piwik_download"><% sprintf(_t('DownloadsAppStoreHeader','%s install'),$InstallType) %></a> $SizeNice</h2>
+     <p><% sprintf(_t('DownloadsAppStoreText','Install LibreOffice %s via the Intel AppUp Center'),$Version) %>.</p></li>
+   <% end_control %>
   </ul>
  </div>
  <% if DownloadSdks || DownloadSources %>
@@ -147,7 +146,7 @@ div.DownloadsRight a {
    <h1><% _t('DownloadsDevelopersHeader','Developers') %></h1>
    <ul class="libreoffice">
     <% control DownloadSdks %>
-     <li><h2><a href='http://download.documentfoundation.org/$Fullpath'><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
+     <li><h2><a href='http://download.documentfoundation.org/$Fullpath' class="piwik_download"><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
          <p><% _t('DownloadsSdkText','Download the SDK for developing extensions and external tools.') %></li>
     <% end_control %>
     <% if DownloadSources %>
@@ -161,7 +160,7 @@ div.DownloadsRight a {
  <div class="HalfBlockLeft">
   <ul class="libreoffice">
    <% control DownloadSdks %>
-    <li><h2><a href='http://download.documentfoundation.org/$Fullpath'><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
+    <li><h2><a href='http://download.documentfoundation.org/$Fullpath' class="piwik_download"><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
         <p><% _t('DownloadsSdkText','Download the SDK for developing extensions and external tools.') %></li>
    <% end_control %>
   </ul>
@@ -185,7 +184,7 @@ div.DownloadsRight a {
  <% end_if %>
  <ul>
   <% control Children %>
-   <li><a href="$Link">$Version</a> <% if Recommended %><b><% _t('VersionsRecommended','Recommended') %></b><% end_if %>
+   <li><a href="$Link">$Version</a> <% if False %><b><% _t('VersionsRecommended','Recommended') %></b><% end_if %>
   <% end_control %>
  </ul>
 <% end_control %>

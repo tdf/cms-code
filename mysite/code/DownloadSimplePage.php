@@ -72,6 +72,19 @@ class DownloadData extends ArrayData {
 }
 
 class DownloadSimplePage extends Page {
+	static $db = array(
+		"dot_zero_warning" => "HTMLText",
+		"dot_one_warning"  => "HTMLText"
+		);
+	// show it to the CMS editor page
+	function getCMSFields() {
+		$fields = parent::getCMSFields();
+		//new field, add above "Content" area
+		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('dot_zero_warning','Warning text for x.y.0 Versions (leave emtpy to disable)', 10), 'Content');
+		$fields->addFieldToTab('Root.Content.Main', new HTMLEditorField('dot_one_warning', 'Warning text for x.y.1 Versions (leave emtpy to disable)', 10), 'Content');
+
+		return $fields;
+	}
 }
 class DownloadSimplePage_Controller extends Page_Controller implements i18nEntityProvider {
 	private static $multiLangs = array("en-US","ar","ast","be-BY","bg","bn","bo","br","ca","ca-XV","cs","da","de","dz","el","en-GB","es","et","eu","fi","fr","gl","gu","he","hi","hr","hu","is","it","ja","km","kn","ko","lt","lv","mr","nb","nl","oc","om","or","pl","pt","pt-BR","ru","sh","si","sk","sl","sr","sv","te","tr","ug","vi","zh-CN","zh-TW");
@@ -245,6 +258,25 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		}
 		return $result;
 	}
+	public function DownloadAppStores($type = null, $lang = null, $version = null) {
+		if (is_null($type)) $type = $this->Type;
+		if (is_null($lang)) $lang = $this->Lang;
+		if (is_null($version)) $version = $this->Version;
+		if (is_null($type) || is_null($lang) || is_null($version)) return new DataObjectSet();
+
+		$cache = SS_Cache::factory('DownloadSimplePageController');
+		if (!($result = @unserialize($cache->load("downloadappstore" . sha1($type."-".$lang."-".$version))))) {
+			$types = explode('-', $type);
+			$rows = DB::query("SELECT InstallType, Fullpath, Size, Type, Lang, Version, FullPath, Size FROM Download WHERE Type='appstore' ".
+				"AND Platform='".convert::raw2sql($types[0])."' ".
+				"AND Lang IN ('".convert::raw2sql($lang)."','multi')");
+			$result = new DataObjectSet();
+			foreach ($rows as $row)
+				$result->push(new DownloadData($row));
+			$cache->save(serialize($result));
+		}
+		return $result;
+	}
 	public function DownloadSdks($type = null, $lang = null, $version = null) {
 		if (is_null($type)) $type = $this->Type;
 		if (is_null($lang)) $lang = $this->Lang;
@@ -285,7 +317,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 				$tags[] = "dltype".($temptype .= "-".$typepart);
 			foreach ($tags as $tag)
 				$sql[] = "concat(MetaKeywords,',') like '%".convert::raw2sql($tag).",%'";
-			$result = DataObject::get("SiteTree", "(".implode(" OR ", $sql).")", "MenuTitle");
+			$result = DataObject::get("SiteTree", "ClassName<>'VirtualPage' AND (".implode(" OR ", $sql).")", "MenuTitle");
 			$cache->save(serialize($result));
 		}
 		return $result;
@@ -316,6 +348,24 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		// IE 7 ? Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30)2011-10-16 20:20:09
 		// Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.23) Gecko/20110920 Firefox/3.6.23 SearchToolbar/1.22011-10-16 20:20:07
 
+		// sample user agents:
+		//
+		// opensuse: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/12.0
+		// fedora:   Mozilla/5.0 (X11; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0
+		// ubuntu:   Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:13.0) Gecko/20100101 Firefox/13.0
+		// Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.102011-10-16 20:23:10
+		// Mozilla/5.0 (Windows NT 6.1; WOW64; rv:7.0.1) Gecko/20100101 Firefox/7.0.12011-10-16 20:23:00
+		// Mozilla/5.0 (Linux; U; Android 2.3.3; en-au; GT-I9100 Build/GINGERBREAD) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.12011-10-16 20:22:55
+		// Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; InfoPath.2; .NET CLR 2.0.50727; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022; .NET CLR 1.1.4322)2011-10-16 20:22:33
+		// Mozilla/5.0 (Windows NT 6.1; rv:5.0) Gecko/20100101 Firefox/5.02011-10-16 20:21:42
+		// Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.202 Safari/535.12011-10-16 20:21:13
+		// Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)2011-10-16 20:21:07
+		// Mozilla/5.0 (Windows NT 6.1; WOW64; rv:7.0.1) Gecko/20100101 Firefox/7.0.12011-10-16 20:21:05
+		// Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.34 (KHTML, like Gecko) rekonq Safari/534.342011-10-16 20:21:01
+		// Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; GTB6; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; OfficeLiveConnector.1.4; OfficeLivePatch.1.3)2011-10-16 20:20:48
+		// IE 7 ? Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30)2011-10-16 20:20:09
+		// Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.23) Gecko/20110920 Firefox/3.6.23 SearchToolbar/1.22011-10-16 20:20:07
+
 		// Detect platform and language
 		$fua = strtolower($_SERVER["HTTP_USER_AGENT"]);
 		$al = $_SERVER["HTTP_ACCEPT_LANGUAGE"];
@@ -325,7 +375,7 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		$type = "";
 		if (strpos($ua, "windows") !== FALSE || strpos($ua, "win32") !== FALSE) $type = "win-x86";
 		elseif (strpos($ua, "macintosh") !== FALSE || strpos($ua, "mac os") !== FALSE) $type = (strpos($ua, "intel") !== FALSE ? "mac-x86" : "mac-ppc");
-		elseif (strpos($ua, "linux") !== FALSE) $type = (strpos($fua, "buntu") !== FALSE || strpos($fua, "debian") !== FALSE || strpos($fua, "iceweasel") !== FALSE ? "deb" : "rpm")."-".(strpos($ua, "x86_64") || strpos($ua, "amd64") ? "x86_64" : "x86");
+		elseif (strpos($ua, "linux") !== FALSE) $type = (strpos($fua, "buntu") !== FALSE || strpos($fua, "debian") !== FALSE || strpos($fua, "mint") !== FALSE || strpos($fua, "iceweasel") !== FALSE ? "deb" : "rpm")."-".(strpos($ua, "x86_64") || strpos($ua, "amd64") ? "x86_64" : "x86");
 
 		// Find langauge candidates
 		$langCandidates = array();
@@ -365,5 +415,11 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 			($this->Type ? isset(TypeData::$typenames[$this->Type]) ? TypeData::$typenames[$this->Type] : $this->Type : "").
 			($this->Version ? ", ".sprintf(_t("DownloadSimplePage.ss.DownloadsVersion", "version %s"), convert::raw2xml($this->Version)) : "").
 			($this->Lang ? ", ".convert::raw2xml(LangData::localeName($this->Lang)) : "");
+	}
+	public function IsDotZero() {
+		return substr($this->Version, 4, 1) === "0";
+	}
+	public function IsDotOne() {
+		return substr($this->Version, 4, 1) === "1";
 	}
 }

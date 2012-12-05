@@ -55,7 +55,7 @@ class UpdateDownloadsTask extends DailyTask {
 					'Size'     => $size,
 					'Fullpath' => $path,
 					'Filename' => $filename)));
-			} elseif ($type == "stable" || $type == "testing") {
+			} elseif ($type == "stable" || ($type == "testing" && $version != "3.6.4")) {
 				//-rw-r--r--     8675353 2011/02/16 14:59:45 libreoffice/stable/3.3.1/deb/x86/LibO-SDK_3.3_Linux_x86_install-deb_en-US.tar.gz
 				//-rw-r--r--     9085513 2011/02/16 15:01:55 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_helppack-deb_af.tar.gz
 				//-rw-r--r--   152944835 2011/02/16 15:59:47 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_install-deb_en-US.tar.gz
