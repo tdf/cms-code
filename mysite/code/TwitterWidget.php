@@ -116,7 +116,7 @@ class TwitterWidget extends DataObject {
 	function forTemplate() {
 		$this->Tweets = new DataObjectSet();
 		$numberOfTweets = 5;
-		$twitterURL = "http://search.twitter.com/search.json?q=from%3Alibreofficenews+OR+from%3Adocufoundation&rpp=" . $numberOfTweets;
+		$twitterURL = "http://search.twitter.com/search.json?q=from%3Alibreofficenews+OR+from%3Atdforg&rpp=" . $numberOfTweets;
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $twitterURL);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
