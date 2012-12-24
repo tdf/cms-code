@@ -16,11 +16,12 @@ $lang['de_DE']['FaqsHolder']['SEARCHRESULTS'] = 'Suchergebnisse';
 $lang['de_DE']['FaqsHolder.ss']['GOTOFAQ'] = 'Dokumente anzeigen';
 $lang['de_DE']['FaqsHolder.ss']['VIEWFAQSCOMMENTS'] = 'Kommentare ansehen';
 $lang['de_DE']['FaqsHolder.ss']['NOFAQSENTRIES'] = 'Keine FAQ-Einträge vorhanden';
-$lang['de_DE']['FaqsHolder.ss']['GOTOPREVIOUSPAGE'] = 'Siehe vorherige Seite';
+$lang['de_DE']['FaqsHolder.ss']['GOTOPREVIOUSPAGE'] = 'Vorherige Seite anzeigen';
 $lang['de_DE']['FaqsHolder.ss']['GOTONEXTPAGE'] = 'Nächste Seite anzeigen';
-$lang['de_DE']['FaqsHolder.ss']['PREVIOUSPAGE'] = 'Weiter';
+$lang['de_DE']['FaqsHolder.ss']['PREVIOUSPAGE'] = 'Zurück';
 $lang['de_DE']['FaqsHolder.ss']['NEXTPAGE'] = 'Weiter';
 $lang['de_DE']['FaqsHolder.ss']['VIEWPAGENUM'] = 'Seitennummer anzeigen';
+$lang['de_DE']['FaqsPage.ss']['RELATEDFAQ'] = 'Ähnlich';
 
 $lang['de_DE']['FaqsSearchResults.ss']['READMORE'] = 'Weiterlesen...';
 $lang['de_DE']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Ihre Suchanfrage lieferte keine Ergebnisse.';

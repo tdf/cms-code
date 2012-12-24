@@ -23,14 +23,14 @@ $lang['da_DK']['FaqsHolder.ss']['NEXTPAGE'] = 'Næste';
 $lang['da_DK']['FaqsHolder.ss']['VIEWPAGENUM'] = 'Vis sidenummer';
 $lang['da_DK']['FaqsPage.ss']['RELATEDFAQ'] = 'Lignende';
 
-$lang['da_DK']['FaqsSearchResults.ss']['READMORE'] = 'Læs mere...';
+$lang['da_DK']['FaqsSearchResults.ss']['READMORE'] = 'Læs mere... ';
 $lang['da_DK']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Beklager, men din søgning gav ingen resultater.';
 
 $lang['da_DK']['FaqsTopWidget']['TITLE'] = 'Populære FAQ\'er';
-$lang['da_DK']['FaqsTopWidget']['LIMIT'] = 'Antal FAQ\'er der kan vises';
+$lang['da_DK']['FaqsTopWidget']['LIMIT'] = 'Antal FAQ\'er der skal vises';
 $lang['da_DK']['FaqsTopWidget']['LABEL'] = 'Widget titel';
 
-$lang['da_DK']['FaqsSearchWidget']['TITLE'] = 'Søg FAQ\'er';
+$lang['da_DK']['FaqsSearchWidget']['TITLE'] = 'Søg i FAQ\'er';
 $lang['da_DK']['FaqsSearchWidget']['LIMIT'] = 'Elementer efter side';
 $lang['da_DK']['FaqsSearchWidget']['LABEL'] = 'Widget titel';
 ?>
