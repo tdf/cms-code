@@ -23,7 +23,7 @@ $lang['gl_ES']['FaqsHolder.ss']['NEXTPAGE'] = 'Seguinte';
 $lang['gl_ES']['FaqsHolder.ss']['VIEWPAGENUM'] = 'Ver o número de páxina';
 $lang['gl_ES']['FaqsPage.ss']['RELATEDFAQ'] = 'Relacionado';
 
-$lang['gl_ES']['FaqsSearchResults.ss']['READMORE'] = 'Ler máis...';
+$lang['gl_ES']['FaqsSearchResults.ss']['READMORE'] = 'Ler máis... ';
 $lang['gl_ES']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Desculpe, a consulta de busca non atopou resultados.';
 
 $lang['gl_ES']['FaqsTopWidget']['TITLE'] = 'As preguntas máis frecuentes';

@@ -23,7 +23,7 @@ $lang['nl_NL']['FaqsHolder.ss']['NEXTPAGE'] = 'Volgende';
 $lang['nl_NL']['FaqsHolder.ss']['VIEWPAGENUM'] = 'Paginanummer bekijken';
 $lang['nl_NL']['FaqsPage.ss']['RELATEDFAQ'] = 'Gerelateerd';
 
-$lang['nl_NL']['FaqsSearchResults.ss']['READMORE'] = 'Lees verder...';
+$lang['nl_NL']['FaqsSearchResults.ss']['READMORE'] = 'Lees verder... ';
 $lang['nl_NL']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Uw zoekopdracht leverde geen resultaten.';
 
 $lang['nl_NL']['FaqsTopWidget']['TITLE'] = 'Meest bekeken FAQ\'s';

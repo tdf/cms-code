@@ -5,7 +5,7 @@ $lang['fr_FR']['FaqsPageEntry']['QUESTIONLABEL'] = 'Question';
 $lang['fr_FR']['FaqsPageEntry']['ANSWERLABEL'] = 'Réponse';
 $lang['fr_FR']['FaqsPageEntry']['COUNTHITSLABEL'] = 'Compter les hits?';
 $lang['fr_FR']['FaqsPageEntry']['HITSLABEL'] = 'Nombre de hits';
-$lang['fr_FR']['FaqsPageEntry']['RELATEDLABEL'] = 'FAQ relatives';
+$lang['fr_FR']['FaqsPageEntry']['RELATEDLABEL'] = 'FAQ correspondantes';
 
 $lang['fr_FR']['FaqsHolder']['SEARCHTITLE'] = 'Rechercher';
 $lang['fr_FR']['FaqsHolder']['SEARCHSELCATEGORY'] = 'Catégorie';
@@ -21,10 +21,10 @@ $lang['fr_FR']['FaqsHolder.ss']['GOTONEXTPAGE'] = 'Afficher la page suivante';
 $lang['fr_FR']['FaqsHolder.ss']['PREVIOUSPAGE'] = 'Précédente';
 $lang['fr_FR']['FaqsHolder.ss']['NEXTPAGE'] = 'Suivante';
 $lang['fr_FR']['FaqsHolder.ss']['VIEWPAGENUM'] = 'Afficher le nombre de page';
-$lang['fr_FR']['FaqsPage.ss']['RELATEDFAQ'] = 'Relative';
+$lang['fr_FR']['FaqsPage.ss']['RELATEDFAQ'] = 'Correspondantes';
 
 $lang['fr_FR']['FaqsSearchResults.ss']['READMORE'] = 'En lire plus...';
-$lang['fr_FR']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'La requête de votre recherche n\'a renvoyé aucun résultat';
+$lang['fr_FR']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Il n’y a aucun résultat correspondant à la requête.';
 
 $lang['fr_FR']['FaqsTopWidget']['TITLE'] = 'Top FAQ';
 $lang['fr_FR']['FaqsTopWidget']['LIMIT'] = 'Nombre de FAQ à afficher';
