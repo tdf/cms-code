@@ -120,7 +120,7 @@ class TwitterWidget extends DataObject {
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $twitterURL);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_REFERER, "http://www.libreoffice.org.org/");
+		curl_setopt($ch, CURLOPT_REFERER, "http://www.libreoffice.org/");
 		$twitterJSON = curl_exec($ch);
 		curl_close($ch);
 		
