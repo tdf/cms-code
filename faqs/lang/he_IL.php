@@ -23,7 +23,7 @@ $lang['he_IL']['FaqsHolder.ss']['NEXTPAGE'] = 'הבא';
 $lang['he_IL']['FaqsHolder.ss']['VIEWPAGENUM'] = 'צפייה במספר העמוד';
 $lang['he_IL']['FaqsPage.ss']['RELATEDFAQ'] = 'באותו נושא';
 
-$lang['he_IL']['FaqsSearchResults.ss']['READMORE'] = 'מידע נוסף...';
+$lang['he_IL']['FaqsSearchResults.ss']['READMORE'] = 'מידע נוסף... ';
 $lang['he_IL']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'שאילתת החיפוש שלך לא החזירה תוצאות כלשהן, עמך הסליחה.';
 
 $lang['he_IL']['FaqsTopWidget']['TITLE'] = 'שאלות נפוצות מובילות';

@@ -3,7 +3,7 @@ global $lang;
 
 $lang['el_GR']['FaqsPageEntry']['QUESTIONLABEL'] = 'Ερώτηση';
 $lang['el_GR']['FaqsPageEntry']['ANSWERLABEL'] = 'Απάντηση';
-$lang['el_GR']['FaqsPageEntry']['COUNTHITSLABEL'] = 'Μέτρηση επιτυχιών;';
+$lang['el_GR']['FaqsPageEntry']['COUNTHITSLABEL'] = 'Μέτρηση επισκέψεων;';
 $lang['el_GR']['FaqsPageEntry']['HITSLABEL'] = 'Αριθμός επιτυχιών';
 $lang['el_GR']['FaqsPageEntry']['RELATEDLABEL'] = 'Σχετικές συχνές ερωτήσεις';
 
@@ -23,14 +23,14 @@ $lang['el_GR']['FaqsHolder.ss']['NEXTPAGE'] = 'Επόμενη';
 $lang['el_GR']['FaqsHolder.ss']['VIEWPAGENUM'] = 'Προβολή αριθμού σελίδας';
 $lang['el_GR']['FaqsPage.ss']['RELATEDFAQ'] = 'Σχετικό';
 
-$lang['el_GR']['FaqsSearchResults.ss']['READMORE'] = 'Παραπέρα ανάγνωση...';
+$lang['el_GR']['FaqsSearchResults.ss']['READMORE'] = 'Περαιτέρω ανάγνωση...';
 $lang['el_GR']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Συγνώμη, το ερώτημα αναζήτησης δεν επέστρεψε αποτελέσματα.';
 
 $lang['el_GR']['FaqsTopWidget']['TITLE'] = 'Συχνές ερωτήσεις';
 $lang['el_GR']['FaqsTopWidget']['LIMIT'] = 'Αριθμός συχνών ερωτήσεων για προβολή';
-$lang['el_GR']['FaqsTopWidget']['LABEL'] = 'Τίτλος γραφικού συστατικού';
+$lang['el_GR']['FaqsTopWidget']['LABEL'] = 'Τίτλος του Widget';
 
 $lang['el_GR']['FaqsSearchWidget']['TITLE'] = 'Αναζήτηση συχνών ερωτήσεων';
 $lang['el_GR']['FaqsSearchWidget']['LIMIT'] = 'Στοιχεία ανά σελίδα';
-$lang['el_GR']['FaqsSearchWidget']['LABEL'] = 'Τίτλος γραφικού συστατικού';
+$lang['el_GR']['FaqsSearchWidget']['LABEL'] = 'Τίτλος του Widget';
 ?>

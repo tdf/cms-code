@@ -23,7 +23,7 @@ $lang['pl_PL']['FaqsHolder.ss']['NEXTPAGE'] = 'Dalej';
 $lang['pl_PL']['FaqsHolder.ss']['VIEWPAGENUM'] = 'Wyświetl numer strony';
 $lang['pl_PL']['FaqsPage.ss']['RELATEDFAQ'] = 'Powiązane';
 
-$lang['pl_PL']['FaqsSearchResults.ss']['READMORE'] = 'Czytaj dalej...';
+$lang['pl_PL']['FaqsSearchResults.ss']['READMORE'] = 'Czytaj dalej... ';
 $lang['pl_PL']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Zapytanie nie zwróciło żadnych wyników.';
 
 $lang['pl_PL']['FaqsTopWidget']['TITLE'] = 'Topowe FAQ';

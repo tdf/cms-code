@@ -24,12 +24,13 @@ $lang['ja_JP']['FaqsHolder.ss']['VIEWPAGENUM'] = 'ページ番号を見る';
 $lang['ja_JP']['FaqsPage.ss']['RELATEDFAQ'] = '関連';
 
 $lang['ja_JP']['FaqsSearchResults.ss']['READMORE'] = '続きを読む...';
-$lang['ja_JP']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'すみません、その検索クエリには該当結果がありません';
+$lang['ja_JP']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'すみません、その検索クエリには該当結果がありません。';
 
 $lang['ja_JP']['FaqsTopWidget']['TITLE'] = 'トップFAQ';
 $lang['ja_JP']['FaqsTopWidget']['LIMIT'] = '表示するFAQの数';
 $lang['ja_JP']['FaqsTopWidget']['LABEL'] = 'ウィジェットのタイトル';
 
 $lang['ja_JP']['FaqsSearchWidget']['TITLE'] = 'FAQを検索';
+$lang['ja_JP']['FaqsSearchWidget']['LIMIT'] = '各ページごとの項目数';
 $lang['ja_JP']['FaqsSearchWidget']['LABEL'] = 'ウィジェットのタイトル';
 ?>
