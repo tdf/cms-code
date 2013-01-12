@@ -62,21 +62,48 @@ class UpdateDownloadsTask extends DailyTask {
 				//-rw-r--r--     8377809 2011/02/16 16:53:09 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_langpack-deb_sw-TZ.tar.gz
 				//-rw-r--r--   260409206 2011/02/16 22:03:46 libreoffice/stable/3.3.1/win/x86/LibO_3.3.1_Win_x86_install_all_lang.exe
 				//-rw-r--r--   223750368 2011/02/16 23:31:06 libreoffice/stable/3.3.1/win/x86/LibO_3.3.1_Win_x86_install_multi.exe
-				if(substr($filename,0,8) == "LibO-SDK" || substr($filename,0,12) == "BrOffice-SDK" || substr($filename,0,12) == "LibO-Dev-SDK") {
-					$installtype = 'SDK';
-					$lang = 'en-US';
-				} else {
-					$temp = explode("_", $filename);
-					switch (substr($temp[4],0,8)) {
-						case "helppack": $installtype='Helppack'; break;
-						case "langpack": $installtype='Languagepack'; break;
-						case "install" : $installtype='Full'; /* windows */
-						case "install-": $installtype='Full'; break;
-						default: Debug::message("Unknown install-type: ".substr($temp[4],0,8)); continue 2; //break out of switch & continue with next loop-item Send log about unknown installtype
-					}
-					$temp = explode(".", $temp[5]);
-					$lang = (substr($filename,0,8) == "BrOffice") ? 'pt-BR' : $temp[0];
-				}
+                if ($version != "4.0.0")
+                {
+                    if(substr($filename,0,8) == "LibO-SDK" || substr($filename,0,12) == "BrOffice-SDK" || substr($filename,0,12) == "LibO-Dev-SDK") {
+                        $installtype = 'SDK';
+                        $lang = 'en-US';
+                    } else {
+                        $temp = explode("_", $filename);
+                        switch (substr($temp[4],0,8)) {
+                            case "helppack": $installtype='Helppack'; break;
+                            case "langpack": $installtype='Languagepack'; break;
+                            case "install" : $installtype='Full'; /* windows */
+                            case "install-": $installtype='Full'; break;
+                            default: Debug::message("Unknown install-type: ".substr($temp[4],0,8)); continue 2; //break out of switch & continue with next loop-item Send log about unknown installtype
+                        }
+                        $temp = explode(".", $temp[5]);
+                        $lang = (substr($filename,0,8) == "BrOffice") ? 'pt-BR' : $temp[0];
+                    }
+                } else
+                //-rw-r--r--   223750368 2011/02/16 23:31:06 libreoffice/stable/4.0.0/win/x86/LibreOffice_4.0.0_Win_x86_sdk.msi
+                //-rw-r--r--   223750368 2011/02/16 23:31:06 libreoffice/stable/4.0.0/win/x86/LibreOffice_4.0.0_Win_x86.msi
+                //-rw-r--r--   223750368 2011/02/16 23:31:06 libreoffice/stable/4.0.0/deb/x86/LibreOffice_4.0.0_Linux_x86_deb.tar.gz
+                //-rw-r--r--   223750368 2011/02/16 23:31:06 libreoffice/stable/4.0.0/deb/x86/LibreOffice_4.0.0_Linux_x86_deb_sdk.tar.gz
+                //-rw-r--r--   223750368 2011/02/16 23:31:06 libreoffice/stable/4.0.0/deb/x86/LibreOffice_4.0.0_Linux_x86_deb_helppack_ta.tar.gz
+                //-rw-r--r--   223750368 2011/02/16 23:31:06 libreoffice/stable/4.0.0/deb/x86/LibreOffice_4.0.0_Linux_x86_deb_langpack_ta.tar.gz
+                {
+                    $lang = 'en-US';
+                    $installtype='Full';
+                    $temp = explode("_", $filename);
+                    $temp = array_slice($temp, -1, 1); // last element of _ split
+                    $temp = explode(".", $temp[0]);    // first part of said last element
+                    if(strpos($filename,"_sdk.") !== false) {
+                        $installtype = 'SDK';
+                    } elseif (strpos($filename,"_helppack_") !== false) {
+                        $installtype='Helppack';
+                        $lang = $temp[0];
+                    } elseif (strpos($filename,"_langpack_") !== false) {
+                        $installtype='Languagepack';
+                        $lang = $temp[0];
+                    } elseif (substr($pathcomponents[3],0,3) == "win") {
+                        $lang = 'all';
+                    }
+                }
 				if ($lang == "ns") $lang = "nso";
 				if ($lang == "be-BY") $lang = "be";
 				$dbtemp->push(new Download(array(
