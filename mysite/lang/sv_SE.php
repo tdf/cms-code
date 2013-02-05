@@ -1,20 +1,32 @@
 <?php
 global $lang;
 
-$lang['sv_SE']['Donationpage']['AMOUNT']='Antal:';
+$lang['sv_SE']['Donationpage']['AMOUNT']='Belopp:';
+
+$lang['sv_SE']['DonatePage']['BUTTON_CARD']='Ge bidrag med kreditkort';
+$lang['sv_SE']['DonatePage']['BUTTON_PAYPAL']='Ge bidrag via PayPal';
+$lang['sv_SE']['DonatePage']['CHOICE_DEFAULT']='Ange ett av standardvärdena';
+$lang['sv_SE']['DonatePage']['CUSTOM_CHOICE']='Eller ange en egen summa och valuta<br/>(du kan endast ange valutor<br/>markerade med * när du betalar via PayPal)';
+$lang['sv_SE']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='250';
+$lang['sv_SE']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '50';
+$lang['sv_SE']['DonatePage']['DEFAULT_AMOUNT_EUR10']='100';
+$lang['sv_SE']['DonatePage']['DEFAULT_AMOUNT_EUR20']='200';
+$lang['sv_SE']['DonatePage']['DEFAULT_AMOUNT_EUR50']='500';
+$lang['sv_SE']['DonatePage']['DEFAULT_CURRENCY'] ='SEK';
 
 $lang['sv_SE']['Downloadpage']['BITTORRENT']='Ladda ner med BitTorrent';
 $lang['sv_SE']['Downloadpage']['DETAILLINK']='Se detaljer (md5sum,…)';
 $lang['sv_SE']['Downloadpage']['DLSDK']     ='Hämta SDK för utveckling av tillägg och externa verktyg.';
 $lang['sv_SE']['Downloadpage']['DLSOURCE']  ='Hämta källkoden för att bygga ditt eget installationspaket';
-$lang['sv_SE']['Downloadpage']['DLSUITE']   ='Andra sett att ladda ner LibreOffice på';
+$lang['sv_SE']['Downloadpage']['DLSUITE']   ='Andra sätt att ladda ner LibreOffice på';
+$lang['en_US']['Downloadpage']['NOTESTBUILDS']='Det finns inga testversioner tillgängliga för tillfället.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['sv_SE']['Navigation']['GOTOPAGE']  ='"Gå till %s"';
 $lang['sv_SE']['Navigation']['TOTOPTITLE']='Bläddra till toppen av sidan';
 $lang['sv_SE']['Navigation']['TOTOP']     ='⬆ till toppen';
 
-$lang['sv_SE']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Du måste hämta och installera dessa filer i denna följd:';
+$lang['sv_SE']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Hämta och installera dessa filer i denna följd:';
 $lang['sv_SE']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Byt system, version eller språk';
 $lang['sv_SE']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Utvecklare';
 $lang['sv_SE']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Inte den version du söker?';
