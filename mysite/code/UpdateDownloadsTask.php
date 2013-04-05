@@ -55,14 +55,14 @@ class UpdateDownloadsTask extends DailyTask {
 					'Size'     => $size,
 					'Fullpath' => $path,
 					'Filename' => $filename)));
-			} elseif ($type == "stable" || ($type == "testing" && $version != "3.6.5")) {
+			} elseif ($type == "stable" || ($type == "testing" && $version != "4.0.2")) {
 				//-rw-r--r--     8675353 2011/02/16 14:59:45 libreoffice/stable/3.3.1/deb/x86/LibO-SDK_3.3_Linux_x86_install-deb_en-US.tar.gz
 				//-rw-r--r--     9085513 2011/02/16 15:01:55 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_helppack-deb_af.tar.gz
 				//-rw-r--r--   152944835 2011/02/16 15:59:47 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_install-deb_en-US.tar.gz
 				//-rw-r--r--     8377809 2011/02/16 16:53:09 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_langpack-deb_sw-TZ.tar.gz
 				//-rw-r--r--   260409206 2011/02/16 22:03:46 libreoffice/stable/3.3.1/win/x86/LibO_3.3.1_Win_x86_install_all_lang.exe
 				//-rw-r--r--   223750368 2011/02/16 23:31:06 libreoffice/stable/3.3.1/win/x86/LibO_3.3.1_Win_x86_install_multi.exe
-                if ($version != "4.0.0")
+                if ($version != "4.0.0" && $version != "4.0.1" && $version != "4.0.2")
                 {
                     if(substr($filename,0,8) == "LibO-SDK" || substr($filename,0,12) == "BrOffice-SDK" || substr($filename,0,12) == "LibO-Dev-SDK") {
                         $installtype = 'SDK';
