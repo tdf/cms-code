@@ -9,7 +9,7 @@
 <!--
 $DebugInfo
 -->
-	
+
 		<%-- $Content --%>
 <style>
 table.columns {
@@ -58,7 +58,8 @@ div.DownloadsLeft li:hover {
     text-decoration: none;
 }
 div.DownloadsLeft li h2 {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    font-weight: bold;
     margin: 0 0 3px;
 }
 div.DownloadsLeft li a, div.DownloadsLeft li a:visited {
@@ -96,7 +97,29 @@ div.DownloadsRight a {
 <p><% sprintf(_t('DownloadsHeader','LibreOffice <b>%s</b>. Not the version you wanted?'),$DownloadTypeVersionLang) %>
 <a href='$Link?nodetect'><% _t('DownloadsChangeLink','Change System, Version or Language') %></a></p>
 <!-- warning goes here --><% if IsDotZero %><!-- is dot zero -->$dot_zero_warning<% else_if IsDotOne %><!-- is dot one -->$dot_one_warning<% end_if %>
-<% if SubsiteID = 3 %><%-- english donation text --%><p>LibreOffice is made available by volunteers around the globe, backed by a charitable Foundation.<br><a href="http://donate.libreoffice.org" target="_blank"><b>Please support our efforts:</b> Your donation helps us to deliver a better product!</a></p><% else_if SubsiteID = 2 %><%-- german donation text --%><p>LibreOffice wird durch ehrenamtlich Engagierte in aller Welt m&ouml;glich gemacht, getragen durch eine gemeinn&uuml;tzige Stiftung.<br><a href="http://donate.libreoffice.org/de/" target="_blank"><b>Bitte unterst&uuml;tzen Sie unsere Arbeit:</b> Ihre Spende hilft uns dabei, ein noch besseres Produkt anzubieten!</a></p><% end_if %> 
+<% if SubsiteID = 3 %><%-- english donation text --%><p>LibreOffice is made available by volunteers around the globe, backed by a charitable Foundation.<br><a href="http://donate.libreoffice.org" target="_blank"><b>Please support our efforts:</b> Your donation helps us to deliver a better product!</a></p><% else_if SubsiteID = 2 %><%-- german donation text --%><p>LibreOffice wird durch ehrenamtlich Engagierte in aller Welt möglich gemacht, getragen durch eine gemeinnützige Stiftung.<br><a href="http://donate.libreoffice.org/de/" target="_blank"><b>Bitte unterstützen Sie unsere Arbeit:</b> Ihre Spende hilft uns dabei, ein noch besseres Produkt anzubieten!</a></p><% end_if %>
+<% if SubsiteID = 3 %><%-- english box text --%><% if Type == "box" %><% _t('DownloadsInstallTypeBox','<h2><strong>CD/DVD</strong> image files with English or German User Interface</h2>
+<br />
+<ul>
+	<li>LibreOffice for <u>all supported platforms in all available languages</u> (Windows™ + Portable)</li>
+	<li>Help- and Language-packs in several languages (GNU Linux 32/64 Bit, Mac OSX x86/PPC)</li>
+	<li>Selected Extensions, Templates, Dictionaries, and Documentation</li>
+	<li>Label, Cover, Inlays, and other Artwork</li>
+	<li>Complementary Open Source Software for Your Office</li>
+	<li>LibreOffice Source and Development Tools (German DVD only)</li>
+</ul>
+Detailed descriptions: <a href="http://www.libreoffice-na.us/" target="_blank">English DVD</a>&nbsp; &nbsp;<a href="http://de.libreofficebox.org/" target="_blank">German DVD</a><br /><br />') %><% end_if %>
+<% else_if SubsiteID = 2 %><%-- german box text --%><% if Type == "box" %><% _t('DownloadsInstallTypeBox','<h2><strong>CD/DVD</strong> iso Dateien mit Benutzeroberfläche in Deutsch oder Englisch</h2>
+<br />
+<ul>
+	<li>LibreOffice für <u>alle unterstützten Betriebssysteme in allen verfügbaren Sprachen</u> (Windows™ + Portable)</li>
+	<li>Hilfe- and Sprachpakete in mehereren Sprachen (GNU Linux 32/64 Bit, Mac OSX x86/PPC)</li>
+	<li>Extensions, Vorlagen, Wörterbücher, und Dokumentationen</li>
+	<li>Label, Cover, Inlays, und anderes Artwork</li>
+	<li>Ergänzende Open Source Software für Ihr Büro</li>
+	<li>LibreOffice Quellcode und Entwicklungswerkzeuge (DVD)</li>
+</ul>
+Detailierte Beschreibung: <a href="http://www.libreoffice-na.us/" target="_blank">English DVD</a>&nbsp; &nbsp;<a href="http://de.libreofficebox.org/" target="_blank">German DVD</a><br /><br />') %><% end_if %><% end_if %>
 <div class="Downloads">
  <div  class="DownloadsLeft">
 <% if Type != "src" %><% if Type != "box" %>
@@ -209,7 +232,7 @@ div.DownloadsRight a {
 <%-- TODO: Generate list dynamicly <% control Types %><li><a href="$Link">$Name</a></li><% end_control %> --%>
 <ul>
  <li><a href="{$Link}?type=win-x86">Windows</a>
- <li>Mac: 
+ <li>Mac:
    <a href="{$Link}?type=mac-x86">Intel</a> <% _t('TypeOr','or') %>
    <a href="{$Link}?type=mac-ppc">PowerPC</a>
  <li>Linux (deb):
