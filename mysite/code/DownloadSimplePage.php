@@ -307,9 +307,9 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 	public function init() {
 		Object::add_extension('DataObjectSet', 'DataObjectSetChunked');
 		parent::init();
-		$this->Type = (isset($_GET["type"]) && $_GET["type"] != "" ? $_GET["type"] : null);
-		$this->Lang = (isset($_GET["lang"]) && $_GET["lang"] != "" ? $_GET["lang"] : null);
-		$this->Version = (isset($_GET["version"]) && $_GET["version"] != "" ? $_GET["version"] : null);
+		$this->Type = (isset($_GET["type"]) && array_key_exists($_GET["type"], TypeData::$typenames) ? $_GET["type"] : null);
+		$this->Lang = (isset($_GET["lang"]) && preg_match('/^(multi|[a-z]{2,3}(-[A-Z]{2})?)$/', $_GET["lang"]) ? $_GET["lang"] : null);
+		$this->Version = (isset($_GET["version"]) && preg_match('/^\d+(\.\d+){2,3}$/', $_GET["version"]) ? $_GET["version"] : null);
 
 		// sample user agents:
 		//
