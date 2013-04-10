@@ -4,16 +4,16 @@ global $lang;
 $lang['it_IT']['Donationpage']['AMOUNT']='Quantità:';
 
 
-$lang['it_IT']['DonatePage']['BUTTON_CARD']   ='Donate via Credit Card';
-$lang['it_IT']['DonatePage']['BUTTON_PAYPAL'] ='Donate via PayPal';
-$lang['it_IT']['DonatePage']['CHOICE_DEFAULT']='Select one of the default values';
-$lang['it_IT']['DonatePage']['CUSTOM_CHOICE'] ='Or enter a custom amount and currency<br/>(only those marked with * are also available via PayPal)';
+$lang['it_IT']['DonatePage']['BUTTON_CARD']   ='Dona con Carta di Credito';
+$lang['it_IT']['DonatePage']['BUTTON_PAYPAL'] ='Dona con PayPal';
+$lang['it_IT']['DonatePage']['CHOICE_DEFAULT']='Selezionate uno degli importi predefiniti';
+$lang['it_IT']['DonatePage']['CUSTOM_CHOICE'] ='Oppure indicate un importo personalizzato ed una valuta<br/>(solo quelle recanti un * sono disponibili tramite PayPal)';
 $lang['it_IT']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
 $lang['it_IT']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
 $lang['it_IT']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['it_IT']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['it_IT']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
-$lang['it_IT']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+$lang['it_IT']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
 
 $lang['it_IT']['Downloadpage']['BITTORRENT']='Scarica con BitTorrent';
 $lang['it_IT']['Downloadpage']['DETAILLINK']='Ottieni dettagli (md5sum,...)';
