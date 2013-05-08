@@ -3,20 +3,20 @@ class ConcardisPayment extends Page_Controller {
 	private static $passphrase = 'AVjth4eK7gQc6EzN';
 
 	static $defaultvars = array(
-		accepturl	=> "http://pumbaa.documentfoundation.org/accept.html", 
-		declineurl	=> "http://pumbaa.documentfoundation.org/decline.html", 
-		exceptionurl	=> "http://pumbaa.documentfoundation.org/exception.html", 
-		cancelurl	=> "http://pumbaa.documentfoundation.org/cancel.html", 
-		catalogurl	=> "http://www.documentfoundation.org", 
-		tp		=> "http://pumbaa.documentfoundation.org/processing.html", 
-		type		=> "test", 
-		currency	=> "EUR", 
-		com		=> "Donation to The Document Foundation", 
-		homeurl		=> "http://www.documentfoundation.org", 
-		operation	=> "SAL", 
-		pmlisttype	=> "2", 
-		pspid		=> "40F02481", 
-		win3ds		=> "MAINW" 
+		'accepturl'	=> 'http://pumbaa.documentfoundation.org/accept.html',
+		'declineurl'	=> 'http://pumbaa.documentfoundation.org/decline.html',
+		'exceptionurl'	=> 'http://pumbaa.documentfoundation.org/exception.html',
+		'cancelurl'	=> 'http://pumbaa.documentfoundation.org/cancel.html',
+		'catalogurl'	=> 'http://www.documentfoundation.org',
+		'tp'		=> 'http://pumbaa.documentfoundation.org/processing.html',
+		'type'		=> 'test',
+		'currency'	=> 'EUR',
+		'com'		=> 'Donation to The Document Foundation',
+		'homeurl'	=> 'http://www.documentfoundation.org',
+		'operation'	=> 'SAL',
+		'pmlisttype'	=> '2',
+		'pspid'		=> '40F02481',
+		'win3ds'	=> 'MAINW'
 		);
 
 
