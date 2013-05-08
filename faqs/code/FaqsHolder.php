@@ -127,7 +127,7 @@ class FaqsHolder_Controller extends Page_Controller {
     function Content() {
         /* faq-search conflicts with global site search - add a property to disable sitesearch when faq-search is used */
         $replacements=0;
-        $content = str_replace('$SearchFaqsForm', $this->SearchFaqsForm()->forTemplate(), $this->Content, &$replacements);
+        $content = str_replace('$SearchFaqsForm', $this->SearchFaqsForm()->forTemplate(), $this->Content, $replacements);
         if ($replacements) $this->DisableSiteSearch=true;
         return $content;
     }
