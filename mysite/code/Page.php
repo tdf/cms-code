@@ -1,7 +1,7 @@
 <?php
 class Page extends SiteTree {
 
-	public static $db = array(
+	private static $db = array(
 		"IsFullWidth" => "Boolean",
 		'ShufflerWidth' => 'Int',
 		'ShufflerHeight' => 'Int',
@@ -9,51 +9,51 @@ class Page extends SiteTree {
 		'FadeSeconds' => 'Decimal',
 		'UseColorbox' => 'Boolean'
 	);
-	static $defaults = array(
+	private static $defaults = array(
 		'ShufflerWidth' => 400,
 		'ShufflerHeight' => 300,
 		'PauseSeconds' => 5.0,
 		'FadeSeconds' => 0.70
 	);
-	static $has_many = array (
+	private static $has_many = array (
 		'Images' => 'ImageResource'
 	);
 
-	function getCMSFields() {
-		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Content.Main', new CheckboxField('IsFullWidth'), 'Content');
-		$fields->addFieldToTab('Root.Content.Colorbox', new CheckboxField('UseColorbox'));
-
-		$width = new NumericField('ShufflerWidth', "Scale images to width x height (keeps aspect ratio)");
-		$height = new NumericField('ShufflerHeight', " x ");
-		$width->setMaxLength(4);
-		$height->setMaxLength(4);
-		$fields->addFieldToTab("Root.Content.PhotoShuffler",new FieldGroup($width,$height));
-
-		$pause = new NumericField('PauseSeconds', "Pause between changing images (seconds)");
-		$fade = new NumericField('FadeSeconds', " Duration of the fade (seconds) ");
-		$pause->setMaxLength(4);
-		$fade->setMaxLength(4);
-		$fields->addFieldToTab("Root.Content.PhotoShuffler",new FieldGroup($pause,$fade));
-
-		$manager = new ImageDataObjectManager(
-			$this, // Controller
-			'Images', // Source name
-			'ImageResource', // Source class
-			'Attachment', // File name on DataObject
-			array(
-				'Title' => 'Title',
-				'Caption' => 'Caption'
-			), // Headings
-			'getCMSFields_forPopup' // Detail fields
-			// Filter clause
-			// Sort clause
-			// Join clause
-		);
-		$fields->addFieldToTab("Root.Content.PhotoShuffler",$manager);
-
-		return $fields;
-	}
+//	function getCMSFields() {
+//		$fields = parent::getCMSFields();
+//		$fields->addFieldToTab('Root.Content.Main', new CheckboxField('IsFullWidth'), 'Content');
+//		$fields->addFieldToTab('Root.Content.Colorbox', new CheckboxField('UseColorbox'));
+//
+//		$width = new NumericField('ShufflerWidth', "Scale images to width x height (keeps aspect ratio)");
+//		$height = new NumericField('ShufflerHeight', " x ");
+//		$width->setMaxLength(4);
+//		$height->setMaxLength(4);
+//		$fields->addFieldToTab("Root.Content.PhotoShuffler",new FieldGroup($width,$height));
+//
+//		$pause = new NumericField('PauseSeconds', "Pause between changing images (seconds)");
+//		$fade = new NumericField('FadeSeconds', " Duration of the fade (seconds) ");
+//		$pause->setMaxLength(4);
+//		$fade->setMaxLength(4);
+//		$fields->addFieldToTab("Root.Content.PhotoShuffler",new FieldGroup($pause,$fade));
+//
+//		$manager = new ImageDataObjectManager(
+//			$this, // Controller
+//			'Images', // Source name
+//			'ImageResource', // Source class
+//			'Attachment', // File name on DataObject
+//			array(
+//				'Title' => 'Title',
+//				'Caption' => 'Caption'
+//			), // Headings
+//			'getCMSFields_forPopup' // Detail fields
+//			// Filter clause
+//			// Sort clause
+//			// Join clause
+//		);
+//		$fields->addFieldToTab("Root.Content.PhotoShuffler",$manager);
+//
+//		return $fields;
+//	}
 
 	/**
 	 * Return a list of all the pages to cache (StaticPublisher)
@@ -128,7 +128,7 @@ class Page_Controller extends ContentController {
 	 *
 	 * @var array
 	 */
-	public static $allowed_actions = array (
+	private static $allowed_actions = array (
 	);
 
 	public function init() {
