@@ -1,6 +1,3 @@
-[submodule "cmsworkflow"]
-	path = cmsworkflow
-	url = ../silverstripe-cmsworkflow.git
 [submodule "spamprotection"]
 	path = spamprotection
 	url = ../silverstripe-spamprotection.git
@@ -10,12 +7,9 @@
 [submodule "news"]
 	path = news
 	url = ../silverstripe-news.git
-[submodule "sapphire"]
-	path = sapphire
+[submodule "framework"]
+	path = framework
 	url = ../sapphire
-[submodule "forum"]
-	path = forum
-	url = ../silverstripe-forum
 [submodule "subsites"]
 	path = subsites
 	url = ../silverstripe-subsites
@@ -28,18 +22,3 @@
 [submodule "googlesitemaps"]
 	path = googlesitemaps
 	url = ../silverstripe-googlesitemaps
-[submodule "concurrentediting"]
-	path = concurrentediting
-	url = ../silverstripe-concurrentediting
-[submodule "event_calendar"]
-	path = event_calendar
-	url = ../EventCalendar
-[submodule "uploadify"]
-	path = uploadify
-	url = ../Uploadify
-[submodule "dataobject_manager"]
-	path = dataobject_manager
-	url = ../DataObjectManager
-[submodule "legacydatetimefields"]
-	path = legacydatetimefields
-	url = ../silverstripe-legacydatetimefields
