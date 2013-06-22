@@ -55,7 +55,7 @@ class UpdateDownloadsTask extends DailyTask {
 					'Size'     => $size,
 					'Fullpath' => $path,
 					'Filename' => $filename)));
-			} elseif ($type == "stable" || ($type == "testing" && $version != "4.0.2")) {
+			} elseif ($type == "stable" || $type == "testing" ) {
 				//-rw-r--r--     8675353 2011/02/16 14:59:45 libreoffice/stable/3.3.1/deb/x86/LibO-SDK_3.3_Linux_x86_install-deb_en-US.tar.gz
 				//-rw-r--r--     9085513 2011/02/16 15:01:55 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_helppack-deb_af.tar.gz
 				//-rw-r--r--   152944835 2011/02/16 15:59:47 libreoffice/stable/3.3.1/deb/x86/LibO_3.3.1_Linux_x86_install-deb_en-US.tar.gz
@@ -135,6 +135,18 @@ class UpdateDownloadsTask extends DailyTask {
 						      'Filename' => "libreoffice")));
 
 		print "got ".$dbtemp->Count()." files…";
+		print "\nremoving duplicates from testing that are already in stable…\n";
+		$types = $dbtemp->groupBy("Type");
+		$testing_versions = $types["testing"]->groupBy("Version");
+		foreach ($testing_versions as $version => $files) {
+			if ($types["stable"]->find("Version", $version)) {
+				print "version »$version« is also in stable, removing entries\n";
+				foreach ($files as $testingfile) {
+					$dbtemp->remove($testingfile);
+				}
+			}
+		}
+		print $dbtemp->Count()." files are left…";
 		print " flushing table…";
 		DB::query('TRUNCATE TABLE Download');
 		print " writing records…\n";
