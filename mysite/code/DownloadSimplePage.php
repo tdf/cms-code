@@ -57,19 +57,6 @@ class LangData extends ArrayData {
 			(isset($_GET["version"]) ? "&version=".urlencode($_GET["version"]) : "");
 	}
 }
-class VersionData extends ArrayData {
-	public function getLink() {
-		return Controller::curr()->Link()."?".
-			(isset($_GET["type"]) ? "type=".urlencode($_GET["type"])."&" : "").
-			(isset($_GET["lang"]) ? "lang=".urlencode($_GET["lang"])."&" : "").
-			"version=".urlencode($this->Version);
-	}
-}
-class DownloadData extends ArrayData {
-	public function getSizeNice() {
-		return File::format_size($this->Size);
-	}
-}
 
 class DownloadSimplePage extends Page {
 	static $db = array(
@@ -86,73 +73,51 @@ class DownloadSimplePage extends Page {
 		return $fields;
 	}
 }
-class DownloadSimplePage_Controller extends Page_Controller implements i18nEntityProvider {
-	private static $multiLangs = array("en-US","ar","ast","be-BY","bg","bn","bo","br","ca","ca-XV","cs","da","de","dz","el","en-GB","es","et","eu","fi","fr","gl","gu","he","hi","hr","hu","is","it","ja","km","kn","ko","lt","lv","mr","nb","nl","oc","om","or","pl","pt","pt-BR","ru","sh","si","sk","sl","sr","sv","te","tr","ug","vi","zh-CN","zh-TW");
-
-	function provideI18nEntities() {
-		$entities = parent::provideI18nEntities();
-		$rows = DB::query("SELECT distinct Lang FROM Download WHERE Lang NOT IN ('all','multi') ORDER BY Lang");
-		foreach ($rows as $row) {
-			$name = ucfirst(i18n::get_language_name($row["Lang"], false));
-			$entities["LocaleName.".$row["Lang"]] = array($name ? $name : $this->Lang);
+class DownloadSimplePage_Controller extends Page_Controller {
+	public function getTypes() {
+		$types = new DataObjectSet();
+		foreach (TypeData::$typenames as $key => $value) {
+			$types->push(new ArrayData(array("osarch" => $key, "label" => $value, "current" => ($key == $this->Type) ? true : false)));
 		}
-		return $entities;
-	}
-
-	private function WhereClause($type, $lang, $version) {
-		$types = explode('-', $type);
-		$brVersion = !is_null($version) && substr($version, -3) == "-br";
-		return (!is_null($type) ? (count($types)==1 ?
-				"AND Type='".convert::raw2sql($types[0])."' " :
-				"AND Platform='".convert::raw2sql($types[0])."' AND Arch='".convert::raw2sql($types[1])."' ") : "").
-			(!is_null($lang) ? "AND (Lang='".convert::raw2sql($lang)."'".($brVersion ? " OR FullPath LIKE '%\\_".convert::raw2sql($lang)."%'" : "").") " : "").
-			(!is_null($version) ?
-				"AND Version='".convert::raw2sql(str_replace('-br', '', $version))."' ".
-				"AND FullPath ".($brVersion ? "" : "NOT ")."LIKE '%/BrOffice%'" : "");
-	}
-	public function Types() {
-		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("types")))) {
-			$rows = DB::query("SELECT distinct case when Type in ('stable','testing','portable') then concat(Platform,'-',Arch) else Type end Type, PlatForm, Arch ".
-				"FROM Download");
-			$result = new DataObjectSet();
-			foreach ($rows as $row)
-				$result->push(new TypeData($row));
-			$cache->save(serialize($result));
-		}
-		$result->sort("Order");
-		return $result;
+		return $types;
 	}
 	public function Languages($type = null) {
 		if (is_null($type)) $type = $this->Type;
 		if (is_null($type)) return new DataObjectSet();
-		
+
 		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("languages" . sha1($type))))) {
-			$rows = DB::query("SELECT distinct Lang ".
-				"FROM Download WHERE Lang NOT IN ('all','multi') ".self::WhereClause($type != "win-x86" ? $type : null, null, null)."ORDER BY Lang");
-			$result = new DataObjectSet();
-			foreach ($rows as $row)
-				$result->push(new LangData($row));
+		if (!($result = unserialize($cache->load(str_replace("-", "_", "-languages"))))) {
+			$langs = DataObject::get("Download", "Lang != '' AND Lang != 'multi'");
+			$langs->removeDuplicates("Lang");
+			$result= new DataObjectSet();
+			foreach ($langs->column("Lang") as $entry)
+				$result->push(new LangData(array("Lang" => $entry)));
+			$result->sort("Name");
 			$cache->save(serialize($result));
 		}
-		$result->sort("Name");
 		return $result;
 	}
-	public function Versions($type = null, $lang = null) {
-		if (is_null($type)) $type = $this->Type;
-		if (is_null($lang)) $lang = $this->Lang;
-		if (is_null($type) || ($type != "box" && $type != "src" && is_null($lang))) return new DataObjectSet();
-		
+
+	public function Versions() {
+
 		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("versions" . sha1($type."-".$lang))))) {
-			$rows = DB::query("SELECT distinct concat(Version, case when FullPath LIKE '%/BrOffice%' then '-br' else '' end) Version, ".
-				" CASE WHEN Type='testing' OR Version LIKE '%rc%' OR Version LIKE '%beta%' THEN 'testing' ELSE 'stable' END Type ".
-				"FROM Download WHERE 1=1 ".self::WhereClause($type != "win-x86" ? $type : null, $lang, null)."ORDER BY Type, Version DESC");
+		if (!($result = unserialize($cache->load("_versions")))) {
+			// order in the order first stable, then testing versions only available as box, then as portable,
+			// then the rest (appstore (ancient version) )
+			$vers = DataObject::get("Download", null,
+				" FIELD(Type,'portable', 'box', 'testing', 'stable') DESC, Type, Version DESC");
+			$vers->removeDuplicates("Version");
+			$vers->First()->Recommended = true;
+			$versarray = $vers->groupBy("Type");
 			$result = new DataObjectSet();
-			foreach ($rows as $row)
-				$result->push(new VersionData($row));
-			$result->First()->Recommended = true;
+			$result->push(new ArrayData(array('Type' => "stable",  'data' => array_shift($versarray))));
+			$result->push(new ArrayData(array('Type' => "testing", 'data' => array_shift($versarray))));
+			$other = new DataObjectSet();
+			foreach ($versarray as $type => $dos) {
+				$other->merge($dos);
+			}
+			$other->sort("Version", "DESC");
+			$result->push(new ArrayData(array('Type' => "other", 'data' => $other)));
 			$cache->save(serialize($result));
 		}
 		return $result;
@@ -161,52 +126,59 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		if (is_null($type)) $type = $this->Type;
 		if (is_null($lang)) $lang = $this->Lang;
 		if (is_null($version)) $version = $this->Version;
-		if (is_null($type) || ($type != "box" && $type != "src" && is_null($lang)) || is_null($version)) return new DataObjectSet();
-		
-		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("downloads" . sha1($type."-".$lang."-".$version))))) {
-			$useMulti = strpos($version, "3.3.") === FALSE || in_array($lang, static::$multiLangs);
-			$rows = $type != "box" && $type != "src" ?
-				DB::query("SELECT InstallType, Fullpath, Size, Type FROM (".
-				"SELECT InstallType, Fullpath, Size, Type, 1 Idx FROM Download WHERE InstallType='Full' ".self::WhereClause($type, ($type == "win-x86" ? ($useMulti ? "multi" : "all") : null), $version)." UNION ALL ".
-				"SELECT InstallType, Fullpath, Size, Type, 2 Idx FROM Download WHERE InstallType='Languagepack' ".self::WhereClause($type, $lang, $version)." UNION ALL ".
-				"SELECT InstallType, Fullpath, Size, Type, 3 Idx FROM Download WHERE InstallType='Helppack' ".self::WhereClause($type, $lang, $version)." UNION ALL ".
-				"SELECT 'Helppack (English fallback)' InstallType, Fullpath, Size, Type, 4 Idx FROM Download WHERE InstallType='Helppack' ".self::WhereClause($type, "en-us", $version).
-					" AND NOT EXISTS(SELECT * FROM Download WHERE InstallType='Helppack' ".self::WhereClause($type, $lang, $version).")) t ".
-				"ORDER BY Idx") :
-				DB::query("SELECT Filename InstallType, Fullpath, Size, Type FROM Download WHERE 1=1 ".self::WhereClause($type, null, $version)." ORDER BY Fullpath");
-			$main = new DataObjectSet();
-			foreach ($rows as $row)
-				$main->push(new DownloadData($row));
-			$IsPreRelease = ($main->First() && $main->First()->Type == "testing") || strpos($version, 'rc') !== FALSE || strpos($version, 'beta') != FALSE;
+		return self::get_downloads($type, $lang, $version);
+	}
+	public static function get_downloads($type = null, $lang = null, $version = null) {
+		if (is_null($type) || ($type != "box" && $type != "src" && $type != 'SDK' && is_null($lang)) || is_null($version)) return new DataObjectSet();
 
-			$result = new ArrayData(array(
-				"Files" => $main,
-				"IsPreRelease" => $IsPreRelease,
-			));
-			$cache->save(serialize($result));
+		$osarch = explode("-", $type);
+		if( $type == "box" || $type == "src" ) {
+			$main = new ArrayData(array("full" => DataObject::get("Download", "Type = '".convert::raw2sql($type)."' "
+				."AND Version = '".convert::raw2sql($version)."'")));
+		} elseif( $type == "SDK" ) {
+			$main = new ArrayData(array("full" => DataObject::get_one("Download", "InstallType = 'SDK' "
+				."AND Version  = '".convert::raw2sql($version)  ."' "
+				."AND Platform = '".convert::raw2sql($osarch[0])."' "
+				."AND Arch     = '".convert::raw2sql($osarch[1])."'")));
+		} else {
+			$full = DataObject::get_one("Download", "InstallType = 'Full' "
+				."AND Version  = '".convert::raw2sql($version)  ."' "
+				."AND Platform = '".convert::raw2sql($osarch[0])."' "
+				."AND Arch     = '".convert::raw2sql($osarch[1])."'");
+			$downloads["full"] = $full;
+			if ($full) {
+				$langpacks = $full->Langpacks();
+				$helppacks = $full->Helppacks();
+				if ($langpacks) {
+					$pack = $langpacks->find("Lang", $lang);
+					if ($pack) $downloads["langpack"] = $pack;
+				}
+				if ($helppacks) {
+					$pack = $helppacks->find("Lang", $lang);
+					if ($pack) {
+						$downloads["helppack"] = $pack;
+					} else {
+						$pack = $helppacks->find("Lang", "en-US");
+						$downloads["helppack"] = $pack;
+						$downloads["helppack"]->setField("fallback", true);
+					}
+				}
+			}
+			$main = new ArrayData($downloads);
 		}
-		return $result;
+		// just check with any installer whether the version is in testing dir (as src-packages don't give a hint)
+		$main->setField("IsPreRelease", (DataObject::get_one("Download", "Type = 'testing' AND Version ='".convert::raw2sql($version)."'")) ? true : false);
+		return $main;
 	}
 	public function DownloadPortables($type = null, $lang = null, $version = null) {
 		if (is_null($type)) $type = $this->Type;
 		if (is_null($lang)) $lang = $this->Lang;
 		if (is_null($version)) $version = $this->Version;
 		if (is_null($type) || ($type != "box" && $type != "src" && is_null($lang)) || is_null($version)) return new DataObjectSet();
-		
-		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("downloadportables" . sha1($type."-".$lang."-".$version))))) {
-			$portableLangs = array("zh-CN","zh-TW","nl","en-US","en-GB","fr","de","hu","it","ja","ko","pl","pt","pt-BR","ru","es");
-			$result = new DataObjectSet();
-			if (in_array($lang, static::$multiLangs)) { // Assume that the 58 languages in MultilingualAll are the same as in 3.3.x, windows, multi installer
-				$rows = DB::query("SELECT InstallType, Fullpath, Size, Type FROM Download WHERE Type='portable' ".
-					self::WhereClause($type, null, $version).
-					"AND FullPath LIKE '%Multilingual".(in_array($lang, $portableLangs) ? "Normal" : "All")."%'");
-				foreach ($rows as $row)
-					$result->push(new DownloadData($row));
-			}
-			$cache->save(serialize($result));
-		}
+
+		$portableLangs = array("zh-CN","zh-TW","nl","en-US","en-GB","fr","de","hu","it","ja","ko","pl","pt","pt-BR","ru","es");
+		$result = DataObject::get_one("Download", "Type = 'portable' AND Version ='".convert::raw2sql($version)."' "
+			."AND Filename LIKE '%Multilingual".(in_array($lang, $portableLangs) ? "Normal" : "All")."%'");
 		return $result;
 	}
 	public function DownloadIsos($type = null, $lang = null, $version = null) {
@@ -214,28 +186,12 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		if (is_null($lang)) $lang = $this->Lang;
 		if (is_null($version)) $version = $this->Version;
 		if (is_null($type) || is_null($lang) || is_null($version)) return new DataObjectSet();
-		
-		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("downloadisos" . sha1($type."-".$lang."-".$version))))) {
-			$rows = DB::query("SELECT InstallType, Fullpath, Size, Type, Lang ".
-				"FROM (SELECT case ".
-				" when FullPath like '%Win%' then 'win' ".
-				" when FullPath like '%Linux-DEB32%' then 'deb-x86' ".
-				" when FullPath like '%Linux-DEB64%' then 'deb-x86_64' ".
-				" when FullPath like '%Linux-RPM32%' then 'deb-x86' ".
-				" when FullPath like '%Linux-RPM64%' then 'deb-x86_64' ".
-				" when FullPath like '%allplatforms%' then 'multi' ".
-				" when FullPath like '%WLM%' then 'multi' end Type, ".
-				" case when FullPath like '%CD%' then 'CD' when FullPath like '%DVD%' then 'DVD' else 'Other' end InstallType, ".
-				" case when FullPath like '%\\_de.%' then 'de' else 'multi' end Lang, ".
-				" Version, FullPath, Size FROM Download WHERE Type='box') t ".
-				"WHERE Type IN ('".convert::raw2sql($type)."','multi')".
-				"AND Lang IN ('".convert::raw2sql($lang)."','multi')".
-				"AND Version IN ('".convert::raw2sql($version)."','multi')");
-			$result = new DataObjectSet();
-			foreach ($rows as $row)
-				$result->push(new DownloadData($row));
-			$cache->save(serialize($result));
+
+		$result = DataObject::get("Download", "Type = 'box' AND Version = '".convert::raw2sql($version)."' ");
+		if ($result) {
+			foreach ($result as $iso) {
+				$iso->setField("InstallMedia", (strpos(strtolower($iso->Filename), "dvd") !== FALSE ) ? "DVD" : "CD");
+			}
 		}
 		return $result;
 	}
@@ -245,49 +201,38 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		if (is_null($version)) $version = $this->Version;
 		if (is_null($type) || is_null($lang) || is_null($version)) return new DataObjectSet();
 
-		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("downloadappstore" . sha1($type."-".$lang."-".$version))))) {
-			$types = explode('-', $type);
-			$rows = DB::query("SELECT InstallType, Fullpath, Size, Type, Lang, Version, FullPath, Size FROM Download WHERE Type='appstore' ".
-				"AND Platform='".convert::raw2sql($types[0])."' ".
-				"AND Lang IN ('".convert::raw2sql($lang)."','multi')");
-			$result = new DataObjectSet();
-			foreach ($rows as $row)
-				$result->push(new DownloadData($row));
-			$cache->save(serialize($result));
-		}
+		$osarch = explode('-', $type);
+		$result = DataObject::get_one("Download", "Type = 'appstore' AND Version = '".convert::raw2sql($version)."' "
+			."AND Platform = '".convert::raw2sql($osarch[0])."' "
+			."AND Arch     = '".convert::raw2sql($osarch[1])."'");
 		return $result;
 	}
 	public function DownloadSdks($type = null, $lang = null, $version = null) {
 		if (is_null($type)) $type = $this->Type;
 		if (is_null($lang)) $lang = $this->Lang;
 		if (is_null($version)) $version = $this->Version;
-		if (is_null($type) || ($type != "box" && $type != "src" && is_null($lang)) || is_null($version)) return new DataObjectSet();
-		
-		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load("downloadsdks" . sha1($type."-".$lang."-".$version))))) {
-			$rows = DB::query("SELECT InstallType, Fullpath, Size, Type FROM Download WHERE InstallType='SDK' ".
-				self::WhereClause($type, null, $version));
-			$result = new DataObjectSet();
-			foreach ($rows as $row)
-				$result->push(new DownloadData($row));
-			$cache->save(serialize($result));
-		}
+		if (is_null($type) || $type == "box" || ($type != "src" && is_null($lang)) || is_null($version)) return new DataObjectSet();
+
+		$osarch = explode("-", $type);
+		$result = DataObject::get_one("Download", "InstallType = 'SDK' AND Version ='".convert::raw2sql($version)."' "
+			."AND Platform = '".convert::raw2sql($osarch[0])."' "
+			."AND Arch     = '".convert::raw2sql($osarch[1])."'");
 		return $result;
 	}
 	public function DownloadSources($type = null, $lang = null, $version = null) {
 		if (is_null($type)) $type = $this->Type;
-		if ($type == "src") return new DataObjectSet(); 
-		$result = $this->Downloads("src", null, $version);
-		return $result->Files;
+		if (is_null($version)) $version = $this->Version;
+		if ($type == "src") return new DataObjectSet(); //don't show sources when sources are explicitly requested
+		$result = self::get_downloads("src", null, $version);
+		return $result;
 	}
 	public function RelatedPages($type = null, $version = null) {
 		if (is_null($type)) $type = $this->Type;
 		if (is_null($version)) $version = $this->Version;
 		if (is_null($type) || is_null($version)) return new DataObjectSet();
-		
+
 		$cache = SS_Cache::factory('DownloadSimplePageController');
-		if (!($result = @unserialize($cache->load($this->SubsiteID . "relatedpages" . sha1($version))))) {
+		if (!($result = unserialize($cache->load($this->SubsiteID . "relatedpages" . sha1($version))))) {
 			$tags = array("dl");
 			$parts = explode(".", str_replace("rc", ".rc", str_replace("beta", ".beta", $version)));
 			$tempver = "";
@@ -304,6 +249,18 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		return $result;
 	}
 
+	public function getDonatePageLink() {
+		Subsite::disable_subsite_filter(true);
+		/* get the page with ID 2219, i.e. the english one */
+		$donateoriginal = DataObject::get_by_id('SiteTree', 2219);
+		$translation = $donateoriginal->getTranslation($this->Locale);
+		Subsite::disable_subsite_filter(false);
+		if ($translation) {
+			return $translation->AbsoluteLink();
+		} else {
+			return false;
+		}
+	}
 	public function init() {
 		Object::add_extension('DataObjectSet', 'DataObjectSetChunked');
 		parent::init();
@@ -335,9 +292,9 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		$ua = strpos($fua, ")") ? substr($fua, 0, strpos($fua, ")")) : $fua;
 		$ua = strpos($ua, "(") ? substr($ua, strpos($ua, "(") + 1) : $fua;
 
-		$type = "";
-		if (strpos($ua, "windows") !== FALSE || strpos($ua, "win32") !== FALSE) $type = "win-x86";
-		elseif (strpos($ua, "macintosh") !== FALSE || strpos($ua, "mac os") !== FALSE) $type = (strpos($ua, "intel") !== FALSE ? "mac-x86" : "mac-ppc");
+		// default to win
+		$type = "win-x86";
+		if (strpos($ua, "macintosh") !== FALSE || strpos($ua, "mac os") !== FALSE) $type = (strpos($ua, "intel") !== FALSE ? "mac-x86" : "mac-ppc");
 		elseif (strpos($ua, "linux") !== FALSE) $type = (strpos($fua, "buntu") !== FALSE || strpos($fua, "debian") !== FALSE || strpos($fua, "mint") !== FALSE || strpos($fua, "iceweasel") !== FALSE ? "deb" : "rpm")."-".(strpos($ua, "x86_64") || strpos($ua, "amd64") ? "x86_64" : "x86");
 
 		// Find langauge candidates
@@ -354,24 +311,24 @@ class DownloadSimplePage_Controller extends Page_Controller implements i18nEntit
 		array_push($langCandidates, i18n::get_locale());
 
 		$lang = "";
-		if ($type && !$this->Type && !$this->Version && !isset($_GET["nodetect"])) {
-			// Check langauge candidates
-			$langs = $this->Languages($type);
-			foreach ($langCandidates as $value) {
-				$parts = explode("-", str_replace("_", "-", trim(strtolower($value))));
-				if (count($parts) > 1 && $langs->find("Lang", $parts[0]."-".strtoupper($parts[1]))) { $lang = $parts[0]."-".strtoupper($parts[1]); break; }
-				elseif ($langs->find("Lang", $parts[0])) { $lang = $parts[0]; break; }
-			}
-			// Find newest version
-			$versions = $this->Versions($type, $lang);
-			if ($versions->Count()) {
-				$this->Type = $type;
-				$this->Lang = $lang;
-				$this->Version = $versions->First()->Version;
-			}
+		if ($type && !$this->Type) {
+			$this->Type = $type;
+		}
+		// Check langauge candidates
+		$langs = $this->Languages($type);
+		foreach ($langCandidates as $value) {
+			$parts = explode("-", str_replace("_", "-", trim(strtolower($value))));
+			if (count($parts) > 1 && $langs->find("Lang", $parts[0]."-".strtoupper($parts[1]))) { $lang = $parts[0]."-".strtoupper($parts[1]); break; }
+			elseif ($langs->find("Lang", $parts[0])) { $lang = $parts[0]; break; }
+		}
+		if ($_GET["lang"] != "pick") $this->Lang = $lang;
+		// Find newest (stable) version
+		$versions = $this->Versions();
+		if ($versions->Count()) {
+			if (!$this->Version) $this->Version = $versions->find("Type", "stable")->getField("data")->First()->Version ;
 		}
 
-		$this->DebugInfo = htmlentities("User-Agent:$fua\nAccept-language:$al\ntype:$type\nLangCand:".implode("|",$langCandidates)."\nlang:$lang");
+		$this->DebugInfo = htmlentities("User-Agent:$fua\nAccept-language:$al\ntype:$type\nLangCand:".implode("|",$langCandidates)."\nlang:$lang\ntype $this->Type - lang $this->Lang - version $this->Version");
 
 		// For top of download page
 		$this->DownloadTypeVersionLang =

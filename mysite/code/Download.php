@@ -33,10 +33,20 @@ class Download extends DataObject {
 		return ucfirst(i18n::get_language_name($this->Lang, true));
 	}
 	public function Helppacks() {
-		return DataObject::get("Download", "Type = '".$this->Type."' AND Version = '".$this->Version."' AND InstallType = 'Helppack' AND Platform = '".$this->Platform."' AND Arch ='".$this->Arch."'", 'Lang');
+		$cache = SS_Cache::factory("Download");
+		if (!($return = unserialize($cache->load(str_replace(array(".", "-"), "_", "-helppacks-$this->Type-$this->Version-$this->Platform-$this->Arch"))))) {
+			$return = DataObject::get("Download", "Type = '".$this->Type."' AND Version = '".$this->Version."' AND InstallType = 'Helppack' AND Platform = '".$this->Platform."' AND Arch ='".$this->Arch."'", 'Lang');
+			$cache->save(serialize($return));
+		}
+		return $return;
 	}
 	public function Langpacks() {
-		return DataObject::get("Download", "Type = '".$this->Type."' AND Version = '".$this->Version."' AND InstallType = 'Languagepack' AND Platform = '".$this->Platform."' AND Arch ='".$this->Arch."'", 'Lang');
+		$cache = SS_Cache::factory("Download");
+		if (!($return = unserialize($cache->load(str_replace(array(".", "-"), "_", "-langpacks-$this->Type-$this->Version-$this->Platform-$this->Arch"))))) {
+			$return = DataObject::get("Download", "Type = '".$this->Type."' AND Version = '".$this->Version."' AND InstallType = 'Languagepack' AND Platform = '".$this->Platform."' AND Arch ='".$this->Arch."'", 'Lang');
+			$cache->save(serialize($return));
+		}
+		return $return;
 	}
 	public function langForDropdown() {
 		return $this->Lang." - ".Convert::html2raw(self::NiceLang());
@@ -44,5 +54,24 @@ class Download extends DataObject {
 	/* change default of persistent-parameter to avoid invalidating the cache on each save */
 	public function flushCache($persistent = False) {
 		parent::flushCache($persistent);
+	}
+	/* workaround for SS 2.4 limitations that can only substitute one single parameter in templates */
+	public function PlainLink() {
+		return "<a href='http://download.documentfoundation.org/$this->Fullpath'>$this->Filename</a>";
+	}
+	public function ButtonLabel($fallback = false) {
+		if ($this->InstallType == "Full") {
+			return _t("DownloadSimplePage.ss.DownloadsInstallTypeFull", "Main installer");
+		} elseif ($this->InstallType == "Languagepack" ) {
+			return _t("DownloadSimplePage.ss.DownloadsInstallTypeLanguagepack", "Translated user interface");
+		} elseif ($this->InstallType == "Helppack" ) {
+			if ($fallback) {
+				return _t("DownloadSimplePage.ss.DownloadsInstallTypeHelppackFallback", "LibreOffice built-in help (English fallback)");
+			} else {
+				return _t("DownloadSimplePage.ss.DownloadsInstallTypeHelppack", "LibreOffice built-in help");
+			}
+		} else {
+			return $this->Filename;
+		}
 	}
 }

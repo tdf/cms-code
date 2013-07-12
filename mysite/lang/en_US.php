@@ -14,6 +14,10 @@ $lang['en_US']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['en_US']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['en_US']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['en_US']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['en_US']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['en_US']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['en_US']['Downloadpage']['BITTORRENT']='Download using BitTorrent';
 $lang['en_US']['Downloadpage']['DETAILLINK']='Get details (md5sum,…)';
@@ -28,9 +32,19 @@ $lang['en_US']['Navigation']['TOTOPTITLE']='scroll to top of page';
 $lang['en_US']['Navigation']['TOTOP']     ='⬆ to top';
 
 $lang['en_US']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'You need to download and install these files in order:';
-$lang['en_US']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Change System, Version or Language';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Developers';
-$lang['en_US']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Not the version you wanted?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['en_US']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['en_US']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['en_US']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['en_US']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">downloadarchive</a>.';
+/* will be formatted as link */
+$lang['en_US']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['en_US']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['en_US']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'See the md5sum and list of download mirrors for the file';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Main installer';
@@ -53,12 +67,8 @@ $lang['en_US']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Download the files using BitTorrent';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsVersion'] = 'version %s';
 $lang['en_US']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Please select your language';
-$lang['en_US']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD images with installers for all platforms';
-$lang['en_US']['DownloadSimplePage.ss']['TypeDescMulti'] = 'For multiple platforms';
-$lang['en_US']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Source code';
-$lang['en_US']['DownloadSimplePage.ss']['TypeOr'] = 'or';
-$lang['en_US']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases';
-$lang['en_US']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Below, you can download a pre-release of the next version of LibreOffice for evaluation, QA testing, etc. These versions are not meant for general use.';
+$lang['en_US']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['en_US']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['en_US']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recommended';
 
 $lang['en_US']['LocaleName']['af'] = 'Afrikaans';

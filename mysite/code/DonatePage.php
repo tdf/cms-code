@@ -9,17 +9,19 @@ class DonatePage extends Page {
 class DonatePage_Controller extends Page_Controller {
         private static $passphrase = 'yuJpYksbQbrHbx59';
         private static $passphrase_incoming = 'JOI7aUwp8rtVA4dG';
-
 	public static $url_handlers = array(
 			'POST external' => 'verifyPOST',
-			'POST accept'   => 'acceptPOST'
+			'POST accept'   => 'acceptPOST',
+			'dl/$type!/$version!/$lang!/$file!' => 'donatedl',
 		);
+
 	static $allowed_actions = array(
 			'verifyPOST',
 			'acceptPOST',
 			'thankyou',
 			'oops',
 			'thanksbut',
+			'donatedl',
 			'ConcardisTemplate',
 			'cancel'
 		);
@@ -46,6 +48,36 @@ class DonatePage_Controller extends Page_Controller {
 			'pspid'        => "40F02481", 
 			'win3ds'       => "MAINW" 
                 );
+
+	public function donatedl($request) {
+		$dlType = array_key_exists($request->param("type"), array_merge(array("SDK"=>1, "portable"=>1), TypeData::$typenames)) ? $request->param("type") : null;
+		$dlVersion = preg_match('/^\d+(\.\d+){2,3}$/', $request->param("version")) ? $request->param("version") : null;
+		$dlLang = preg_match('/^(multi|[a-z]{2,3}(-[A-Z]{2})?)$/', $request->param("lang")) ? $request->param("lang") : null;
+		$dlIdx = (isset($_GET["idx"]) && is_numeric($_GET["idx"]) ? $_GET["idx"] : null);
+
+		if ($dlType && ($dlLang || $dlType == 'box' || $dlType == 'src') && $dlVersion) {
+			$this->Downloads = DownloadSimplePage_Controller::get_downloads($dlType, $dlLang, $dlVersion);
+			$this->RefreshTarget = $this->Downloads->getField("full");
+			if ($dlIdx) {
+				$tmp = $this->RefreshTarget->toArray();
+				$this->RefreshTarget = $tmp[$dlIdx-1];
+			}
+		} elseif (($dlType == 'SDK' || $dlType == 'portable') && is_numeric($request->param("lang"))) {
+			$this->Downloads = new ArrayData(array('full' => DataObject::get_by_id("Download", $request->param("lang"))));
+			$this->RefreshTarget = $this->Downloads->getField("full");
+		}
+		if ($this->RefreshTarget->Filename != $request->param("file").".".$request->getExtension()) $this->RefreshTarget = Null;
+		return $this;
+	}
+
+	public function Metatags($includeTitle = true) {
+		$metatags = parent::Metatags($includeTitle);
+		if ($this->RefreshTarget) {
+			$metatags.= '<meta http-equiv="Refresh" content="4; url=http://download.documentfoundation.org/'.$this->RefreshTarget->Fullpath.'"/>';
+		}
+		return $metatags;
+
+	}
 
 	function Content() {
 		return str_replace(
