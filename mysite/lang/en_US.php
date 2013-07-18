@@ -39,7 +39,7 @@ $lang['en_US']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you
 /* will be displayed instead of the dl-buttons */
 $lang['en_US']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
 /* watch out for proper quoting */
-$lang['en_US']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">downloadarchive</a>.';
+$lang['en_US']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
 /* will be formatted as link */
 $lang['en_US']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
 $lang['en_US']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
@@ -76,7 +76,6 @@ $lang['en_US']['LocaleName']['ar'] = 'Arabic';
 $lang['en_US']['LocaleName']['as'] = 'Assamese';
 $lang['en_US']['LocaleName']['ast'] = 'Asturian';
 $lang['en_US']['LocaleName']['be'] = 'Belarusian';
-$lang['en_US']['LocaleName']['be-BY'] = 'Belarusian';
 $lang['en_US']['LocaleName']['bg'] = 'Bulgarian';
 $lang['en_US']['LocaleName']['bn'] = 'Bengali';
 $lang['en_US']['LocaleName']['bo'] = 'Tibetan';
