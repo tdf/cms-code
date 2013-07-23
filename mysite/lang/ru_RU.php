@@ -3,31 +3,48 @@ global $lang;
 
 $lang['ru_RU']['Donationpage']['AMOUNT']='Количество:';
 
+
+$lang['ru_RU']['DonatePage']['BUTTON_CARD']   ='Пожертвовать с помощью банковской карты';
+$lang['ru_RU']['DonatePage']['BUTTON_PAYPAL'] ='Пожертвовать через PayPal';
+$lang['ru_RU']['DonatePage']['CHOICE_DEFAULT']='Выберите предопределённую сумму';
+$lang['ru_RU']['DonatePage']['CUSTOM_CHOICE'] ='или введите произвольную сумму<br/>(валюты, для которых доступны платежи через систему PayPal, отмечены *)';
+$lang['ru_RU']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='500';
+$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '100';
+$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR10']='500';
+$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR20']='1000';
+$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR50']='2000';
+$lang['ru_RU']['DonatePage']['DEFAULT_CURRENCY']    ='RUB';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['ru_RU']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['ru_RU']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+
 $lang['ru_RU']['Downloadpage']['BITTORRENT']='Загрузить через BitTorrent';
 $lang['ru_RU']['Downloadpage']['DETAILLINK']='Подробнее (md5sum, …)';
 $lang['ru_RU']['Downloadpage']['DLSDK']     ='Загрузить SDK для разработки расширений и утилит';
 $lang['ru_RU']['Downloadpage']['DLSOURCE']  ='Загрузить исходный код для создания собственной сборки';
-$lang['ru_RU']['Downloadpage']['DLSUITE']   ='Другие способы загрузки LibreOffice';
+$lang['ru_RU']['Downloadpage']['DLSUITE']   ='Другие варианты загрузки LibreOffice';
+$lang['ru_RU']['Downloadpage']['NOTESTBUILDS']='На данный момент нет доступных предварительных версий программы.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['ru_RU']['Navigation']['GOTOPAGE']  ='"Перейти на страницу %s"';
 $lang['ru_RU']['Navigation']['TOTOPTITLE']='к началу страницы';
 $lang['ru_RU']['Navigation']['TOTOP']     ='⬆ в начало';
 
-$lang['ru_RU']['DonatePage']['BUTTON_CARD']   = 'Пожертвовать с помощью банковской карты';
-$lang['ru_RU']['DonatePage']['BUTTON_PAYPAL'] = 'Пожертвовать через PayPal';
-$lang['ru_RU']['DonatePage']['CHOICE_DEFAULT']= 'Выберите предопределённую сумму';
-$lang['ru_RU']['DonatePage']['CUSTOM_CHOICE'] = 'или введите произвольную сумму<br/>(валюты, для которых доступны платежи через систему PayPal, отмечены *)';
-$lang['ru_RU']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '500';
-$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '100';
-$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '500';
-$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '1000';
-$lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '2000';
-$lang['ru_RU']['DonatePage']['DEFAULT_CURRENCY'] = 'RUB';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Загрузите и установите эти файлы в следующем порядке:';
-$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Выбрать систему, версию или язык';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Разработчикам';
-$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Нужна другая версия?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['ru_RU']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['ru_RU']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['ru_RU']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['ru_RU']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['ru_RU']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['ru_RU']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Информация';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'md5sum и список зеркал для загрузки файла';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Основной установщик';
@@ -35,27 +52,23 @@ $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Вс�
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Языковой пакет';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s образ';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'Загрузить ISO-образ для создания установочного диска';
-$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = '%s install';
-$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Install LibreOffice %s via the Intel AppUp Center.';
+$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = '%s установка';
+$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Установить LibreOffice %s через Intel AppUp Center.';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Пакеты';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'Портативная версия LibreOffice в формате PortableApps.com. Не требует установки, т.к. работает прямо с USB, с облачного или локального диска. Посетите <a href="http://portableapps.com/ru">PortableApps.com</a> для получения более подробной информации.';
-$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'This is a pre-release version not meant for general use.';
+$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'Это предварительная версия, она не предназначена для повседневного использования.';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = 'Handy resources';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsSdkHeader'] = 'Комплект средств разработки (SDK)';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsSdkText'] = 'Загрузить SDK для разработки расширений и внешних инструментов.';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsSrcHeader'] = 'Исходный код';
-$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsSrcText'] = 'LibreOffice - это открытый проект, и поэтому вы можете загрузить исходный код и создать свой собственный установщик.';
+$lang['ru_RU']['DownloadSimplePage.ss']['DownloadsSrcText'] = 'LibreOffice - это открытый проект, и поэтому вы можете загрузить исходный код и создать свой собственный дистрибутив.';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Загрузить файлы, используя BitTorrent';
 $lang['ru_RU']['DownloadSimplePage.ss']['DownloadsVersion'] = 'версия %s';
 $lang['ru_RU']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Пожалуйста, выберите язык';
-$lang['ru_RU']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD образы с установщиками для всех платформ';
-$lang['ru_RU']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Для нескольких платформ';
-$lang['ru_RU']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Исходный код';
-$lang['ru_RU']['DownloadSimplePage.ss']['TypeOr'] = 'либо';
-$lang['ru_RU']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Предварительные версии';
-$lang['ru_RU']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Below, you can download a pre-release of the next version of LibreOffice for evaluation, QA testing, etc. These versions are not meant for general use.';
+$lang['ru_RU']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['ru_RU']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['ru_RU']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Рекомендовано';
 
 $lang['ru_RU']['LocaleName']['af'] = 'Afrikaans';
@@ -63,7 +76,6 @@ $lang['ru_RU']['LocaleName']['ar'] = 'Arabic';
 $lang['ru_RU']['LocaleName']['as'] = 'Assamese';
 $lang['ru_RU']['LocaleName']['ast'] = 'Asturian';
 $lang['ru_RU']['LocaleName']['be'] = 'Белорусский';
-$lang['ru_RU']['LocaleName']['be-BY'] = 'Белорусский';
 $lang['ru_RU']['LocaleName']['bg'] = 'Bulgarian';
 $lang['ru_RU']['LocaleName']['bn'] = 'Bengali';
 $lang['ru_RU']['LocaleName']['bo'] = 'Tibetan';

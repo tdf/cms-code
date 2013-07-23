@@ -5,7 +5,7 @@ $lang['de_DE']['FaqsPageEntry']['QUESTIONLABEL'] = 'Frage';
 $lang['de_DE']['FaqsPageEntry']['ANSWERLABEL'] = 'Antwort';
 $lang['de_DE']['FaqsPageEntry']['COUNTHITSLABEL'] = 'Treffer zählen?';
 $lang['de_DE']['FaqsPageEntry']['HITSLABEL'] = 'Trefferzahl';
-$lang['de_DE']['FaqsPageEntry']['RELATEDLABEL'] = 'In den FAQs';
+$lang['de_DE']['FaqsPageEntry']['RELATEDLABEL'] = 'Ähnliche FAQs';
 
 $lang['de_DE']['FaqsHolder']['SEARCHTITLE'] = 'Suche';
 $lang['de_DE']['FaqsHolder']['SEARCHSELCATEGORY'] = 'Kategorie';

@@ -14,6 +14,10 @@ $lang['brx_IN']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['brx_IN']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['brx_IN']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['brx_IN']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['brx_IN']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['brx_IN']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['brx_IN']['Downloadpage']['BITTORRENT']='BitTorrent जों दावनलड खालाम';
 $lang['brx_IN']['Downloadpage']['DETAILLINK']='डिटेलसखौ ला (md5sum,…)';
@@ -28,9 +32,19 @@ $lang['brx_IN']['Navigation']['TOTOPTITLE']='पेजनि गोजौसि�
 $lang['brx_IN']['Navigation']['TOTOP']     ='⬆ गोजौसिम';
 
 $lang['brx_IN']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'नोंथाङा बे फाइलफोरखौ अरदाराव दावनलद आरो इनस्टल खालाम नांगोन';
-$lang['brx_IN']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'सेस्टिम, भारचन एबा राव सोलाइ';
 $lang['brx_IN']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'डेभालाफारफोर';
-$lang['brx_IN']['DownloadSimplePage.ss']['DownloadsHeader'] = 'लिबार अफिच <b>%s</b>. नोंथांनि गोनांथि भारचन नङा नामा?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['brx_IN']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['brx_IN']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['brx_IN']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['brx_IN']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['brx_IN']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['brx_IN']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['brx_IN']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['brx_IN']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'मोन्थिहोनाय';
 $lang['brx_IN']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'एमदिफाइब साम आरो फाइलनि दावनलद मिररनि लिस्टखौ नाइ';
 $lang['brx_IN']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'गाहाइ इनस्टलार';
@@ -53,12 +67,8 @@ $lang['brx_IN']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'टरेन
 $lang['brx_IN']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'BitTorrent जों फाइलफोरखौ दावनलद खालाम';
 $lang['brx_IN']['DownloadSimplePage.ss']['DownloadsVersion'] = 'भारचन %s';
 $lang['brx_IN']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'अन्नानै नोंथांनि रावखौ बासि';
-$lang['brx_IN']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD सावगारिफोर जों लोगोसे गासैबो फ्लेटफमफोरनि इनस्टलारफोर';
-$lang['brx_IN']['DownloadSimplePage.ss']['TypeDescMulti'] = 'गोबां फ्लेटफमफोरनि थाखाइ';
-$lang['brx_IN']['DownloadSimplePage.ss']['TypeDescSrc'] = 'सरच कड';
-$lang['brx_IN']['DownloadSimplePage.ss']['TypeOr'] = 'इबा';
-$lang['brx_IN']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'सिगां ओंखारनाइफोर';
-$lang['brx_IN']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Below, you can download a pre-release of the next version of LibreOffice for evaluation, QA testing, etc. These versions are not meant for general use.';
+$lang['brx_IN']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['brx_IN']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['brx_IN']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recommended';
 
 $lang['brx_IN']['LocaleName']['af'] = 'Afrikaans';
@@ -66,7 +76,6 @@ $lang['brx_IN']['LocaleName']['ar'] = 'Arabic';
 $lang['brx_IN']['LocaleName']['as'] = 'Assamese';
 $lang['brx_IN']['LocaleName']['ast'] = 'Asturian';
 $lang['brx_IN']['LocaleName']['be'] = 'Belarusian';
-$lang['brx_IN']['LocaleName']['be-BY'] = 'Belarusian';
 $lang['brx_IN']['LocaleName']['bg'] = 'Bulgarian';
 $lang['brx_IN']['LocaleName']['bn'] = 'बेंगलि';
 $lang['brx_IN']['LocaleName']['bo'] = 'तिबेटान';

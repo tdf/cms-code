@@ -14,6 +14,10 @@ $lang['ky_KG']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['ky_KG']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['ky_KG']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['ky_KG']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['ky_KG']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['ky_KG']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['ky_KG']['Downloadpage']['BITTORRENT']='BitTorrent\'ти колдонуп жүктөө';
 $lang['ky_KG']['Downloadpage']['DETAILLINK']='Толук маалымат алуу (md5sum,…)';
@@ -28,9 +32,19 @@ $lang['ky_KG']['Navigation']['TOTOPTITLE']='scroll to top of page';
 $lang['ky_KG']['Navigation']['TOTOP']     ='⬆ үстүгө';
 
 $lang['ky_KG']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'You need to download and install these files in order:';
-$lang['ky_KG']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Change System, Version or Language';
 $lang['ky_KG']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Иштетүүчүлөр';
-$lang['ky_KG']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Not the version you wanted?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['ky_KG']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['ky_KG']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['ky_KG']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['ky_KG']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['ky_KG']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['ky_KG']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['ky_KG']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['ky_KG']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Маалымат';
 $lang['ky_KG']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'See the md5sum and list of download mirrors for the file';
 $lang['ky_KG']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Main installer';
@@ -53,12 +67,8 @@ $lang['ky_KG']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['ky_KG']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Download the files using BitTorrent';
 $lang['ky_KG']['DownloadSimplePage.ss']['DownloadsVersion'] = 'version %s';
 $lang['ky_KG']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Please select your language';
-$lang['ky_KG']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD images with installers for all platforms';
-$lang['ky_KG']['DownloadSimplePage.ss']['TypeDescMulti'] = 'For multiple platforms';
-$lang['ky_KG']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Булак коду';
-$lang['ky_KG']['DownloadSimplePage.ss']['TypeOr'] = 'же';
-$lang['ky_KG']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases';
-$lang['ky_KG']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Below, you can download a pre-release of the next version of LibreOffice for evaluation, QA testing, etc. These versions are not meant for general use.';
+$lang['ky_KG']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['ky_KG']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['ky_KG']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Сунушталган';
 
 $lang['ky_KG']['LocaleName']['af'] = 'Afrikaans';
@@ -66,7 +76,6 @@ $lang['ky_KG']['LocaleName']['ar'] = 'Arabic';
 $lang['ky_KG']['LocaleName']['as'] = 'Assamese';
 $lang['ky_KG']['LocaleName']['ast'] = 'Asturian';
 $lang['ky_KG']['LocaleName']['be'] = 'Belarusian';
-$lang['ky_KG']['LocaleName']['be-BY'] = 'Belarusian';
 $lang['ky_KG']['LocaleName']['bg'] = 'Bulgarian';
 $lang['ky_KG']['LocaleName']['bn'] = 'Bengali';
 $lang['ky_KG']['LocaleName']['bo'] = 'Tibetan';

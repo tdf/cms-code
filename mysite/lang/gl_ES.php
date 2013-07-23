@@ -3,11 +3,28 @@ global $lang;
 
 $lang['gl_ES']['Donationpage']['AMOUNT']='Cantidade:';
 
+
+$lang['gl_ES']['DonatePage']['BUTTON_CARD']   ='Doar con tarxeta de crédito';
+$lang['gl_ES']['DonatePage']['BUTTON_PAYPAL'] ='Doar con PayPal';
+$lang['gl_ES']['DonatePage']['CHOICE_DEFAULT']='Seleccionar un dos valores predeterminados';
+$lang['gl_ES']['DonatePage']['CUSTOM_CHOICE'] ='Ou introducir unha contía e moeda personalizada<br/>(soamente as marcadas co * están tamén dispoñíbeis con PayPal)';
+$lang['gl_ES']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['gl_ES']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['gl_ES']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['gl_ES']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['gl_ES']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['gl_ES']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['gl_ES']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['gl_ES']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+
 $lang['gl_ES']['Downloadpage']['BITTORRENT']='Descargar usando BitTorrent';
 $lang['gl_ES']['Downloadpage']['DETAILLINK']='Obter detalles (md5sum,...)';
 $lang['gl_ES']['Downloadpage']['DLSDK']     ='Descargar o SDK para o desenvolvemento de extensións e ferramentas externas';
 $lang['gl_ES']['Downloadpage']['DLSOURCE']  ='Descargar o código fonte para compilar o seu propio instalador';
 $lang['gl_ES']['Downloadpage']['DLSUITE']   ='Outro camiño para descargar LibreOffice, a suite de productividade';
+$lang['gl_ES']['Downloadpage']['NOTESTBUILDS']='Non hai compilacións de proba dispoñíbeis neste intre.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['gl_ES']['Navigation']['GOTOPAGE']  ='"Ir á páxina %s"';
@@ -15,9 +32,19 @@ $lang['gl_ES']['Navigation']['TOTOPTITLE']='desprazarse á parte superior da pá
 $lang['gl_ES']['Navigation']['TOTOP']     ='⬆ ir arriba';
 
 $lang['gl_ES']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Debe descargar e instalar estes ficheiros seguindo unha ordenación:';
-$lang['gl_ES']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Trocar o sistema, versión ou idioma';
 $lang['gl_ES']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Desenvolvedores';
-$lang['gl_ES']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Non é esa a versión que quería?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['gl_ES']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['gl_ES']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['gl_ES']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['gl_ES']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['gl_ES']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['gl_ES']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['gl_ES']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['gl_ES']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
 $lang['gl_ES']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Vexa a suma de comprobación md5sum do ficheiro e a lista de réplicas para descargalo';
 $lang['gl_ES']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Instalador principal';
@@ -40,12 +67,8 @@ $lang['gl_ES']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['gl_ES']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Descargar os ficheiros usando do BitTorrent';
 $lang['gl_ES']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versión %s';
 $lang['gl_ES']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Escolla o seu idioma';
-$lang['gl_ES']['DownloadSimplePage.ss']['TypeDescBox'] = 'Imaxes de CD/DVD con instaladores para todas as plataformas';
-$lang['gl_ES']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Para múltiplas plataformas';
-$lang['gl_ES']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Código fonte';
-$lang['gl_ES']['DownloadSimplePage.ss']['TypeOr'] = 'ou';
-$lang['gl_ES']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-versións';
-$lang['gl_ES']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'A seguir, pode descargar unha versión previa da nova versión de LibreOffice para avaliación, control de calidade, etc. Estas versións non son aptas para uso xeral.';
+$lang['gl_ES']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['gl_ES']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['gl_ES']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recomendada';
 
 $lang['gl_ES']['LocaleName']['af'] = 'Africáner';
@@ -53,7 +76,6 @@ $lang['gl_ES']['LocaleName']['ar'] = 'Árabe';
 $lang['gl_ES']['LocaleName']['as'] = 'Asamés';
 $lang['gl_ES']['LocaleName']['ast'] = 'Asturiano';
 $lang['gl_ES']['LocaleName']['be'] = 'Bielorruso';
-$lang['gl_ES']['LocaleName']['be-BY'] = 'Bielorruso';
 $lang['gl_ES']['LocaleName']['bg'] = 'Búlgaro';
 $lang['gl_ES']['LocaleName']['bn'] = 'Bengalí';
 $lang['gl_ES']['LocaleName']['bo'] = 'Tibetano';
@@ -136,10 +158,10 @@ $lang['gl_ES']['LocaleName']['sk'] = 'Eslovaco';
 $lang['gl_ES']['LocaleName']['sl'] = 'Eslveno';
 $lang['gl_ES']['LocaleName']['sq'] = 'Albano';
 $lang['gl_ES']['LocaleName']['sr'] = 'Serbio (cirílico)';
-$lang['gl_ES']['LocaleName']['ss'] = 'Suazi';
+$lang['gl_ES']['LocaleName']['ss'] = 'Suati';
 $lang['gl_ES']['LocaleName']['st'] = 'Sutu do Sur';
 $lang['gl_ES']['LocaleName']['sv'] = 'Sueco';
-$lang['gl_ES']['LocaleName']['sw-TZ'] = 'Swahili';
+$lang['gl_ES']['LocaleName']['sw-TZ'] = 'Swahili ';
 $lang['gl_ES']['LocaleName']['ta'] = 'Támil';
 $lang['gl_ES']['LocaleName']['te'] = 'Telugo';
 $lang['gl_ES']['LocaleName']['tg'] = 'Tadxiko';

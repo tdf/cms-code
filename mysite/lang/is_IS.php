@@ -14,6 +14,10 @@ $lang['is_IS']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['is_IS']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['is_IS']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['is_IS']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['is_IS']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['is_IS']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['is_IS']['Downloadpage']['BITTORRENT']='Sækja með BitTorrent';
 $lang['is_IS']['Downloadpage']['DETAILLINK']='Ná í nánari upplýsingar (md5sum,…)';
@@ -28,9 +32,19 @@ $lang['is_IS']['Navigation']['TOTOPTITLE']='skruna efst á síðu';
 $lang['is_IS']['Navigation']['TOTOP']     ='⬆ fara efst';
 
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Þú þarft að ná í þessar skrár og setja upp í réttri röð:';
-$lang['is_IS']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Skipta um stýrikerfi, útgáfu eða tungumál';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Hönnuðir';
-$lang['is_IS']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Ekki sú útgáfa sem þú vildir?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['is_IS']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['is_IS']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['is_IS']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['is_IS']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['is_IS']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['is_IS']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['is_IS']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Upplýsingar';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Skoða md5 gátsummu og lista yfir niðurhalsspegla skrárinnar';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Aðal-uppsetningarforrit';
@@ -53,12 +67,8 @@ $lang['is_IS']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent-skrá
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Sækja skrárnar með BitTorrent';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsVersion'] = 'útgáfa %s';
 $lang['is_IS']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Veldu tungumálið sem þú vilt nota';
-$lang['is_IS']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD diskmyndir með uppsetningarforritum fyrir öll stýrikerfi';
-$lang['is_IS']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Fyrir margskonar kerfi';
-$lang['is_IS']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Upprunakóði';
-$lang['is_IS']['DownloadSimplePage.ss']['TypeOr'] = 'eða';
-$lang['is_IS']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Forútgáfur';
-$lang['is_IS']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Below, you can download a pre-release of the next version of LibreOffice for evaluation, QA testing, etc. These versions are not meant for general use.';
+$lang['is_IS']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['is_IS']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['is_IS']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Mælt með þessu';
 
 $lang['is_IS']['LocaleName']['af'] = 'Afrikaans';
@@ -66,7 +76,6 @@ $lang['is_IS']['LocaleName']['ar'] = 'Arabíska';
 $lang['is_IS']['LocaleName']['as'] = 'Assamíska';
 $lang['is_IS']['LocaleName']['ast'] = 'Astúríska';
 $lang['is_IS']['LocaleName']['be'] = 'Hvítrússneska';
-$lang['is_IS']['LocaleName']['be-BY'] = 'Hvítrússneska';
 $lang['is_IS']['LocaleName']['bg'] = 'Búlgarska';
 $lang['is_IS']['LocaleName']['bn'] = 'Bengalska';
 $lang['is_IS']['LocaleName']['bo'] = 'Tíbetska';

@@ -14,6 +14,10 @@ $lang['ar_EG']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['ar_EG']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['ar_EG']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['ar_EG']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['ar_EG']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['ar_EG']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['ar_EG']['Downloadpage']['BITTORRENT']='نزّل باستخدام بت تورنت';
 $lang['ar_EG']['Downloadpage']['DETAILLINK']='اطّلع على التفاصيل (مجموع md5،...)';
@@ -28,9 +32,19 @@ $lang['ar_EG']['Navigation']['TOTOPTITLE']='لفّ إلى أعلى الصفحة'
 $lang['ar_EG']['Navigation']['TOTOP']     ='⬆ إلى الأعلى';
 
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'تحتاج إلى تنزيل وتثبيت هذه الملفات بالترتيب:';
-$lang['ar_EG']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'غيّر النظام، الإصدار أو اللغة';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'المطورين';
-$lang['ar_EG']['DownloadSimplePage.ss']['DownloadsHeader'] = 'ليبرأوفيس <b>%s</b>. ليس الإصدار الذي تريده؟';
+/* %s will be replaced with OS/arch, version, language */
+$lang['ar_EG']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['ar_EG']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['ar_EG']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['ar_EG']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['ar_EG']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['ar_EG']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['ar_EG']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'معلومات';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'اطّلع على مجموع md5 وقائمة مستضيفي الملف';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'المثبت الرئيسي';
@@ -53,12 +67,8 @@ $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'تورنت';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'نزّل الملفات باستخدام بت تورنت';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsVersion'] = 'الإصدار %s';
 $lang['ar_EG']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'يرجى اختيار لغتك';
-$lang['ar_EG']['DownloadSimplePage.ss']['TypeDescBox'] = 'صور سي دي/دي في دي مع المثبتات لكل الأنظمة';
-$lang['ar_EG']['DownloadSimplePage.ss']['TypeDescMulti'] = 'لمنصات متعددة';
-$lang['ar_EG']['DownloadSimplePage.ss']['TypeDescSrc'] = 'الشفرة المصدرية';
-$lang['ar_EG']['DownloadSimplePage.ss']['TypeOr'] = 'أو';
-$lang['ar_EG']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'نسخ تجريبية';
-$lang['ar_EG']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'بالأسفل, يمكنك تنزيل نسخة تجريبية من ليبر أوفيس للتقييم واختبار ضمان الجودة إلخ. هذه الإصدارات ليست للاستعمال العام.';
+$lang['ar_EG']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['ar_EG']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['ar_EG']['DownloadSimplePage.ss']['VersionsRecommended'] = 'يُنصَح به';
 
 $lang['ar_EG']['LocaleName']['af'] = 'الأفريكانية';
@@ -66,7 +76,6 @@ $lang['ar_EG']['LocaleName']['ar'] = 'العربية';
 $lang['ar_EG']['LocaleName']['as'] = 'الأسامية';
 $lang['ar_EG']['LocaleName']['ast'] = 'الأسترية';
 $lang['ar_EG']['LocaleName']['be'] = 'البيلاروسية';
-$lang['ar_EG']['LocaleName']['be-BY'] = 'البيلاروسية';
 $lang['ar_EG']['LocaleName']['bg'] = 'البلغارية';
 $lang['ar_EG']['LocaleName']['bn'] = 'البنغالية';
 $lang['ar_EG']['LocaleName']['bo'] = 'التبتية';

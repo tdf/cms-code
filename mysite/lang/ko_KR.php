@@ -14,6 +14,10 @@ $lang['ko_KR']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['ko_KR']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['ko_KR']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['ko_KR']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['ko_KR']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['ko_KR']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['ko_KR']['Downloadpage']['BITTORRENT']='비트토렌트로 내려받기';
 $lang['ko_KR']['Downloadpage']['DETAILLINK']='자세한 정보 가져오기(md5sum 등 …)';
@@ -28,9 +32,19 @@ $lang['ko_KR']['Navigation']['TOTOPTITLE']='페이지 맨 위로 이동';
 $lang['ko_KR']['Navigation']['TOTOP']     ='⬆ 맨 위로';
 
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadNeededFiles'] = '다음 파일들을 내려받아 순서대로 설치하세요.';
-$lang['ko_KR']['DownloadSimplePage.ss']['DownloadsChangeLink'] = '사용 시스템, 버전, 언어 변경';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = '개발자';
-$lang['ko_KR']['DownloadSimplePage.ss']['DownloadsHeader'] = '리브레오피스 <b>%s</b>. 원하는 버전이 아닙니까?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['ko_KR']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['ko_KR']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['ko_KR']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['ko_KR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['ko_KR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['ko_KR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['ko_KR']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = '정보';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = '파일의 md5sum과 내려받기 미러 목록을 확인하세요.';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = '기본 설치 프로그램';
@@ -53,12 +67,8 @@ $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = '토렌트';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = '비트토렌트를 이용하여 파일 내려받기';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsVersion'] = '%s 버전';
 $lang['ko_KR']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = '사용할 언어를 선택하세요.';
-$lang['ko_KR']['DownloadSimplePage.ss']['TypeDescBox'] = '모든 플랫폼을 위한 설치 파일이 담긴 CD/DVD 이미지';
-$lang['ko_KR']['DownloadSimplePage.ss']['TypeDescMulti'] = '다중 플랫폼용';
-$lang['ko_KR']['DownloadSimplePage.ss']['TypeDescSrc'] = '원시 코드';
-$lang['ko_KR']['DownloadSimplePage.ss']['TypeOr'] = '또는';
-$lang['ko_KR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = '시험판';
-$lang['ko_KR']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = '아래에서 LibreOffice 다음 판의 시험판을 내려받을 수 있습니다. 이는 평가, 품질 확인 등을 위한 것이며 일반 사용을 위한 것이 아닙니다.';
+$lang['ko_KR']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['ko_KR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['ko_KR']['DownloadSimplePage.ss']['VersionsRecommended'] = '권장';
 
 $lang['ko_KR']['LocaleName']['af'] = 'Afrikaans';
@@ -66,7 +76,6 @@ $lang['ko_KR']['LocaleName']['ar'] = 'Arabic';
 $lang['ko_KR']['LocaleName']['as'] = 'Assamese';
 $lang['ko_KR']['LocaleName']['ast'] = 'Asturian';
 $lang['ko_KR']['LocaleName']['be'] = 'Belarusian';
-$lang['ko_KR']['LocaleName']['be-BY'] = 'Belarusian';
 $lang['ko_KR']['LocaleName']['bg'] = 'Bulgarian';
 $lang['ko_KR']['LocaleName']['bn'] = 'Bengali';
 $lang['ko_KR']['LocaleName']['bo'] = 'Tibetan';

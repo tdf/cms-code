@@ -24,7 +24,7 @@ $lang['pt_PT']['FaqsHolder.ss']['VIEWPAGENUM'] = 'Ver número da página';
 $lang['pt_PT']['FaqsPage.ss']['RELATEDFAQ'] = 'Relacionadas';
 
 $lang['pt_PT']['FaqsSearchResults.ss']['READMORE'] = 'Mais... ';
-$lang['pt_PT']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Desculpe, mas a sua procura não devolveu qualquer resultado.';
+$lang['pt_PT']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Desculpe mas a sua procura não devolveu qualquer resultado.';
 
 $lang['pt_PT']['FaqsTopWidget']['TITLE'] = 'Perguntas mais frequentes';
 $lang['pt_PT']['FaqsTopWidget']['LIMIT'] = 'Número de perguntas a exibir';

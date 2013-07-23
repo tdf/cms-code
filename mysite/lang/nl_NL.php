@@ -3,11 +3,28 @@ global $lang;
 
 $lang['nl_NL']['Donationpage']['AMOUNT']='Hoeveelheid:';
 
+
+$lang['nl_NL']['DonatePage']['BUTTON_CARD']   ='Doneer via kredietkaart';
+$lang['nl_NL']['DonatePage']['BUTTON_PAYPAL'] ='Doneer via PayPal';
+$lang['nl_NL']['DonatePage']['CHOICE_DEFAULT']='Kies een van onderstaande standaardwaarden';
+$lang['nl_NL']['DonatePage']['CUSTOM_CHOICE'] ='Of kies zelf een bedrag en valuta<br>(enkel de opties met een * zijn ook beschikbaar via PayPal)';
+$lang['nl_NL']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['nl_NL']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['nl_NL']['DonatePage']['DLRefreshMsg']= 'Uw download %s zal snel beginnen. Klik op de link indien het niet begint.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['nl_NL']['DonatePage']['DLOptional']  = 'U kunt de optionele downloads aan de linkerkant vinden.';
+
 $lang['nl_NL']['Downloadpage']['BITTORRENT']='Downloaden met BitTorrent';
 $lang['nl_NL']['Downloadpage']['DETAILLINK']='Details laten zien (md5sum,…)';
 $lang['nl_NL']['Downloadpage']['DLSDK']     ='De SDK voor ontwikkeling van extensies en externe hulpmiddelen downloaden';
 $lang['nl_NL']['Downloadpage']['DLSOURCE']  ='De broncode downloaden om uw eigen installatieprogramma te bouwen';
 $lang['nl_NL']['Downloadpage']['DLSUITE']   ='Andere manier om LibreOffice te downloaden';
+$lang['nl_NL']['Downloadpage']['NOTESTBUILDS']='Er zijn momenteel geen testversies beschikbaar.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['nl_NL']['Navigation']['GOTOPAGE']  ='"Ga naar pagina %s"';
@@ -15,9 +32,19 @@ $lang['nl_NL']['Navigation']['TOTOPTITLE']='naar de bovenkant van de pagina gaan
 $lang['nl_NL']['Navigation']['TOTOP']     ='⬆ naar de top';
 
 $lang['nl_NL']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'De bestanden downloaden en in deze volgorde installeren:';
-$lang['nl_NL']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'systeem, versie en taal te wijzigen';
 $lang['nl_NL']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Ontwikkelaars';
-$lang['nl_NL']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Niet de door uw gewenste versie?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['nl_NL']['DownloadSimplePage.ss']['DownloadsHeader']= 'Geselecteerd: LibreOffice <b>%s</b>';
+$lang['nl_NL']['DownloadSimplePage.ss']['NotWanted']      = 'Is dit niet de versie die u wilde?';
+/* will be displayed instead of the dl-buttons */
+$lang['nl_NL']['DownloadSimplePage.ss']['NoRegularDL']    = 'Er zijn geen regeluliere installatiebestanden beschikbaar.<br/>Verander uw keuze of kies er één uit de aanvullende downloads hieronder.';
+/* watch out for proper quoting */
+$lang['nl_NL']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Als u een oudere versie zoekt, bezoek dan ons <a href="http://downloadarchive.documentfoundation.org/libreoffice/old"> download archief</a>.';
+/* will be formatted as link */
+$lang['nl_NL']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Een andere taal kiezen';
+$lang['nl_NL']['DownloadSimplePage.ss']['ChangeVersion']  = 'Een andere versie kiezen';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['nl_NL']['DownloadSimplePage.ss']['ChangeOS']       = 'Een ander <abbr title="Operating System">besturingssysteem</abbr> kiezen:';
 $lang['nl_NL']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informatie';
 $lang['nl_NL']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Zie de md5sum en de lijst van mirrors voor het downloaden van het bestand';
 $lang['nl_NL']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Hoofd installatieprogramma';
@@ -40,12 +67,8 @@ $lang['nl_NL']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['nl_NL']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'De bestanden met BitTorrent downloaden';
 $lang['nl_NL']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versie %s';
 $lang['nl_NL']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Uw taal selecteren';
-$lang['nl_NL']['DownloadSimplePage.ss']['TypeDescBox'] = 'Cd/dvd-images met installatieprogramma\'s voor alle platforms';
-$lang['nl_NL']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Voor meerdere platforms';
-$lang['nl_NL']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Broncode';
-$lang['nl_NL']['DownloadSimplePage.ss']['TypeOr'] = 'of';
-$lang['nl_NL']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Voor-uitgaven';
-$lang['nl_NL']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Onderstaand kunt u een test-versie van de volgende uitgave van LibreOffice downloaden, om te evalueren, testen, enz. Deze versies zijn niet bedoeld voor algemeen gebruik.';
+$lang['nl_NL']['DownloadSimplePage.ss']['TypeOr'] = 'of download';
+$lang['nl_NL']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Voor-uitgaven:';
 $lang['nl_NL']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Aanbevolen';
 
 $lang['nl_NL']['LocaleName']['af'] = 'Afrikaans';
@@ -53,7 +76,6 @@ $lang['nl_NL']['LocaleName']['ar'] = 'Arabisch';
 $lang['nl_NL']['LocaleName']['as'] = 'Assamees';
 $lang['nl_NL']['LocaleName']['ast'] = 'Asturisch';
 $lang['nl_NL']['LocaleName']['be'] = 'Wit-Russisch';
-$lang['nl_NL']['LocaleName']['be-BY'] = 'Wit-Russisch';
 $lang['nl_NL']['LocaleName']['bg'] = 'Bulgaars';
 $lang['nl_NL']['LocaleName']['bn'] = 'Bengalees';
 $lang['nl_NL']['LocaleName']['bo'] = 'Tibetaans';
@@ -157,14 +179,3 @@ $lang['nl_NL']['LocaleName']['xh'] = 'Xhosa';
 $lang['nl_NL']['LocaleName']['zh-CN'] = 'Chinees (vereenvoudigd)';
 $lang['nl_NL']['LocaleName']['zh-TW'] = 'Chinees (traditioneel)';
 $lang['nl_NL']['LocaleName']['zu'] = 'Zoeloe';
-
-$lang['nl_NL']['DonatePage']['BUTTON_CARD']   = 'Doneer via kredietkaart';
-$lang['nl_NL']['DonatePage']['BUTTON_PAYPAL'] = 'Doneer via PayPal';
-$lang['nl_NL']['DonatePage']['CHOICE_DEFAULT']= 'Kies een van onderstaande standaardwaarden';
-$lang['nl_NL']['DonatePage']['CUSTOM_CHOICE'] = 'Of kies zelf een bedrag en valuta<br>(enkel de opties met een * zijn ook beschikbaar via PayPal)';
-$lang['nl_NL']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
-$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
-$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '10';
-$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '20';
-$lang['nl_NL']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '50';
-$lang['nl_NL']['DonatePage']['DEFAULT_CURRENCY'] = 'EUR'; 

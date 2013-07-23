@@ -3,7 +3,7 @@ global $lang;
 
 $lang['id_ID']['FaqsPageEntry']['QUESTIONLABEL'] = 'Pertanyaan';
 $lang['id_ID']['FaqsPageEntry']['ANSWERLABEL'] = 'Jawaban';
-$lang['id_ID']['FaqsPageEntry']['COUNTHITSLABEL'] = 'Hitung Hit ?';
+$lang['id_ID']['FaqsPageEntry']['COUNTHITSLABEL'] = 'Hitung Hit?';
 $lang['id_ID']['FaqsPageEntry']['HITSLABEL'] = 'Cacah Hit';
 $lang['id_ID']['FaqsPageEntry']['RELATEDLABEL'] = 'Faq Terkait';
 

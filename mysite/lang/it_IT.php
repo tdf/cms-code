@@ -13,7 +13,11 @@ $lang['it_IT']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
 $lang['it_IT']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['it_IT']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['it_IT']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
-$lang['it_IT']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
+$lang['it_IT']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['it_IT']['DonatePage']['DLRefreshMsg']= 'Il download %s dovrebbe iniziare a breve. Fate clic sul collegamento in caso non si avviasse.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['it_IT']['DonatePage']['DLOptional']  = 'Potete trovare altre opzioni per il download sulla sinistra.';
 
 $lang['it_IT']['Downloadpage']['BITTORRENT']='Scarica con BitTorrent';
 $lang['it_IT']['Downloadpage']['DETAILLINK']='Ottieni dettagli (md5sum,...)';
@@ -28,9 +32,19 @@ $lang['it_IT']['Navigation']['TOTOPTITLE']='scorri fino all\'inizio pagina';
 $lang['it_IT']['Navigation']['TOTOP']     ='⬆ all\'inizio';
 
 $lang['it_IT']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Dovete scaricare e installare questi file per:';
-$lang['it_IT']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Cambia sistema, versione o lingua';
 $lang['it_IT']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Sviluppatori';
-$lang['it_IT']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Non è la versione che cercavi?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['it_IT']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selezionato: LibreOffice <b>%s</b>';
+$lang['it_IT']['DownloadSimplePage.ss']['NotWanted']      = 'Non è la versione che desiderate?';
+/* will be displayed instead of the dl-buttons */
+$lang['it_IT']['DownloadSimplePage.ss']['NoRegularDL']    = 'Non sono disponibili file d\'installazione regolari.<br/>Per favore modificate la vostra selezione o scegliete uno dei download aggiuntivi indicati sotto.';
+/* watch out for proper quoting */
+$lang['it_IT']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Se cercate versioni meno recenti, visitate il nostro <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">archivio dei download</a>.';
+/* will be formatted as link */
+$lang['it_IT']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Cambiate lingua';
+$lang['it_IT']['DownloadSimplePage.ss']['ChangeVersion']  = 'Cambiate versione:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['it_IT']['DownloadSimplePage.ss']['ChangeOS']       = 'Cambiate <abbr title="Operating System">SO</abbr>:';
 $lang['it_IT']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informazioni';
 $lang['it_IT']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Guarda il controllo md5sum e l\'elenco dei siti mirror per lo scaricamento del file';
 $lang['it_IT']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Programma di installazione principale';
@@ -53,12 +67,8 @@ $lang['it_IT']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['it_IT']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Scaricate i file con BitTorrent';
 $lang['it_IT']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versione %s';
 $lang['it_IT']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Selezionate la lingua';
-$lang['it_IT']['DownloadSimplePage.ss']['TypeDescBox'] = 'Immagini CD/DVD con i programmi di installazione per tutte le piattaforme';
-$lang['it_IT']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Per più piattaforme';
-$lang['it_IT']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Codice sorgente';
-$lang['it_IT']['DownloadSimplePage.ss']['TypeOr'] = 'oppure';
-$lang['it_IT']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-rilasci';
-$lang['it_IT']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Qui di seguito potete scaricare un pre-rilascio della prossima versione di LibreOffice per la valutazione, la Garanzia di qualità, e via discorrendo. Queste versioni non sono adatte ad uso generale.';
+$lang['it_IT']['DownloadSimplePage.ss']['TypeOr'] = 'o download';
+$lang['it_IT']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-release:';
 $lang['it_IT']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Consigliato';
 
 $lang['it_IT']['LocaleName']['af'] = 'Afrikaans';
@@ -66,7 +76,6 @@ $lang['it_IT']['LocaleName']['ar'] = 'Arabo';
 $lang['it_IT']['LocaleName']['as'] = 'Assamese';
 $lang['it_IT']['LocaleName']['ast'] = 'Asturiano';
 $lang['it_IT']['LocaleName']['be'] = 'Bielorusso';
-$lang['it_IT']['LocaleName']['be-BY'] = 'Bielorusso';
 $lang['it_IT']['LocaleName']['bg'] = 'Bulgaro';
 $lang['it_IT']['LocaleName']['bn'] = 'Bengalese';
 $lang['it_IT']['LocaleName']['bo'] = 'Tibetano';

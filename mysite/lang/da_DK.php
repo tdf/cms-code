@@ -3,11 +3,28 @@ global $lang;
 
 $lang['da_DK']['Donationpage']['AMOUNT']='Antal:';
 
+
+$lang['da_DK']['DonatePage']['BUTTON_CARD']   ='Bidrag med kreditkort';
+$lang['da_DK']['DonatePage']['BUTTON_PAYPAL'] ='Bidrag med PayPal';
+$lang['da_DK']['DonatePage']['CHOICE_DEFAULT']='Vælg en af standardværdierne';
+$lang['da_DK']['DonatePage']['CUSTOM_CHOICE'] ='Eller indtast et valgfrit beløb og valuta<br>(kun de valutaer, som er markeret med * kan benyttes med PayPal)';
+$lang['da_DK']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='100';
+$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '50';
+$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR10']='100';
+$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR20']='250';
+$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR50']='500';
+$lang['da_DK']['DonatePage']['DEFAULT_CURRENCY']    ='DKK';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['da_DK']['DonatePage']['DLRefreshMsg']= 'Din hentning %s begynder om et øjeblik. Klik venligst på dette link, hvis hentningen ikke starter.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['da_DK']['DonatePage']['DLOptional']  = 'Du kan vælge mellem valgfrie hentninger til venstre.';
+
 $lang['da_DK']['Downloadpage']['BITTORRENT']='Hent vha. BitTorrent';
 $lang['da_DK']['Downloadpage']['DETAILLINK']='Se detaljer (md5sum,…)';
 $lang['da_DK']['Downloadpage']['DLSDK']     ='Hent SDK\'et til udvikling af udvidelser og eksterne værktøjer';
 $lang['da_DK']['Downloadpage']['DLSOURCE']  ='Hent kildekoden for at bygge din egen installationspakke';
 $lang['da_DK']['Downloadpage']['DLSUITE']   ='Andre måder at hente kontorpakken LibreOffice på';
+$lang['da_DK']['Downloadpage']['NOTESTBUILDS']='Der er for øjeblikket ingen testversioner.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['da_DK']['Navigation']['GOTOPAGE']  ='"Gå til side %s"';
@@ -15,9 +32,19 @@ $lang['da_DK']['Navigation']['TOTOPTITLE']='rul til toppen af siden';
 $lang['da_DK']['Navigation']['TOTOP']     ='⬆ til top';
 
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Du skal hente og installere disse filer i rækkefølge:';
-$lang['da_DK']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Skift system, version eller sprog';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Udviklere';
-$lang['da_DK']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Ikke den version du ønskede?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['da_DK']['DownloadSimplePage.ss']['DownloadsHeader']= 'Valgt: LibreOffice <b>%s';
+$lang['da_DK']['DownloadSimplePage.ss']['NotWanted']      = 'Ikke den version du ønsker?';
+/* will be displayed instead of the dl-buttons */
+$lang['da_DK']['DownloadSimplePage.ss']['NoRegularDL']    = 'Der er ingen installationsfiler til rådighed.<br/>Gør venligst et andet valg, eller vælg fra yderligere hentninger herunder.';
+/* watch out for proper quoting */
+$lang['da_DK']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Der er ingen installationsfiler til rådighed for øjeblikket.<br/>Gør venligst et andet valg, eller vælg fra yderligere hentninger herunder.';
+/* will be formatted as link */
+$lang['da_DK']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Skift sprog';
+$lang['da_DK']['DownloadSimplePage.ss']['ChangeVersion']  = 'Skift version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['da_DK']['DownloadSimplePage.ss']['ChangeOS']       = 'Skift <abbr title="Operating System">OS</abbr>:';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Se md5sum og en liste over spejlservere for filen';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Hovedinstallationsprogram';
@@ -30,7 +57,7 @@ $lang['da_DK']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Installer Li
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Pakker';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'En portable version af LibreOffice pakket i PortableApps.com format, så du kan tage programmet og alle dine dokumenter med dig, når du har brug for at arbejde fra en USB-nøgle, skyen eller lokalt. Se <a href="http://portableapps.com/">PortableApps.com</a> for yderligere oplysninger.';
-$lang['da_DK']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'Dette er en ikke-udgivet version, som ikke bør benyttes til dagligt arbejde.';
+$lang['da_DK']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'Dette er en testversion, der ikke er beregnet til almindelig brug.';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = 'Nyttige ressourcer';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsSdkHeader'] = 'Software development kit (SDK)';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsSdkText'] = 'Hent SDK til udvikling af udvidelser og eksterne værktøjer';
@@ -40,12 +67,8 @@ $lang['da_DK']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Hent filerne ved hjælp af BitTorrent';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsVersion'] = 'version %s';
 $lang['da_DK']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Vælg venligst dit sprog';
-$lang['da_DK']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD-billeder med installationsprogrammer til alle platforme';
-$lang['da_DK']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Til flere platforme';
-$lang['da_DK']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Kildekode';
-$lang['da_DK']['DownloadSimplePage.ss']['TypeOr'] = 'eller';
-$lang['da_DK']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Ikke-frigivet version';
-$lang['da_DK']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Herunder kan du hente en ikke-frigivet version af den næste udgave af LibreOffice til evaluering, kvalitetskontrol osv. Disse versioner bør ikke benyttes til dagligt arbejde.';
+$lang['da_DK']['DownloadSimplePage.ss']['TypeOr'] = 'eller hent';
+$lang['da_DK']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Forhåndsfrigivelse:';
 $lang['da_DK']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Anbefalet';
 
 $lang['da_DK']['LocaleName']['af'] = 'Afrikaans';
@@ -53,9 +76,8 @@ $lang['da_DK']['LocaleName']['ar'] = 'Arabisk';
 $lang['da_DK']['LocaleName']['as'] = 'Assam';
 $lang['da_DK']['LocaleName']['ast'] = 'Asturiansk';
 $lang['da_DK']['LocaleName']['be'] = 'Hviderussisk';
-$lang['da_DK']['LocaleName']['be-BY'] = 'Hviderussisk';
 $lang['da_DK']['LocaleName']['bg'] = 'Bulgarsk';
-$lang['da_DK']['LocaleName']['bn'] = 'Bengali';
+$lang['da_DK']['LocaleName']['bn'] = 'Bengalsk';
 $lang['da_DK']['LocaleName']['bo'] = 'Tibetansk';
 $lang['da_DK']['LocaleName']['br'] = 'Bretonsk';
 $lang['da_DK']['LocaleName']['brx'] = 'Bodo (Indien)';
@@ -92,15 +114,15 @@ $lang['da_DK']['LocaleName']['is'] = 'Islandsk';
 $lang['da_DK']['LocaleName']['it'] = 'Italiensk';
 $lang['da_DK']['LocaleName']['ja'] = 'Japansk';
 $lang['da_DK']['LocaleName']['ka'] = 'Georgisk';
-$lang['da_DK']['LocaleName']['kk'] = 'Kazakh';
+$lang['da_DK']['LocaleName']['kk'] = 'Kazakhisk';
 $lang['da_DK']['LocaleName']['km'] = 'Khmer';
 $lang['da_DK']['LocaleName']['kn'] = 'Kannada';
 $lang['da_DK']['LocaleName']['ko'] = 'Koreansk';
 $lang['da_DK']['LocaleName']['kok'] = 'Konkani';
-$lang['da_DK']['LocaleName']['ks'] = 'Kashmiri';
+$lang['da_DK']['LocaleName']['ks'] = 'Kashmirisk';
 $lang['da_DK']['LocaleName']['ku'] = 'Kurdisk';
 $lang['da_DK']['LocaleName']['lb'] = 'Luxemburgsk';
-$lang['da_DK']['LocaleName']['lo'] = 'Lao';
+$lang['da_DK']['LocaleName']['lo'] = 'Laotisk';
 $lang['da_DK']['LocaleName']['lt'] = 'Litauisk';
 $lang['da_DK']['LocaleName']['lv'] = 'Lettisk';
 $lang['da_DK']['LocaleName']['mai'] = 'Maithili';
@@ -115,9 +137,9 @@ $lang['da_DK']['LocaleName']['ne'] = 'Nepalesisk';
 $lang['da_DK']['LocaleName']['nl'] = 'Hollandsk';
 $lang['da_DK']['LocaleName']['nn'] = 'Norsk Nynorsk';
 $lang['da_DK']['LocaleName']['nr'] = 'Ndebele (Syd)';
-$lang['da_DK']['LocaleName']['ns'] = 'Northern Sotho';
+$lang['da_DK']['LocaleName']['ns'] = 'Nordlig Sotho';
 $lang['da_DK']['LocaleName']['nso'] = 'Nordligt Sotho';
-$lang['da_DK']['LocaleName']['oc'] = 'Occitan';
+$lang['da_DK']['LocaleName']['oc'] = 'Occitansk';
 $lang['da_DK']['LocaleName']['om'] = 'Oromo';
 $lang['da_DK']['LocaleName']['or'] = 'Oriya';
 $lang['da_DK']['LocaleName']['pa-IN'] = 'Panjabi';
@@ -137,7 +159,7 @@ $lang['da_DK']['LocaleName']['sl'] = 'Slovensk';
 $lang['da_DK']['LocaleName']['sq'] = 'Albansk';
 $lang['da_DK']['LocaleName']['sr'] = 'Serbisk (kyrillisk)';
 $lang['da_DK']['LocaleName']['ss'] = 'Swati';
-$lang['da_DK']['LocaleName']['st'] = 'Southern Sotho';
+$lang['da_DK']['LocaleName']['st'] = 'Sydligt Sotho';
 $lang['da_DK']['LocaleName']['sv'] = 'Svensk';
 $lang['da_DK']['LocaleName']['sw-TZ'] = 'Swahili ';
 $lang['da_DK']['LocaleName']['ta'] = 'Tamilsk';
@@ -147,8 +169,8 @@ $lang['da_DK']['LocaleName']['th'] = 'Thai';
 $lang['da_DK']['LocaleName']['tn'] = 'Tswana';
 $lang['da_DK']['LocaleName']['tr'] = 'Tyrkisk';
 $lang['da_DK']['LocaleName']['ts'] = 'Tsonga';
-$lang['da_DK']['LocaleName']['tt'] = 'Tatar';
-$lang['da_DK']['LocaleName']['ug'] = 'Uighur';
+$lang['da_DK']['LocaleName']['tt'] = 'Tatarisk';
+$lang['da_DK']['LocaleName']['ug'] = 'Uigurisk';
 $lang['da_DK']['LocaleName']['uk'] = 'Ukrainsk';
 $lang['da_DK']['LocaleName']['uz'] = 'Uzbekisk';
 $lang['da_DK']['LocaleName']['ve'] = 'Venda';
@@ -157,14 +179,3 @@ $lang['da_DK']['LocaleName']['xh'] = 'Xhosa';
 $lang['da_DK']['LocaleName']['zh-CN'] = 'Kinesisk (simpel)';
 $lang['da_DK']['LocaleName']['zh-TW'] = 'Kinesisk (traditionel)';
 $lang['da_DK']['LocaleName']['zu'] = 'Zulu';
-
-$lang['da_DK']['DonatePage']['BUTTON_CARD']   = 'Bidrag med kreditkort';
-$lang['da_DK']['DonatePage']['BUTTON_PAYPAL'] = 'Bidrag med PayPal';
-$lang['da_DK']['DonatePage']['CHOICE_DEFAULT']= 'Vælg en af standardværdierne';
-$lang['da_DK']['DonatePage']['CUSTOM_CHOICE'] = 'Eller indtast et valgfrit beløb og valuta<br>(kun de valutaer, som er markeret med * kan benyttes med PayPal)';
-$lang['da_DK']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '100';
-$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '50';
-$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '100';
-$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '250';
-$lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '500';
-$lang['da_DK']['DonatePage']['DEFAULT_CURRENCY'] = 'DKK';

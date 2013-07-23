@@ -3,11 +3,28 @@ global $lang;
 
 $lang['ast_ES']['Donationpage']['AMOUNT']='Cantidá:';
 
-$lang['ast_ES']['Downloadpage']['BITTORRENT']='Descargar usando BitTorrent';
+
+$lang['ast_ES']['DonatePage']['BUTTON_CARD']   ='Donativu con tarxeta de créditu';
+$lang['ast_ES']['DonatePage']['BUTTON_PAYPAL'] ='Donativu via PayPal';
+$lang['ast_ES']['DonatePage']['CHOICE_DEFAULT']='Seleiciona unu de los valores predeterminaos';
+$lang['ast_ES']['DonatePage']['CUSTOM_CHOICE'] ='O escribi una cantidá y moneda<br/>(Sólo les marcaes con * tan disponibles tamién via PayPal)';
+$lang['ast_ES']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['ast_ES']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['ast_ES']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['ast_ES']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['ast_ES']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['ast_ES']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['ast_ES']['DonatePage']['DLRefreshMsg']= 'La descarga de %s tendría de principiar nel intre. Por favor, calque nel enllaz si nun entama.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['ast_ES']['DonatePage']['DLOptional']  = 'Pue alcontrar les descargues opcionales a la izquierda.';
+
+$lang['ast_ES']['Downloadpage']['BITTORRENT']='Pue alcontrar les descargues opcionales a la izquierda.';
 $lang['ast_ES']['Downloadpage']['DETAILLINK']='Obtener detalles (md5sum,…)';
 $lang['ast_ES']['Downloadpage']['DLSDK']     ='Descargar el SDK pa desendolcar estensiones y ferramientes esternes';
 $lang['ast_ES']['Downloadpage']['DLSOURCE']  ='Descargar el códigu fonte pa construyir el to propiu instalador';
 $lang['ast_ES']['Downloadpage']['DLSUITE']   ='Otres formes de descargar LibreOffice, la suite de productividá';
+$lang['ast_ES']['Downloadpage']['NOTESTBUILDS']='Nesti momentu nun hai versiones de prueba disponibles.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['ast_ES']['Navigation']['GOTOPAGE']  ='"Dir a la páxina %s"';
@@ -15,11 +32,21 @@ $lang['ast_ES']['Navigation']['TOTOPTITLE']='desplazase al entamu de la páxina'
 $lang['ast_ES']['Navigation']['TOTOP']     ='⬆ hacia arriba';
 
 $lang['ast_ES']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Necesites descargar ya instalar estos ficheros n\'orde:';
-$lang['ast_ES']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Camudar de sistema, versión o llingua';
 $lang['ast_ES']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Desendolcadores';
-$lang['ast_ES']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. ¿Nun ye la versión que necesites?';
-$lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info.';
-$lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Ver la suma MD5 y la llista d\'espeyos de descarga pal ficheru';
+/* %s will be replaced with OS/arch, version, language */
+$lang['ast_ES']['DownloadSimplePage.ss']['DownloadsHeader']= 'Seleicionada: LibreOffice <b>%s</b>';
+$lang['ast_ES']['DownloadSimplePage.ss']['NotWanted']      = '¿Nun ye la versión que quería?';
+/* will be displayed instead of the dl-buttons */
+$lang['ast_ES']['DownloadSimplePage.ss']['NoRegularDL']    = 'Nun hai disponibles ficheros d\'instalación regulares.<br/>Por favor, cambie la seleición o escueya una de les otres descargues más abaxo.';
+/* watch out for proper quoting */
+$lang['ast_ES']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Si ta buscando versiones antigües, por favor, visite\'l nuesu <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">archivu de descargues</a>.';
+/* will be formatted as link */
+$lang['ast_ES']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Camudar la llingua';
+$lang['ast_ES']['DownloadSimplePage.ss']['ChangeVersion']  = 'Camudar la versión:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['ast_ES']['DownloadSimplePage.ss']['ChangeOS']       = 'Camudar el <abbr title="Sistema operativu">S.O.</abbr>:';
+$lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
+$lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Ver la suma md5 y la llista d\'espeyos de descarga pal ficheru';
 $lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Instalador principal';
 $lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Ayuda incorporada de LibreOffice';
 $lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Interfaz traducida d\'usuariu';
@@ -40,12 +67,8 @@ $lang['ast_ES']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['ast_ES']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Descargar los ficheros usando BitTorrent';
 $lang['ast_ES']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versión %s';
 $lang['ast_ES']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Seleiciona la to llingua';
-$lang['ast_ES']['DownloadSimplePage.ss']['TypeDescBox'] = 'Imáxenes de CD/DVD con instaladores pa toles plataformes';
-$lang['ast_ES']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Pa plataformes múltiples';
-$lang['ast_ES']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Códigu fonte';
-$lang['ast_ES']['DownloadSimplePage.ss']['TypeOr'] = 'o';
-$lang['ast_ES']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Prellanzamientos';
-$lang['ast_ES']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Debaxo, pues descargar una versión en desendolcu de LibreOffice pa la so evaluación, control de calidá, pruebes, etc. Estes versiones nun se recomienden pa usu xeneral.';
+$lang['ast_ES']['DownloadSimplePage.ss']['TypeOr'] = 'o descargar';
+$lang['ast_ES']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-llanzamientos:';
 $lang['ast_ES']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recomendáu';
 
 $lang['ast_ES']['LocaleName']['af'] = 'Afrikaans';
@@ -53,7 +76,6 @@ $lang['ast_ES']['LocaleName']['ar'] = 'Árabe';
 $lang['ast_ES']['LocaleName']['as'] = 'Asamés';
 $lang['ast_ES']['LocaleName']['ast'] = 'Asturianu';
 $lang['ast_ES']['LocaleName']['be'] = 'Bielorrusu';
-$lang['ast_ES']['LocaleName']['be-BY'] = 'Bielorrusu';
 $lang['ast_ES']['LocaleName']['bg'] = 'Búlgaru';
 $lang['ast_ES']['LocaleName']['bn'] = 'Bengalí';
 $lang['ast_ES']['LocaleName']['bo'] = 'Tibetanu';
@@ -69,9 +91,9 @@ $lang['ast_ES']['LocaleName']['de'] = 'Alemán';
 $lang['ast_ES']['LocaleName']['dgo'] = 'Dogri';
 $lang['ast_ES']['LocaleName']['dz'] = 'Dzongkha';
 $lang['ast_ES']['LocaleName']['el'] = 'Griegu';
-$lang['ast_ES']['LocaleName']['en-GB'] = 'Inglés (británicu)';
+$lang['ast_ES']['LocaleName']['en-GB'] = 'Inglés (GB)';
 $lang['ast_ES']['LocaleName']['en-US'] = 'Inglés (EE.XX.)';
-$lang['ast_ES']['LocaleName']['en-ZA'] = 'Inglés (neozelandés)';
+$lang['ast_ES']['LocaleName']['en-ZA'] = 'Inglés (ZA)';
 $lang['ast_ES']['LocaleName']['eo'] = 'Esperantu';
 $lang['ast_ES']['LocaleName']['es'] = 'Español';
 $lang['ast_ES']['LocaleName']['et'] = 'Estoniu';
@@ -142,7 +164,7 @@ $lang['ast_ES']['LocaleName']['sv'] = 'Suecu';
 $lang['ast_ES']['LocaleName']['sw-TZ'] = 'Suaḥili';
 $lang['ast_ES']['LocaleName']['ta'] = 'Tamil';
 $lang['ast_ES']['LocaleName']['te'] = 'Telugu';
-$lang['ast_ES']['LocaleName']['tg'] = 'Tajik';
+$lang['ast_ES']['LocaleName']['tg'] = 'Tayiku';
 $lang['ast_ES']['LocaleName']['th'] = 'Tailandés';
 $lang['ast_ES']['LocaleName']['tn'] = 'Tswana';
 $lang['ast_ES']['LocaleName']['tr'] = 'Turcu';
