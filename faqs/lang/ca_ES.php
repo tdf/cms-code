@@ -27,7 +27,7 @@ $lang['ca_ES']['FaqsSearchResults.ss']['READMORE'] = 'Llegeix més... ';
 $lang['ca_ES']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Ho sentim, la teva cerca ho ha retornat cap resultat.';
 
 $lang['ca_ES']['FaqsTopWidget']['TITLE'] = 'PMF més populars';
-$lang['ca_ES']['FaqsTopWidget']['LIMIT'] = 'Número de PMF a mostrar';
+$lang['ca_ES']['FaqsTopWidget']['LIMIT'] = 'Número de preguntes freqüents a mostrar';
 $lang['ca_ES']['FaqsTopWidget']['LABEL'] = 'Títol de giny';
 
 $lang['ca_ES']['FaqsSearchWidget']['TITLE'] = 'Cerca PMFs';
