@@ -3,11 +3,28 @@ global $lang;
 
 $lang['sk_SK']['Donationpage']['AMOUNT']='Množstvo:';
 
+
+$lang['sk_SK']['DonatePage']['BUTTON_CARD']   ='Prispieť kreditnou kartou';
+$lang['sk_SK']['DonatePage']['BUTTON_PAYPAL'] ='Prispieť cez PayPal';
+$lang['sk_SK']['DonatePage']['CHOICE_DEFAULT']='Vyberte jednu z nastavených hodnôt';
+$lang['sk_SK']['DonatePage']['CUSTOM_CHOICE'] ='Alebo zadajte vlastné množstvo a menu <br> (pre PayPal možno použiť iba označené *)';
+$lang['sk_SK']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['sk_SK']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['sk_SK']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['sk_SK']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['sk_SK']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['sk_SK']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['sk_SK']['DonatePage']['DLRefreshMsg']= 'Sťahovanie %s by malo čoskoro začať. Ak sa tak nestane, kliknite na odkaz.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['sk_SK']['DonatePage']['DLOptional']  = 'Doplnkové súbory na stiahnutie nájdete naľavo.';
+
 $lang['sk_SK']['Downloadpage']['BITTORRENT']='Stiahnuť pomocou BitTorrent klienta';
 $lang['sk_SK']['Downloadpage']['DETAILLINK']='Detaily (kontrolné súčty,...)';
 $lang['sk_SK']['Downloadpage']['DLSDK']     ='Stiahnuť SDK na vývoj rozšírení a externých nástrojov';
 $lang['sk_SK']['Downloadpage']['DLSOURCE']  ='Stiahnuť zdrojový kód na vytvorenie vlastného inštalátora';
 $lang['sk_SK']['Downloadpage']['DLSUITE']   ='Iný spôsob sťahovania Libreoffice ';
+$lang['sk_SK']['Downloadpage']['NOTESTBUILDS']='V súčasnosti nie sú k dispozícii žiadne testovacie verzie.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['sk_SK']['Navigation']['GOTOPAGE']  ='"Ísť na stránku %s" ';
@@ -15,9 +32,19 @@ $lang['sk_SK']['Navigation']['TOTOPTITLE']='prejsť navrch stránky';
 $lang['sk_SK']['Navigation']['TOTOP']     ='⬆ navrch';
 
 $lang['sk_SK']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Tieto súbory treba stiahnuť a nainštalovať v danom poradí:';
-$lang['sk_SK']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Zmeniť systém, verziu a jazyk';
 $lang['sk_SK']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Vývojári';
-$lang['sk_SK']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Je to iná verzia než tá, ktorú potrebujete?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['sk_SK']['DownloadSimplePage.ss']['DownloadsHeader']= 'Vybrané: LibreOffice <b>%s</b>';
+$lang['sk_SK']['DownloadSimplePage.ss']['NotWanted']      = 'Iná verzia, než akú potrebujete?';
+/* will be displayed instead of the dl-buttons */
+$lang['sk_SK']['DownloadSimplePage.ss']['NoRegularDL']    = 'Inštalačné súbory nie sú k dispozícii. <br/> Zmeňte svoju voľbu alebo vyberte niektorý z doplnkových súborov nižšie.';
+/* watch out for proper quoting */
+$lang['sk_SK']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Ak hľadáte staršiu verziu, pozrite sa do <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">archívu</a>.';
+/* will be formatted as link */
+$lang['sk_SK']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Zmeniť jazyk';
+$lang['sk_SK']['DownloadSimplePage.ss']['ChangeVersion']  = 'Zmeniť verziu:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['sk_SK']['DownloadSimplePage.ss']['ChangeOS']       = 'Zmeniť <abbr title="operačný systém">OS</abbr>:';
 $lang['sk_SK']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informácie';
 $lang['sk_SK']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Zobraziť kontrolný súčet a zoznam zrkadlových serverov';
 $lang['sk_SK']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Základný inštalačný balíček';
@@ -40,12 +67,8 @@ $lang['sk_SK']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['sk_SK']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Stiahnuť súbory pomocou BitTorrent';
 $lang['sk_SK']['DownloadSimplePage.ss']['DownloadsVersion'] = 'verzia %s';
 $lang['sk_SK']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Vyberte jazyk';
-$lang['sk_SK']['DownloadSimplePage.ss']['TypeDescBox'] = 'ISO obrazy CD/DVD s inštalačnými balíčkami pre všetky platformy';
-$lang['sk_SK']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Pre viaceré platformy';
-$lang['sk_SK']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Zdrojový kód';
-$lang['sk_SK']['DownloadSimplePage.ss']['TypeOr'] = 'alebo';
-$lang['sk_SK']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testovacie verzie';
-$lang['sk_SK']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Kliknutím na nižšie uvedené odkazy si môžete stiahnuť testovacie balíčky nových verzií LibreOffice, ktoré sú určené na vyskúšanie nových funkcií, hľadanie chýb a pod. Tieto verzie nie sú určené na bežné použitie.';
+$lang['sk_SK']['DownloadSimplePage.ss']['TypeOr'] = 'alebo stiahnuť';
+$lang['sk_SK']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testovacie verzie:';
 $lang['sk_SK']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Odporúčané';
 
 $lang['sk_SK']['LocaleName']['af'] = 'afrikánčina';
@@ -53,7 +76,6 @@ $lang['sk_SK']['LocaleName']['ar'] = 'arabčina';
 $lang['sk_SK']['LocaleName']['as'] = 'asámčina';
 $lang['sk_SK']['LocaleName']['ast'] = 'astúrčina';
 $lang['sk_SK']['LocaleName']['be'] = 'bieloruština';
-$lang['sk_SK']['LocaleName']['be-BY'] = 'bieloruština (Bielorusko)';
 $lang['sk_SK']['LocaleName']['bg'] = 'bulharčina';
 $lang['sk_SK']['LocaleName']['bn'] = 'Bengálčina';
 $lang['sk_SK']['LocaleName']['bo'] = 'tibetčina';

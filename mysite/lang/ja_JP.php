@@ -3,11 +3,28 @@ global $lang;
 
 $lang['ja_JP']['Donationpage']['AMOUNT']='額:';
 
+
+$lang['ja_JP']['DonatePage']['BUTTON_CARD']   ='クレジットカードで寄付する';
+$lang['ja_JP']['DonatePage']['BUTTON_PAYPAL'] ='PayPalで寄付する';
+$lang['ja_JP']['DonatePage']['CHOICE_DEFAULT']='次の選択肢の中から金額を指定する';
+$lang['ja_JP']['DonatePage']['CUSTOM_CHOICE'] ='金額を入力して通貨を指定する<br/>(*印が付いている通貨はPayPalでもご利用いただけます)';
+$lang['ja_JP']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='2500';
+$lang['ja_JP']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '500';
+$lang['ja_JP']['DonatePage']['DEFAULT_AMOUNT_EUR10']='1000';
+$lang['ja_JP']['DonatePage']['DEFAULT_AMOUNT_EUR20']='2000';
+$lang['ja_JP']['DonatePage']['DEFAULT_AMOUNT_EUR50']='5000';
+$lang['ja_JP']['DonatePage']['DEFAULT_CURRENCY']    ='JPY';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['ja_JP']['DonatePage']['DLRefreshMsg']= '%sのダウンロードが開始されます。始まらない場合はこのリンクをクリックしてください。';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['ja_JP']['DonatePage']['DLOptional']  = 'オプションのダウンロードが左にあります。';
+
 $lang['ja_JP']['Downloadpage']['BITTORRENT']='BitTorrentを使ってダウンロード';
 $lang['ja_JP']['Downloadpage']['DETAILLINK']='詳細情報 (md5sum,…)';
 $lang['ja_JP']['Downloadpage']['DLSDK']     ='拡張機能や外部ツールを開発するためのSDKのダウンロード';
 $lang['ja_JP']['Downloadpage']['DLSOURCE']  ='独自のインストーラーを構築するためのソースコードのダウンロード';
 $lang['ja_JP']['Downloadpage']['DLSUITE']   ='オフィススイート LibreOffice をダウンロードする他の方法';
+$lang['ja_JP']['Downloadpage']['NOTESTBUILDS']='現時点で利用可能な開発版パッケージはありません。';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['ja_JP']['Navigation']['GOTOPAGE']  ='"%s のページへ行く"';
@@ -15,15 +32,25 @@ $lang['ja_JP']['Navigation']['TOTOPTITLE']='ページのトップへスクロー
 $lang['ja_JP']['Navigation']['TOTOP']     ='⬆ トップへ';
 
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadNeededFiles'] = '以下のファイルを順にダウンロードしてインストールしてください：';
-$lang['ja_JP']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'システム、バージョン、言語の変更';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = '開発者';
-$lang['ja_JP']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b> ご希望のバージョンではありませんか?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['ja_JP']['DownloadSimplePage.ss']['DownloadsHeader']= '選択されたバージョン: LibreOffice <b>%s</b>';
+$lang['ja_JP']['DownloadSimplePage.ss']['NotWanted']      = 'ご希望のバージョンではありませんか?';
+/* will be displayed instead of the dl-buttons */
+$lang['ja_JP']['DownloadSimplePage.ss']['NoRegularDL']    = 'このバージョンの正規のインストールファイルはありません。<br/>選択を変更するか、以下の追加ダウンロードのリストからひとつ選んでください。';
+/* watch out for proper quoting */
+$lang['ja_JP']['DownloadSimplePage.ss']['ViewDLArchive']  = '古いバージョンをお探しの場合は、<a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>をご覧ください。';
+/* will be formatted as link */
+$lang['ja_JP']['DownloadSimplePage.ss']['ChangeLanguage'] = '言語の変更';
+$lang['ja_JP']['DownloadSimplePage.ss']['ChangeVersion']  = 'バージョンの変更:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['ja_JP']['DownloadSimplePage.ss']['ChangeOS']       = '<abbr title="Operating System">OS</abbr>の変更:';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsInfoLink'] = '情報';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'MD5チェックサムとこのファイルのダウンロードミラーの一覧を見る';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'メイン・インストールパッケージ';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice ヘルプパッケージ';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = '言語パッケージ';
-$lang['ja_JP']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s 画像';
+$lang['ja_JP']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s イメージ';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'インストール用メディアを作成するためにISOファイルをダウンロードする';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = '%s インストール';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Intel AppUp Center から LibreOffice %s をインストールする。';
@@ -40,34 +67,19 @@ $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'BitTorrent を使ってダウンロード';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsVersion'] = 'バージョン %s';
 $lang['ja_JP']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = '言語を選択してください';
-$lang['ja_JP']['DownloadSimplePage.ss']['TypeDescBox'] = '全てのプラットフォームについてのインストーラーを含むCD/DVDイメージ';
-$lang['ja_JP']['DownloadSimplePage.ss']['TypeDescMulti'] = '複数のプラットフォーム向け';
-$lang['ja_JP']['DownloadSimplePage.ss']['TypeDescSrc'] = 'ソースコード';
-$lang['ja_JP']['DownloadSimplePage.ss']['TypeOr'] = 'または';
+$lang['ja_JP']['DownloadSimplePage.ss']['TypeOr'] = 'またはダウンロード';
 $lang['ja_JP']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = '開発版';
-$lang['ja_JP']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = '以下では、LibreOffice の評価や QA 試験のために次バージョンのプレリリース版をダウンロードできます。このバージョンは一般利用向けではありません。';
 $lang['ja_JP']['DownloadSimplePage.ss']['VersionsRecommended'] = '推奨';
 
-$lang['ja_JP']['DonatePage']['BUTTON_CARD']   = 'クレジットカードで寄付する';
-$lang['ja_JP']['DonatePage']['BUTTON_PAYPAL'] = 'PayPalで寄付する';
-$lang['ja_JP']['DonatePage']['CHOICE_DEFAULT']= '次の選択肢の中から金額を指定する';
-$lang['ja_JP']['DonatePage']['CUSTOM_CHOICE'] = '金額を入力して通貨を指定する<br/>(*印が付いている通貨はPayPalでもご利用いただけます)';
-$lang['ja_JP']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '2500';
-$lang['ja_JP']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '500';
-$lang['ja_JP']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '1000';
-$lang['ja_JP']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '2000';
-$lang['ja_JP']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '5000';
-$lang['ja_JP']['DonatePage']['DEFAULT_CURRENCY'] = 'JPY';
 $lang['ja_JP']['LocaleName']['af'] = 'アフリカーンス語';
 $lang['ja_JP']['LocaleName']['ar'] = 'アラビア語';
 $lang['ja_JP']['LocaleName']['as'] = 'アッサム語';
 $lang['ja_JP']['LocaleName']['ast'] = 'アストゥリアス語';
 $lang['ja_JP']['LocaleName']['be'] = 'ベラルーシ語';
-$lang['ja_JP']['LocaleName']['be-BY'] = 'ベラルーシ語';
 $lang['ja_JP']['LocaleName']['bg'] = 'ブルガリア語';
 $lang['ja_JP']['LocaleName']['bn'] = 'ベンガル語';
 $lang['ja_JP']['LocaleName']['bo'] = 'チベット語';
-$lang['ja_JP']['LocaleName']['br'] = 'ブルトン語';
+$lang['ja_JP']['LocaleName']['br'] = 'ブルターニュ語';
 $lang['ja_JP']['LocaleName']['brx'] = 'ボド語';
 $lang['ja_JP']['LocaleName']['bs'] = 'ボスニア語';
 $lang['ja_JP']['LocaleName']['ca'] = 'カタルーニャ語';

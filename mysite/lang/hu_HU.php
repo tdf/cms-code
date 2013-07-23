@@ -3,11 +3,28 @@ global $lang;
 
 $lang['hu_HU']['Donationpage']['AMOUNT']='Összeg:';
 
+
+$lang['hu_HU']['DonatePage']['BUTTON_CARD']   ='Adományozzon bankkártya segítségével';
+$lang['hu_HU']['DonatePage']['BUTTON_PAYPAL'] ='Adományozzon PayPal segítségével';
+$lang['hu_HU']['DonatePage']['CHOICE_DEFAULT']='Válasszon a megadott összegekből';
+$lang['hu_HU']['DonatePage']['CUSTOM_CHOICE'] ='Vagy írja be a kívánt összeget és pénznemet<br/>(csak a *-gal jelöltek érhetők el PayPalon)';
+$lang['hu_HU']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['hu_HU']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['hu_HU']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['hu_HU']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['hu_HU']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['hu_HU']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['hu_HU']['DonatePage']['DLRefreshMsg']= '%s letöltése hamarosan megkezdődik. Kattintson a hivatkozásra, ha mégsem ez történt.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['hu_HU']['DonatePage']['DLOptional']  = 'A további letöltések a bal oldalon találhatók.';
+
 $lang['hu_HU']['Downloadpage']['BITTORRENT']='Letöltés BitTorrent segítségével';
 $lang['hu_HU']['Downloadpage']['DETAILLINK']='Részletek (md5sum, ...)';
 $lang['hu_HU']['Downloadpage']['DLSDK']     ='Az SDK letöltése kiterjesztések és külső eszközök fejlesztéséhez';
 $lang['hu_HU']['Downloadpage']['DLSOURCE']  ='A forráskód letöltése saját telepítőkészlet készítéséhez';
 $lang['hu_HU']['Downloadpage']['DLSUITE']   ='Alternatív letöltési linkek a LibreOffice csomagjaihoz';
+$lang['hu_HU']['Downloadpage']['NOTESTBUILDS']='Jelenleg nem érhető el tesztváltozat.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['hu_HU']['Navigation']['GOTOPAGE']  ='"Ugrás a(z) %s oldalra"';
@@ -15,9 +32,19 @@ $lang['hu_HU']['Navigation']['TOTOPTITLE']='ugrás az oldal tetejére';
 $lang['hu_HU']['Navigation']['TOTOP']     ='⬆ fel';
 
 $lang['hu_HU']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Töltse le ezeket a fájlokat, és ebben a sorrendben telepítse őket.';
-$lang['hu_HU']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Rendszer, verzió vagy nyelv váltása';
 $lang['hu_HU']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Fejlesztők';
-$lang['hu_HU']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Nem ezt a verziót akarja?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['hu_HU']['DownloadSimplePage.ss']['DownloadsHeader']= 'Kiválasztva: LibreOffice <b>%s</b>';
+$lang['hu_HU']['DownloadSimplePage.ss']['NotWanted']      = 'Nem a kívánt verzió?';
+/* will be displayed instead of the dl-buttons */
+$lang['hu_HU']['DownloadSimplePage.ss']['NoRegularDL']    = 'Nem érhetők el normál telepítőfájlok.<br/>Módosítsa a kijelölést, vagy válasszon egyet a további letöltések közül lentebb.';
+/* watch out for proper quoting */
+$lang['hu_HU']['DownloadSimplePage.ss']['ViewDLArchive']  = 'A régebbi verziókat a <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">letöltési archívumban</a> találhatja meg.';
+/* will be formatted as link */
+$lang['hu_HU']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Nyelv módosítása';
+$lang['hu_HU']['DownloadSimplePage.ss']['ChangeVersion']  = 'Verzió módosítása:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['hu_HU']['DownloadSimplePage.ss']['ChangeOS']       = 'Operációs rendszer módosítása:';
 $lang['hu_HU']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Információ';
 $lang['hu_HU']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'A fájl letöltése helyeinek és md5 ellenőrzőösszegének megtekintése';
 $lang['hu_HU']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Fő telepítőkészlet';
@@ -40,12 +67,8 @@ $lang['hu_HU']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['hu_HU']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Letöltés BitTorrent segítségével';
 $lang['hu_HU']['DownloadSimplePage.ss']['DownloadsVersion'] = 'Verzió: %s';
 $lang['hu_HU']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Nyelv választása';
-$lang['hu_HU']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD lemezképek minden platformhoz';
-$lang['hu_HU']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Több platformhoz';
-$lang['hu_HU']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Forráskód';
-$lang['hu_HU']['DownloadSimplePage.ss']['TypeOr'] = 'vagy';
-$lang['hu_HU']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Előzetes kiadások';
-$lang['hu_HU']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'A LibreOffice következő verziójának előzetes kiadásai tölthetőek le itt. Tesztelésre javasoljuk őket, nem mindennapi munkára.';
+$lang['hu_HU']['DownloadSimplePage.ss']['TypeOr'] = 'vagy letölthet:';
+$lang['hu_HU']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Előzetes kiadások:';
 $lang['hu_HU']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Ajánlott';
 
 $lang['hu_HU']['LocaleName']['af'] = 'Afrikaans';
@@ -53,7 +76,6 @@ $lang['hu_HU']['LocaleName']['ar'] = 'Arab';
 $lang['hu_HU']['LocaleName']['as'] = 'Asszámi';
 $lang['hu_HU']['LocaleName']['ast'] = 'Asztúriai';
 $lang['hu_HU']['LocaleName']['be'] = 'Belorusz';
-$lang['hu_HU']['LocaleName']['be-BY'] = 'Belorusz';
 $lang['hu_HU']['LocaleName']['bg'] = 'Bolgár';
 $lang['hu_HU']['LocaleName']['bn'] = 'Bengáli';
 $lang['hu_HU']['LocaleName']['bo'] = 'Tibeti';

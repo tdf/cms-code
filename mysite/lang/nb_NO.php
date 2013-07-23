@@ -1,27 +1,54 @@
 <?php
 global $lang;
 
-$lang['nb_NO']['Donationpage']['AMOUNT']='Størrelse:';
+$lang['nb_NO']['Donationpage']['AMOUNT']='Beløp:';
+
+
+$lang['nb_NO']['DonatePage']['BUTTON_CARD']   ='Doner med kredittkort';
+$lang['nb_NO']['DonatePage']['BUTTON_PAYPAL'] ='Doner med PayPal';
+$lang['nb_NO']['DonatePage']['CHOICE_DEFAULT']='Velg en av standardverdiene';
+$lang['nb_NO']['DonatePage']['CUSTOM_CHOICE'] ='Eller angi et selvvalgt beløp og valuta<br/>(kun de som er merket med * er også tilgjengelig med PayPayl)';
+$lang['nb_NO']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['nb_NO']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['nb_NO']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['nb_NO']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['nb_NO']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['nb_NO']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['nb_NO']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['nb_NO']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['nb_NO']['Downloadpage']['BITTORRENT']='Last ned med BitTorrent';
 $lang['nb_NO']['Downloadpage']['DETAILLINK']='Få detaljer (md5sum, …)';
 $lang['nb_NO']['Downloadpage']['DLSDK']     ='Last ned SDK for å utvikle utvidelser og eksterne verktøy';
 $lang['nb_NO']['Downloadpage']['DLSOURCE']  ='Last ned kildekoden for å lage din egen installasjon';
 $lang['nb_NO']['Downloadpage']['DLSUITE']   ='Alternative nedlastingsmetoder for LibreOffice';
+$lang['nb_NO']['Downloadpage']['NOTESTBUILDS']='Ingen testbygg er tilgjengelige.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
-$lang['nb_NO']['Navigation']['GOTOPAGE']  ='"Gå til %s"';
-$lang['nb_NO']['Navigation']['TOTOPTITLE']='Gå til toppen';
+$lang['nb_NO']['Navigation']['GOTOPAGE']  ='«Gå til %s»';
+$lang['nb_NO']['Navigation']['TOTOPTITLE']='rull til toppen av siden';
 $lang['nb_NO']['Navigation']['TOTOP']     ='⬆ til toppen';
 
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Filene må lastes ned og installeres i denne rekkefølgen:';
-$lang['nb_NO']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Endre system, versjon, eller språk';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Utviklere';
-$lang['nb_NO']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Ikke den versjonen du lette etter?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['nb_NO']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['nb_NO']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['nb_NO']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['nb_NO']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['nb_NO']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['nb_NO']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['nb_NO']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informasjon';
-$lang['nb_NO']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Se MD5-summen, og en liste med speil som fila kan lastes ned fra';
+$lang['nb_NO']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Se MD5-summen og en liste med speil som fila kan lastes ned fra';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Hovedinstallasjon';
-$lang['nb_NO']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Innebygget hjelp i LibreOffice';
+$lang['nb_NO']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Innebygd hjelp i LibreOffice';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Oversatte brukergrensesnitt';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s-bilde';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'Last ned et ISO-bilde for å lage installasjonsmedium';
@@ -40,12 +67,8 @@ $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Last ned filene med BitTorrent';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versjon %s';
 $lang['nb_NO']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Velg språk';
-$lang['nb_NO']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD-bilder med installasjonsrutiner for alle plattformer';
-$lang['nb_NO']['DownloadSimplePage.ss']['TypeDescMulti'] = 'For flere plattformer';
-$lang['nb_NO']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Kildekode';
-$lang['nb_NO']['DownloadSimplePage.ss']['TypeOr'] = 'eller';
-$lang['nb_NO']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testversjoner';
-$lang['nb_NO']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Under kan du laste ned en testversjon av den framtidige LibreOffice-versjonen for evaluering, kvalitetstesting, mm. Disse versjonene er ikke egnet til vanlig bruk.';
+$lang['nb_NO']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['nb_NO']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['nb_NO']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Anbefalt';
 
 $lang['nb_NO']['LocaleName']['af'] = 'Afrikaans';
@@ -53,7 +76,6 @@ $lang['nb_NO']['LocaleName']['ar'] = 'Arabisk';
 $lang['nb_NO']['LocaleName']['as'] = 'Assamesisk';
 $lang['nb_NO']['LocaleName']['ast'] = 'Asturisk';
 $lang['nb_NO']['LocaleName']['be'] = 'Hviterussisk';
-$lang['nb_NO']['LocaleName']['be-BY'] = 'Hviterussisk';
 $lang['nb_NO']['LocaleName']['bg'] = 'Bulgarsk';
 $lang['nb_NO']['LocaleName']['bn'] = 'Bengali';
 $lang['nb_NO']['LocaleName']['bo'] = 'Tibetansk';

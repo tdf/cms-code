@@ -3,11 +3,28 @@ global $lang;
 
 $lang['fr_FR']['Donationpage']['AMOUNT']='Montant :';
 
+
+$lang['fr_FR']['DonatePage']['BUTTON_CARD']   ='Faire un don via une carte de crédit';
+$lang['fr_FR']['DonatePage']['BUTTON_PAYPAL'] ='Faire un don via PayPal';
+$lang['fr_FR']['DonatePage']['CHOICE_DEFAULT']='Sélectionnez l\'une des valeurs par défaut';
+$lang['fr_FR']['DonatePage']['CUSTOM_CHOICE'] ='Ou saisissez un montant personnalisé<br/>(seuls ceux marqués par une * sont disponibles via PayPayl)';
+$lang['fr_FR']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['fr_FR']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['fr_FR']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['fr_FR']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+
 $lang['fr_FR']['Downloadpage']['BITTORRENT']='Télécharger en utilisant BitTorrent';
 $lang['fr_FR']['Downloadpage']['DETAILLINK']='Obtenir des détails (md5sum, ...)';
 $lang['fr_FR']['Downloadpage']['DLSDK']     ='Télécharger le SDK pour développer des extensions et des outils externes';
 $lang['fr_FR']['Downloadpage']['DLSOURCE']  ='Télécharger le code source pour compiler votre propre installeur';
 $lang['fr_FR']['Downloadpage']['DLSUITE']   ='Autre façon de télécharger LibreOffice, la suite bureautique';
+$lang['fr_FR']['Downloadpage']['NOTESTBUILDS']='Il n\'y a pas de versions de test disponibles actuellement.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['fr_FR']['Navigation']['GOTOPAGE']  ='"Aller à la page %s"';
@@ -15,9 +32,19 @@ $lang['fr_FR']['Navigation']['TOTOPTITLE']='faire défiler vers le haut de la pa
 $lang['fr_FR']['Navigation']['TOTOP']     ='⬆ en haut';
 
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Vous devez télécharger et installer ces fichiers dans l\'ordre :';
-$lang['fr_FR']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Modifier le système d\'exploitation, la version ou la langue';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Développeurs';
-$lang['fr_FR']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Ce n\'est pas la version que vous souhaitez ?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['fr_FR']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['fr_FR']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['fr_FR']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['fr_FR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['fr_FR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['fr_FR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['fr_FR']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Voir les md5sum et une liste de miroirs de téléchargement du fichier';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Installeur principal';
@@ -40,12 +67,8 @@ $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Télécharger les fichiers en utlisant BitTorrent';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsVersion'] = 'version %s';
 $lang['fr_FR']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Veuillez sélectionner votre langue';
-$lang['fr_FR']['DownloadSimplePage.ss']['TypeDescBox'] = 'Images CD/DVD avec installeurs pour toutes les plateformes';
-$lang['fr_FR']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Pour plusieurs plateformes';
-$lang['fr_FR']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Code Source';
-$lang['fr_FR']['DownloadSimplePage.ss']['TypeOr'] = 'ou';
-$lang['fr_FR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Préversions';
-$lang['fr_FR']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Ci-dessous, vous pouvez télécharger une préversion de la prochaine version de LibreOffice à fins d\'évaluation, de tests d\'assurance qualité, etc. Cette version n\'est pas destinée à un usage général.';
+$lang['fr_FR']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['fr_FR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['fr_FR']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recommandé';
 
 $lang['fr_FR']['LocaleName']['af'] = 'Afrikaans';
@@ -53,7 +76,6 @@ $lang['fr_FR']['LocaleName']['ar'] = 'Arabe';
 $lang['fr_FR']['LocaleName']['as'] = 'Assamais';
 $lang['fr_FR']['LocaleName']['ast'] = 'Asturien';
 $lang['fr_FR']['LocaleName']['be'] = 'Biélorusse';
-$lang['fr_FR']['LocaleName']['be-BY'] = 'Biélorusse';
 $lang['fr_FR']['LocaleName']['bg'] = 'Bulgare';
 $lang['fr_FR']['LocaleName']['bn'] = 'Bengali';
 $lang['fr_FR']['LocaleName']['bo'] = 'Tibétain';
@@ -157,14 +179,3 @@ $lang['fr_FR']['LocaleName']['xh'] = 'Xhosa';
 $lang['fr_FR']['LocaleName']['zh-CN'] = 'Chinois (simplifié)';
 $lang['fr_FR']['LocaleName']['zh-TW'] = 'Chinois (traditionnel)';
 $lang['fr_FR']['LocaleName']['zu'] = 'Zoulou';
-
-$lang['fr_FR']['DonatePage']['BUTTON_CARD']   = 'Faire un don via une carte de crédit';
-$lang['fr_FR']['DonatePage']['BUTTON_PAYPAL'] = 'Faire un don via PayPal';
-$lang['fr_FR']['DonatePage']['CHOICE_DEFAULT']= 'Sélectionnez l\'une des valeurs par défaut';
-$lang['fr_FR']['DonatePage']['CUSTOM_CHOICE'] = 'Ou saisissez un montant personnalisé<br/>(seuls ceux marqués par une * sont disponibles via PayPayl)';
-$lang['fr_FR']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
-$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
-$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '10';
-$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '20';
-$lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '50';
-$lang['fr_FR']['DonatePage']['DEFAULT_CURRENCY'] = 'EUR';

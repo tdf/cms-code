@@ -14,6 +14,10 @@ $lang['vi_VN']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['vi_VN']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['vi_VN']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['vi_VN']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['vi_VN']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['vi_VN']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['vi_VN']['Downloadpage']['BITTORRENT']='Tải về bằng BitTorrent';
 $lang['vi_VN']['Downloadpage']['DETAILLINK']='Chi tiết (md5sum,...)';
@@ -28,9 +32,19 @@ $lang['vi_VN']['Navigation']['TOTOPTITLE']='cuộn lên đầu trang';
 $lang['vi_VN']['Navigation']['TOTOP']     ='⬆ lên đầu';
 
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Bạn cần tải và cài những tập tin này theo đúng thứ tự:';
-$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Thay đổi hệ thống, phiên bản hoặc ngôn ngữ';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Lập trình viên';
-$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b> không phải phiên bản mà bạn cần?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['vi_VN']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['vi_VN']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['vi_VN']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['vi_VN']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['vi_VN']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['vi_VN']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Thông tin';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Xem mã md5sum và danh sách các máy chủ của tập tin';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Bộ cài đặt chính';
@@ -53,12 +67,8 @@ $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Tải các tập tin sử dụng BitTorrent';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsVersion'] = 'phiên bản %s';
 $lang['vi_VN']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Hãy chọn ngôn ngữ';
-$lang['vi_VN']['DownloadSimplePage.ss']['TypeDescBox'] = 'Ảnh đĩa CD/DVD chứa bộ cài đặt cho tất cả hệ điều hành';
-$lang['vi_VN']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Cho nhiều hệ điều hành';
-$lang['vi_VN']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Mã nguồn';
-$lang['vi_VN']['DownloadSimplePage.ss']['TypeOr'] = 'hoặc';
-$lang['vi_VN']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Bản thử nghiệm';
-$lang['vi_VN']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Below, you can download a pre-release of the next version of LibreOffice for evaluation, QA testing, etc. These versions are not meant for general use.';
+$lang['vi_VN']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['vi_VN']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['vi_VN']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Khuyên dùng';
 
 $lang['vi_VN']['LocaleName']['af'] = 'Afrikaans';
@@ -66,7 +76,6 @@ $lang['vi_VN']['LocaleName']['ar'] = 'Ả rập';
 $lang['vi_VN']['LocaleName']['as'] = 'Assamese';
 $lang['vi_VN']['LocaleName']['ast'] = 'Asturian';
 $lang['vi_VN']['LocaleName']['be'] = 'Belarusian';
-$lang['vi_VN']['LocaleName']['be-BY'] = 'Belarusian';
 $lang['vi_VN']['LocaleName']['bg'] = 'Bulgarian';
 $lang['vi_VN']['LocaleName']['bn'] = 'Bengali';
 $lang['vi_VN']['LocaleName']['bo'] = 'Tibetan';

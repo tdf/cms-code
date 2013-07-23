@@ -3,11 +3,28 @@ global $lang;
 
 $lang['pt_PT']['Donationpage']['AMOUNT']='Montante:';
 
+
+$lang['pt_PT']['DonatePage']['BUTTON_CARD']   ='Doação com cartão de crédito';
+$lang['pt_PT']['DonatePage']['BUTTON_PAYPAL'] ='Doação com Paypal';
+$lang['pt_PT']['DonatePage']['CHOICE_DEFAULT']='Escolha um dos valores sugeridos';
+$lang['pt_PT']['DonatePage']['CUSTOM_CHOICE'] ='Ou escreva o valor e selecione a moeda<br/>(apenas os valores com * podem ser enviados via PayPal)';
+$lang['pt_PT']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['pt_PT']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['pt_PT']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['pt_PT']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['pt_PT']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['pt_PT']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['pt_PT']['DonatePage']['DLRefreshMsg']= 'A transferência de %s deve iniciar brevemente. Clique na ligação se a transferência não for iniciada.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['pt_PT']['DonatePage']['DLOptional']  = 'No lado esquerdo, encontra as transferências facultativas.';
+
 $lang['pt_PT']['Downloadpage']['BITTORRENT']='Transferir via BitTorrent';
 $lang['pt_PT']['Downloadpage']['DETAILLINK']='Obter detalhes (md5sum,…)';
 $lang['pt_PT']['Downloadpage']['DLSDK']     ='Transferir SDK para desenvolvimento de extensões e ferramentas externas';
-$lang['pt_PT']['Downloadpage']['DLSOURCE']  ='Transferir o código fonte para compilar o seu próprio instalador';
+$lang['pt_PT']['Downloadpage']['DLSOURCE']  ='Transferir código fonte para compilar o seu instalador';
 $lang['pt_PT']['Downloadpage']['DLSUITE']   ='Outras formas de transferir o LibreOffice';
+$lang['pt_PT']['Downloadpage']['NOTESTBUILDS']='Neste momento não existem versões de teste.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['pt_PT']['Navigation']['GOTOPAGE']  ='"Ir para a página %s"';
@@ -15,9 +32,19 @@ $lang['pt_PT']['Navigation']['TOTOPTITLE']='mover para o início da página';
 $lang['pt_PT']['Navigation']['TOTOP']     ='⬆ para o início';
 
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Tem que transferir e instalar estes ficheiros pela ordem:';
-$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Alterar sistema operativo, versão ou idioma';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Programadores';
-$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Não é a versão que pretende?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsHeader']= 'Seleção: LibreOffice <b>%s</b>';
+$lang['pt_PT']['DownloadSimplePage.ss']['NotWanted']      = 'Não é a versão pretendida?';
+/* will be displayed instead of the dl-buttons */
+$lang['pt_PT']['DownloadSimplePage.ss']['NoRegularDL']    = 'Não existem ficheiros de instalação disponíveis.<br/>Altere a sua seleção ou escolha uma das transferências facultativas.';
+/* watch out for proper quoting */
+$lang['pt_PT']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Se quiser transferir uma versão anterior, aceda ao nosso <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">arquivo de transferências</a>.';
+/* will be formatted as link */
+$lang['pt_PT']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Mudar idioma:';
+$lang['pt_PT']['DownloadSimplePage.ss']['ChangeVersion']  = 'Mudar versão:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['pt_PT']['DownloadSimplePage.ss']['ChangeOS']       = 'Mudar <abbr title="Operating System">sistema operativo</abbr>:';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informações';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Verifique o md5sum e a lista de repositórios do ficheiro';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Instalador principal';
@@ -29,23 +56,19 @@ $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = 'Instalaç�
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Instalar o LibreOffice %s através da loja Intel AppUp.';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Pacotes';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
-$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'Uma versão portátil do LibreOffice no formato PortableApps.com para poder levar todos os documentos e o que precisar para trabalhar num disco USB, na nuvem ou disco local. Visite <a href="http://portableapps.com/">PortableApps.com</a> para mais informações.';
-$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'Esta é uma versão de testes e não é aconselhada para utilização em ambientes de produção.';
+$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'Uma versão portátil do LibreOffice no formato PortableApps.com para poder levar todos os documentos e o que precisar para trabalhar num disco USB, na nuvem ou disco local. Aceda a <a href="http://portableapps.com/">PortableApps.com</a> para mais informações.';
+$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'Esta é uma versão de testes e não é deve ser utilizada em ambientes de produção.';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = 'Recursos úteis';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsSdkHeader'] = 'Conjunto de desenvolvimento de aplicações (SDK)';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsSdkText'] = 'Transferir o SDK para desenvolvimento de extensões e ferramentas externas.';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsSrcHeader'] = 'Código fonte';
-$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsSrcText'] = 'O LibreOffice é um projeto de código aberto e você pode transferir o código fonte para criar o seu instalador.';
+$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsSrcText'] = 'O LibreOffice é um projeto de código aberto e todas as pessoas podem transferir o código fonte para criar o seu instalador.';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Transferir ficheiros através de BitTorrent';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versão %s';
-$lang['pt_PT']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Por favor, selecione o seu idioma';
-$lang['pt_PT']['DownloadSimplePage.ss']['TypeDescBox'] = 'Imagens de CD/DVD com instaladores para todas as plataformas';
-$lang['pt_PT']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Para diversas plataformas';
-$lang['pt_PT']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Código fonte';
-$lang['pt_PT']['DownloadSimplePage.ss']['TypeOr'] = 'ou';
-$lang['pt_PT']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Versões de teste';
-$lang['pt_PT']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Em baixo pode transferir a versão de testes da próxima versão do LibreOffice para avaliar, testar e procurar erros. Esta versão não é aconselhada para utilização em ambientes de produção.';
+$lang['pt_PT']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Por favor selecione o seu idioma';
+$lang['pt_PT']['DownloadSimplePage.ss']['TypeOr'] = 'ou transfira';
+$lang['pt_PT']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Versões de teste:';
 $lang['pt_PT']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recomendado';
 
 $lang['pt_PT']['LocaleName']['af'] = 'Africânder';
@@ -53,7 +76,6 @@ $lang['pt_PT']['LocaleName']['ar'] = 'Árabe';
 $lang['pt_PT']['LocaleName']['as'] = 'Assamês';
 $lang['pt_PT']['LocaleName']['ast'] = 'Asturiano';
 $lang['pt_PT']['LocaleName']['be'] = 'Bielorrusso';
-$lang['pt_PT']['LocaleName']['be-BY'] = 'Bielorrusso';
 $lang['pt_PT']['LocaleName']['bg'] = 'Búlgaro';
 $lang['pt_PT']['LocaleName']['bn'] = 'Bengali';
 $lang['pt_PT']['LocaleName']['bo'] = 'Tibetano';
@@ -61,7 +83,7 @@ $lang['pt_PT']['LocaleName']['br'] = 'Bretão';
 $lang['pt_PT']['LocaleName']['brx'] = 'Bodo (Índia)';
 $lang['pt_PT']['LocaleName']['bs'] = 'Bósnio';
 $lang['pt_PT']['LocaleName']['ca'] = 'Catalão';
-$lang['pt_PT']['LocaleName']['ca-XV'] = 'Catalão valenciano';
+$lang['pt_PT']['LocaleName']['ca-XV'] = 'Catalão (Valência)';
 $lang['pt_PT']['LocaleName']['cs'] = 'Checo';
 $lang['pt_PT']['LocaleName']['cy'] = 'Inglês do país de gales';
 $lang['pt_PT']['LocaleName']['da'] = 'Dinamarquês';

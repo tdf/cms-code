@@ -3,11 +3,28 @@ global $lang;
 
 $lang['el_GR']['Donationpage']['AMOUNT']='Ποσότητα:';
 
+
+$lang['el_GR']['DonatePage']['BUTTON_CARD']   ='Δωρεά μέσω πιστωτικής κάρτας';
+$lang['el_GR']['DonatePage']['BUTTON_PAYPAL'] ='Δωρεά μέσω PayPal';
+$lang['el_GR']['DonatePage']['CHOICE_DEFAULT']='Επιλογή μιας από τις προεπιλεγμένες τιμές';
+$lang['el_GR']['DonatePage']['CUSTOM_CHOICE'] ='Ή εισαγωγή ενός άλλου ποσού και νομίσματος<br/>(μόνο αυτά που σημειώνονται με * είναι επίσης διαθέσιμα μέσω PayPal)';
+$lang['el_GR']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['el_GR']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['el_GR']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['el_GR']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['el_GR']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['el_GR']['DonatePage']['DEFAULT_CURRENCY']    ='Ευρώ';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['el_GR']['DonatePage']['DLRefreshMsg']= 'Η μεταφόρτωσή σας %s θα ξεκινήσει σύντομα. Παρακαλούμε, πατήστε τον σύνδεσμο σε περίπτωση που δεν ξεκινήσει.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['el_GR']['DonatePage']['DLOptional']  = 'Μπορείτε να βρείτε τις προαιρετικές μεταφορτώσεις στα αριστερά.';
+
 $lang['el_GR']['Downloadpage']['BITTORRENT']='Λήψη χρησιμοποιώντας BitTorrent';
 $lang['el_GR']['Downloadpage']['DETAILLINK']='Λήψη λεπτομερειών (md5sum,…)';
 $lang['el_GR']['Downloadpage']['DLSDK']     ='Λήψη του SDK για επεκτάσεις ανάπτυξης και εξωτερικά εργαλεία';
 $lang['el_GR']['Downloadpage']['DLSOURCE']  ='Λήψη του πηγαίου κώδικα για τη δημιουργία του δικού σας εγκαταστάτη';
 $lang['el_GR']['Downloadpage']['DLSUITE']   ='Άλλος τρόπος λήψης του LibreOffice, της σουίτας παραγωγικότητας γραφείου';
+$lang['el_GR']['Downloadpage']['NOTESTBUILDS']='Δεν υπάρχουν διαθέσιμες δοκιμαστικές δομήσεις προς το παρόν.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['el_GR']['Navigation']['GOTOPAGE']  ='"Μετάβαση στη σελίδα %s"';
@@ -15,9 +32,19 @@ $lang['el_GR']['Navigation']['TOTOPTITLE']='Κύλιση στην κορυφή �
 $lang['el_GR']['Navigation']['TOTOP']     ='⬆ στην κορυφή';
 
 $lang['el_GR']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Πρέπει να κατεβάσετε και να εγκαταστήσετε αυτά τα αρχεία με τη σειρά:';
-$lang['el_GR']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Αλλαγή συστήματος, έκδοσης ή γλώσσας';
 $lang['el_GR']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Προγραμματιστές';
-$lang['el_GR']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Μήπως αυτή δεν είναι η έκδοση που θέλατε;';
+/* %s will be replaced with OS/arch, version, language */
+$lang['el_GR']['DownloadSimplePage.ss']['DownloadsHeader']= 'Επιλεγμένη: LibreOffice <b>%s</b>';
+$lang['el_GR']['DownloadSimplePage.ss']['NotWanted']      = 'Δεν είναι η έκδοση που θέλετε;';
+/* will be displayed instead of the dl-buttons */
+$lang['el_GR']['DownloadSimplePage.ss']['NoRegularDL']    = 'Δεν είναι διαθέσιμα αρχεία κανονικής εγκατάστασης.<br/>Παρακαλούμε, αλλάξτε την επιλογή σας ή επιλέξτε μία από τις πρόσθετες παρακάτω μεταφορτώσεις.';
+/* watch out for proper quoting */
+$lang['el_GR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Αν ψάχνετε για παλιές εκδόσεις, επισκεφτείτε την <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">αρχειοθήκη μεταφορτώσεων</a>.';
+/* will be formatted as link */
+$lang['el_GR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Αλλαγή γλώσσας';
+$lang['el_GR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Αλλαγή έκδοσης:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['el_GR']['DownloadSimplePage.ss']['ChangeOS']       = 'Αλλαγή <abbr title="Operating System">Λειτουργικού συστήματος</abbr>:';
 $lang['el_GR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Πληροφορίες';
 $lang['el_GR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Δείτε το md5sum και σημειώστε τους καθρέφτες λήψης για το αρχείο';
 $lang['el_GR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Βασική εγκατάσταση';
@@ -40,12 +67,8 @@ $lang['el_GR']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['el_GR']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Λήψη των αρχείων χρησιμοποιώντας BitTorrent';
 $lang['el_GR']['DownloadSimplePage.ss']['DownloadsVersion'] = 'έκδοση %s';
 $lang['el_GR']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Παρακαλώ επιλέξτε τη γλώσσα σας';
-$lang['el_GR']['DownloadSimplePage.ss']['TypeDescBox'] = 'Εικόνες CD/DVD με εγκαταστάτες για όλα τα λειτουργικά συστήματα';
-$lang['el_GR']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Για πολλαπλά λειτουργικά';
-$lang['el_GR']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Πηγαίος κώδικας';
-$lang['el_GR']['DownloadSimplePage.ss']['TypeOr'] = 'ή';
-$lang['el_GR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Προκαταρκτικές εκδόσεις';
-$lang['el_GR']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Παρακάτω, μπορείτε να κατεβάσετε μια προέκδοση της επόμενης έκδοσης του LibreOffice, για αξιολόγηση, έλεγχο ποιότητας, κλπ. Αυτές οι εκδόσεις δεν προορίζονται για γενική χρήση.';
+$lang['el_GR']['DownloadSimplePage.ss']['TypeOr'] = 'ή μεταφόρτωση';
+$lang['el_GR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Προεκδόσεις:';
 $lang['el_GR']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Συνιστώμενο';
 
 $lang['el_GR']['LocaleName']['af'] = 'Αφρικάανς';
@@ -53,7 +76,6 @@ $lang['el_GR']['LocaleName']['ar'] = 'Αραβικά';
 $lang['el_GR']['LocaleName']['as'] = 'Ασαμικά';
 $lang['el_GR']['LocaleName']['ast'] = 'Αστουριανά';
 $lang['el_GR']['LocaleName']['be'] = 'Λευκορωσικά';
-$lang['el_GR']['LocaleName']['be-BY'] = 'Λευκορωσικά';
 $lang['el_GR']['LocaleName']['bg'] = 'Βουλγαρικά';
 $lang['el_GR']['LocaleName']['bn'] = 'Μπενγκάλι';
 $lang['el_GR']['LocaleName']['bo'] = 'Θιβετιανά';

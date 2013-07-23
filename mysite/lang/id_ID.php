@@ -4,23 +4,27 @@ global $lang;
 $lang['id_ID']['Donationpage']['AMOUNT']='Banyaknya:';
 
 
-$lang['id_ID']['DonatePage']['BUTTON_CARD']   ='Donate via Credit Card';
-$lang['id_ID']['DonatePage']['BUTTON_PAYPAL'] ='Donate via PayPal';
-$lang['id_ID']['DonatePage']['CHOICE_DEFAULT']='Select one of the default values';
-$lang['id_ID']['DonatePage']['CUSTOM_CHOICE'] ='Or enter a custom amount and currency<br/>(only those marked with * are also available via PayPal)';
+$lang['id_ID']['DonatePage']['BUTTON_CARD']   ='Menyumbang melalui Kartu Kredit';
+$lang['id_ID']['DonatePage']['BUTTON_PAYPAL'] ='Menyumbang melalui PayPal';
+$lang['id_ID']['DonatePage']['CHOICE_DEFAULT']='Pilih satu dari nilai baku';
+$lang['id_ID']['DonatePage']['CUSTOM_CHOICE'] ='Atau masukkan angka dan mata uang pilihan<br/>(hanya yang ditandai dengan * yang juga tersedia melalui PayPal)';
 $lang['id_ID']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
 $lang['id_ID']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
 $lang['id_ID']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['id_ID']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['id_ID']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['id_ID']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['id_ID']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['id_ID']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['id_ID']['Downloadpage']['BITTORRENT']='Unduh memakai BitTorrent';
 $lang['id_ID']['Downloadpage']['DETAILLINK']='Dapatkan rincian (md5sum,...)';
 $lang['id_ID']['Downloadpage']['DLSDK']     ='Unduh SDK untuk mengembangkan ekstensi dan perkakas eksternal';
 $lang['id_ID']['Downloadpage']['DLSOURCE']  ='Unduh kode sumber untuk membangun pemasangmu sendiri';
 $lang['id_ID']['Downloadpage']['DLSUITE']   ='Cara lain untuk mengunduh LibreOffice, suite produktivitas';
-$lang['id_ID']['Downloadpage']['NOTESTBUILDS']='There are no testing builds available at the moment.';
+$lang['id_ID']['Downloadpage']['NOTESTBUILDS']='Tak ada build uji yang tersedia saat ini.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['id_ID']['Navigation']['GOTOPAGE']  ='"Pergi ke halaman %s"';
@@ -28,9 +32,19 @@ $lang['id_ID']['Navigation']['TOTOPTITLE']='gulung ke puncak layar';
 $lang['id_ID']['Navigation']['TOTOP']     ='⬆ ke puncak';
 
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Anda perlu mengunduh dan memasang berkas-berkas ini secara berurut:';
-$lang['id_ID']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Ubah Sistem, Versi, atau Bahasa';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Pengembang';
-$lang['id_ID']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Bukan versi yang Anda inginkan?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['id_ID']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['id_ID']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['id_ID']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['id_ID']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['id_ID']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['id_ID']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['id_ID']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Lihat md5sum dan daftar cermin unduhan bagi berkas';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Pemasang utama';
@@ -53,12 +67,8 @@ $lang['id_ID']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Unduh berkas memakai BitTorrent';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versi %s';
 $lang['id_ID']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Silakan pilih bahasa Anda';
-$lang['id_ID']['DownloadSimplePage.ss']['TypeDescBox'] = 'Image CD/DVD dengan pemasang bagi semua platform';
-$lang['id_ID']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Bagi banyak platform';
-$lang['id_ID']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Kode sumber';
-$lang['id_ID']['DownloadSimplePage.ss']['TypeOr'] = 'atau';
-$lang['id_ID']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Prarilis';
-$lang['id_ID']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Below, you can download a pre-release of the next version of LibreOffice for evaluation, QA testing, etc. These versions are not meant for general use.';
+$lang['id_ID']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['id_ID']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['id_ID']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Disarankan';
 
 $lang['id_ID']['LocaleName']['af'] = 'Afrikaan';
@@ -66,7 +76,6 @@ $lang['id_ID']['LocaleName']['ar'] = 'Arab';
 $lang['id_ID']['LocaleName']['as'] = 'Assam';
 $lang['id_ID']['LocaleName']['ast'] = 'Asturia';
 $lang['id_ID']['LocaleName']['be'] = 'Belarusia';
-$lang['id_ID']['LocaleName']['be-BY'] = 'Belarusia';
 $lang['id_ID']['LocaleName']['bg'] = 'Bulgaria';
 $lang['id_ID']['LocaleName']['bn'] = 'Bengali';
 $lang['id_ID']['LocaleName']['bo'] = 'Tibet';
@@ -74,11 +83,11 @@ $lang['id_ID']['LocaleName']['br'] = 'Breton';
 $lang['id_ID']['LocaleName']['brx'] = 'Bodo (India)';
 $lang['id_ID']['LocaleName']['bs'] = 'Bosnia';
 $lang['id_ID']['LocaleName']['ca'] = 'Catala';
-$lang['id_ID']['LocaleName']['ca-XV'] = 'Catala valencia';
+$lang['id_ID']['LocaleName']['ca-XV'] = 'Katala Valencia';
 $lang['id_ID']['LocaleName']['cs'] = 'Ceko';
 $lang['id_ID']['LocaleName']['cy'] = 'Wales';
 $lang['id_ID']['LocaleName']['da'] = 'Denmark';
-$lang['id_ID']['LocaleName']['de'] = 'German';
+$lang['id_ID']['LocaleName']['de'] = 'Jerman';
 $lang['id_ID']['LocaleName']['dgo'] = 'Dogri';
 $lang['id_ID']['LocaleName']['dz'] = 'Dzongkha';
 $lang['id_ID']['LocaleName']['el'] = 'Yunani';
@@ -127,7 +136,7 @@ $lang['id_ID']['LocaleName']['nb'] = 'Bokmål Norwegia';
 $lang['id_ID']['LocaleName']['ne'] = 'Nepal';
 $lang['id_ID']['LocaleName']['nl'] = 'Belanda';
 $lang['id_ID']['LocaleName']['nn'] = 'Nynorsk Norwegia';
-$lang['id_ID']['LocaleName']['nr'] = 'Ndebele (South)';
+$lang['id_ID']['LocaleName']['nr'] = 'Ndebele (Selatan)';
 $lang['id_ID']['LocaleName']['ns'] = 'Sotho Utara';
 $lang['id_ID']['LocaleName']['nso'] = 'Sotho Utara';
 $lang['id_ID']['LocaleName']['oc'] = 'Occita';

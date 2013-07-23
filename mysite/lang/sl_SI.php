@@ -3,22 +3,28 @@ global $lang;
 
 $lang['sl_SI']['Donationpage']['AMOUNT']='Znesek:';
 
+
+$lang['sl_SI']['DonatePage']['BUTTON_CARD']   ='Doniraj prek kreditne kartice';
+$lang['sl_SI']['DonatePage']['BUTTON_PAYPAL'] ='Doniraj prek PayPal';
+$lang['sl_SI']['DonatePage']['CHOICE_DEFAULT']='Izberite eno od privzetih vrednosti';
+$lang['sl_SI']['DonatePage']['CUSTOM_CHOICE'] ='Ali vnesite znesek in valuto po svoji meri<br/>(le označeni z * so na voljo tudi prek PayPal)';
+$lang['sl_SI']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['sl_SI']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['sl_SI']['DonatePage']['DLRefreshMsg']= 'Vaš prenos %s se bo začel v kratkem. Če se ne začne, kliknite povezavo.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['sl_SI']['DonatePage']['DLOptional']  = 'Možne prenose najdete na levi strani.';
+
 $lang['sl_SI']['Downloadpage']['BITTORRENT']='Prenesi z BitTorrentom';
 $lang['sl_SI']['Downloadpage']['DETAILLINK']='Poglej podrobnosti (md5sum, …)';
 $lang['sl_SI']['Downloadpage']['DLSDK']     ='Prenesite SDK za razvijanje razširitev in zunanjih orodij';
 $lang['sl_SI']['Downloadpage']['DLSOURCE']  ='Prenesite izvorno kodo in sami izdelajte namestitveni paket';
 $lang['sl_SI']['Downloadpage']['DLSUITE']   ='Drugi načini prenosa pisarniškega paketa LibreOffice';
-
-$lang['sl_SI']['DonatePage']['BUTTON_CARD']   = 'Doniraj prek kreditne kartice';
-$lang['sl_SI']['DonatePage']['BUTTON_PAYPAL'] = 'Doniraj prek PayPal';
-$lang['sl_SI']['DonatePage']['CHOICE_DEFAULT']= 'Izberite eno od privzetih vrednosti';
-$lang['sl_SI']['DonatePage']['CUSTOM_CHOICE'] = 'Ali vnesite znesek in valuto po svoji meri<br/>(le označeni z * so na voljo tudi prek PayPal)';
-$lang['sl_SI']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
-$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
-$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '10';
-$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '20';
-$lang['sl_SI']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '50';
-$lang['sl_SI']['DonatePage']['DEFAULT_CURRENCY'] = 'EUR';
+$lang['sl_SI']['Downloadpage']['NOTESTBUILDS']='Trenutno ni poskusnih gradenj.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['sl_SI']['Navigation']['GOTOPAGE']  ='"Pojdi na stran %s"';
@@ -26,9 +32,19 @@ $lang['sl_SI']['Navigation']['TOTOPTITLE']='pojdi na vrh strani';
 $lang['sl_SI']['Navigation']['TOTOP']     ='⬆ na vrh';
 
 $lang['sl_SI']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Prenesti in namestiti morate datoteke v tem zaporedju:';
-$lang['sl_SI']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Spremeni sistem, različico ali jezik';
 $lang['sl_SI']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Razvijalci';
-$lang['sl_SI']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Ne gre za različico, ki ste jo želeli?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['sl_SI']['DownloadSimplePage.ss']['DownloadsHeader']= 'Izbrano: LibreOffice <b>%s</b>';
+$lang['sl_SI']['DownloadSimplePage.ss']['NotWanted']      = 'To ni različica, ki ste jo želeli?';
+/* will be displayed instead of the dl-buttons */
+$lang['sl_SI']['DownloadSimplePage.ss']['NoRegularDL']    = 'Na voljo ni rednih namestitvenih datotek.<br/>Spremenite izbrano ali izberite med dodatnimi prenosi spodaj.';
+/* watch out for proper quoting */
+$lang['sl_SI']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['sl_SI']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Spremeni jezik';
+$lang['sl_SI']['DownloadSimplePage.ss']['ChangeVersion']  = 'Spremeni različico:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['sl_SI']['DownloadSimplePage.ss']['ChangeOS']       = 'Spremeni <abbr title="Operating System">op. sistem</abbr>:';
 $lang['sl_SI']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'informacije';
 $lang['sl_SI']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Oglejte si md5sum in seznam zrcalnih strežnikov za prenos datoteke';
 $lang['sl_SI']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Glavni namestitveni program';
@@ -51,12 +67,8 @@ $lang['sl_SI']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'torrent';
 $lang['sl_SI']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Prenesite datoteke z BitTorrentom';
 $lang['sl_SI']['DownloadSimplePage.ss']['DownloadsVersion'] = 'različica %s';
 $lang['sl_SI']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Izberite svoj jezik';
-$lang['sl_SI']['DownloadSimplePage.ss']['TypeDescBox'] = 'Slike CD/DVD z namestitvenimi programi za vse platforme';
-$lang['sl_SI']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Za več platform';
-$lang['sl_SI']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Izvorna koda';
-$lang['sl_SI']['DownloadSimplePage.ss']['TypeOr'] = 'ali';
-$lang['sl_SI']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Predizdaje';
-$lang['sl_SI']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Spodaj lahko prenesete predizdajo naslednje različice LibreOffice za ocenjevanje, preizkušanje, odpravljanje hroščev itn. Te različice niso namenjene splošni rabi!';
+$lang['sl_SI']['DownloadSimplePage.ss']['TypeOr'] = 'ali prenesite';
+$lang['sl_SI']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Predizdaje:';
 $lang['sl_SI']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Priporočeno';
 
 $lang['sl_SI']['LocaleName']['af'] = 'afrikanščina';
@@ -64,7 +76,6 @@ $lang['sl_SI']['LocaleName']['ar'] = 'arabščina';
 $lang['sl_SI']['LocaleName']['as'] = 'asamščina';
 $lang['sl_SI']['LocaleName']['ast'] = 'asturijščina';
 $lang['sl_SI']['LocaleName']['be'] = 'beloruščina';
-$lang['sl_SI']['LocaleName']['be-BY'] = 'beloruščina';
 $lang['sl_SI']['LocaleName']['bg'] = 'bolgarščina';
 $lang['sl_SI']['LocaleName']['bn'] = 'bengalščina';
 $lang['sl_SI']['LocaleName']['bo'] = 'tibetanščina';

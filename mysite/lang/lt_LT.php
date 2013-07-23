@@ -3,6 +3,22 @@ global $lang;
 
 $lang['lt_LT']['Donationpage']['AMOUNT']='Paramos suma:';
 
+
+$lang['lt_LT']['DonatePage']['BUTTON_CARD']   ='Paremti kreditine kortele';
+$lang['lt_LT']['DonatePage']['BUTTON_PAYPAL'] ='Paremti per „PayPal“';
+$lang['lt_LT']['DonatePage']['CHOICE_DEFAULT']='Pasirinkite vieną iš numatytųjų dydžių';
+$lang['lt_LT']['DonatePage']['CUSTOM_CHOICE'] ='Arba įveskite norimą skaičių bei valiutą<br/>(PayPal aptarnauja tik * pažymėtas valiutas)';
+$lang['lt_LT']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='75';
+$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '15';
+$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR10']='30';
+$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR20']='60';
+$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR50']='150';
+$lang['lt_LT']['DonatePage']['DEFAULT_CURRENCY']    ='LTL';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['lt_LT']['DonatePage']['DLRefreshMsg']= 'Failo %s parsiuntimas turėtų prasidėti netrukus. Jeigu jis neprasidės, spustelėkite saitą.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['lt_LT']['DonatePage']['DLOptional']  = 'Papildomus siuntinius rasite kairėje.';
+
 $lang['lt_LT']['Downloadpage']['BITTORRENT']='siųstis naudojant „BitTorrent“';
 $lang['lt_LT']['Downloadpage']['DETAILLINK']='Rodyti saitą į išsamesnę informaciją (kontrolines sumas ir pan.)';
 $lang['lt_LT']['Downloadpage']['DLSDK']     ='Parsisiųsti programavimo bibliotekas (SDK) plėtinių ir papildomų priemonių kūrimui';
@@ -16,9 +32,19 @@ $lang['lt_LT']['Navigation']['TOTOPTITLE']='slinkti į tinklalapio viršų';
 $lang['lt_LT']['Navigation']['TOTOP']     ='⬆ į viršų';
 
 $lang['lt_LT']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Parsisiuntę, šiuos failus turite įdiegti pateikta eilės tvarka:';
-$lang['lt_LT']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Pasirinkite kitą platformą, versiją arba sąsajos kalbą.';
 $lang['lt_LT']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Programuotojams';
-$lang['lt_LT']['DownloadSimplePage.ss']['DownloadsHeader'] = '„LibreOffice“ <b>%s</b>. Norite kitos versijos?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['lt_LT']['DownloadSimplePage.ss']['DownloadsHeader']= 'Pasirinkta: „LibreOffice“ <b>(%s)</b>';
+$lang['lt_LT']['DownloadSimplePage.ss']['NotWanted']      = 'Norite ne šios versijos?';
+/* will be displayed instead of the dl-buttons */
+$lang['lt_LT']['DownloadSimplePage.ss']['NoRegularDL']    = 'Pasirinkimą tenkinančių įprastų įdiegimo failų nėra.<br/>Pakeiskite pasirinkimą arba rinkitės vieną iš papildomų siuntinių, išvardintų žemiau.';
+/* watch out for proper quoting */
+$lang['lt_LT']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Jeigu ieškote ankstesnių versijų, apsilankykite mūsų <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">siuntinių archyve</a>.';
+/* will be formatted as link */
+$lang['lt_LT']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Keisti kalbą';
+$lang['lt_LT']['DownloadSimplePage.ss']['ChangeVersion']  = 'Keisti versiją:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['lt_LT']['DownloadSimplePage.ss']['ChangeOS']       = 'Keisti <abbr title="operacinę sistemą">OS</abbr>:';
 $lang['lt_LT']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informacija';
 $lang['lt_LT']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Failo kontrolinės sumos ir serverių, iš kurių jį galite parsisiųsti, sąrašas';
 $lang['lt_LT']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Pagrindinis įdiegiklis';
@@ -41,12 +67,8 @@ $lang['lt_LT']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torentas';
 $lang['lt_LT']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Failams parsisiųsti galite pasinaudoti „BitTorrent“';
 $lang['lt_LT']['DownloadSimplePage.ss']['DownloadsVersion'] = '%s versija';
 $lang['lt_LT']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Pasirinkite norimą kalbą';
-$lang['lt_LT']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD atvaizdžiai su įdiegimo paketais visoms platformoms';
-$lang['lt_LT']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Įvairioms platformoms';
-$lang['lt_LT']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Pradiniai tekstai';
-$lang['lt_LT']['DownloadSimplePage.ss']['TypeOr'] = 'arba';
-$lang['lt_LT']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testuojamosios versijos';
-$lang['lt_LT']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Žemiau galite parsisiųsti išankstiniam testavimui skirtą kandidatinę „LibreOffice“ paketo versiją. Šių versijų nepatariame naudoti kritiniams darbams atlikti.';
+$lang['lt_LT']['DownloadSimplePage.ss']['TypeOr'] = 'arba siųstis';
+$lang['lt_LT']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testuojamosios versijos:';
 $lang['lt_LT']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Rekomenduojame';
 
 $lang['lt_LT']['LocaleName']['af'] = 'afrikanų';
@@ -54,7 +76,6 @@ $lang['lt_LT']['LocaleName']['ar'] = 'arabų';
 $lang['lt_LT']['LocaleName']['as'] = 'asamų';
 $lang['lt_LT']['LocaleName']['ast'] = 'astūrų';
 $lang['lt_LT']['LocaleName']['be'] = 'baltarusių';
-$lang['lt_LT']['LocaleName']['be-BY'] = 'baltarusių';
 $lang['lt_LT']['LocaleName']['bg'] = 'bulgarų';
 $lang['lt_LT']['LocaleName']['bn'] = 'bengalų';
 $lang['lt_LT']['LocaleName']['bo'] = 'tibetiečių';
@@ -158,14 +179,3 @@ $lang['lt_LT']['LocaleName']['xh'] = 'kosų';
 $lang['lt_LT']['LocaleName']['zh-CN'] = 'kinų (supaprastintoji)';
 $lang['lt_LT']['LocaleName']['zh-TW'] = 'kinų (tradicinė)';
 $lang['lt_LT']['LocaleName']['zu'] = 'zulų';
-
-$lang['lt_LT']['DonatePage']['BUTTON_CARD']   = 'Paremti kreditine kortele';
-$lang['lt_LT']['DonatePage']['BUTTON_PAYPAL'] = 'Paremti per PayPal';
-$lang['lt_LT']['DonatePage']['CHOICE_DEFAULT']= 'Pasirinkite vieną iš numatytųjų dydžių';
-$lang['lt_LT']['DonatePage']['CUSTOM_CHOICE'] = 'Arba įveskite norimą skaičių bei valiutą<br/>(PayPal aptarnauja tik * pažymėtas valiutas)';
-$lang['lt_LT']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '75';
-$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '15';
-$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '30';
-$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '60';
-$lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '150';
-$lang['lt_LT']['DonatePage']['DEFAULT_CURRENCY'] = 'LTL';

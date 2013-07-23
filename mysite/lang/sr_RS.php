@@ -3,11 +3,28 @@ global $lang;
 
 $lang['sr_RS']['Donationpage']['AMOUNT']='Износ:';
 
+
+$lang['sr_RS']['DonatePage']['BUTTON_CARD']   ='Донирајте кредитном картицом';
+$lang['sr_RS']['DonatePage']['BUTTON_PAYPAL'] ='Донирајте кроз PayPal';
+$lang['sr_RS']['DonatePage']['CHOICE_DEFAULT']='Одаберите од понуђених';
+$lang['sr_RS']['DonatePage']['CUSTOM_CHOICE'] ='или унесите износ и валуту<br/>(кроз PayPal су доступне само валуте означене звездицом) ';
+$lang['sr_RS']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['sr_RS']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['sr_RS']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['sr_RS']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['sr_RS']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['sr_RS']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['sr_RS']['DonatePage']['DLRefreshMsg']= 'Преузимање датотеке %s би требало да ускоро започне. Уколико се то не догоди, кликните на линк.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['sr_RS']['DonatePage']['DLOptional']  = 'Погледајте додатне делове за преузимање са леве стране.';
+
 $lang['sr_RS']['Downloadpage']['BITTORRENT']='Преузмите преко бит-торента';
 $lang['sr_RS']['Downloadpage']['DETAILLINK']='Детаљи (мд5 отисак,...)';
 $lang['sr_RS']['Downloadpage']['DLSDK']     ='Преузмите SDK за развој додатака и нових производа';
 $lang['sr_RS']['Downloadpage']['DLSOURCE']  ='Преузмите изворни код';
 $lang['sr_RS']['Downloadpage']['DLSUITE']   ='Остали начини преузимања пакета Либреофис';
+$lang['sr_RS']['Downloadpage']['NOTESTBUILDS']='Тренутно нема доступних издања за тестирање.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['sr_RS']['Navigation']['GOTOPAGE']  ='"Иди на „%s“"';
@@ -15,9 +32,19 @@ $lang['sr_RS']['Navigation']['TOTOPTITLE']='повратак на врх';
 $lang['sr_RS']['Navigation']['TOTOP']     ='⬆ врх';
 
 $lang['sr_RS']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Потребно је да преузмете и инсталирате следеће датотеке:';
-$lang['sr_RS']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Преузимање инсталације за други систем, издање или језик';
 $lang['sr_RS']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'За програмере';
-$lang['sr_RS']['DownloadSimplePage.ss']['DownloadsHeader'] = 'Либреофис за <b>%s</b>.';
+/* %s will be replaced with OS/arch, version, language */
+$lang['sr_RS']['DownloadSimplePage.ss']['DownloadsHeader']= 'Избор: Либреофис <b>%s</b>';
+$lang['sr_RS']['DownloadSimplePage.ss']['NotWanted']      = 'Да ли желите другу верзију?';
+/* will be displayed instead of the dl-buttons */
+$lang['sr_RS']['DownloadSimplePage.ss']['NoRegularDL']    = 'Датотеке са инсталацијом нису доступне.<br/>Промените избор или изаберите из додатних делова за преузимање испод.';
+/* watch out for proper quoting */
+$lang['sr_RS']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Уколико тражите стара издања, погледајте <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">архиву преузимања</a>.';
+/* will be formatted as link */
+$lang['sr_RS']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Други језик';
+$lang['sr_RS']['DownloadSimplePage.ss']['ChangeVersion']  = 'Друго издање:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['sr_RS']['DownloadSimplePage.ss']['ChangeOS']       = 'Други <abbr title="Оперативни систем">систем</abbr>:';
 $lang['sr_RS']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'детаљи';
 $lang['sr_RS']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Погледајте МД5 отисак и списак других сајтова за преузимање исте датотеке';
 $lang['sr_RS']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Основна инсталација ';
@@ -40,12 +67,8 @@ $lang['sr_RS']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Торент'
 $lang['sr_RS']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Преузмите преко бит-торента';
 $lang['sr_RS']['DownloadSimplePage.ss']['DownloadsVersion'] = 'издање %s';
 $lang['sr_RS']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Одаберите језик';
-$lang['sr_RS']['DownloadSimplePage.ss']['TypeDescBox'] = 'ЦД/ДВД отисци са инсталацијама за све платформе';
-$lang['sr_RS']['DownloadSimplePage.ss']['TypeDescMulti'] = 'За више платформи';
-$lang['sr_RS']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Изворни код';
-$lang['sr_RS']['DownloadSimplePage.ss']['TypeOr'] = 'или';
-$lang['sr_RS']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Пробна предиздања';
-$lang['sr_RS']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Below, you can download a pre-release of the next version of LibreOffice for evaluation, QA testing, etc. These versions are not meant for general use.';
+$lang['sr_RS']['DownloadSimplePage.ss']['TypeOr'] = 'или преузмите';
+$lang['sr_RS']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Пробна предиздања:';
 $lang['sr_RS']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Препоручено';
 
 $lang['sr_RS']['LocaleName']['af'] = 'африканс';
@@ -53,7 +76,6 @@ $lang['sr_RS']['LocaleName']['ar'] = 'арапски';
 $lang['sr_RS']['LocaleName']['as'] = 'Assamese';
 $lang['sr_RS']['LocaleName']['ast'] = 'Asturian';
 $lang['sr_RS']['LocaleName']['be'] = 'Belarusian';
-$lang['sr_RS']['LocaleName']['be-BY'] = 'Belarusian';
 $lang['sr_RS']['LocaleName']['bg'] = 'Bulgarian';
 $lang['sr_RS']['LocaleName']['bn'] = 'Bengali';
 $lang['sr_RS']['LocaleName']['bo'] = 'Tibetan';

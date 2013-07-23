@@ -14,6 +14,10 @@ $lang['ka_GE']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['ka_GE']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['ka_GE']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['ka_GE']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['ka_GE']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['ka_GE']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['ka_GE']['Downloadpage']['BITTORRENT']='BitTorrent-ით გადმოწერა';
 $lang['ka_GE']['Downloadpage']['DETAILLINK']='ვრცლად (md5sum,...)';
@@ -28,9 +32,19 @@ $lang['ka_GE']['Navigation']['TOTOPTITLE']='დასაწყისში დ�
 $lang['ka_GE']['Navigation']['TOTOP']     ='⬆ დასაწყისი';
 
 $lang['ka_GE']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'საჭიროა ამ ფაილების შემდეგი თანმიმდევრობით გადმოწერა და დაყენება:';
-$lang['ka_GE']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'სისტემის, ვერსიის ან ენის შეცვლა';
 $lang['ka_GE']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'პროგრამისტები';
-$lang['ka_GE']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. არ არის ის ვერსია, რომელიც გსურდათ?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['ka_GE']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['ka_GE']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['ka_GE']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['ka_GE']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['ka_GE']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['ka_GE']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['ka_GE']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['ka_GE']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'ინფორმაცია';
 $lang['ka_GE']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'md5sum და გადმოსაწერი ალტერნატიული საიტების (სარკეების) ჩვენება';
 $lang['ka_GE']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'მთავარი საინსტალაციო';
@@ -53,12 +67,8 @@ $lang['ka_GE']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['ka_GE']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'ფაილების BitTorrent-ით გადმოწერა';
 $lang['ka_GE']['DownloadSimplePage.ss']['DownloadsVersion'] = '%s ვერსია';
 $lang['ka_GE']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'გთხოვთ აირჩიოთ სასურველი ენა';
-$lang['ka_GE']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD კლონები ყველა პლატფორმის საინსტალაციოებით';
-$lang['ka_GE']['DownloadSimplePage.ss']['TypeDescMulti'] = 'სხვადასხვა პლატფორმებისთვის';
-$lang['ka_GE']['DownloadSimplePage.ss']['TypeDescSrc'] = 'წყარო კოდი';
-$lang['ka_GE']['DownloadSimplePage.ss']['TypeOr'] = 'ან';
-$lang['ka_GE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'საცდელი გამოშვებები';
-$lang['ka_GE']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'ქვემოთ შეგიძლიათ LibreOffice-ს შემდეგი ვერსიის საცდელი ვარიანტი გადმოწეროთ შესამოწმებლად, დასატესტად და ა.შ. ეს ვერსიები არ არის გათვლილი ყოველდღიურ მოხმარებაზე.';
+$lang['ka_GE']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['ka_GE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['ka_GE']['DownloadSimplePage.ss']['VersionsRecommended'] = 'რეკომენდირებულია';
 
 $lang['ka_GE']['LocaleName']['af'] = 'აფრიკული';
@@ -66,7 +76,6 @@ $lang['ka_GE']['LocaleName']['ar'] = 'არაბული';
 $lang['ka_GE']['LocaleName']['as'] = 'ასამეური';
 $lang['ka_GE']['LocaleName']['ast'] = 'ასტურიული';
 $lang['ka_GE']['LocaleName']['be'] = 'ბელორუსიული';
-$lang['ka_GE']['LocaleName']['be-BY'] = 'ბელორუსიული';
 $lang['ka_GE']['LocaleName']['bg'] = 'ბულგარული';
 $lang['ka_GE']['LocaleName']['bn'] = 'ბენგალური';
 $lang['ka_GE']['LocaleName']['bo'] = 'ტიბეტური';

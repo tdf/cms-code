@@ -3,32 +3,48 @@ global $lang;
 
 $lang['he_IL']['Donationpage']['AMOUNT']='כמות:';
 
+
+$lang['he_IL']['DonatePage']['BUTTON_CARD']   ='לתרום באמצעות כרטיס אשראי ';
+$lang['he_IL']['DonatePage']['BUTTON_PAYPAL'] ='לתרום באמצעות PayPal';
+$lang['he_IL']['DonatePage']['CHOICE_DEFAULT']='נא לבחור באחד מערכי בררת המחדל ';
+$lang['he_IL']['DonatePage']['CUSTOM_CHOICE'] ='או להזין סכום ומטבע שונים (רק אלו המסומנים ב־* זמינים גם ב־PayPal)';
+$lang['he_IL']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='125';
+$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '25';
+$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR10']='50';
+$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR20']='100';
+$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR50']='250';
+$lang['he_IL']['DonatePage']['DEFAULT_CURRENCY']    ='ILS';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['he_IL']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['he_IL']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+
 $lang['he_IL']['Downloadpage']['BITTORRENT']='הורדה באמצעות BitTorrent';
 $lang['he_IL']['Downloadpage']['DETAILLINK']='קבלת פרטים (md5sum,…)';
 $lang['he_IL']['Downloadpage']['DLSDK']     ='הורדת ה־SDK לצורך פיתוח הרחבות וכלים חיצוניים';
 $lang['he_IL']['Downloadpage']['DLSOURCE']  ='הורדת קוד המקור כדי להכין תכנית התקנה משלך';
 $lang['he_IL']['Downloadpage']['DLSUITE']   ='דרך נוספת להורדת LibreOffice, חבילת יישומי התועלת';
-
-$lang['he_IL']['DonatePage']['BUTTON_CARD']   = 'לתרום באמצעות כרטיס אשראי ';
-$lang['he_IL']['DonatePage']['BUTTON_PAYPAL'] = 'לתרום באמצעות PayPal';
-$lang['he_IL']['DonatePage']['CHOICE_DEFAULT']= 'נא לבחור באחד מערכי בררת המחדל ';
-$lang['he_IL']['DonatePage']['CUSTOM_CHOICE'] = 'או להזין סכום ומטבע שונים (רק אלו המסומנים ב־* זמינים גם ב־PayPal)';
-$lang['he_IL']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '125';
-$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '25';
-$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '50';
-$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '100';
-$lang['he_IL']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '250';
-$lang['he_IL']['DonatePage']['DEFAULT_CURRENCY'] = 'ILS'; 
+$lang['he_IL']['Downloadpage']['NOTESTBUILDS']='אין מהדורות בדיקה זמינות כרגע.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
-$lang['he_IL']['Navigation']['GOTOPAGE']  ='"מעבר לעמוד ה%s"';
+$lang['he_IL']['Navigation']['GOTOPAGE']  ='„מעבר לעמוד ה%s“';
 $lang['he_IL']['Navigation']['TOTOPTITLE']='גלילה לראש העמוד';
 $lang['he_IL']['Navigation']['TOTOP']     ='⬆ לראש העמוד';
 
 $lang['he_IL']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'עליך להוריד ולהתקין את הקבצים האלה לפי הסדר:';
-$lang['he_IL']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'החלפת המערכת, הגרסה או השפה';
 $lang['he_IL']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'מתכנתים';
-$lang['he_IL']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. לא הגרסה שרצית?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['he_IL']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['he_IL']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['he_IL']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['he_IL']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['he_IL']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['he_IL']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['he_IL']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['he_IL']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'מידע';
 $lang['he_IL']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'הצגת מחרוזת ה־md5sum ואת רשימת האתרים שמהם ניתן להוריד את הקובץ';
 $lang['he_IL']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'תכנית ההתקנה הראשית';
@@ -51,12 +67,8 @@ $lang['he_IL']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'טורנט';
 $lang['he_IL']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'הורדת הקבצים באמצעות ביטטורנט';
 $lang['he_IL']['DownloadSimplePage.ss']['DownloadsVersion'] = 'גרסה %s';
 $lang['he_IL']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'נא לבחור את השפה שלך';
-$lang['he_IL']['DownloadSimplePage.ss']['TypeDescBox'] = 'תמונות CD/DVD עם תכניות התקנה עבור כל הפלטפורמות';
-$lang['he_IL']['DownloadSimplePage.ss']['TypeDescMulti'] = 'למגוון פלטפורמות';
-$lang['he_IL']['DownloadSimplePage.ss']['TypeDescSrc'] = 'קוד מקור';
-$lang['he_IL']['DownloadSimplePage.ss']['TypeOr'] = 'או';
-$lang['he_IL']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'הפצה טרומית';
-$lang['he_IL']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'להלן, ניתן להוריד גרסה טרומית של הגרסה הבאה של LibreOffice לצורכי הערכה, בדיקות איכות וכו׳. גרסאות אלה אינן מיועדות לשימוש הכלל.';
+$lang['he_IL']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['he_IL']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['he_IL']['DownloadSimplePage.ss']['VersionsRecommended'] = 'מומלצת';
 
 $lang['he_IL']['LocaleName']['af'] = 'אפריקאנס';
@@ -64,7 +76,6 @@ $lang['he_IL']['LocaleName']['ar'] = 'ערבית';
 $lang['he_IL']['LocaleName']['as'] = 'אסאמית';
 $lang['he_IL']['LocaleName']['ast'] = 'אסטורית';
 $lang['he_IL']['LocaleName']['be'] = 'בלרוסית';
-$lang['he_IL']['LocaleName']['be-BY'] = 'בלרוסית';
 $lang['he_IL']['LocaleName']['bg'] = 'בולגרית';
 $lang['he_IL']['LocaleName']['bn'] = 'בנגלית';
 $lang['he_IL']['LocaleName']['bo'] = 'טיבטית';
