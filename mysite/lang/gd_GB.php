@@ -3,11 +3,28 @@ global $lang;
 
 $lang['gd_GB']['Donationpage']['AMOUNT']='Meud:';
 
+
+$lang['gd_GB']['DonatePage']['BUTTON_CARD']   ='Thoir tabhartas air cairt creideis';
+$lang['gd_GB']['DonatePage']['BUTTON_PAYPAL'] ='Thoir tabhartas air PayPal';
+$lang['gd_GB']['DonatePage']['CHOICE_DEFAULT']='Tagh aon dhe na suimean gu h-ìosal';
+$lang['gd_GB']['DonatePage']['CUSTOM_CHOICE'] ='No cuir a-steach suim agus airgeadra thu fhèin<br/>(Chan eil ach an fheadhainn ris a bheil * ri làimh air PayPal)';
+$lang['gd_GB']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['gd_GB']['DonatePage']['DEFAULT_CURRENCY']    ='GBP';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['gd_GB']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['gd_GB']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+
 $lang['gd_GB']['Downloadpage']['BITTORRENT']='Luchdaich a-nuas le BitTorrent';
 $lang['gd_GB']['Downloadpage']['DETAILLINK']='Faigh am mion-fhiosrachadh (md5sum,…)';
 $lang['gd_GB']['Downloadpage']['DLSDK']     ='Luchdaich a-nuas an SDK airson gus leudachain is innealan a dhealbhadh';
 $lang['gd_GB']['Downloadpage']['DLSOURCE']  ='Luchdaich a-nuas bun-tùs a\' chòd gus do stàlaichear fhèin a chruthachadh';
 $lang['gd_GB']['Downloadpage']['DLSUITE']   ='An dòigh eile gus LibreOffice, am productivity suite a luchdadh a-nuas';
+$lang['gd_GB']['Downloadpage']['NOTESTBUILDS']='Chan eil build deuchainn sam bith ri fhaighinn aig an àm seo.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['gd_GB']['Navigation']['GOTOPAGE']  ='"Rach dhan duilleag %s"';
@@ -15,9 +32,19 @@ $lang['gd_GB']['Navigation']['TOTOPTITLE']='sgrolaich gu barr na duilleige';
 $lang['gd_GB']['Navigation']['TOTOP']     ='⬆ barr';
 
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Feumaidh tu na faidhlichean seo a luchdadh a-nuas is a stàladh ann an òrdugh:';
-$lang['gd_GB']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Atharraich an siostam, tionndadh no cànan';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Luchd-leasachaidh';
-$lang['gd_GB']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Nach e seo an tionndadh a bha a dhìth ort?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['gd_GB']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['gd_GB']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['gd_GB']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['gd_GB']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['gd_GB']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['gd_GB']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['gd_GB']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Fiosrachadh';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Seall an md5sumb agus liosta nam frithealaichean-sgàthain airson an fhaidhle';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Prìomh-stàlaichear';
@@ -40,12 +67,8 @@ $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Luchdaich a-nuas na faidhlichean le BitTorrent';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsVersion'] = 'tionndadh %s';
 $lang['gd_GB']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Tagh do chànan';
-$lang['gd_GB']['DownloadSimplePage.ss']['TypeDescBox'] = 'Ìomhaighean CD/DVD le stàlaichearan airson gach ùrlar';
-$lang['gd_GB']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Airson iomadh ùrlar';
-$lang['gd_GB']['DownloadSimplePage.ss']['TypeDescSrc'] = 'An còd tùsail';
-$lang['gd_GB']['DownloadSimplePage.ss']['TypeOr'] = 'no';
-$lang['gd_GB']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Ro-sgaoilidhean';
-$lang['gd_GB']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = '\'S urrainn dhut tionndadh ro-sgaoilidh de LibreOffice a luchdadh a-nuas gu h-ìosal gus a chur fo dheuchainn, beagan QA is rudan mar sin. Chan ann a chum cleachdadh leis a\' mhòrchuid a tha iad seo.';
+$lang['gd_GB']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['gd_GB']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['gd_GB']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Mholamaid dhut am fear seo';
 
 $lang['gd_GB']['LocaleName']['af'] = 'Afraganais';
@@ -53,7 +76,6 @@ $lang['gd_GB']['LocaleName']['ar'] = 'Arabais';
 $lang['gd_GB']['LocaleName']['as'] = 'Asamais';
 $lang['gd_GB']['LocaleName']['ast'] = 'Asturais';
 $lang['gd_GB']['LocaleName']['be'] = 'Bealaruisis';
-$lang['gd_GB']['LocaleName']['be-BY'] = 'Bealaruisis';
 $lang['gd_GB']['LocaleName']['bg'] = 'Bulgairis';
 $lang['gd_GB']['LocaleName']['bn'] = 'Beangailis';
 $lang['gd_GB']['LocaleName']['bo'] = 'Tibeitis';
@@ -152,19 +174,8 @@ $lang['gd_GB']['LocaleName']['ug'] = 'Ùigiurais';
 $lang['gd_GB']['LocaleName']['uk'] = 'Ucràinis';
 $lang['gd_GB']['LocaleName']['uz'] = 'Usbagais';
 $lang['gd_GB']['LocaleName']['ve'] = 'Venda';
-$lang['gd_GB']['LocaleName']['vi'] = 'Bhiet-Nàmais';
+$lang['gd_GB']['LocaleName']['vi'] = 'Bhiet-Namais';
 $lang['gd_GB']['LocaleName']['xh'] = 'Xhosa';
 $lang['gd_GB']['LocaleName']['zh-CN'] = 'Sìnis (Shimplichte)';
 $lang['gd_GB']['LocaleName']['zh-TW'] = 'Sìnis (Thradaiseanta)';
 $lang['gd_GB']['LocaleName']['zu'] = 'Zulu';
-
-$lang['gd_GB']['DonatePage']['BUTTON_CARD']   = 'Thoir tabhartas air cairt creideis';
-$lang['gd_GB']['DonatePage']['BUTTON_PAYPAL'] = 'Thoir tabhartas air PayPal';
-$lang['gd_GB']['DonatePage']['CHOICE_DEFAULT']= 'Tagh aon dhe na suimean gu h-ìosal';
-$lang['gd_GB']['DonatePage']['CUSTOM_CHOICE'] = 'No cuir a-steach suim agus airgeadra thu fhèin<br/>(Chan eil ach an fheadhainn ris a bheil * ri làimh air PayPal)';
-$lang['gd_GB']['DonatePage']['CUSTOM_AMOUNT_VALUE'] = '25';
-$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
-$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR10']= '10';
-$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR20']= '20';
-$lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR50']= '50';
-$lang['gd_GB']['DonatePage']['DEFAULT_CURRENCY'] = 'GBP'; 

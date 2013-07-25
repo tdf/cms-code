@@ -14,11 +14,15 @@ $lang['ro_RO']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['ro_RO']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['ro_RO']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['ro_RO']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['ro_RO']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['ro_RO']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['ro_RO']['Downloadpage']['BITTORRENT']='Descarcare folosind BitTorrent';
 $lang['ro_RO']['Downloadpage']['DETAILLINK']='Detalii (md5sum, …)';
-$lang['ro_RO']['Downloadpage']['DLSDK']     ='Descărcare SDK pt. a dezvolta extensii și alte programe externe';
-$lang['ro_RO']['Downloadpage']['DLSOURCE']  ='Descărcare cod sursă pt. a crea un pache instalabil propriu';
+$lang['ro_RO']['Downloadpage']['DLSDK']     ='Descărcare SDK pentru a dezvolta extensii și alte programe externe';
+$lang['ro_RO']['Downloadpage']['DLSOURCE']  ='Descărcare cod sursă pentru a crea un pachet instalabil propriu';
 $lang['ro_RO']['Downloadpage']['DLSUITE']   ='Alte metode de a descărca LibreOffice';
 $lang['ro_RO']['Downloadpage']['NOTESTBUILDS']='There are no testing builds available at the moment.';
 
@@ -28,16 +32,26 @@ $lang['ro_RO']['Navigation']['TOTOPTITLE']='săriți la început de pagină';
 $lang['ro_RO']['Navigation']['TOTOP']     ='⬆ sus';
 
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Trebuie descărcate și instalate următoarele fișiere în ordine:';
-$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Modifică Sistemul, Versiunea sau Limba';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Dezvoltatori';
-$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Nu este versiunea dorită?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['ro_RO']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['ro_RO']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['ro_RO']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['ro_RO']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['ro_RO']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['ro_RO']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informații';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Afișare md5sum și lista serverelor alternative pentru descărcarea fișierului';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Kit de instalare principal';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Ajutorul integrat în LibreOffice';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Interfață utilizator tradus';
-$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s imagine';
-$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'Descărcare fișier ISO pt. a crea un set de instalare';
+$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = 'Imagine %s';
+$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'Descărcare fișier ISO pentru a crea un set de instalare';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = 'Instalare %s';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Instalare LibreOffice %s prin Intel AppUp Center.';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Pachete';
@@ -53,12 +67,8 @@ $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Descărcare fișiere cu ajutorul BitTorrent';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versiunea %s';
 $lang['ro_RO']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Vă rog selectați limba dorită';
-$lang['ro_RO']['DownloadSimplePage.ss']['TypeDescBox'] = 'Imagini CD/DVD cu instalere pt. toate platformele';
-$lang['ro_RO']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Pt. multiple platforme';
-$lang['ro_RO']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Codul sursă';
-$lang['ro_RO']['DownloadSimplePage.ss']['TypeOr'] = 'sau';
-$lang['ro_RO']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases';
-$lang['ro_RO']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Mai jos, puteți descărca o versiune pre-release a lui LibreOffice, pentru evaluare, teste QA, etc. Aceste versiuni nu sunt recomandate pentru uz general.';
+$lang['ro_RO']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['ro_RO']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['ro_RO']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recomandat';
 
 $lang['ro_RO']['LocaleName']['af'] = 'Afrikaans';
@@ -66,7 +76,6 @@ $lang['ro_RO']['LocaleName']['ar'] = 'Arabic';
 $lang['ro_RO']['LocaleName']['as'] = 'Assamese';
 $lang['ro_RO']['LocaleName']['ast'] = 'Asturian';
 $lang['ro_RO']['LocaleName']['be'] = 'Belarusă';
-$lang['ro_RO']['LocaleName']['be-BY'] = 'Belarusă';
 $lang['ro_RO']['LocaleName']['bg'] = 'Bulgariană';
 $lang['ro_RO']['LocaleName']['bn'] = 'Bengaleză';
 $lang['ro_RO']['LocaleName']['bo'] = 'Tibetiană';

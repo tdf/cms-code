@@ -3,21 +3,48 @@ global $lang;
 
 $lang['et_EE']['Donationpage']['AMOUNT']='Summa:';
 
+
+$lang['et_EE']['DonatePage']['BUTTON_CARD']   ='Annetan krediitkaardiga';
+$lang['et_EE']['DonatePage']['BUTTON_PAYPAL'] ='Annetan PayPaliga';
+$lang['et_EE']['DonatePage']['CHOICE_DEFAULT']='Vali üks eelmääratud summadest';
+$lang['et_EE']['DonatePage']['CUSTOM_CHOICE'] ='Või määra ise sobiv summa ja rahaühik<br/>(PayPaliga saab kasutada vaid neid, mille juures on *)';
+$lang['et_EE']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['et_EE']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['et_EE']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['et_EE']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['et_EE']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['et_EE']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['et_EE']['DonatePage']['DLRefreshMsg']= 'Faili "%s" allalaadimine peaks kohe algama. Kui ei, siis klõpsa eeltoodud linki.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['et_EE']['DonatePage']['DLOptional']  = 'Keelepaketi ja abiteksti allalaadimislingid on vasakul.';
+
 $lang['et_EE']['Downloadpage']['BITTORRENT']='Allalaadimine BitTorrenti abil';
 $lang['et_EE']['Downloadpage']['DETAILLINK']='Üksikasjad (md5sum, peeglid, ...)';
 $lang['et_EE']['Downloadpage']['DLSDK']     ='Arenduskomplekt (SDK) laienduste ja väliste tööriistade loomiseks';
 $lang['et_EE']['Downloadpage']['DLSOURCE']  ='Lähtekood omaenda paigalduspaketi loomiseks';
 $lang['et_EE']['Downloadpage']['DLSUITE']   ='Muud viisid loometarkvara LibreOffice allalaadimiseks';
+$lang['et_EE']['Downloadpage']['NOTESTBUILDS']='Hetkel pole ühtki testversiooni saadaval.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['et_EE']['Navigation']['GOTOPAGE']  ='"%s"';
 $lang['et_EE']['Navigation']['TOTOPTITLE']='Lehekülje algusesse';
 $lang['et_EE']['Navigation']['TOTOP']     ='⬆ üles';
 
-$lang['et_EE']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Alla laadida ja selles järjekorras paigaldada tuleb järgnevad failid:';
-$lang['et_EE']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Platvormi, versiooni või keele vahetus';
+$lang['et_EE']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Alla laadida ja selles järjekorras paigaldada tuleb järgmised failid:';
 $lang['et_EE']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Arendajatele';
-$lang['et_EE']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Pole soovitud versioon?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['et_EE']['DownloadSimplePage.ss']['DownloadsHeader']= 'Valitud: LibreOffice <b>%s</b>';
+$lang['et_EE']['DownloadSimplePage.ss']['NotWanted']      = 'Tahad mõnda teist versiooni?';
+/* will be displayed instead of the dl-buttons */
+$lang['et_EE']['DownloadSimplePage.ss']['NoRegularDL']    = 'Tavalisi paigaldusfaile pole saadaval.<br/>Palun vali mõni teine versioon.';
+/* watch out for proper quoting */
+$lang['et_EE']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Kui otsid vanu versioone, vaata <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">allalaadimisarhiivi</a>.';
+/* will be formatted as link */
+$lang['et_EE']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Muuda keelt';
+$lang['et_EE']['DownloadSimplePage.ss']['ChangeVersion']  = 'Versioon:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['et_EE']['DownloadSimplePage.ss']['ChangeOS']       = 'Operatsioonisüsteem:';
 $lang['et_EE']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'info';
 $lang['et_EE']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Kuvab faili kontrollsummad ja loetleb peegelserverid';
 $lang['et_EE']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Põhipaigaldus';
@@ -40,12 +67,8 @@ $lang['et_EE']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'torrent';
 $lang['et_EE']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Failide allalaadimine BitTorrenti kaudu';
 $lang['et_EE']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versioon %s';
 $lang['et_EE']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Keele valimine';
-$lang['et_EE']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD-tõmmised paigaldajaga kõigile platvormidele';
-$lang['et_EE']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Mitmele platvormile';
-$lang['et_EE']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Lähtekood';
-$lang['et_EE']['DownloadSimplePage.ss']['TypeOr'] = 'või';
-$lang['et_EE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Eelväljalasked';
-$lang['et_EE']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Allpool saab proovimiseks, kvaliteedi kontrollimiseks või muuks selliseks alla laadida LibreOffice\'i järgmiste versioonide eelväljalaske. Need pole mõeldud tavakasutuseks.';
+$lang['et_EE']['DownloadSimplePage.ss']['TypeOr'] = 'Muud võimalused:';
+$lang['et_EE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Eelväljalasked:';
 $lang['et_EE']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Soovitatav';
 
 $lang['et_EE']['LocaleName']['af'] = 'Afrikaani';
@@ -53,7 +76,6 @@ $lang['et_EE']['LocaleName']['ar'] = 'Araabia';
 $lang['et_EE']['LocaleName']['as'] = 'Assami';
 $lang['et_EE']['LocaleName']['ast'] = 'Astuuria';
 $lang['et_EE']['LocaleName']['be'] = 'Valgevene';
-$lang['et_EE']['LocaleName']['be-BY'] = 'Valgevene';
 $lang['et_EE']['LocaleName']['bg'] = 'Bulgaaria';
 $lang['et_EE']['LocaleName']['bn'] = 'Bengali';
 $lang['et_EE']['LocaleName']['bo'] = 'Tiibeti';

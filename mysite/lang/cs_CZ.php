@@ -3,11 +3,28 @@ global $lang;
 
 $lang['cs_CZ']['Donationpage']['AMOUNT']='Obnos:';
 
+
+$lang['cs_CZ']['DonatePage']['BUTTON_CARD']   ='Přispět kreditní kartou';
+$lang['cs_CZ']['DonatePage']['BUTTON_PAYPAL'] ='Přispět přes PayPal';
+$lang['cs_CZ']['DonatePage']['CHOICE_DEFAULT']='Vyberte jednu z nastavených hodnot';
+$lang['cs_CZ']['DonatePage']['CUSTOM_CHOICE'] ='Nebo zadejte vlastní množství a měnu<br>(pro PayPal lze použít pouze měny označené *)';
+$lang['cs_CZ']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='500';
+$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '100';
+$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR10']='200';
+$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR20']='400';
+$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR50']='1000';
+$lang['cs_CZ']['DonatePage']['DEFAULT_CURRENCY']    ='CZK';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['cs_CZ']['DonatePage']['DLRefreshMsg']= 'Stahování %s by mělo brzy začít. Pokud se tak nestane, klikněte na odkaz.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['cs_CZ']['DonatePage']['DLOptional']  = 'Doplňkové soubory ke stažení naleznete nalevo.';
+
 $lang['cs_CZ']['Downloadpage']['BITTORRENT']='Stáhnout prostřednictvím BitTorrent';
 $lang['cs_CZ']['Downloadpage']['DETAILLINK']='Podrobnosti (md5sum,...)';
 $lang['cs_CZ']['Downloadpage']['DLSDK']     ='Stáhnout SDK pro vývoj rozšíření a externích nástrojů';
 $lang['cs_CZ']['Downloadpage']['DLSOURCE']  ='Stáhnout zdrojový kód pro vytvoření vlastní instalace';
 $lang['cs_CZ']['Downloadpage']['DLSUITE']   ='Další možnosti stažení kancelářských nástrojů LibreOffice';
+$lang['cs_CZ']['Downloadpage']['NOTESTBUILDS']='V současnosti nejsou k dispozici žádná testovací sestavení.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['cs_CZ']['Navigation']['GOTOPAGE']  ='"Přejít na stránku %s"';
@@ -15,9 +32,19 @@ $lang['cs_CZ']['Navigation']['TOTOPTITLE']='přejít na začátek stránky';
 $lang['cs_CZ']['Navigation']['TOTOP']     ='⬆ nahoru';
 
 $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Soubory je třeba stáhnout a nainstalovat v tomto pořadí:';
-$lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Změnit systém, verzi a jazyk';
 $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Vývojáři';
-$lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Jiná verze, než jakou potřebujete?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsHeader']= 'Vybráno: LibreOffice <b>%s</b>';
+$lang['cs_CZ']['DownloadSimplePage.ss']['NotWanted']      = 'Jiná verze, než jakou potřebujete?';
+/* will be displayed instead of the dl-buttons */
+$lang['cs_CZ']['DownloadSimplePage.ss']['NoRegularDL']    = 'Instalační soubory nejsou k dispozici.<br/>Změňte svůj výběr nebo zvolte některý z doplňkových souborů níže.';
+/* watch out for proper quoting */
+$lang['cs_CZ']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Pokud hledáte staré verze, podívejte se do <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">archivu</a>.';
+/* will be formatted as link */
+$lang['cs_CZ']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Změnit jazyk';
+$lang['cs_CZ']['DownloadSimplePage.ss']['ChangeVersion']  = 'Změnit verzi:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['cs_CZ']['DownloadSimplePage.ss']['ChangeOS']       = 'Změnit <abbr title="operační systém">OS</abbr>:';
 $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informace';
 $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Zobrazit kontrolní součet a seznam zrcadlových serverů';
 $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Základní instalační balíček';
@@ -40,12 +67,8 @@ $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Stáhnout soubory prostřednictvím BitTorrent';
 $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsVersion'] = 'verze %s';
 $lang['cs_CZ']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Zvolte jazyk';
-$lang['cs_CZ']['DownloadSimplePage.ss']['TypeDescBox'] = 'Bitové kopie CD/DVD s instalačními balíčky pro všechny platformy';
-$lang['cs_CZ']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Pro více platforem';
-$lang['cs_CZ']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Zdrojový kód';
-$lang['cs_CZ']['DownloadSimplePage.ss']['TypeOr'] = 'nebo';
-$lang['cs_CZ']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testovací verze';
-$lang['cs_CZ']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Kliknutím na níže uvedené odkazy můžete stáhnout testovací balíčky nových verzí LibreOffice, které jsou určené k vyzkoušení nových funkcí, hledání chyb apod. Tyto verze nejsou určeny k běžnému použití.';
+$lang['cs_CZ']['DownloadSimplePage.ss']['TypeOr'] = 'nebo stáhnout';
+$lang['cs_CZ']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testovací verze:';
 $lang['cs_CZ']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Doporučeno';
 
 $lang['cs_CZ']['LocaleName']['af'] = 'afrikánština';
@@ -53,7 +76,6 @@ $lang['cs_CZ']['LocaleName']['ar'] = 'arabština';
 $lang['cs_CZ']['LocaleName']['as'] = 'ásámština';
 $lang['cs_CZ']['LocaleName']['ast'] = 'asturština';
 $lang['cs_CZ']['LocaleName']['be'] = 'běloruština';
-$lang['cs_CZ']['LocaleName']['be-BY'] = 'běloruština (Bělorusko)';
 $lang['cs_CZ']['LocaleName']['bg'] = 'bulharština';
 $lang['cs_CZ']['LocaleName']['bn'] = 'bengálština';
 $lang['cs_CZ']['LocaleName']['bo'] = 'tibetština';
@@ -157,14 +179,3 @@ $lang['cs_CZ']['LocaleName']['xh'] = 'xhoština';
 $lang['cs_CZ']['LocaleName']['zh-CN'] = 'čínština (zjednodušená)';
 $lang['cs_CZ']['LocaleName']['zh-TW'] = 'čínština (tradiční)';
 $lang['cs_CZ']['LocaleName']['zu'] = 'zulština';
-
-$lang['cs_CZ']['DonatePage']['BUTTON_CARD']   ='Přispět kreditní kartou';
-$lang['cs_CZ']['DonatePage']['BUTTON_PAYPAL'] ='Přispět přes PayPal';
-$lang['cs_CZ']['DonatePage']['CHOICE_DEFAULT']='Vyberte jednu z nastavených hodnot';
-$lang['cs_CZ']['DonatePage']['CUSTOM_CHOICE'] ='Nebo zadejte vlastní množství a měnu<br>(pro PayPal lze použít pouze měny označené *)';
-$lang['cs_CZ']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='500';
-$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '100';
-$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR10']='200';
-$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR20']='400';
-$lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR50']='1000';
-$lang['cs_CZ']['DonatePage']['DEFAULT_CURRENCY']    ='CZK';

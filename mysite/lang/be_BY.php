@@ -14,6 +14,10 @@ $lang['be_BY']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['be_BY']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['be_BY']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['be_BY']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['be_BY']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['be_BY']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['be_BY']['Downloadpage']['BITTORRENT']='Атрымаць праз BitTorrent';
 $lang['be_BY']['Downloadpage']['DETAILLINK']='Падрабязнасці (md5sum,…)';
@@ -28,9 +32,19 @@ $lang['be_BY']['Navigation']['TOTOPTITLE']='прагарнуць да верху
 $lang['be_BY']['Navigation']['TOTOP']     ='⬆ да верху';
 
 $lang['be_BY']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Належыць атрымаць і ўстанавіць гэтыя файлы паслядоўна:';
-$lang['be_BY']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Выбраць сістэму, версію ці мову';
 $lang['be_BY']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Распрацоўнікі';
-$lang['be_BY']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Шукаеце іншую версію?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['be_BY']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['be_BY']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['be_BY']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['be_BY']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['be_BY']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['be_BY']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['be_BY']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['be_BY']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Інфармацыя';
 $lang['be_BY']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Гл. md5sum і спіс люстэрак для атрымання файла';
 $lang['be_BY']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Галоўны інсталятар';
@@ -53,12 +67,8 @@ $lang['be_BY']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['be_BY']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Атрымаць файлы праз BitTorrent';
 $lang['be_BY']['DownloadSimplePage.ss']['DownloadsVersion'] = 'версія %s';
 $lang['be_BY']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Калі ласка, выберыце мову';
-$lang['be_BY']['DownloadSimplePage.ss']['TypeDescBox'] = 'Вобразы CD/DVD з інсталяцыйнымі файламі для ўсіх платформ';
-$lang['be_BY']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Для некалькіх платформ';
-$lang['be_BY']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Выточны код';
-$lang['be_BY']['DownloadSimplePage.ss']['TypeOr'] = 'альбо';
-$lang['be_BY']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Перадрэлізныя версіі';
-$lang['be_BY']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Ніжэй, вы можаце ўзяць перадрэлізны варыянт наступнай версіі LibreOffice для ацэнкі, выпрабавання якасці і г.д. Гэтыя версіі не прызначаны для паўсядзённага ўжытку.';
+$lang['be_BY']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['be_BY']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['be_BY']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Рэкамендавана';
 
 $lang['be_BY']['LocaleName']['af'] = 'Афрыкаанс';
@@ -66,7 +76,6 @@ $lang['be_BY']['LocaleName']['ar'] = 'Арабская';
 $lang['be_BY']['LocaleName']['as'] = 'Асамская';
 $lang['be_BY']['LocaleName']['ast'] = 'Астурыйская';
 $lang['be_BY']['LocaleName']['be'] = 'Беларуская';
-$lang['be_BY']['LocaleName']['be-BY'] = 'Беларуская';
 $lang['be_BY']['LocaleName']['bg'] = 'Балгарская';
 $lang['be_BY']['LocaleName']['bn'] = 'Бенгальская';
 $lang['be_BY']['LocaleName']['bo'] = 'Тыбецкая';

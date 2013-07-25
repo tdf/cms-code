@@ -3,68 +3,79 @@ global $lang;
 
 $lang['de_DE']['Donationpage']['AMOUNT']='Summe:';
 
-$lang['de_DE']['Downloadpage']['BITTORRENT']='Download mittels BitTorrent';
-$lang['de_DE']['Downloadpage']['DETAILLINK']='Details anzeigen (md5sum,…)';
-$lang['de_DE']['Downloadpage']['DLSDK']     ='Laden Sie das SDK herunter, um Erweiterungen und externe Werkzeuge zu entwickeln';
-$lang['de_DE']['Downloadpage']['DLSOURCE']  ='Laden Sie den Quelltext herunter, um einen eigenen Installer zu bauen';
-$lang['de_DE']['Downloadpage']['DLSUITE']   ='Andere Wege, LibreOffice herunterzuladen';
 
 $lang['de_DE']['DonatePage']['BUTTON_CARD']   ='Spenden per Kreditkarte/Giropay';
 $lang['de_DE']['DonatePage']['BUTTON_PAYPAL'] ='Spenden per PayPal';
-$lang['de_DE']['DonatePage']['CHOICE_DEFAULT']   ='Wählen Sie einen der vorgeschlagenen Beträge';
+$lang['de_DE']['DonatePage']['CHOICE_DEFAULT']='Wählen Sie einen der vorgeschlagenen Beträge';
 $lang['de_DE']['DonatePage']['CUSTOM_CHOICE'] ='Oder geben Sie einen Betrag samt Währung ein<br/>(nur die mit * markierten sind auch via PayPal verfügbar)';
 $lang['de_DE']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
-$lang['de_DE']['DonatePage']['DEFAULT_AMOUNT_EUR05'] ='5';
-$lang['de_DE']['DonatePage']['DEFAULT_AMOUNT_EUR10'] ='10';
-$lang['de_DE']['DonatePage']['DEFAULT_AMOUNT_EUR20'] ='20';
-$lang['de_DE']['DonatePage']['DEFAULT_AMOUNT_EUR50'] ='50';
-$lang['de_DE']['DonatePage']['DEFAULT_CURRENCY'] ='EUR';
+$lang['de_DE']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['de_DE']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['de_DE']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['de_DE']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['de_DE']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['de_DE']['DonatePage']['DLRefreshMsg']= 'Ihr Download %s sollte in Kürze beginnen. Bitte klicken Sie auf den Link, falls es nicht startet.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['de_DE']['DonatePage']['DLOptional']  = 'Sie können die optionalen Downloads auf der linken Seite finden.';
+
+$lang['de_DE']['Downloadpage']['BITTORRENT']='Download über BitTorrent';
+$lang['de_DE']['Downloadpage']['DETAILLINK']='Details anzeigen (md5sum,…)';
+$lang['de_DE']['Downloadpage']['DLSDK']     ='Laden Sie das SDK herunter, um Erweiterungen und externe Werkzeuge zu entwickeln';
+$lang['de_DE']['Downloadpage']['DLSOURCE']  ='Laden Sie den Quelltext herunter, um Ihren eigenen Installer zu bauen';
+$lang['de_DE']['Downloadpage']['DLSUITE']   ='Andere Wege, LibreOffice herunterzuladen';
+$lang['de_DE']['Downloadpage']['NOTESTBUILDS']='Derzeit ist keine Testversion verfügbar.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
-$lang['de_DE']['Navigation']['GOTOPAGE']  ='"Gehe zu Seite »%s«"';
-$lang['de_DE']['Navigation']['TOTOPTITLE']='Zum Anfang der Seite springen';
+$lang['de_DE']['Navigation']['GOTOPAGE']  ='"Gehe zu Seite %s"';
+$lang['de_DE']['Navigation']['TOTOPTITLE']='Zum Seitenanfang springen';
 $lang['de_DE']['Navigation']['TOTOP']     ='⬆ zum Seitenanfang';
 
-$lang['de_DE']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Laden Sie diese Dateien herunter und installieren Sie sie in der angegebenen Reihenfolge:';
-$lang['de_DE']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'System, Version oder Sprache ändern';
+$lang['de_DE']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Laden Sie folgende Dateien herunter und installieren Sie diese in der angegebenen Reihenfolge:';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Entwickler';
-$lang['de_DE']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Nicht die gewünschte Version?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['de_DE']['DownloadSimplePage.ss']['DownloadsHeader']= 'Ausgewählt: LibreOffice <b>%s</b>';
+$lang['de_DE']['DownloadSimplePage.ss']['NotWanted']      = 'Nicht die gewünschte Version?';
+/* will be displayed instead of the dl-buttons */
+$lang['de_DE']['DownloadSimplePage.ss']['NoRegularDL']    = 'Reguläre Installationsdateien stehen nicht zur Verfügung.<br/>Bitte ändern Sie Ihre Auswahl oder wählen Sie eine von den zusätzlichen Downloads unten aus.                ';
+/* watch out for proper quoting */
+$lang['de_DE']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['de_DE']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Sprache ändern           ';
+$lang['de_DE']['DownloadSimplePage.ss']['ChangeVersion']  = 'Version ändern:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['de_DE']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Zeigt die md5sum und die Liste der Mirror für diese Datei';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Hauptprogramm';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Offline LibreOffice-Hilfe';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Übersetzte Benutzeroberfläche';
-$lang['de_DE']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s Image';
-$lang['de_DE']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'Eine ISO-Datei herunterladen, um ein Installationsmedium zu erstellen';
+$lang['de_DE']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s-Image';
+$lang['de_DE']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'Laden Sie eine ISO-Datei herunter, um ein Installationsmedium zu erstellen.';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = '%s-Installation';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'LibreOffice %s über das Intel AppUp-Center installieren.';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Pakete';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
-$lang['de_DE']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'Eine portable Version von LibreOffice im PortableApps.com-Format, mit der Sie Ihre Dokumente und das benötigte Programm direkt vom USB-Stick, einer "cloud" oder einem lokalen Laufwerk starten können. Gehen Sie auf <a href="http://portableapps.com/de/">http://portableapps.com/de/</a> für weitere Informationen.';
-$lang['de_DE']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'Dieses ist eine Vorabversion und nicht für den produktiven Einsatz vorgesehen.';
-$lang['de_DE']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = 'Handy-Ressourcen';
+$lang['de_DE']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'Eine portable Version von LibreOffice im PortableApps.com-Format, mit der Sie Ihre Dokumente und das benötigte Programm direkt vom USB-Stick, einer "cloud" oder einem lokalen Laufwerk starten können. Gehen Sie für weitere Informationen auf <a href="http://portableapps.com/de/">http://portableapps.com/de/</a>.';
+$lang['de_DE']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'Dieses ist eine Vorabversion, die nicht für den produktiven Einsatz gedacht ist.';
+$lang['de_DE']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = 'Nützliche Ressourcen';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsSdkHeader'] = 'Software Development Kit (SDK)';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsSdkText'] = 'Laden Sie das SDK herunter, um Erweiterungen und externe Werkzeuge zu entwickeln';
-$lang['de_DE']['DownloadSimplePage.ss']['DownloadsSrcHeader'] = 'Quellcode';
-$lang['de_DE']['DownloadSimplePage.ss']['DownloadsSrcText'] = 'LibreOffice ist ein OpenSource-Projekt und Sie können hierfür den Quellcode herunterladen, um Ihren eigenen Installer zu bauen.';
+$lang['de_DE']['DownloadSimplePage.ss']['DownloadsSrcHeader'] = 'Quelltext';
+$lang['de_DE']['DownloadSimplePage.ss']['DownloadsSrcText'] = 'LibreOffice ist ein OpenSource-Projekt und Sie können hierfür den Quelltext herunterladen, um Ihr eigenes Installationsprogramm zu erstellen.';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Dateien mittels BitTorrent herunterladen';
 $lang['de_DE']['DownloadSimplePage.ss']['DownloadsVersion'] = 'Version %s';
 $lang['de_DE']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Bitte wählen Sie Ihre Sprache';
-$lang['de_DE']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD ISO-Dateien mit Installationsdateien für alle Plattformen';
-$lang['de_DE']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Für mehrere Plattformen';
-$lang['de_DE']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Quellcode';
-$lang['de_DE']['DownloadSimplePage.ss']['TypeOr'] = 'oder';
-$lang['de_DE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Vorabversionen (PreReleases)';
-$lang['de_DE']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Weiter unten können Sie eine Vorabversion der nächsten LibreOffice-Version zu Testzwecken herunterladen. Diese Version ist nicht für einen produktiven Einsatz vorgesehen.';
+$lang['de_DE']['DownloadSimplePage.ss']['TypeOr'] = 'oder Download';
+$lang['de_DE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Vorabversionen (PreReleases):';
 $lang['de_DE']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Empfohlen';
 
-$lang['de_DE']['LocaleName']['af'] = 'Afrikanisch';
+$lang['de_DE']['LocaleName']['af'] = 'Afrikaans';
 $lang['de_DE']['LocaleName']['ar'] = 'Arabisch';
 $lang['de_DE']['LocaleName']['as'] = 'Assamesisch';
 $lang['de_DE']['LocaleName']['ast'] = 'Asturisch';
 $lang['de_DE']['LocaleName']['be'] = 'Weißrussisch';
-$lang['de_DE']['LocaleName']['be-BY'] = 'Weißrussisch';
 $lang['de_DE']['LocaleName']['bg'] = 'Bulgarisch';
 $lang['de_DE']['LocaleName']['bn'] = 'Bengalisch';
 $lang['de_DE']['LocaleName']['bo'] = 'Tibetisch';
@@ -80,9 +91,9 @@ $lang['de_DE']['LocaleName']['de'] = 'Deutsch';
 $lang['de_DE']['LocaleName']['dgo'] = 'Dogri';
 $lang['de_DE']['LocaleName']['dz'] = 'Dzongkha';
 $lang['de_DE']['LocaleName']['el'] = 'Griechisch';
-$lang['de_DE']['LocaleName']['en-GB'] = 'Englisch (Großbritannien)';
-$lang['de_DE']['LocaleName']['en-US'] = 'Englisch (USA)';
-$lang['de_DE']['LocaleName']['en-ZA'] = 'Englisch (Südafrika)';
+$lang['de_DE']['LocaleName']['en-GB'] = 'Englisch (UK)';
+$lang['de_DE']['LocaleName']['en-US'] = 'Englisch (US)';
+$lang['de_DE']['LocaleName']['en-ZA'] = 'Englisch (ZA)';
 $lang['de_DE']['LocaleName']['eo'] = 'Esperanto';
 $lang['de_DE']['LocaleName']['es'] = 'Spanisch';
 $lang['de_DE']['LocaleName']['et'] = 'Estnisch';
@@ -92,7 +103,7 @@ $lang['de_DE']['LocaleName']['fi'] = 'Finnisch';
 $lang['de_DE']['LocaleName']['fr'] = 'Französisch';
 $lang['de_DE']['LocaleName']['ga'] = 'Irisch';
 $lang['de_DE']['LocaleName']['gd'] = 'Schottisch-gälisch';
-$lang['de_DE']['LocaleName']['gl'] = 'Galizisch';
+$lang['de_DE']['LocaleName']['gl'] = 'Galicisch';
 $lang['de_DE']['LocaleName']['gu'] = 'Gujarati';
 $lang['de_DE']['LocaleName']['he'] = 'Hebräisch';
 $lang['de_DE']['LocaleName']['hi'] = 'Hindi';
@@ -105,7 +116,7 @@ $lang['de_DE']['LocaleName']['ja'] = 'Japanisch';
 $lang['de_DE']['LocaleName']['ka'] = 'Georgisch';
 $lang['de_DE']['LocaleName']['kk'] = 'Kasachisch';
 $lang['de_DE']['LocaleName']['km'] = 'Khmer';
-$lang['de_DE']['LocaleName']['kn'] = 'Kanadisch';
+$lang['de_DE']['LocaleName']['kn'] = 'Kannada';
 $lang['de_DE']['LocaleName']['ko'] = 'Koreanisch';
 $lang['de_DE']['LocaleName']['kok'] = 'Konkani';
 $lang['de_DE']['LocaleName']['ks'] = 'Kashmiri';
@@ -148,7 +159,7 @@ $lang['de_DE']['LocaleName']['sl'] = 'Slovenisch';
 $lang['de_DE']['LocaleName']['sq'] = 'Albanisch';
 $lang['de_DE']['LocaleName']['sr'] = 'Serbisch (kyrillisch)';
 $lang['de_DE']['LocaleName']['ss'] = 'Siswati';
-$lang['de_DE']['LocaleName']['st'] = 'Südliches Sotho';
+$lang['de_DE']['LocaleName']['st'] = 'Sesotho';
 $lang['de_DE']['LocaleName']['sv'] = 'Schwedisch';
 $lang['de_DE']['LocaleName']['sw-TZ'] = 'Swahili';
 $lang['de_DE']['LocaleName']['ta'] = 'Tamilisch';

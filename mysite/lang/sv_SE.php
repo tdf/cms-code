@@ -3,33 +3,48 @@ global $lang;
 
 $lang['sv_SE']['Donationpage']['AMOUNT']='Belopp:';
 
-$lang['sv_SE']['DonatePage']['BUTTON_CARD']='Ge bidrag med kreditkort';
-$lang['sv_SE']['DonatePage']['BUTTON_PAYPAL']='Ge bidrag via PayPal';
+
+$lang['sv_SE']['DonatePage']['BUTTON_CARD']   ='Ge bidrag med kreditkort';
+$lang['sv_SE']['DonatePage']['BUTTON_PAYPAL'] ='Ge bidrag via PayPal';
 $lang['sv_SE']['DonatePage']['CHOICE_DEFAULT']='Ange ett av standardvärdena';
-$lang['sv_SE']['DonatePage']['CUSTOM_CHOICE']='Eller ange en egen summa och valuta<br/>(du kan endast ange valutor<br/>markerade med * när du betalar via PayPal)';
+$lang['sv_SE']['DonatePage']['CUSTOM_CHOICE'] ='Eller ange en egen summa och valuta<br/>(du kan endast ange valutor markerade med * när du betalar via PayPal)';
 $lang['sv_SE']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='250';
 $lang['sv_SE']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '50';
 $lang['sv_SE']['DonatePage']['DEFAULT_AMOUNT_EUR10']='100';
 $lang['sv_SE']['DonatePage']['DEFAULT_AMOUNT_EUR20']='200';
 $lang['sv_SE']['DonatePage']['DEFAULT_AMOUNT_EUR50']='500';
-$lang['sv_SE']['DonatePage']['DEFAULT_CURRENCY'] ='SEK';
+$lang['sv_SE']['DonatePage']['DEFAULT_CURRENCY']    ='SEK';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['sv_SE']['DonatePage']['DLRefreshMsg']= 'Din nedladdning %s bör påbörjas inom kort. Klicka på länken om så inte är fallet.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['sv_SE']['DonatePage']['DLOptional']  = 'Du kan välja mellan valfria nedladdningar till vänster.';
 
 $lang['sv_SE']['Downloadpage']['BITTORRENT']='Ladda ner med BitTorrent';
 $lang['sv_SE']['Downloadpage']['DETAILLINK']='Se detaljer (md5sum,…)';
 $lang['sv_SE']['Downloadpage']['DLSDK']     ='Hämta SDK för utveckling av tillägg och externa verktyg.';
 $lang['sv_SE']['Downloadpage']['DLSOURCE']  ='Hämta källkoden för att bygga ditt eget installationspaket';
 $lang['sv_SE']['Downloadpage']['DLSUITE']   ='Andra sätt att ladda ner LibreOffice på';
-$lang['en_US']['Downloadpage']['NOTESTBUILDS']='Det finns inga testversioner tillgängliga för tillfället.';
+$lang['sv_SE']['Downloadpage']['NOTESTBUILDS']='Det finns inga testversioner tillgängliga för tillfället.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['sv_SE']['Navigation']['GOTOPAGE']  ='"Gå till %s"';
 $lang['sv_SE']['Navigation']['TOTOPTITLE']='Bläddra till toppen av sidan';
 $lang['sv_SE']['Navigation']['TOTOP']     ='⬆ till toppen';
 
-$lang['sv_SE']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Hämta och installera dessa filer i denna följd:';
-$lang['sv_SE']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Byt system, version eller språk';
+$lang['sv_SE']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Du måste hämta och installera dessa filer i denna följd:';
 $lang['sv_SE']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Utvecklare';
-$lang['sv_SE']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Inte den version du söker?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['sv_SE']['DownloadSimplePage.ss']['DownloadsHeader']= 'Valt: LibreOffice <b>%s</b>';
+$lang['sv_SE']['DownloadSimplePage.ss']['NotWanted']      = 'Är det inte den version du vill ha?';
+/* will be displayed instead of the dl-buttons */
+$lang['sv_SE']['DownloadSimplePage.ss']['NoRegularDL']    = 'Inga installationsfiler är tillgängliga.<br/>Vänligen ändra ditt val eller välj från ytterligare nedladdningar nedan.';
+/* watch out for proper quoting */
+$lang['sv_SE']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Om du söker efter äldre versioner, besök vårt <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">nedladdningsarkiv</a>.';
+/* will be formatted as link */
+$lang['sv_SE']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Ändra språk';
+$lang['sv_SE']['DownloadSimplePage.ss']['ChangeVersion']  = 'Ändra version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['sv_SE']['DownloadSimplePage.ss']['ChangeOS']       = 'Ändra<abbr title="Operating System">OS</abbr>:';
 $lang['sv_SE']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Information';
 $lang['sv_SE']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Visa md5-värde och speglar för filen';
 $lang['sv_SE']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Grundinstallation';
@@ -52,12 +67,8 @@ $lang['sv_SE']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['sv_SE']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Hämta filerna med hjälp av BitTorrent';
 $lang['sv_SE']['DownloadSimplePage.ss']['DownloadsVersion'] = 'version %s';
 $lang['sv_SE']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Välj språk';
-$lang['sv_SE']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD-bilder med installationsprogram till alla plattformar';
-$lang['sv_SE']['DownloadSimplePage.ss']['TypeDescMulti'] = 'För flera plattformar';
-$lang['sv_SE']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Källkod';
-$lang['sv_SE']['DownloadSimplePage.ss']['TypeOr'] = 'eller';
-$lang['sv_SE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Förhandsversioner';
-$lang['sv_SE']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Nedan kan du ladda ner en försläppsversion av LibreOffice så att du kan utvärdera, kvalitetssäkra etc. Dessa versioner är inte tänkta att användas i produktion.';
+$lang['sv_SE']['DownloadSimplePage.ss']['TypeOr'] = 'eller hämta';
+$lang['sv_SE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Förhandsversioner:';
 $lang['sv_SE']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Rekommenderat';
 
 $lang['sv_SE']['LocaleName']['af'] = 'Afrikaans';
@@ -65,7 +76,6 @@ $lang['sv_SE']['LocaleName']['ar'] = 'Arabiska';
 $lang['sv_SE']['LocaleName']['as'] = 'Assamesiska';
 $lang['sv_SE']['LocaleName']['ast'] = 'Asturiska';
 $lang['sv_SE']['LocaleName']['be'] = 'Vitryska';
-$lang['sv_SE']['LocaleName']['be-BY'] = 'Vitryska';
 $lang['sv_SE']['LocaleName']['bg'] = 'Bulgariska';
 $lang['sv_SE']['LocaleName']['bn'] = 'Bengali';
 $lang['sv_SE']['LocaleName']['bo'] = 'Tibetansk';

@@ -3,11 +3,28 @@ global $lang;
 
 $lang['br_FR']['Donationpage']['AMOUNT']='Kementad :';
 
+
+$lang['br_FR']['DonatePage']['BUTTON_CARD']   ='Reiñ dre ar gartenn gred';
+$lang['br_FR']['DonatePage']['BUTTON_PAYPAL'] ='Reiñ dre bPaypal';
+$lang['br_FR']['DonatePage']['CHOICE_DEFAULT']='Diuzañ unan eus ar gwerzhioù dre ziouer';
+$lang['br_FR']['DonatePage']['CUSTOM_CHOICE'] ='Pe bizskrivit ur sammad personelaet <br/> (ar re verket gant * zo hegerz dre bPaypal ivez)';
+$lang['br_FR']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['br_FR']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['br_FR']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['br_FR']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['br_FR']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['br_FR']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['br_FR']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['br_FR']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+
 $lang['br_FR']['Downloadpage']['BITTORRENT']='Pellgargañ en ur arverañ BitTorrent';
 $lang['br_FR']['Downloadpage']['DETAILLINK']='Kaout munudoù (md5sum,…)';
 $lang['br_FR']['Downloadpage']['DLSDK']     ='Pellgargañ an SDK evit diorren askouezhioù ha binvioù diavaez';
 $lang['br_FR']['Downloadpage']['DLSOURCE']  ='Pellgargañ bonegoù an tarzh da sevel ho meziant staliañ deoc\'h-c\'hwi';
 $lang['br_FR']['Downloadpage']['DLSUITE']   ='Doareoù all da bellgargañ LibreOffice, an heuliad burevek';
+$lang['br_FR']['Downloadpage']['NOTESTBUILDS']='N\'eus savadur ebet da brouadiñ evit poent.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['br_FR']['Navigation']['GOTOPAGE']  ='"Mont d\'ar bajennad %s"';
@@ -15,9 +32,19 @@ $lang['br_FR']['Navigation']['TOTOPTITLE']='dibunañ betek krec\'h ar bajennad';
 $lang['br_FR']['Navigation']['TOTOP']     ='⬆ betek krec\'h';
 
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Ezhomm hoc\'h eus pellgargañ ha staliañ ar restroù-mañ en urzh :';
-$lang['br_FR']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Kemmañ ar reizhiad, an handelv pe ar yezh';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Paotred an diorren';
-$lang['br_FR']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. N\'eo ket an handelv a fell deoc\'h ?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['br_FR']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['br_FR']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['br_FR']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['br_FR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['br_FR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['br_FR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['br_FR']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Titouroù';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Gwelout ar md5sum hag ur roll melezourioù pellgargañ evit ar restr';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Meziant staliañ pennañ';
@@ -25,6 +52,8 @@ $lang['br_FR']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Skoaz
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Ketal an arveriaded troet';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = 'Lunienn %s';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'Pellgargañ ur restr mod ISO a-benn krouiñ ur media staliañ';
+$lang['br_FR']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = 'Staliañ %s';
+$lang['br_FR']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Staliañ LibreOffice %s dre ar greizenn AppUp Intel';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Pakadoù';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'Un handelv hezoug eus LibreOffice savet gant mentrezh PortableApps.com. Neuze e vez tapet ho teulioù holl hag ar pezh hoc\'h eus ezhomm evit labourat adalek un alc\'hwez USB, ur goumoulenn pe ur gantenn lec\'hel. Lennit <a href="http://portableapps.com/">PortableApps.com</a> da c\'houzout hiroc\'h.';
@@ -38,12 +67,8 @@ $lang['br_FR']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Pellgargañ ar restroù en ur ober gant BitTorrent';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsVersion'] = 'handelv %s';
 $lang['br_FR']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Diuzit ho yezh, mar plij';
-$lang['br_FR']['DownloadSimplePage.ss']['TypeDescBox'] = 'Luniennoù CD/DVD gant meziantoù staliañ evit an holl savennoù';
-$lang['br_FR']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Evit meur a savenn';
-$lang['br_FR']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Boneg Tarzh';
-$lang['br_FR']['DownloadSimplePage.ss']['TypeOr'] = 'pe';
-$lang['br_FR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Handelvoù prientiñ';
-$lang['br_FR']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Amañ dindan e vez pellgarget un handelv prientiñ eus handelv da zont LibreOffice evit ur priziadur, taolioù arnod mod QA, h.a. N\'eo ket savet an handelv-mañ evit un arver hollek.';
+$lang['br_FR']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['br_FR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['br_FR']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Erbedet';
 
 $lang['br_FR']['LocaleName']['af'] = 'Afrikaaneg';
@@ -51,7 +76,6 @@ $lang['br_FR']['LocaleName']['ar'] = 'Arabeg';
 $lang['br_FR']['LocaleName']['as'] = 'Asameseg';
 $lang['br_FR']['LocaleName']['ast'] = 'Asturieg';
 $lang['br_FR']['LocaleName']['be'] = 'Belaruseg';
-$lang['br_FR']['LocaleName']['be-BY'] = 'Belaruseg';
 $lang['br_FR']['LocaleName']['bg'] = 'Bulgareg';
 $lang['br_FR']['LocaleName']['bn'] = 'Bengalieg';
 $lang['br_FR']['LocaleName']['bo'] = 'Tibeteg';

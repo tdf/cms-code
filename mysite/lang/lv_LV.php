@@ -14,6 +14,10 @@ $lang['lv_LV']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
 $lang['lv_LV']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['lv_LV']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['lv_LV']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['lv_LV']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['lv_LV']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
 $lang['lv_LV']['Downloadpage']['BITTORRENT']='Lejupielādēt, izmantojot BitTorrent';
 $lang['lv_LV']['Downloadpage']['DETAILLINK']='Uzzināt vairāk (md5sum,…)';
@@ -28,9 +32,19 @@ $lang['lv_LV']['Navigation']['TOTOPTITLE']='ritināt uz lapas augšpusi';
 $lang['lv_LV']['Navigation']['TOTOP']     ='⬆ uz augšu';
 
 $lang['lv_LV']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Jums jālejupielādē un jāinstalē šie faili, lai:';
-$lang['lv_LV']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Mainītu sistēmu, versiju vai valodu';
 $lang['lv_LV']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Izstrādātāji';
-$lang['lv_LV']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Nav tā versija, ko vēlējāties?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['lv_LV']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
+$lang['lv_LV']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+/* will be displayed instead of the dl-buttons */
+$lang['lv_LV']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+/* watch out for proper quoting */
+$lang['lv_LV']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+/* will be formatted as link */
+$lang['lv_LV']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
+$lang['lv_LV']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['lv_LV']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
 $lang['lv_LV']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informācija';
 $lang['lv_LV']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Skatiet md5sum un sarakstu ar faila lejupielāžu spoguļiem';
 $lang['lv_LV']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Galvenais instalators';
@@ -53,12 +67,8 @@ $lang['lv_LV']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['lv_LV']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Lejupielādēt failus, lietojot BitTorrent';
 $lang['lv_LV']['DownloadSimplePage.ss']['DownloadsVersion'] = '%s versiju';
 $lang['lv_LV']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Lūdzu, izvēlieties savu valodu';
-$lang['lv_LV']['DownloadSimplePage.ss']['TypeDescBox'] = 'CD/DVD attēli ar instalatoriem visām platformām';
-$lang['lv_LV']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Vairākām platformām';
-$lang['lv_LV']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Pirmkods';
-$lang['lv_LV']['DownloadSimplePage.ss']['TypeOr'] = 'vai';
-$lang['lv_LV']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pirms laidiena';
-$lang['lv_LV']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Zemāk var lejupielādēt nākamā LibreOffice pirms laidiena versiju novērtēšanai, testēšanai utt. Šīs versijas nav paredzētas vispārīgai lietošanai.';
+$lang['lv_LV']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
+$lang['lv_LV']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['lv_LV']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Ieteicams';
 
 $lang['lv_LV']['LocaleName']['af'] = 'Afrikandu';
@@ -66,7 +76,6 @@ $lang['lv_LV']['LocaleName']['ar'] = 'Arābu';
 $lang['lv_LV']['LocaleName']['as'] = 'Asamiešu';
 $lang['lv_LV']['LocaleName']['ast'] = 'Astūriešu';
 $lang['lv_LV']['LocaleName']['be'] = 'Baltkrievu';
-$lang['lv_LV']['LocaleName']['be-BY'] = 'Baltkrievu';
 $lang['lv_LV']['LocaleName']['bg'] = 'Bulgāru';
 $lang['lv_LV']['LocaleName']['bn'] = 'Bengāļu';
 $lang['lv_LV']['LocaleName']['bo'] = 'Tibetiešu';

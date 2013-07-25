@@ -3,11 +3,28 @@ global $lang;
 
 $lang['eo_XX']['Donationpage']['AMOUNT']='Kvanto:';
 
+
+$lang['eo_XX']['DonatePage']['BUTTON_CARD']   ='Donaci per kreditkarto';
+$lang['eo_XX']['DonatePage']['BUTTON_PAYPAL'] ='Donaci per PayPal';
+$lang['eo_XX']['DonatePage']['CHOICE_DEFAULT']='Elekti iun el la defaŭltaj valoroj';
+$lang['eo_XX']['DonatePage']['CUSTOM_CHOICE'] ='Aŭ enigi propran sumon kaj kurzon<br/>(nur tiuj markitaj per * ankaŭ estas haveblaj per PayPal)';
+$lang['eo_XX']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
+$lang['eo_XX']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
+$lang['eo_XX']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
+$lang['eo_XX']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
+$lang['eo_XX']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
+$lang['eo_XX']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
+/* %s is a regular downloadlink, with the filename as label */
+$lang['eo_XX']['DonatePage']['DLRefreshMsg']= 'Via elŝuto %s devus baldaŭ komenci. Se la elŝuto ne komencas, bonvolu alklaki la ligilon.';
+/* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
+$lang['eo_XX']['DonatePage']['DLOptional']  = 'Maldekstre troviĝas la malnepraj elŝutoj.';
+
 $lang['eo_XX']['Downloadpage']['BITTORRENT']='Elŝuti per BitTorrent';
 $lang['eo_XX']['Downloadpage']['DETAILLINK']='Legu detalojn (md5sum,...)';
 $lang['eo_XX']['Downloadpage']['DLSDK']     ='Elŝuti je la SDK por evoluigi kromprogramojn kaj eksterajn ilojn';
 $lang['eo_XX']['Downloadpage']['DLSOURCE']  ='Elŝuti la fontokodon por konstrui la propran instalilon';
 $lang['eo_XX']['Downloadpage']['DLSUITE']   ='Alia metodo elŝuti je LibreOffice, la oficeja programaro';
+$lang['eo_XX']['Downloadpage']['NOTESTBUILDS']='Neniu testa distribuaĵo disponeblas nuntempe.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['eo_XX']['Navigation']['GOTOPAGE']  ='"Iru al la %s paĝo"';
@@ -15,9 +32,19 @@ $lang['eo_XX']['Navigation']['TOTOPTITLE']='rulumi al la supro de la paĝo';
 $lang['eo_XX']['Navigation']['TOTOP']     ='⬆ al supro';
 
 $lang['eo_XX']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Vi devus elŝuti kaj instali la jenajn dosierojn sinsekve:';
-$lang['eo_XX']['DownloadSimplePage.ss']['DownloadsChangeLink'] = 'Ŝanĝi sistemon, version aŭ lingvon';
 $lang['eo_XX']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Programistoj';
-$lang['eo_XX']['DownloadSimplePage.ss']['DownloadsHeader'] = 'LibreOffice <b>%s</b>. Ĉu la versio dezirata de vi?';
+/* %s will be replaced with OS/arch, version, language */
+$lang['eo_XX']['DownloadSimplePage.ss']['DownloadsHeader']= 'Elektita: LibreOffice <b>%s</b>';
+$lang['eo_XX']['DownloadSimplePage.ss']['NotWanted']      = 'Ĉu tiu estas la versio bezonata?';
+/* will be displayed instead of the dl-buttons */
+$lang['eo_XX']['DownloadSimplePage.ss']['NoRegularDL']    = 'Neniu normalaj instalaĵaj dosieroj disponeblas.<br/>Bonvolu ŝanĝi vian elekton aŭ elektu iun el la pluaj elŝutaĵoj malsupre.';
+/* watch out for proper quoting */
+$lang['eo_XX']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Se vi serĉas malnovajn versiojn, bonvolu viziti nian <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">arĥivon de elŝutaĵoj</a>.';
+/* will be formatted as link */
+$lang['eo_XX']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Ŝanĝi la lingvon';
+$lang['eo_XX']['DownloadSimplePage.ss']['ChangeVersion']  = 'Ŝanĝi la version:';
+/* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
+$lang['eo_XX']['DownloadSimplePage.ss']['ChangeOS']       = 'Ŝanĝi la <abbr title="Operating System">mastruman sistemon</abbr>:';
 $lang['eo_XX']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
 $lang['eo_XX']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Rigardu je la md5sum kaj listo de elŝutaj serviloj por la dosiero';
 $lang['eo_XX']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Ĉefa instalilo';
@@ -40,12 +67,8 @@ $lang['eo_XX']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['eo_XX']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Elŝuti la dosierojn per BitTorrent';
 $lang['eo_XX']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versio %s';
 $lang['eo_XX']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Bonvolu elekti vian lingvon';
-$lang['eo_XX']['DownloadSimplePage.ss']['TypeDescBox'] = 'KD/DVD-kopioj kun instaliloj por ĉiuj platformoj';
-$lang['eo_XX']['DownloadSimplePage.ss']['TypeDescMulti'] = 'Por pluraj platformoj';
-$lang['eo_XX']['DownloadSimplePage.ss']['TypeDescSrc'] = 'Fontkodo';
-$lang['eo_XX']['DownloadSimplePage.ss']['TypeOr'] = 'aŭ';
-$lang['eo_XX']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Internaj eldonoj';
-$lang['eo_XX']['DownloadSimplePage.ss']['VersionsPrereleaseText'] = 'Sube, vi povas elŝuti internan version de la sekva versio de LibreOffice por eksperimenti, testi kvaliton, ktp. Ni ne celas tiajn versiojn por ĝenerala uzado.';
+$lang['eo_XX']['DownloadSimplePage.ss']['TypeOr'] = 'aŭ elŝuti';
+$lang['eo_XX']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'internajn eldonojn:';
 $lang['eo_XX']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Rekomendita';
 
 $lang['eo_XX']['LocaleName']['af'] = 'Afrikansa';
@@ -53,7 +76,6 @@ $lang['eo_XX']['LocaleName']['ar'] = 'Araba';
 $lang['eo_XX']['LocaleName']['as'] = 'Asama';
 $lang['eo_XX']['LocaleName']['ast'] = 'Asturia';
 $lang['eo_XX']['LocaleName']['be'] = 'Belorusa';
-$lang['eo_XX']['LocaleName']['be-BY'] = 'Belorusa';
 $lang['eo_XX']['LocaleName']['bg'] = 'Bulgara';
 $lang['eo_XX']['LocaleName']['bn'] = 'Bengala';
 $lang['eo_XX']['LocaleName']['bo'] = 'Tibeta';
