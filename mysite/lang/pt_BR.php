@@ -71,6 +71,19 @@ $lang['pt_BR']['DownloadSimplePage.ss']['TypeOr'] = 'ou baixe';
 $lang['pt_BR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pré-lançamentos:';
 $lang['pt_BR']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recomendado';
 
+$lang['pt_BR']['FancyPage.ss']['NOSCRIPT'] = 'O Javascript foi desativado no seu navegador.';
+$lang['pt_BR']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4.1';
+$lang['pt_BR']['FancyPage.ss']['DISCOVER'] = 'Descubra o LibreOffice';
+$lang['pt_BR']['FancyPage.ss']['DONATE']   = 'Faça uma doação';
+$lang['pt_BR']['FancyPage.ss']['MAINSITE'] = 'Site principal';
+$lang['pt_BR']['FancyPage.ss']['DLBADGE']  = 'Baixe o<br/><strong>Libre</strong>Office<br/>já&nbsp;!';
+$lang['pt_BR']['FancyPage.ss']['SUITE_H']  = 'Suite Office Livre';
+$lang['pt_BR']['FancyPage.ss']['SUITE']    = 'LibreOffice 4.1: Um sonho de 12 anos da comunidade de software livre.';
+$lang['pt_BR']['FancyPage.ss']['FUN_H']    = 'É Divertido';
+$lang['pt_BR']['FancyPage.ss']['FUN']      = 'O LibreOffice é o projeto mais amigável e de rápido crescimento no mundo do software livre. Temos o compromisso de produzir um grande software livre e grátis.<br/><a href="https://www.documentfoundation.org/foundation/">Saiba mais sobre nós e sobre nossos valores</a>';
+$lang['pt_BR']['FancyPage.ss']['PEOPLE_H'] = 'Gente fant&aacute;stica';
+$lang['pt_BR']['FancyPage.ss']['PEOPLE']   = 'O LibreOffice é mais que um software. É feito de gente, de cultura, de criação, compartilhamento e colaboração.<br/>Existimos e crescemos graças aos volunt&aacute;rios do projeto e temos muitos papéis para você: da engenharia de software ao suporte para a comunidade passando pela inovação e criatividade.<br/><a href="https://www.libreoffice.org/get-involved/">Venha para o LibreOffice já !</a>';
+
 $lang['pt_BR']['LocaleName']['af'] = 'Africâner';
 $lang['pt_BR']['LocaleName']['ar'] = 'Árabe';
 $lang['pt_BR']['LocaleName']['as'] = 'Assamês';

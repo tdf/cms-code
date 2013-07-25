@@ -252,7 +252,7 @@ JS
 	}
 
 	public function Banner() {
-		//return false;
+		return false;
 		if ($this->SubsiteID == 13) {
 			/* no donation banner for fi site */
 			return false;
