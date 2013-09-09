@@ -15,9 +15,9 @@ $lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['fr_FR']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['fr_FR']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['fr_FR']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['fr_FR']['DonatePage']['DLRefreshMsg']= 'Votre téléchargement %s va bientôt commencer. Veuillez cliquer sur le lien dans le cas où il ne démarre pas.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['fr_FR']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['fr_FR']['DonatePage']['DLOptional']  = 'Vous trouverez les téléchargements facultatifs sur la gauche.';
 
 $lang['fr_FR']['Downloadpage']['BITTORRENT']='Télécharger en utilisant BitTorrent';
 $lang['fr_FR']['Downloadpage']['DETAILLINK']='Obtenir des détails (md5sum, ...)';
@@ -34,17 +34,17 @@ $lang['fr_FR']['Navigation']['TOTOP']     ='⬆ en haut';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Vous devez télécharger et installer ces fichiers dans l\'ordre :';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Développeurs';
 /* %s will be replaced with OS/arch, version, language */
-$lang['fr_FR']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['fr_FR']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['fr_FR']['DownloadSimplePage.ss']['DownloadsHeader']= 'Sélectionné : LibreOffice <b>%s</b>';
+$lang['fr_FR']['DownloadSimplePage.ss']['NotWanted']      = 'Ce n\'est pas la version que vous souhaitez ?';
 /* will be displayed instead of the dl-buttons */
-$lang['fr_FR']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+$lang['fr_FR']['DownloadSimplePage.ss']['NoRegularDL']    = 'Aucun fichier d\'installation régulière n\'est disponible.<br/>Veuillez modifier la sélection ou choisir un téléchargement supplémentaire ci-dessous.';
 /* watch out for proper quoting */
-$lang['fr_FR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['fr_FR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Si vous cherchez une ancienne version, veuillez visiter nos <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">archives de téléchargement</a>.';
 /* will be formatted as link */
-$lang['fr_FR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['fr_FR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['fr_FR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Modifier la langue';
+$lang['fr_FR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Modifier la version :';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['fr_FR']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['fr_FR']['DownloadSimplePage.ss']['ChangeOS']       = 'Modifier l\'<abbr title="Operating System">OS</abbr> :';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Voir les md5sum et une liste de miroirs de téléchargement du fichier';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Installeur principal';
@@ -67,8 +67,8 @@ $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Télécharger les fichiers en utlisant BitTorrent';
 $lang['fr_FR']['DownloadSimplePage.ss']['DownloadsVersion'] = 'version %s';
 $lang['fr_FR']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Veuillez sélectionner votre langue';
-$lang['fr_FR']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['fr_FR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['fr_FR']['DownloadSimplePage.ss']['TypeOr'] = 'ou télécharger';
+$lang['fr_FR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Préversions :';
 $lang['fr_FR']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recommandé';
 
 $lang['fr_FR']['LocaleName']['af'] = 'Afrikaans';
