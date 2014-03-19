@@ -17,7 +17,7 @@ $lang['pt_PT']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
 /* %s is a regular downloadlink, with the filename as label */
 $lang['pt_PT']['DonatePage']['DLRefreshMsg']= 'A transferência de %s deve iniciar brevemente. Clique na ligação se a transferência não for iniciada.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['pt_PT']['DonatePage']['DLOptional']  = 'No lado esquerdo, encontra as transferências facultativas.';
+$lang['pt_PT']['DonatePage']['DLOptional']  = 'No lado direito, encontra as transferências opcionais.';
 
 $lang['pt_PT']['Downloadpage']['BITTORRENT']='Transferir via BitTorrent';
 $lang['pt_PT']['Downloadpage']['DETAILLINK']='Obter detalhes (md5sum,…)';
@@ -41,7 +41,7 @@ $lang['pt_PT']['DownloadSimplePage.ss']['NoRegularDL']    = 'Não existem fichei
 /* watch out for proper quoting */
 $lang['pt_PT']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Se quiser transferir uma versão anterior, aceda ao nosso <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">arquivo de transferências</a>.';
 /* will be formatted as link */
-$lang['pt_PT']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Mudar idioma:';
+$lang['pt_PT']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Mudar idioma';
 $lang['pt_PT']['DownloadSimplePage.ss']['ChangeVersion']  = 'Mudar versão:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['pt_PT']['DownloadSimplePage.ss']['ChangeOS']       = 'Mudar <abbr title="Operating System">sistema operativo</abbr>:';
@@ -70,6 +70,19 @@ $lang['pt_PT']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Por favor se
 $lang['pt_PT']['DownloadSimplePage.ss']['TypeOr'] = 'ou transfira';
 $lang['pt_PT']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Versões de teste:';
 $lang['pt_PT']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recomendado';
+
+$lang['pt_PT']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['pt_PT']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['pt_PT']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['pt_PT']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['pt_PT']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['pt_PT']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['pt_PT']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['pt_PT']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['pt_PT']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['pt_PT']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['pt_PT']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['pt_PT']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['pt_PT']['LocaleName']['af'] = 'Africânder';
 $lang['pt_PT']['LocaleName']['ar'] = 'Árabe';

@@ -15,7 +15,7 @@ $lang['ar_EG']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['ar_EG']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['ar_EG']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['ar_EG']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['ar_EG']['DonatePage']['DLRefreshMsg']= 'التنزيل %s الخاص بك سيبدأ حالًا. يرجى نقر الرابط في حال لم يبدأ.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
 $lang['ar_EG']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
@@ -23,8 +23,8 @@ $lang['ar_EG']['Downloadpage']['BITTORRENT']='نزّل باستخدام بت ت�
 $lang['ar_EG']['Downloadpage']['DETAILLINK']='اطّلع على التفاصيل (مجموع md5،...)';
 $lang['ar_EG']['Downloadpage']['DLSDK']     ='نزّل أدوات تطوير البرمجيات لتطوير الامتدادات والأدوات الخارجيّة';
 $lang['ar_EG']['Downloadpage']['DLSOURCE']  ='نزّل الكود المصدري لبناء مثبّتك الخاص';
-$lang['ar_EG']['Downloadpage']['DLSUITE']   ='طريقة أخرى لتنزيل ليبر أوفيس هي المجموعة الإنتاجية ';
-$lang['ar_EG']['Downloadpage']['NOTESTBUILDS']='There are no testing builds available at the moment.';
+$lang['ar_EG']['Downloadpage']['DLSUITE']   ='طريقة أخرى لتنزيل ليبر أوفيس هي المجموعة الإنتاجية';
+$lang['ar_EG']['Downloadpage']['NOTESTBUILDS']='لا تجارب بناء متوفّرة حاليًّا.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['ar_EG']['Navigation']['GOTOPAGE']  ='"اذهب إلى الصفحة %s"';
@@ -34,17 +34,17 @@ $lang['ar_EG']['Navigation']['TOTOP']     ='⬆ إلى الأعلى';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'تحتاج إلى تنزيل وتثبيت هذه الملفات بالترتيب:';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'المطورين';
 /* %s will be replaced with OS/arch, version, language */
-$lang['ar_EG']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['ar_EG']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['ar_EG']['DownloadSimplePage.ss']['DownloadsHeader']= 'المختار: ليبر أوفيس <b>%s</b>';
+$lang['ar_EG']['DownloadSimplePage.ss']['NotWanted']      = 'ليس الإصدار الذي تريده؟';
 /* will be displayed instead of the dl-buttons */
-$lang['ar_EG']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+$lang['ar_EG']['DownloadSimplePage.ss']['NoRegularDL']    = 'لا تتوفّر ملفات تثبيت اعتياديّة.<br/>يرجى تغيير اختيارك أو انتقِ واحدًا من التنزيلات الإضافية أدناه.';
 /* watch out for proper quoting */
-$lang['ar_EG']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['ar_EG']['DownloadSimplePage.ss']['ViewDLArchive']  = 'إن كنت تبحث عن إصدارات قديمة، يرجى زيارة <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">أرشيف التنزيلات</a> خاصتنا.';
 /* will be formatted as link */
-$lang['ar_EG']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['ar_EG']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['ar_EG']['DownloadSimplePage.ss']['ChangeLanguage'] = 'غيّر اللغة';
+$lang['ar_EG']['DownloadSimplePage.ss']['ChangeVersion']  = 'غيّر الإصدار:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['ar_EG']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['ar_EG']['DownloadSimplePage.ss']['ChangeOS']       = 'غيّر <abbr title="Operating System">نظام التشغيل</abbr>:';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'معلومات';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'اطّلع على مجموع md5 وقائمة مستضيفي الملف';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'المثبت الرئيسي';
@@ -53,7 +53,7 @@ $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = '�
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = 'صورة %s';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'تنزيل ملف ISO لإنشاء وسائط تثبيت';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = 'تثبيت %s';
-$lang['ar_EG']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'تثبيت LibreOffice %s عبرمركز Intel AppUp.';
+$lang['ar_EG']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'تثبيت ليبر أوفيس %s عبر مركز Intel AppUp.';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'الحزم';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'التطبيقات المحمولة';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'نسخة محمولة من ليبر أوفيس حُزّمت في هيئة PortableApps.com، لذا تستطيع أخذ كل مستنداتك و كل شيء تريده إلى العمل من USB، الوِب، أو القرص المحلي. لمعلومات أكثر طالع <a href="http://portableapps.com/">PortableApps.com</a>.';
@@ -67,9 +67,22 @@ $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'تورنت';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'نزّل الملفات باستخدام بت تورنت';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsVersion'] = 'الإصدار %s';
 $lang['ar_EG']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'يرجى اختيار لغتك';
-$lang['ar_EG']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['ar_EG']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['ar_EG']['DownloadSimplePage.ss']['TypeOr'] = 'أو نزّل';
+$lang['ar_EG']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'النسخ التجريبية:';
 $lang['ar_EG']['DownloadSimplePage.ss']['VersionsRecommended'] = 'يُنصَح به';
+
+$lang['ar_EG']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['ar_EG']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['ar_EG']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['ar_EG']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['ar_EG']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['ar_EG']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['ar_EG']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['ar_EG']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['ar_EG']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['ar_EG']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['ar_EG']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['ar_EG']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['ar_EG']['LocaleName']['af'] = 'الأفريكانية';
 $lang['ar_EG']['LocaleName']['ar'] = 'العربية';

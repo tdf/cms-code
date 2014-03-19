@@ -4,10 +4,10 @@ global $lang;
 $lang['vi_VN']['Donationpage']['AMOUNT']='Số lượng:';
 
 
-$lang['vi_VN']['DonatePage']['BUTTON_CARD']   ='Donate via Credit Card';
-$lang['vi_VN']['DonatePage']['BUTTON_PAYPAL'] ='Donate via PayPal';
-$lang['vi_VN']['DonatePage']['CHOICE_DEFAULT']='Select one of the default values';
-$lang['vi_VN']['DonatePage']['CUSTOM_CHOICE'] ='Or enter a custom amount and currency<br/>(only those marked with * are also available via PayPal)';
+$lang['vi_VN']['DonatePage']['BUTTON_CARD']   ='Quyên góp bằng thẻ ghi nợ (Credit)';
+$lang['vi_VN']['DonatePage']['BUTTON_PAYPAL'] ='Quyên góp qua PayPal';
+$lang['vi_VN']['DonatePage']['CHOICE_DEFAULT']='Chọn một trong các giá trị mặc định';
+$lang['vi_VN']['DonatePage']['CUSTOM_CHOICE'] ='Hoặc nhập số lượng và đơn vị tiền tệ<br/>(chỉ có mục đánh dấu * là cũng góp được bằng PayPal)';
 $lang['vi_VN']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
 $lang['vi_VN']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
 $lang['vi_VN']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
@@ -15,16 +15,16 @@ $lang['vi_VN']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['vi_VN']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['vi_VN']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['vi_VN']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['vi_VN']['DonatePage']['DLRefreshMsg']= '%s sẽ được tải ngay sau đây. Nhấn vào liên kết nếu vẫn chưa tải được.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['vi_VN']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['vi_VN']['DonatePage']['DLOptional']  = 'Bạn có thể tìm các tuỳ chọn tải về ở bên trái.';
 
 $lang['vi_VN']['Downloadpage']['BITTORRENT']='Tải về bằng BitTorrent';
-$lang['vi_VN']['Downloadpage']['DETAILLINK']='Chi tiết (md5sum,...)';
+$lang['vi_VN']['Downloadpage']['DETAILLINK']='Xem chi tiết (md5sum,...)';
 $lang['vi_VN']['Downloadpage']['DLSDK']     ='Tải bộ SDK để phát triển các phần mở rộng';
 $lang['vi_VN']['Downloadpage']['DLSOURCE']  ='Tải mã nguồn để tạo bộ cài đặt riêng';
 $lang['vi_VN']['Downloadpage']['DLSUITE']   ='Tuỳ chọn tải khác';
-$lang['vi_VN']['Downloadpage']['NOTESTBUILDS']='There are no testing builds available at the moment.';
+$lang['vi_VN']['Downloadpage']['NOTESTBUILDS']='Hiện tại chưa có bản thử nghiệm nào.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['vi_VN']['Navigation']['GOTOPAGE']  ='"Đến trang %s"';
@@ -34,17 +34,17 @@ $lang['vi_VN']['Navigation']['TOTOP']     ='⬆ lên đầu';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Bạn cần tải và cài những tập tin này theo đúng thứ tự:';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Lập trình viên';
 /* %s will be replaced with OS/arch, version, language */
-$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['vi_VN']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsHeader']= 'Đã chọn: LibreOffice <b>%s</b>';
+$lang['vi_VN']['DownloadSimplePage.ss']['NotWanted']      = 'Không đúng phiên bản bạn cần?';
 /* will be displayed instead of the dl-buttons */
 $lang['vi_VN']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
 /* watch out for proper quoting */
-$lang['vi_VN']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['vi_VN']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Nếu bạn cần những phiên bản cũ, hãy xem trang <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">này</a>.';
 /* will be formatted as link */
-$lang['vi_VN']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['vi_VN']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['vi_VN']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Đổi ngôn ngữ';
+$lang['vi_VN']['DownloadSimplePage.ss']['ChangeVersion']  = 'Đổi phiên bản:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['vi_VN']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['vi_VN']['DownloadSimplePage.ss']['ChangeOS']       = 'Đổi <abbr title="Hệ điều hành">Hệ điều hành</abbr>:';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Thông tin';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Xem mã md5sum và danh sách các máy chủ của tập tin';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Bộ cài đặt chính';
@@ -56,20 +56,33 @@ $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = 'Cài đặ
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Cài đặt LibreOffice %s thông qua Intel AppUp Center.';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Đóng gói';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
-$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'Phiên bản LibreOffice được đóng gói với định dạng của PortableApps.com, vì thế bạn có thể xử lí được tất cả tài liệu từ USB, trên mạng hay đĩa cục bộ. Xem <a href="http://portableapps.com/">PortableApps.com</a> để biết thêm chi tiết.';
-$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'This is a pre-release version not meant for general use.';
+$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'LibreOffice được đóng gói với định dạng của PortableApps.com, vì thế bạn có thể xử lí được tất cả tài liệu từ USB, trên mạng hay đĩa cục bộ. Xem <a href="http://portableapps.com/">PortableApps.com</a> để biết thêm chi tiết.';
+$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'Đây là bản thử nghiệm, không dùng được cho công việc.';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = 'Handy resources';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsSdkHeader'] = 'Software Development Kit (SDK)';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsSdkText'] = 'Tải bộ SDK để phát triển các phần mở rộng.';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsSrcHeader'] = 'Mã nguồn';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsSrcText'] = 'LibreOffice là một dự án mã nguồn mở và dĩ nhiên bạn có thể tải về mã nguồn để tạo bản cài đặt riêng.';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
-$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Tải các tập tin sử dụng BitTorrent';
+$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Tải các tập tin bằng BitTorrent';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsVersion'] = 'phiên bản %s';
 $lang['vi_VN']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Hãy chọn ngôn ngữ';
-$lang['vi_VN']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['vi_VN']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['vi_VN']['DownloadSimplePage.ss']['TypeOr'] = 'hoặc tải về';
+$lang['vi_VN']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Bản thử nghiệm:';
 $lang['vi_VN']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Khuyên dùng';
+
+$lang['vi_VN']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['vi_VN']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['vi_VN']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['vi_VN']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['vi_VN']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['vi_VN']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['vi_VN']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['vi_VN']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['vi_VN']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['vi_VN']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['vi_VN']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['vi_VN']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['vi_VN']['LocaleName']['af'] = 'Afrikaans';
 $lang['vi_VN']['LocaleName']['ar'] = 'Ả rập';
@@ -91,8 +104,8 @@ $lang['vi_VN']['LocaleName']['de'] = 'Đức';
 $lang['vi_VN']['LocaleName']['dgo'] = 'Dogri';
 $lang['vi_VN']['LocaleName']['dz'] = 'Dzongkha';
 $lang['vi_VN']['LocaleName']['el'] = 'Hy Lạp';
-$lang['vi_VN']['LocaleName']['en-GB'] = 'Tiếng Anh (GB)';
-$lang['vi_VN']['LocaleName']['en-US'] = 'Tiếng Anh (US)';
+$lang['vi_VN']['LocaleName']['en-GB'] = 'Tiếng Anh (Anh)';
+$lang['vi_VN']['LocaleName']['en-US'] = 'Tiếng Anh (Mỹ)';
 $lang['vi_VN']['LocaleName']['en-ZA'] = 'Tiếng Anh (ZA)';
 $lang['vi_VN']['LocaleName']['eo'] = 'Esperanto';
 $lang['vi_VN']['LocaleName']['es'] = 'Tây Ban Nha';

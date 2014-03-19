@@ -4,10 +4,10 @@ global $lang;
 $lang['cy_GB']['Donationpage']['AMOUNT']='Nifer:';
 
 
-$lang['cy_GB']['DonatePage']['BUTTON_CARD']   ='Donate via Credit Card';
-$lang['cy_GB']['DonatePage']['BUTTON_PAYPAL'] ='Donate via PayPal';
-$lang['cy_GB']['DonatePage']['CHOICE_DEFAULT']='Select one of the default values';
-$lang['cy_GB']['DonatePage']['CUSTOM_CHOICE'] ='Or enter a custom amount and currency<br/>(only those marked with * are also available via PayPal)';
+$lang['cy_GB']['DonatePage']['BUTTON_CARD']   ='Cyfrannwch drwy Gerdyn Credyd';
+$lang['cy_GB']['DonatePage']['BUTTON_PAYPAL'] ='Cyfrannwch drwy PayPal';
+$lang['cy_GB']['DonatePage']['CHOICE_DEFAULT']='Dewiswch un o\'r gwerthoedd ragosodedig';
+$lang['cy_GB']['DonatePage']['CUSTOM_CHOICE'] ='Neu cynigwch swm neu arian gwahanol<br/>(dim ond rheini sydd wedi eu nodi gyda * sydd hefyd ar gael drwy PayPal)';
 $lang['cy_GB']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
 $lang['cy_GB']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
 $lang['cy_GB']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
@@ -15,16 +15,16 @@ $lang['cy_GB']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['cy_GB']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['cy_GB']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['cy_GB']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['cy_GB']['DonatePage']['DLRefreshMsg']= 'Dylai llwytho i lawr %s yn dechrau cyn bo hir. Cliciwch ar y ddolen os na fydd yn cychwyn.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['cy_GB']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['cy_GB']['DonatePage']['DLOptional']  = 'Gallwch ddod o hyd i\'r llwytho i lawr dewisol ar y chwith.';
 
 $lang['cy_GB']['Downloadpage']['BITTORRENT']='Llwytho i lawr gyda BitTorrent';
 $lang['cy_GB']['Downloadpage']['DETAILLINK']='Manylion (md5sum,…)';
 $lang['cy_GB']['Downloadpage']['DLSDK']     ='Llwythwch i lawr yr SDK ar gyfer datblygu estyniadau ag offer allanol';
 $lang['cy_GB']['Downloadpage']['DLSOURCE']  ='Llwythwch y cod ffynhonnell i lawr i adeiladu eich gosodwr eich hun';
 $lang['cy_GB']['Downloadpage']['DLSUITE']   ='Ffordd arall i lwytho i lawr LibreOffice, y casgliad cynhyrchiol';
-$lang['cy_GB']['Downloadpage']['NOTESTBUILDS']='There are no testing builds available at the moment.';
+$lang['cy_GB']['Downloadpage']['NOTESTBUILDS']='Nid oes fersiynau prawf ar gael ar hyn o bryd.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['cy_GB']['Navigation']['GOTOPAGE']  ='"Mynd i dudalen %s"';
@@ -34,17 +34,17 @@ $lang['cy_GB']['Navigation']['TOTOP']     ='⬆ i\'r brig';
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Rhaid llwytho i lawr a gosod y ffeiliau hyn er mwyn:';
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Datblygwyr';
 /* %s will be replaced with OS/arch, version, language */
-$lang['cy_GB']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['cy_GB']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['cy_GB']['DownloadSimplePage.ss']['DownloadsHeader']= 'Dewiswyd: LibreOffice <b>%s</b>';
+$lang['cy_GB']['DownloadSimplePage.ss']['NotWanted']      = 'Nid y fersiwn hoffech chi ei gael?';
 /* will be displayed instead of the dl-buttons */
-$lang['cy_GB']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+$lang['cy_GB']['DownloadSimplePage.ss']['NoRegularDL']    = 'Nid oes ffeiliau gosod arferol ar gael.<br/>Newidiwch eich dewis neu ddewis un o\'r rhai ychwanegol isod.';
 /* watch out for proper quoting */
-$lang['cy_GB']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['cy_GB']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Os ydych yn edrych am un hŷn, ewch i\'r <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">archif</a>.';
 /* will be formatted as link */
-$lang['cy_GB']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['cy_GB']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['cy_GB']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Newid yr iaith';
+$lang['cy_GB']['DownloadSimplePage.ss']['ChangeVersion']  = 'Newid y fersiwn:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['cy_GB']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['cy_GB']['DownloadSimplePage.ss']['ChangeOS']       = 'Newid <abbr title="Operating System">System Weithredu</abbr>:';
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Gwybodaeth';
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Gweld y md5sum a rhestr o ddrychau llwytho i lawr y ffeil';
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Prif osodwr';
@@ -67,9 +67,22 @@ $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Llwytho i lawr y ffeiliau gan ddefnyddio BitTorrent';
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsVersion'] = 'fersiwn %s';
 $lang['cy_GB']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Dewiswch eich iaith';
-$lang['cy_GB']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['cy_GB']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['cy_GB']['DownloadSimplePage.ss']['TypeOr'] = 'neu lwytho i lawr';
+$lang['cy_GB']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Rhag ryddhad:';
 $lang['cy_GB']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Argymhellir';
+
+$lang['cy_GB']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['cy_GB']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['cy_GB']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['cy_GB']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['cy_GB']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['cy_GB']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['cy_GB']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['cy_GB']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['cy_GB']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['cy_GB']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['cy_GB']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['cy_GB']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['cy_GB']['LocaleName']['af'] = 'Affrikans';
 $lang['cy_GB']['LocaleName']['ar'] = 'Arabeg';
@@ -83,7 +96,7 @@ $lang['cy_GB']['LocaleName']['br'] = 'Llydaweg';
 $lang['cy_GB']['LocaleName']['brx'] = 'Bodo (India)';
 $lang['cy_GB']['LocaleName']['bs'] = 'Bosnieg';
 $lang['cy_GB']['LocaleName']['ca'] = 'Catalaneg';
-$lang['cy_GB']['LocaleName']['ca-XV'] = 'Catalaneg Valencia';
+$lang['cy_GB']['LocaleName']['ca-XV'] = 'Catalaneg valencia';
 $lang['cy_GB']['LocaleName']['cs'] = 'Tsiec';
 $lang['cy_GB']['LocaleName']['cy'] = 'Cymraeg';
 $lang['cy_GB']['LocaleName']['da'] = 'Daneg';
@@ -133,7 +146,7 @@ $lang['cy_GB']['LocaleName']['mni'] = 'Manipuri';
 $lang['cy_GB']['LocaleName']['mr'] = 'Marathi';
 $lang['cy_GB']['LocaleName']['my'] = 'Burmeg';
 $lang['cy_GB']['LocaleName']['nb'] = 'Bokmål Norwyeg';
-$lang['cy_GB']['LocaleName']['ne'] = 'Nepali';
+$lang['cy_GB']['LocaleName']['ne'] = 'Nepaleg';
 $lang['cy_GB']['LocaleName']['nl'] = 'Iseldireg';
 $lang['cy_GB']['LocaleName']['nn'] = 'Norwyeg Nynorsk';
 $lang['cy_GB']['LocaleName']['nr'] = 'Ndebele (De)';

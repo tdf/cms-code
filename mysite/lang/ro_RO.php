@@ -15,9 +15,9 @@ $lang['ro_RO']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['ro_RO']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['ro_RO']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['ro_RO']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['ro_RO']['DonatePage']['DLRefreshMsg']= 'Descărcarea lui %s imediat începe. Dați clic pe legătură dacă totuși nu a început.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['ro_RO']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['ro_RO']['DonatePage']['DLOptional']  = 'Pe partea stângă puteți găsi și alte tipuri de descărcări.';
 
 $lang['ro_RO']['Downloadpage']['BITTORRENT']='Descarcare folosind BitTorrent';
 $lang['ro_RO']['Downloadpage']['DETAILLINK']='Detalii (md5sum, …)';
@@ -34,17 +34,17 @@ $lang['ro_RO']['Navigation']['TOTOP']     ='⬆ sus';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Trebuie descărcate și instalate următoarele fișiere în ordine:';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Dezvoltatori';
 /* %s will be replaced with OS/arch, version, language */
-$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['ro_RO']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selectat: LibreOffice <b>%s</b>';
+$lang['ro_RO']['DownloadSimplePage.ss']['NotWanted']      = 'Nu este versiunea dorită?';
 /* will be displayed instead of the dl-buttons */
-$lang['ro_RO']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+$lang['ro_RO']['DownloadSimplePage.ss']['NoRegularDL']    = 'Nu sunt disponibile pachete de instalare.<br/>Modificați selecția, sau selectați una din versiunile de mai jos.';
 /* watch out for proper quoting */
-$lang['ro_RO']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['ro_RO']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Dacă căutați o versiune mai veche, vizitați <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">arhiva de descărcări</a>.';
 /* will be formatted as link */
-$lang['ro_RO']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['ro_RO']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['ro_RO']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Alegeți limba';
+$lang['ro_RO']['DownloadSimplePage.ss']['ChangeVersion']  = 'Alegeți versiunea:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['ro_RO']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['ro_RO']['DownloadSimplePage.ss']['ChangeOS']       = 'Alegeți sistemul de operare:';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informații';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Afișare md5sum și lista serverelor alternative pentru descărcarea fișierului';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Kit de instalare principal';
@@ -67,9 +67,22 @@ $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Descărcare fișiere cu ajutorul BitTorrent';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versiunea %s';
 $lang['ro_RO']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Vă rog selectați limba dorită';
-$lang['ro_RO']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['ro_RO']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['ro_RO']['DownloadSimplePage.ss']['TypeOr'] = 'sau descărcați:';
+$lang['ro_RO']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Versiuni în dezvoltare:';
 $lang['ro_RO']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recomandat';
+
+$lang['ro_RO']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['ro_RO']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['ro_RO']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['ro_RO']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['ro_RO']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['ro_RO']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['ro_RO']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['ro_RO']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['ro_RO']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['ro_RO']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['ro_RO']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['ro_RO']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['ro_RO']['LocaleName']['af'] = 'Afrikaans';
 $lang['ro_RO']['LocaleName']['ar'] = 'Arabic';

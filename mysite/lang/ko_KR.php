@@ -15,9 +15,9 @@ $lang['ko_KR']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['ko_KR']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['ko_KR']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['ko_KR']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['ko_KR']['DonatePage']['DLRefreshMsg']= '%s 다운로드가 곧 시작됩니다. 다운로드가 시작되지 않으면 링크를 클릭하십시오.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['ko_KR']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['ko_KR']['DonatePage']['DLOptional']  = '왼쪽 메뉴에서 다른 버전을 다운로드받을 수 있습니다.';
 
 $lang['ko_KR']['Downloadpage']['BITTORRENT']='비트토렌트로 내려받기';
 $lang['ko_KR']['Downloadpage']['DETAILLINK']='자세한 정보 가져오기(md5sum 등 …)';
@@ -34,17 +34,17 @@ $lang['ko_KR']['Navigation']['TOTOP']     ='⬆ 맨 위로';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadNeededFiles'] = '다음 파일들을 내려받아 순서대로 설치하세요.';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = '개발자';
 /* %s will be replaced with OS/arch, version, language */
-$lang['ko_KR']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['ko_KR']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['ko_KR']['DownloadSimplePage.ss']['DownloadsHeader']= '선택된 버전: LibreOffice <b>%s</b>';
+$lang['ko_KR']['DownloadSimplePage.ss']['NotWanted']      = '원하는 버전이 아닙니까?';
 /* will be displayed instead of the dl-buttons */
-$lang['ko_KR']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+$lang['ko_KR']['DownloadSimplePage.ss']['NoRegularDL']    = '설치 파일이 없습니다.<br/> 선택 내용을 변경하거나 아래쪽의 추가 다운로드에서 선택하십시오.';
 /* watch out for proper quoting */
-$lang['ko_KR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['ko_KR']['DownloadSimplePage.ss']['ViewDLArchive']  = '오래된 버전을 내려받으려면, <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">다운로드 저장소</a>를 방문하십시오.';
 /* will be formatted as link */
-$lang['ko_KR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['ko_KR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['ko_KR']['DownloadSimplePage.ss']['ChangeLanguage'] = '언어 변경하기';
+$lang['ko_KR']['DownloadSimplePage.ss']['ChangeVersion']  = '버전 변경하기:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['ko_KR']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['ko_KR']['DownloadSimplePage.ss']['ChangeOS']       = '<abbr title="Operating System">운영체제</abbr> 변경:';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = '정보';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = '파일의 md5sum과 내려받기 미러 목록을 확인하세요.';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = '기본 설치 프로그램';
@@ -67,9 +67,22 @@ $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = '토렌트';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = '비트토렌트를 이용하여 파일 내려받기';
 $lang['ko_KR']['DownloadSimplePage.ss']['DownloadsVersion'] = '%s 버전';
 $lang['ko_KR']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = '사용할 언어를 선택하세요.';
-$lang['ko_KR']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['ko_KR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['ko_KR']['DownloadSimplePage.ss']['TypeOr'] = '또는 다운로드';
+$lang['ko_KR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = '시험판:';
 $lang['ko_KR']['DownloadSimplePage.ss']['VersionsRecommended'] = '권장';
+
+$lang['ko_KR']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['ko_KR']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['ko_KR']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['ko_KR']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['ko_KR']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['ko_KR']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['ko_KR']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['ko_KR']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['ko_KR']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['ko_KR']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['ko_KR']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['ko_KR']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['ko_KR']['LocaleName']['af'] = 'Afrikaans';
 $lang['ko_KR']['LocaleName']['ar'] = 'Arabic';

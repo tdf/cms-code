@@ -15,9 +15,9 @@ $lang['id_ID']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['id_ID']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['id_ID']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['id_ID']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['id_ID']['DonatePage']['DLRefreshMsg']= 'Pengunduhan %s Anda mestinya segera dimulai. Harap klik pada taut bila tidak mulai.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['id_ID']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['id_ID']['DonatePage']['DLOptional']  = 'Anda bisa temukan unduhan opsional di kiri.';
 
 $lang['id_ID']['Downloadpage']['BITTORRENT']='Unduh memakai BitTorrent';
 $lang['id_ID']['Downloadpage']['DETAILLINK']='Dapatkan rincian (md5sum,...)';
@@ -34,17 +34,17 @@ $lang['id_ID']['Navigation']['TOTOP']     ='⬆ ke puncak';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Anda perlu mengunduh dan memasang berkas-berkas ini secara berurut:';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Pengembang';
 /* %s will be replaced with OS/arch, version, language */
-$lang['id_ID']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['id_ID']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['id_ID']['DownloadSimplePage.ss']['DownloadsHeader']= 'Dipilih: LibreOffice <b>%s</b>';
+$lang['id_ID']['DownloadSimplePage.ss']['NotWanted']      = 'Bukan versi yang Anda inginkan?';
 /* will be displayed instead of the dl-buttons */
-$lang['id_ID']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+$lang['id_ID']['DownloadSimplePage.ss']['NoRegularDL']    = 'Tak tersedia berkas instalasi reguler.<br/>Harap ubah pilihan Anda atau ambil satu dari unduhan tambahan di bawah.';
 /* watch out for proper quoting */
-$lang['id_ID']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['id_ID']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Bila Anda mencari versi lama, harap kunjungi <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">arsip unduhan</a> kami.';
 /* will be formatted as link */
-$lang['id_ID']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['id_ID']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['id_ID']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Ubah bahasa';
+$lang['id_ID']['DownloadSimplePage.ss']['ChangeVersion']  = 'Ubah versi:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['id_ID']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['id_ID']['DownloadSimplePage.ss']['ChangeOS']       = 'Ubah <abbr title="Operating System">OS</abbr>:';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Lihat md5sum dan daftar cermin unduhan bagi berkas';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Pemasang utama';
@@ -67,9 +67,22 @@ $lang['id_ID']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Unduh berkas memakai BitTorrent';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versi %s';
 $lang['id_ID']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Silakan pilih bahasa Anda';
-$lang['id_ID']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['id_ID']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['id_ID']['DownloadSimplePage.ss']['TypeOr'] = 'atau unduh';
+$lang['id_ID']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Prarilis:';
 $lang['id_ID']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Disarankan';
+
+$lang['id_ID']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['id_ID']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['id_ID']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['id_ID']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['id_ID']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['id_ID']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['id_ID']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['id_ID']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['id_ID']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['id_ID']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['id_ID']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['id_ID']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['id_ID']['LocaleName']['af'] = 'Afrikaan';
 $lang['id_ID']['LocaleName']['ar'] = 'Arab';

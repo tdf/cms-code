@@ -7,7 +7,7 @@ $lang['lt_LT']['Donationpage']['AMOUNT']='Paramos suma:';
 $lang['lt_LT']['DonatePage']['BUTTON_CARD']   ='Paremti kreditine kortele';
 $lang['lt_LT']['DonatePage']['BUTTON_PAYPAL'] ='Paremti per „PayPal“';
 $lang['lt_LT']['DonatePage']['CHOICE_DEFAULT']='Pasirinkite vieną iš numatytųjų dydžių';
-$lang['lt_LT']['DonatePage']['CUSTOM_CHOICE'] ='Arba įveskite norimą skaičių bei valiutą<br/>(PayPal aptarnauja tik * pažymėtas valiutas)';
+$lang['lt_LT']['DonatePage']['CUSTOM_CHOICE'] ='Arba įveskite norimą skaičių bei valiutą<br/>(„PayPal“ aptarnauja tik * pažymėtas valiutas)';
 $lang['lt_LT']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='75';
 $lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '15';
 $lang['lt_LT']['DonatePage']['DEFAULT_AMOUNT_EUR10']='30';
@@ -70,6 +70,19 @@ $lang['lt_LT']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Pasirinkite 
 $lang['lt_LT']['DownloadSimplePage.ss']['TypeOr'] = 'arba siųstis';
 $lang['lt_LT']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testuojamosios versijos:';
 $lang['lt_LT']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Rekomenduojame';
+
+$lang['lt_LT']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['lt_LT']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['lt_LT']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['lt_LT']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['lt_LT']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['lt_LT']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['lt_LT']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['lt_LT']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['lt_LT']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['lt_LT']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['lt_LT']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['lt_LT']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['lt_LT']['LocaleName']['af'] = 'afrikanų';
 $lang['lt_LT']['LocaleName']['ar'] = 'arabų';
