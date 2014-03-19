@@ -24,7 +24,7 @@ $lang['de_DE']['FaqsHolder.ss']['VIEWPAGENUM'] = 'Seitennummer anzeigen';
 $lang['de_DE']['FaqsPage.ss']['RELATEDFAQ'] = 'Ähnlich';
 
 $lang['de_DE']['FaqsSearchResults.ss']['READMORE'] = 'Weiterlesen...';
-$lang['de_DE']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Ihre Suchanfrage lieferte keine Ergebnisse.';
+$lang['de_DE']['FaqsSearchResults.ss']['NORESULTSFAQS'] = 'Ihre Suchanfrage lieferte leider keine Ergebnisse.';
 
 $lang['de_DE']['FaqsTopWidget']['TITLE'] = 'Häufigste FAQs';
 $lang['de_DE']['FaqsTopWidget']['LIMIT'] = 'Zahl der anzuzeigenden FAQs';
