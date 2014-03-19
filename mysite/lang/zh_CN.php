@@ -1,7 +1,7 @@
 <?php
 global $lang;
 
-$lang['zh_CN']['Donationpage']['AMOUNT']='数目:';
+$lang['zh_CN']['Donationpage']['AMOUNT']='金额：';
 
 
 $lang['zh_CN']['DonatePage']['BUTTON_CARD']   ='通过信用卡捐款';
@@ -15,9 +15,9 @@ $lang['zh_CN']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['zh_CN']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['zh_CN']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['zh_CN']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['zh_CN']['DonatePage']['DLRefreshMsg']= '您的下载 %s 将在稍后开始。若没有开始，请点击链接。';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['zh_CN']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['zh_CN']['DonatePage']['DLOptional']  = '您可以在左侧找到可选下载项。';
 
 $lang['zh_CN']['Downloadpage']['BITTORRENT']='通过 BitTorrent 下载';
 $lang['zh_CN']['Downloadpage']['DETAILLINK']='获取文件详情 (md5 校验码等)';
@@ -31,45 +31,58 @@ $lang['zh_CN']['Navigation']['GOTOPAGE']  ='"访问 %s 页面"';
 $lang['zh_CN']['Navigation']['TOTOPTITLE']='滚动到页面顶部';
 $lang['zh_CN']['Navigation']['TOTOP']     ='⬆ 返回顶部';
 
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadNeededFiles'] = '您需要下载并安装这些文件才能:';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadNeededFiles'] = '您需要按顺序下载并安装这些文件：';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = '开发者';
 /* %s will be replaced with OS/arch, version, language */
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['zh_CN']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsHeader']= '已选择：LibreOffice <b>%s</b>';
+$lang['zh_CN']['DownloadSimplePage.ss']['NotWanted']      = '不是您想要的版本？';
 /* will be displayed instead of the dl-buttons */
-$lang['zh_CN']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+$lang['zh_CN']['DownloadSimplePage.ss']['NoRegularDL']    = '没有可用的常规安装文件。<br/>请更改您的选择或从下方的附加下载项中选取一个。';
 /* watch out for proper quoting */
-$lang['zh_CN']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['zh_CN']['DownloadSimplePage.ss']['ViewDLArchive']  = '若需要较早的版本，请访问我们的<a href="http://downloadarchive.documentfoundation.org/libreoffice/old">下载归档</a>。';
 /* will be formatted as link */
-$lang['zh_CN']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['zh_CN']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['zh_CN']['DownloadSimplePage.ss']['ChangeLanguage'] = '更换语言';
+$lang['zh_CN']['DownloadSimplePage.ss']['ChangeVersion']  = '更改版本：';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['zh_CN']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['zh_CN']['DownloadSimplePage.ss']['ChangeOS']       = '更改<abbr title="Operating System">操作系统</abbr>：';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInfoLink'] = '信息';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = '查看该文件的 md5 校验码及镜像下载点列表';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = '主安装程序';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice 内置帮助';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = '翻译版用户界面';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s 图像';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsIsoText'] = '下载 ISO 文件以创建安装媒体';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = '已翻译的用户界面';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s 镜像';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsIsoText'] = '下载 ISO 文件以创建安装介质';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = '%s 安装';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = '通过 Intel AppUp Center 安装 LibreOffice %s。';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = '软件包';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = '便捷应用';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'PortableApps.com 格式的 LibreOffice 便捷版本，可以通过 USB、云存储或本地驱动器携带所有文档及程序。更多信息请见 <a href="http://portableapps.com/">PortableApps.com</a>。';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = '打包';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsPortableText'] = '以PortableApps.com格式打包的LibreOffice便携版本，可以通过 USB、云存储或本地驱动器携带所有文档及程序。更多信息请见 <a href="http://portableapps.com/">PortableApps.com</a>。';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = '这是预发布版本，不适合常规用途。';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = '实用资源';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsSdkHeader'] = '软件开发工具包 (SDK)';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsSdkText'] = '下载用于开发扩展及外部工具的 SDK。';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsSrcHeader'] = '源码';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsSrcText'] = 'LibreOffice 是开源项目，因此您可以下载源码编译自己的安装程序。';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = '种子';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsSrcHeader'] = '源代码';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsSrcText'] = 'LibreOffice 是开源项目，因此您可以下载源代码以编译自己的安装程序。';
+$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'BT种子';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = '通过 BitTorrent 下载文件';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsVersion'] = '版本 %s';
 $lang['zh_CN']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = '请选择您的语言';
-$lang['zh_CN']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['zh_CN']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['zh_CN']['DownloadSimplePage.ss']['TypeOr'] = '或者下载';
+$lang['zh_CN']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = '预发行版本：';
 $lang['zh_CN']['DownloadSimplePage.ss']['VersionsRecommended'] = '推荐';
+
+$lang['zh_CN']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['zh_CN']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['zh_CN']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['zh_CN']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['zh_CN']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['zh_CN']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['zh_CN']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['zh_CN']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['zh_CN']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['zh_CN']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['zh_CN']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['zh_CN']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['zh_CN']['LocaleName']['af'] = '南非荷兰语';
 $lang['zh_CN']['LocaleName']['ar'] = '阿拉伯语';
@@ -88,7 +101,7 @@ $lang['zh_CN']['LocaleName']['cs'] = '捷克语';
 $lang['zh_CN']['LocaleName']['cy'] = '威尔士语';
 $lang['zh_CN']['LocaleName']['da'] = '丹麦语';
 $lang['zh_CN']['LocaleName']['de'] = '德语';
-$lang['zh_CN']['LocaleName']['dgo'] = 'Dogri 语';
+$lang['zh_CN']['LocaleName']['dgo'] = '多格拉语';
 $lang['zh_CN']['LocaleName']['dz'] = '不丹语';
 $lang['zh_CN']['LocaleName']['el'] = '希腊语';
 $lang['zh_CN']['LocaleName']['en-GB'] = '英语 (英国)';
@@ -158,7 +171,7 @@ $lang['zh_CN']['LocaleName']['sk'] = '斯洛伐克语';
 $lang['zh_CN']['LocaleName']['sl'] = '斯洛文尼亚语';
 $lang['zh_CN']['LocaleName']['sq'] = '阿尔巴尼亚语';
 $lang['zh_CN']['LocaleName']['sr'] = '塞尔维亚语 (西里尔)';
-$lang['zh_CN']['LocaleName']['ss'] = 'Swazi 语';
+$lang['zh_CN']['LocaleName']['ss'] = '斯威士语';
 $lang['zh_CN']['LocaleName']['st'] = '南索托语';
 $lang['zh_CN']['LocaleName']['sv'] = '瑞典语';
 $lang['zh_CN']['LocaleName']['sw-TZ'] = '斯瓦希里语';

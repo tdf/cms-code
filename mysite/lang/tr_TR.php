@@ -39,7 +39,7 @@ $lang['tr_TR']['DownloadSimplePage.ss']['NotWanted']      = 'İstediğiniz sür�
 /* will be displayed instead of the dl-buttons */
 $lang['tr_TR']['DownloadSimplePage.ss']['NoRegularDL']    = 'Normal kurulum dosyaları kullanılamıyor. <br/>Lütfen seçiminizi değiştirin veya aşağıdaki ek indirme seçeneklerinden birini seçin.';
 /* watch out for proper quoting */
-$lang['tr_TR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['tr_TR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Eğer eski sürümleri arıyorsanız, lütfen <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">indirme arşivi</a> sayfamızı ziyaret edin.';
 /* will be formatted as link */
 $lang['tr_TR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Dili değiştir';
 $lang['tr_TR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Sürümü değiştir:';
@@ -70,6 +70,19 @@ $lang['tr_TR']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Lütfen dili
 $lang['tr_TR']['DownloadSimplePage.ss']['TypeOr'] = 'veya indir';
 $lang['tr_TR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Test sürümleri:';
 $lang['tr_TR']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Tavsiye edilen';
+
+$lang['tr_TR']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['tr_TR']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['tr_TR']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['tr_TR']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['tr_TR']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['tr_TR']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['tr_TR']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['tr_TR']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['tr_TR']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['tr_TR']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['tr_TR']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['tr_TR']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['tr_TR']['LocaleName']['af'] = 'Afrikaca';
 $lang['tr_TR']['LocaleName']['ar'] = 'Arapça';

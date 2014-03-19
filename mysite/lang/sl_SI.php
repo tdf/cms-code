@@ -17,7 +17,7 @@ $lang['sl_SI']['DonatePage']['DEFAULT_CURRENCY']    ='EUR';
 /* %s is a regular downloadlink, with the filename as label */
 $lang['sl_SI']['DonatePage']['DLRefreshMsg']= 'Vaš prenos %s se bo začel v kratkem. Če se ne začne, kliknite povezavo.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['sl_SI']['DonatePage']['DLOptional']  = 'Možne prenose najdete na levi strani.';
+$lang['sl_SI']['DonatePage']['DLOptional']  = 'Možne prenose najdete na desni strani.';
 
 $lang['sl_SI']['Downloadpage']['BITTORRENT']='Prenesi z BitTorrentom';
 $lang['sl_SI']['Downloadpage']['DETAILLINK']='Poglej podrobnosti (md5sum, …)';
@@ -39,7 +39,7 @@ $lang['sl_SI']['DownloadSimplePage.ss']['NotWanted']      = 'To ni različica, k
 /* will be displayed instead of the dl-buttons */
 $lang['sl_SI']['DownloadSimplePage.ss']['NoRegularDL']    = 'Na voljo ni rednih namestitvenih datotek.<br/>Spremenite izbrano ali izberite med dodatnimi prenosi spodaj.';
 /* watch out for proper quoting */
-$lang['sl_SI']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['sl_SI']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Če iščete starejše različice, obiščite naš <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">arhiv prenosov</a>.';
 /* will be formatted as link */
 $lang['sl_SI']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Spremeni jezik';
 $lang['sl_SI']['DownloadSimplePage.ss']['ChangeVersion']  = 'Spremeni različico:';
@@ -70,6 +70,19 @@ $lang['sl_SI']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Izberite svo
 $lang['sl_SI']['DownloadSimplePage.ss']['TypeOr'] = 'ali prenesite';
 $lang['sl_SI']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Predizdaje:';
 $lang['sl_SI']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Priporočeno';
+
+$lang['sl_SI']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['sl_SI']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['sl_SI']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['sl_SI']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['sl_SI']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['sl_SI']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['sl_SI']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['sl_SI']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['sl_SI']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['sl_SI']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['sl_SI']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['sl_SI']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['sl_SI']['LocaleName']['af'] = 'afrikanščina';
 $lang['sl_SI']['LocaleName']['ar'] = 'arabščina';

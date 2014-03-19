@@ -4,9 +4,9 @@ global $lang;
 $lang['fa_IR']['Donationpage']['AMOUNT']='مقدار:';
 
 
-$lang['fa_IR']['DonatePage']['BUTTON_CARD']   ='هدیه از طریق کارت اعتباری';
+$lang['fa_IR']['DonatePage']['BUTTON_CARD']   ='هديه از طريق کارت اعتباری';
 $lang['fa_IR']['DonatePage']['BUTTON_PAYPAL'] ='هدیه از طریق پی‌پل';
-$lang['fa_IR']['DonatePage']['CHOICE_DEFAULT']='لطفاً یکی از مقادیر زیر را برگزینید';
+$lang['fa_IR']['DonatePage']['CHOICE_DEFAULT']='لطفاً يکی از مقادير پیش‌گزیده را برگزينيد';
 $lang['fa_IR']['DonatePage']['CUSTOM_CHOICE'] ='یا مقدار دلخواه و ارز را وارد کنید<br>(تنها آن‌هائی که با * مشخص شده‌اند، در پی‌پل نیز در دسترس هستند)';
 $lang['fa_IR']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
 $lang['fa_IR']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
@@ -15,16 +15,16 @@ $lang['fa_IR']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['fa_IR']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['fa_IR']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['fa_IR']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['fa_IR']['DonatePage']['DLRefreshMsg']= 'بارگيری %s به زودی آغاز می‌شود. اگر به صورت خودکار آغاز نشد، روی پيوند زير کليک کنید.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['fa_IR']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['fa_IR']['DonatePage']['DLOptional']  = 'شما می‌توانید بارگیری‌های اختیاری را در سمت چپ بیابید.';
 
 $lang['fa_IR']['Downloadpage']['BITTORRENT']='بارگیری بوسیله تورنت';
 $lang['fa_IR']['Downloadpage']['DETAILLINK']='دریافت جزئیات (مقدار کنترلی md5، ...)';
 $lang['fa_IR']['Downloadpage']['DLSDK']     ='دریافت جعبه ابزار تولید برای ایجاد نرم‌افزارهای الحاقی و ابزارهای خارجی.';
 $lang['fa_IR']['Downloadpage']['DLSOURCE']  ='دریافت کد منبع برای ساخت نصب کننده سفارشی';
 $lang['fa_IR']['Downloadpage']['DLSUITE']   ='روش‌های دیگر دریافت لیبره آفیس، محیط نرم‌افزارهای سودمند';
-$lang['fa_IR']['Downloadpage']['NOTESTBUILDS']='There are no testing builds available at the moment.';
+$lang['fa_IR']['Downloadpage']['NOTESTBUILDS']='هیچ نسخه آزمایشی در حال حاضر موجود نیست.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['fa_IR']['Navigation']['GOTOPAGE']  ='"برو به صفحه %s"';
@@ -34,17 +34,17 @@ $lang['fa_IR']['Navigation']['TOTOP']     ='⬆ به بالا';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'شما باید این پرونده‌ها را به ترتیب زیر دریافت و نصب کنید:';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'برنامه‌نویسان';
 /* %s will be replaced with OS/arch, version, language */
-$lang['fa_IR']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['fa_IR']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['fa_IR']['DownloadSimplePage.ss']['DownloadsHeader']= 'انتخاب شده: لیبره آفیس <b>%s</b>';
+$lang['fa_IR']['DownloadSimplePage.ss']['NotWanted']      = 'آیا اين نسخه مورد نظر شما نيست؟';
 /* will be displayed instead of the dl-buttons */
-$lang['fa_IR']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+$lang['fa_IR']['DownloadSimplePage.ss']['NoRegularDL']    = 'هیچ پرونده نصب عادی موجود نیست.<br/>لطفاً انتخاب خود را تغییر دهید یا یکی از بارگیری‌های اضافی زیر را برگزینید.';
 /* watch out for proper quoting */
-$lang['fa_IR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['fa_IR']['DownloadSimplePage.ss']['ViewDLArchive']  = 'اگر به دنبال نسخه‌های قدیمی می‌گردید، به سایت<a href="http://downloadarchive.documentfoundation.org/libreoffice/old">بایگانی نسخه‌های قدیمی</a> سر بزنید.';
 /* will be formatted as link */
-$lang['fa_IR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['fa_IR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['fa_IR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'تغيير زبان';
+$lang['fa_IR']['DownloadSimplePage.ss']['ChangeVersion']  = 'تغيير نسخه';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['fa_IR']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['fa_IR']['DownloadSimplePage.ss']['ChangeOS']       = 'تغییر <abbr title="Operating System">سیستم عامل</abbr>:';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'اطلاعات';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'جمع کنترلی md5 و فهرست آینه‌های بارگیری پرونده را مشاهده کنید';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'نصب کننده اصلی';
@@ -52,8 +52,8 @@ $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'را�
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'رابط کاربری ترجمه شده';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = 'تصویر %s';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'دریافت یک پرونده ISO برای ایجاد رسانه نصب';
-$lang['fa_IR']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = '%s install';
-$lang['fa_IR']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Install LibreOffice %s via the Intel AppUp Center.';
+$lang['fa_IR']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = 'نصب %s';
+$lang['fa_IR']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'نصب لیبره آفیس %s از طریق مرکز نصب نرم‌افزار اینتل.';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'بسته';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'برنامه قابل حمل';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'نسخه قابل حمل لیبره آفیس در قالب PortableApps.com بسته‌بندی شده است تا شما بتوانید همه مستندات و هر چیزی که برای کار کردن نیاز دارید در یک حافظه USB، دیسک‌گردان محلی یا محیط محاسبات ابری در اختیار داشته باشید. برای اطلاعات بیشتر <a href="http://portableapps.com/">PortableApps.com</a> را ببینید.';
@@ -67,9 +67,22 @@ $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'تورنت';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'دریافت پرونده با استفاده از بیت تورنت';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsVersion'] = 'نسخه %s';
 $lang['fa_IR']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'زبان خود را انتخاب کنید';
-$lang['fa_IR']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['fa_IR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['fa_IR']['DownloadSimplePage.ss']['TypeOr'] = 'يا بارگيری کنيد';
+$lang['fa_IR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'نسخه‌های پیش از انتشار';
 $lang['fa_IR']['DownloadSimplePage.ss']['VersionsRecommended'] = 'توصیه شده';
+
+$lang['fa_IR']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['fa_IR']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['fa_IR']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['fa_IR']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['fa_IR']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['fa_IR']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['fa_IR']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['fa_IR']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['fa_IR']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['fa_IR']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['fa_IR']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['fa_IR']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['fa_IR']['LocaleName']['af'] = 'آفریقائی';
 $lang['fa_IR']['LocaleName']['ar'] = 'عربی';

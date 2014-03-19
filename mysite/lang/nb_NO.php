@@ -15,9 +15,9 @@ $lang['nb_NO']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['nb_NO']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['nb_NO']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['nb_NO']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['nb_NO']['DonatePage']['DLRefreshMsg']= 'Nedlastingen av %1 vil om kort tid starte. Klikk på lenka hvis den ikke gjør dette automatisk.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['nb_NO']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['nb_NO']['DonatePage']['DLOptional']  = 'Du finner de alternative nedlastingene til venstre.';
 
 $lang['nb_NO']['Downloadpage']['BITTORRENT']='Last ned med BitTorrent';
 $lang['nb_NO']['Downloadpage']['DETAILLINK']='Få detaljer (md5sum, …)';
@@ -34,17 +34,17 @@ $lang['nb_NO']['Navigation']['TOTOP']     ='⬆ til toppen';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Filene må lastes ned og installeres i denne rekkefølgen:';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Utviklere';
 /* %s will be replaced with OS/arch, version, language */
-$lang['nb_NO']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['nb_NO']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['nb_NO']['DownloadSimplePage.ss']['DownloadsHeader']= 'Valgt: LibreOffice <b>%s</b>';
+$lang['nb_NO']['DownloadSimplePage.ss']['NotWanted']      = 'Ikke den versjonen du vil ha?';
 /* will be displayed instead of the dl-buttons */
-$lang['nb_NO']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+$lang['nb_NO']['DownloadSimplePage.ss']['NoRegularDL']    = 'Ingen vanlige installasjonsfiler er tilgjengelige.<br/>Endre valget ditt, eller velg et av de alternative valgene under.';
 /* watch out for proper quoting */
-$lang['nb_NO']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['nb_NO']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Hvis du leter etter gamle versjoner, besøk <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">arkivet</a>.';
 /* will be formatted as link */
-$lang['nb_NO']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['nb_NO']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['nb_NO']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Endre språk';
+$lang['nb_NO']['DownloadSimplePage.ss']['ChangeVersion']  = 'Endre versjon:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['nb_NO']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['nb_NO']['DownloadSimplePage.ss']['ChangeOS']       = 'Endre <abbr title="Operativsystem">OS</abbr>:';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informasjon';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Se MD5-summen og en liste med speil som fila kan lastes ned fra';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Hovedinstallasjon';
@@ -67,9 +67,22 @@ $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Last ned filene med BitTorrent';
 $lang['nb_NO']['DownloadSimplePage.ss']['DownloadsVersion'] = 'versjon %s';
 $lang['nb_NO']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Velg språk';
-$lang['nb_NO']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['nb_NO']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['nb_NO']['DownloadSimplePage.ss']['TypeOr'] = 'eller nedlasting';
+$lang['nb_NO']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testversjoner:';
 $lang['nb_NO']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Anbefalt';
+
+$lang['nb_NO']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['nb_NO']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['nb_NO']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['nb_NO']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['nb_NO']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['nb_NO']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['nb_NO']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['nb_NO']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['nb_NO']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['nb_NO']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['nb_NO']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['nb_NO']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['nb_NO']['LocaleName']['af'] = 'Afrikaans';
 $lang['nb_NO']['LocaleName']['ar'] = 'Arabisk';

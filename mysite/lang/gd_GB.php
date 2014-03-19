@@ -15,9 +15,9 @@ $lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['gd_GB']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['gd_GB']['DonatePage']['DEFAULT_CURRENCY']    ='GBP';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['gd_GB']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['gd_GB']['DonatePage']['DLRefreshMsg']= 'Bu chòir gun tòisich an luchdadh a-nuas (%s) a dh\'aithghearr. Mur an tòisich, briog air a\' cheangal.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['gd_GB']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['gd_GB']['DonatePage']['DLOptional']  = 'Gheibh thu na rudan roghainneil as urrainn dhut luchdadh a-nuas air an taobh chlì.';
 
 $lang['gd_GB']['Downloadpage']['BITTORRENT']='Luchdaich a-nuas le BitTorrent';
 $lang['gd_GB']['Downloadpage']['DETAILLINK']='Faigh am mion-fhiosrachadh (md5sum,…)';
@@ -34,8 +34,8 @@ $lang['gd_GB']['Navigation']['TOTOP']     ='⬆ barr';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Feumaidh tu na faidhlichean seo a luchdadh a-nuas is a stàladh ann an òrdugh:';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Luchd-leasachaidh';
 /* %s will be replaced with OS/arch, version, language */
-$lang['gd_GB']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['gd_GB']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['gd_GB']['DownloadSimplePage.ss']['DownloadsHeader']= 'Thagh thu: LibreOffice <b>%s</b>';
+$lang['gd_GB']['DownloadSimplePage.ss']['NotWanted']      = 'Nach e seo an tionndadh a bha thu ag iarraidh?';
 /* will be displayed instead of the dl-buttons */
 $lang['gd_GB']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
 /* watch out for proper quoting */
@@ -70,6 +70,19 @@ $lang['gd_GB']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Tagh do chà
 $lang['gd_GB']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
 $lang['gd_GB']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['gd_GB']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Mholamaid dhut am fear seo';
+
+$lang['gd_GB']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['gd_GB']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['gd_GB']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['gd_GB']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['gd_GB']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['gd_GB']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['gd_GB']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['gd_GB']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['gd_GB']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['gd_GB']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['gd_GB']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['gd_GB']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['gd_GB']['LocaleName']['af'] = 'Afraganais';
 $lang['gd_GB']['LocaleName']['ar'] = 'Arabais';
