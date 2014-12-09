@@ -54,8 +54,48 @@ $(document).ready(function() {
 		$('ul.translations li:icontains("' + term.toUpperCase() + '")').fadeIn();
 		});
 
-	$.expr[':'].icontains = function(a, i, m) { 
-		return $(a).text().toUpperCase().indexOf(m[3]) >= 0 || $(a).attr('class').toUpperCase().indexOf(m[3]) >= 0; 
+	$.expr[':'].icontains = function(a, i, m) {
+		return $(a).text().toUpperCase().indexOf(m[3]) >= 0 || $(a).attr('class').toUpperCase().indexOf(m[3]) >= 0;
 	};
+
+     $('.tablesorter').each(function() {
+       $(this).tablesorter();
+     });
+
+// qa feedback page
+	$('.happy').click(function(){
+		$('.sad').removeClass('initial');
+		$('.sad').removeClass('active');
+		$('.sad-area').removeClass('active');
+		$('.tweet').removeClass('active');
+		$('.characters').removeClass('active');
+		$('.happy').addClass('active');
+		$('.happy-area').addClass('active');
+		$('.tweet').addClass('active');
+		$('.characters').addClass('active');
+		$('.happy-area').focus();
+		return false;
+	});
+	$('.sad').click(function(){
+		$('.happy').removeClass('initial');
+		$('.happy').removeClass('active');
+		$('.happy-area').removeClass('active');
+		$('.tweet').removeClass('active');
+		$('.characters').removeClass('active');
+		$('.sad').addClass('active');
+		$('.sad-area').addClass('active');
+		$('.tweet').addClass('active');
+		$('.characters').addClass('active');
+		$('.sad-area').focus();
+		return false;
+	});
+	// Populate our Bug Report button with any passed-in variables.
+	var param_index = window.location.href.indexOf('?');
+	// Only try to add parameters if some have been passed-in.
+	if(param_index > -1) {
+	  var params = window.location.href.slice(window.location.href.indexOf('?'));
+	  var url = $('#bugbutton').attr('href');
+	  $('#bugbutton').attr('href', url + params);
+	}
 })
 })(jQuery.noConflict());
