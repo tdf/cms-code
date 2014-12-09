@@ -71,6 +71,19 @@ $lang['sk_SK']['DownloadSimplePage.ss']['TypeOr'] = 'alebo stiahnuť';
 $lang['sk_SK']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testovacie verzie:';
 $lang['sk_SK']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Odporúčané';
 
+$lang['sk_SK']['FancyPage.ss']['NOSCRIPT'] = 'Webový prehliadač má vypnutý Javascript.';
+$lang['sk_SK']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['sk_SK']['FancyPage.ss']['DISCOVER'] = 'Objavuj';
+$lang['sk_SK']['FancyPage.ss']['DONATE']   = 'Daruj';
+$lang['sk_SK']['FancyPage.ss']['MAINSITE'] = 'Hlavná stránka';
+$lang['sk_SK']['FancyPage.ss']['DLBADGE']  = 'Stiahnuť<br/><strong>Libre</strong>Office<br/>&nbsp;!';
+$lang['sk_SK']['FancyPage.ss']['SUITE_H']  = 'Slobodný kancelársky balík';
+$lang['sk_SK']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: slobodný kancelársky balík, o ktorom komunita sníva už  komunita dvanásť rokov.';
+$lang['sk_SK']['FancyPage.ss']['FUN_H']    = 'Zaujímavý projekt';
+$lang['sk_SK']['FancyPage.ss']['FUN']      = 'LibreOffice je jedným z najpriateľskejších a súčasne aj najrýchlejšie rastúcich projektov vo svete  slobodného a open source softvéru. Zaväzujeme sa vytvárať naozaj vynikajúci a slobodný softvér. <br/> <a href="https://www.documentfoundation.org/foundation/"> Zistite viac o nás a našich hodnotách </a>';
+$lang['sk_SK']['FancyPage.ss']['PEOPLE_H'] = 'Úžasní ľudia';
+$lang['sk_SK']['FancyPage.ss']['PEOPLE']   = 'LibreOffice nie je len  softvér. Sú to aj ľudia a kultúra, je to vytváranie, zdieľanie a spolupráca. <br/> Existujeme a rastieme len vďaka dobrovoľníkom projektu LibreOffice. Máme pre vás veľa rol, od vývoja softvéru až po podporu komunitnú a inú tvorivú prácu.<br/><a href="https://www.libreoffice.org/get-involved/">Pridajte sa ešte dnes!</a>';
+
 $lang['sk_SK']['LocaleName']['af'] = 'afrikánčina';
 $lang['sk_SK']['LocaleName']['ar'] = 'arabčina';
 $lang['sk_SK']['LocaleName']['as'] = 'asámčina';

@@ -71,6 +71,19 @@ $lang['ast_ES']['DownloadSimplePage.ss']['TypeOr'] = 'o descargar';
 $lang['ast_ES']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-llanzamientos:';
 $lang['ast_ES']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recomendáu';
 
+$lang['ast_ES']['FancyPage.ss']['NOSCRIPT'] = 'Tien desactiváu JavaScript nel restolador web.';
+$lang['ast_ES']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['ast_ES']['FancyPage.ss']['DISCOVER'] = 'Descúbrilu';
+$lang['ast_ES']['FancyPage.ss']['DONATE']   = 'Facer una donación';
+$lang['ast_ES']['FancyPage.ss']['MAINSITE'] = 'Sitiu principal';
+$lang['ast_ES']['FancyPage.ss']['DLBADGE']  = '¡Descargue<br/><strong>Libre</strong>Office<br/>yá!';
+$lang['ast_ES']['FancyPage.ss']['SUITE_H']  = 'Paquete d\'oficina llibre';
+$lang['ast_ES']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: el paquete de oficina llibre que la comunidá suañó demientres doce años.';
+$lang['ast_ES']['FancyPage.ss']['FUN_H']    = 'Proyeutu gayoleru';
+$lang['ast_ES']['FancyPage.ss']['FUN']      = 'LibreOffice ye unu de los proyeutos de software llibre y de códigu abiertu más amistosos y con mayor espoxigue. Comprometémonos a producir un software llibre y de gran calidá.<br/><a href="https://www.documentfoundation.org/foundation/">Descubra más tocante a nós ya los nuesos valores</a>';
+$lang['ast_ES']['FancyPage.ss']['PEOPLE_H'] = 'Xente fantástico';
+$lang['ast_ES']['FancyPage.ss']['PEOPLE']   = 'LibreOffice ye más que software. Tien que ver cola xente, la cultura, la creación, el compartir y la collaboración.<br/>Sólo podemos existir y medrar gracies a los voluntarios del proyeutu LibreOffice. Tenemos munches maneres de participar, dende xeres d\'inxeniería fasta asistencia a la comunidá o trabayu creativu.<br/><a href="https://www.libreoffice.org/get-involved/">¡Xúnase a nós yá!</a>';
+
 $lang['ast_ES']['LocaleName']['af'] = 'Afrikaans';
 $lang['ast_ES']['LocaleName']['ar'] = 'Árabe';
 $lang['ast_ES']['LocaleName']['as'] = 'Asamés';

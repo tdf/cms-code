@@ -1,11 +1,11 @@
 <?php
 global $lang;
 
-$lang['da_DK']['Donationpage']['AMOUNT']='Antal:';
+$lang['da_DK']['Donationpage']['AMOUNT']='Beløb:';
 
 
-$lang['da_DK']['DonatePage']['BUTTON_CARD']   ='Bidrag med kreditkort';
-$lang['da_DK']['DonatePage']['BUTTON_PAYPAL'] ='Bidrag med PayPal';
+$lang['da_DK']['DonatePage']['BUTTON_CARD']   ='Giv et bidrag med kreditkort';
+$lang['da_DK']['DonatePage']['BUTTON_PAYPAL'] ='Giv et bidrag via PayPal';
 $lang['da_DK']['DonatePage']['CHOICE_DEFAULT']='Vælg en af standardværdierne';
 $lang['da_DK']['DonatePage']['CUSTOM_CHOICE'] ='Eller indtast et valgfrit beløb og valuta<br>(kun de valutaer, som er markeret med * kan benyttes med PayPal)';
 $lang['da_DK']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='100';
@@ -15,9 +15,9 @@ $lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR20']='250';
 $lang['da_DK']['DonatePage']['DEFAULT_AMOUNT_EUR50']='500';
 $lang['da_DK']['DonatePage']['DEFAULT_CURRENCY']    ='DKK';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['da_DK']['DonatePage']['DLRefreshMsg']= 'Din hentning %s begynder om et øjeblik. Klik venligst på dette link, hvis hentningen ikke starter.';
+$lang['da_DK']['DonatePage']['DLRefreshMsg']= 'Din overførsel %s begynder om et øjeblik. Klik venligst på dette link, hvis overførslen ikke starter.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['da_DK']['DonatePage']['DLOptional']  = 'Du kan vælge mellem valgfrie hentninger til venstre.';
+$lang['da_DK']['DonatePage']['DLOptional']  = 'Du kan finde valgmulighederne for overførsel til venstre.';
 
 $lang['da_DK']['Downloadpage']['BITTORRENT']='Hent vha. BitTorrent';
 $lang['da_DK']['Downloadpage']['DETAILLINK']='Se detaljer (md5sum,…)';
@@ -34,21 +34,21 @@ $lang['da_DK']['Navigation']['TOTOP']     ='⬆ til top';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Du skal hente og installere disse filer i rækkefølge:';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Udviklere';
 /* %s will be replaced with OS/arch, version, language */
-$lang['da_DK']['DownloadSimplePage.ss']['DownloadsHeader']= 'Valgt: LibreOffice <b>%s';
+$lang['da_DK']['DownloadSimplePage.ss']['DownloadsHeader']= 'Valgt: LibreOffice <b>%s</b>';
 $lang['da_DK']['DownloadSimplePage.ss']['NotWanted']      = 'Ikke den version du ønsker?';
 /* will be displayed instead of the dl-buttons */
-$lang['da_DK']['DownloadSimplePage.ss']['NoRegularDL']    = 'Der er ingen installationsfiler til rådighed.<br/>Gør venligst et andet valg, eller vælg fra yderligere hentninger herunder.';
+$lang['da_DK']['DownloadSimplePage.ss']['NoRegularDL']    = 'Der er ingen almindelige installationsfiler til rådighed.<br/>Vælg venligst noget andet, eller vælg en af de yderligere overførsler herunder.';
 /* watch out for proper quoting */
-$lang['da_DK']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Der er ingen installationsfiler til rådighed for øjeblikket.<br/>Gør venligst et andet valg, eller vælg fra yderligere hentninger herunder.';
+$lang['da_DK']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Hvis du leder efter tidligere versioner, besøg da venligst vores <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">arkiv</a>';
 /* will be formatted as link */
 $lang['da_DK']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Skift sprog';
 $lang['da_DK']['DownloadSimplePage.ss']['ChangeVersion']  = 'Skift version:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['da_DK']['DownloadSimplePage.ss']['ChangeOS']       = 'Skift <abbr title="Operating System">OS</abbr>:';
-$lang['da_DK']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
+$lang['da_DK']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Information';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Se md5sum og en liste over spejlservere for filen';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Hovedinstallationsprogram';
-$lang['da_DK']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice indbygget hjælp';
+$lang['da_DK']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Indbygget hjælp til LibreOffice';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Oversat brugergrænseflade';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsIsoHeader'] = '%s billede';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsIsoText'] = 'Hent en ISO-fil for at oprette et installationsmedie';
@@ -56,11 +56,11 @@ $lang['da_DK']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = 'Installer 
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Installer LibreOffice %s via Intel AppUp Center.';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Pakker';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
-$lang['da_DK']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'En portable version af LibreOffice pakket i PortableApps.com format, så du kan tage programmet og alle dine dokumenter med dig, når du har brug for at arbejde fra en USB-nøgle, skyen eller lokalt. Se <a href="http://portableapps.com/">PortableApps.com</a> for yderligere oplysninger.';
+$lang['da_DK']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'En flytbar version af LibreOffice pakket i PortableApps.com-format, så du kan tage programmet og alle dine dokumenter med dig, når du har brug for at arbejde fra en USB-nøgle, fra skyen eller lokalt. Se <a href="http://portableapps.com/">PortableApps.com</a> for yderligere oplysninger.';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'Dette er en testversion, der ikke er beregnet til almindelig brug.';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = 'Nyttige ressourcer';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsSdkHeader'] = 'Software development kit (SDK)';
-$lang['da_DK']['DownloadSimplePage.ss']['DownloadsSdkText'] = 'Hent SDK til udvikling af udvidelser og eksterne værktøjer';
+$lang['da_DK']['DownloadSimplePage.ss']['DownloadsSdkText'] = 'Hent SDK\'et til udvikling af udvidelser og eksterne værktøjer';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsSrcHeader'] = 'Kildekode';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsSrcText'] = 'LibreOffice er et open source projekt, og du kan derfor hente kildekoden og bygge dit eget tilpassede installationsprogram.';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent';
@@ -70,6 +70,19 @@ $lang['da_DK']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Vælg venlig
 $lang['da_DK']['DownloadSimplePage.ss']['TypeOr'] = 'eller hent';
 $lang['da_DK']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Forhåndsfrigivelse:';
 $lang['da_DK']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Anbefalet';
+
+$lang['da_DK']['FancyPage.ss']['NOSCRIPT'] = 'Javascript er slået fra i din browser.';
+$lang['da_DK']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['da_DK']['FancyPage.ss']['DISCOVER'] = 'Oplev det';
+$lang['da_DK']['FancyPage.ss']['DONATE']   = 'Donationer';
+$lang['da_DK']['FancyPage.ss']['MAINSITE'] = 'Hovedhjemmeside';
+$lang['da_DK']['FancyPage.ss']['DLBADGE']  = 'Hent <br/><strong>Libre</strong>Office<br/> nu&nbsp;!';
+$lang['da_DK']['FancyPage.ss']['SUITE_H']  = 'Fri kontorpakke';
+$lang['da_DK']['FancyPage.ss']['SUITE']    = 'LibreOffice: Den frie kontorpakke som fællesskabet har drømt om i mange år.';
+$lang['da_DK']['FancyPage.ss']['FUN_H']    = 'Sjovt projekt';
+$lang['da_DK']['FancyPage.ss']['FUN']      = 'LibreOffice er en af de lettest tilgængelige og hurtigt voksende projekter inden for open source. Vi er optaget af at lave storartet gratis software. <br/><a href="https://www.documentfoundation.org/foundation/">Læs mere om os og om vores værdier</a>';
+$lang['da_DK']['FancyPage.ss']['PEOPLE_H'] = 'Fantastiske mennesker';
+$lang['da_DK']['FancyPage.ss']['PEOPLE']   = 'LibreOffice er meget mere end software. Det handler om mennesker, kultur og kreativitet, og om at dele og samarbejde. <br/>Vi kan kun fortsætte udviklingen takket være de frivillige i LibreOffice projektet. Vi har også opgaver til dig, både indenfor programmering, support, vejledning og kreativt design.<br/><a href="https://www.libreoffice.org/get-involved/">Deltag allerede i dag!</a>';
 
 $lang['da_DK']['LocaleName']['af'] = 'Afrikaans';
 $lang['da_DK']['LocaleName']['ar'] = 'Arabisk';

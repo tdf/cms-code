@@ -71,6 +71,19 @@ $lang['nl_NL']['DownloadSimplePage.ss']['TypeOr'] = 'of download';
 $lang['nl_NL']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Voor-uitgaven:';
 $lang['nl_NL']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Aanbevolen';
 
+$lang['nl_NL']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is uitgeschakeld in uw webbrowser.';
+$lang['nl_NL']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['nl_NL']['FancyPage.ss']['DISCOVER'] = 'Ontdek het';
+$lang['nl_NL']['FancyPage.ss']['DONATE']   = 'Doneren';
+$lang['nl_NL']['FancyPage.ss']['MAINSITE'] = 'Startpagina';
+$lang['nl_NL']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>nu&nbsp;!';
+$lang['nl_NL']['FancyPage.ss']['SUITE_H']  = 'Gratis Office pakket';
+$lang['nl_NL']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: Het vrije Office-pakket waar de community al twaalf jaar van droomt.';
+$lang['nl_NL']['FancyPage.ss']['FUN_H']    = 'Pretproject';
+$lang['nl_NL']['FancyPage.ss']['FUN']      = 'LibreOffice is één van de vriendelijkste en snelst groeiende projecten in de vrije open source software wereld. We verbinden ons tot werkelijk geweldige en gratis software.<br/><a href="https://www.documentfoundation.org/foundation/">Ontdek meer over ons en onze waarden</a>';
+$lang['nl_NL']['FancyPage.ss']['PEOPLE_H'] = 'Fantastische mensen';
+$lang['nl_NL']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is meer dan software alleen. Het zijn de mensen, de cultuur, het ontwerpen, delen en samenwerken.<br/>We kunnen alleen bestaan en groeien dankzij de vrijwilligers van het LibreOffice project. Er zijn verschillende functies voor u, van ontwikkeltaken tot community-ondersteuning en creatief werk.<br/><a href="https://www.libreoffice.org/get-involved/">Sluit u vandaag nog bij ons aan!</a>';
+
 $lang['nl_NL']['LocaleName']['af'] = 'Afrikaans';
 $lang['nl_NL']['LocaleName']['ar'] = 'Arabisch';
 $lang['nl_NL']['LocaleName']['as'] = 'Assamees';

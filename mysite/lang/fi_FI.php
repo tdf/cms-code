@@ -71,6 +71,19 @@ $lang['fi_FI']['DownloadSimplePage.ss']['TypeOr'] = 'tai lataa';
 $lang['fi_FI']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testiversiot:';
 $lang['fi_FI']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Suositeltu';
 
+$lang['fi_FI']['FancyPage.ss']['NOSCRIPT'] = 'Web-selaimesi Javascript-tuki ei ole käytössä.';
+$lang['fi_FI']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['fi_FI']['FancyPage.ss']['DISCOVER'] = 'Tutustu';
+$lang['fi_FI']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['fi_FI']['FancyPage.ss']['MAINSITE'] = 'Pääsivusto';
+$lang['fi_FI']['FancyPage.ss']['DLBADGE']  = 'Lataa<br/><strong>Libre</strong>Office<br/>nyt&nbsp;!';
+$lang['fi_FI']['FancyPage.ss']['SUITE_H']  = 'Vapaa toimisto-ohjelmisto';
+$lang['fi_FI']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: Vapaa toimisto-ohjelmisto, jota yhteisö on odottanut jo 12 vuotta.';
+$lang['fi_FI']['FancyPage.ss']['FUN_H']    = 'Kiinnostava projekti';
+$lang['fi_FI']['FancyPage.ss']['FUN']      = 'LibreOffice on yksi ystävällisimmistä ja nopeimmin kasvavista projekteista vapaan ja avoimen lähdekoodin ohjelmistojen maailmassa. Aidosti toimivan ja vapaan ohjelmiston tuottaminen on meille kunnia-asia.<br/><a href="https://www.documentfoundation.org/foundation/">Lue lisää meistä ja arvoistamme</a>';
+$lang['fi_FI']['FancyPage.ss']['PEOPLE_H'] = 'Fantastisia ihmisiä';
+$lang['fi_FI']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
+
 $lang['fi_FI']['LocaleName']['af'] = 'afrikaans';
 $lang['fi_FI']['LocaleName']['ar'] = 'arabia';
 $lang['fi_FI']['LocaleName']['as'] = 'assami';

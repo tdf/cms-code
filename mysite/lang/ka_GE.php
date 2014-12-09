@@ -71,6 +71,19 @@ $lang['ka_GE']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
 $lang['ka_GE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['ka_GE']['DownloadSimplePage.ss']['VersionsRecommended'] = 'რეკომენდირებულია';
 
+$lang['ka_GE']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['ka_GE']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['ka_GE']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['ka_GE']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['ka_GE']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['ka_GE']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['ka_GE']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['ka_GE']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['ka_GE']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['ka_GE']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['ka_GE']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['ka_GE']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
+
 $lang['ka_GE']['LocaleName']['af'] = 'აფრიკული';
 $lang['ka_GE']['LocaleName']['ar'] = 'არაბული';
 $lang['ka_GE']['LocaleName']['as'] = 'ასამეური';

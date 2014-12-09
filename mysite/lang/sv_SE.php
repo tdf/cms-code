@@ -71,6 +71,19 @@ $lang['sv_SE']['DownloadSimplePage.ss']['TypeOr'] = 'eller hämta';
 $lang['sv_SE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Förhandsversioner:';
 $lang['sv_SE']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Rekommenderat';
 
+$lang['sv_SE']['FancyPage.ss']['NOSCRIPT'] = 'Användning av Javaskript är inaktiverat i din webbläsare.';
+$lang['sv_SE']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['sv_SE']['FancyPage.ss']['DISCOVER'] = 'Upptäck';
+$lang['sv_SE']['FancyPage.ss']['DONATE']   = 'Donera';
+$lang['sv_SE']['FancyPage.ss']['MAINSITE'] = 'Startsida';
+$lang['sv_SE']['FancyPage.ss']['DLBADGE']  = 'Ladda ner<br/><strong>Libre</strong>Office<br/>nu&nbsp;!';
+$lang['sv_SE']['FancyPage.ss']['SUITE_H']  = 'Fri kontorssvit';
+$lang['sv_SE']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: Den fria kontorssvit som gemenskapen drömt om i tolv år.';
+$lang['sv_SE']['FancyPage.ss']['FUN_H']    = 'Projektet';
+$lang['sv_SE']['FancyPage.ss']['FUN']      = 'LibreOffice är ett av de vänligaste och snabbast växande projekten inom den fria- och öppna-källkodsvärlden. Vi anstränger oss för att producera högkvalitativ och fri programvara.<br/><a href="https://www.documentfoundation.org/foundation/">Få reda på mer om oss och våra värderingar</a>';
+$lang['sv_SE']['FancyPage.ss']['PEOPLE_H'] = 'Underbara människor';
+$lang['sv_SE']['FancyPage.ss']['PEOPLE']   = 'LibreOffice handlar om mer än en programvara. Det handlar om människor, kultur, skapande, att dela med sig och samarbeta.<br/>Vi kan bara finnas till och växa med hjälp av de volontärer som finns inom LibreOffice. Som volontär finns mycket som du kan göra, allt från ingenjörsuppgifter till användarsupport samt kreativt arbete.<br/><a href="https://www.libreoffice.org/get-involved/">Bli en del av gemenskapen</a> ';
+
 $lang['sv_SE']['LocaleName']['af'] = 'Afrikaans';
 $lang['sv_SE']['LocaleName']['ar'] = 'Arabiska';
 $lang['sv_SE']['LocaleName']['as'] = 'Assamesiska';

@@ -71,6 +71,19 @@ $lang['et_EE']['DownloadSimplePage.ss']['TypeOr'] = 'Muud võimalused:';
 $lang['et_EE']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Eelväljalasked:';
 $lang['et_EE']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Soovitatav';
 
+$lang['et_EE']['FancyPage.ss']['NOSCRIPT'] = 'Veebilehitsejas on JavaScript välja lülitatud.';
+$lang['et_EE']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['et_EE']['FancyPage.ss']['DISCOVER'] = 'Tutvustus';
+$lang['et_EE']['FancyPage.ss']['DONATE']   = 'Annetamine';
+$lang['et_EE']['FancyPage.ss']['MAINSITE'] = 'Põhilehekülg';
+$lang['et_EE']['FancyPage.ss']['DLBADGE']  = 'Laadi <br/><strong>Libre</strong>Office<br/> alla!';
+$lang['et_EE']['FancyPage.ss']['SUITE_H']  = 'Vaba kontoritarkvara';
+$lang['et_EE']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: vaba kontoritarkvara pakett, millest kogukond kaksteist aastat unistanud on.';
+$lang['et_EE']['FancyPage.ss']['FUN_H']    = 'Vahva projekt';
+$lang['et_EE']['FancyPage.ss']['FUN']      = 'LibreOffice on üks sõbralikumaid ja kiiremini kasvavaid projekte vaba ja avatud lähtekoodiga tarkvara maailmas. Oleme pühendunud looma tõeliselt suurepärast vaba tarkvara.<br/><a href="https://www.documentfoundation.org/foundation/">Loe lisa meist ja me väärtustest</a>';
+$lang['et_EE']['FancyPage.ss']['PEOPLE_H'] = 'Imelised inimesed';
+$lang['et_EE']['FancyPage.ss']['PEOPLE']   = 'LibreOffice tähendab enamat kui tarkvara. See tähendab inimesi, kultuuri, loovust, jagamist ja koostööd.<br/>Me saame olemas olla ja kasvada ainult tänu LibreOffice’i projekti vabatahtlikele. Huvilistele on pakkuda erinevaid ülesandeid tarkvaraarendusest kogukonna toetamise ja loovtööni.<br/><a href="https://www.libreoffice.org/get-involved/">Liitu kasvõi kohe!</a>';
+
 $lang['et_EE']['LocaleName']['af'] = 'Afrikaani';
 $lang['et_EE']['LocaleName']['ar'] = 'Araabia';
 $lang['et_EE']['LocaleName']['as'] = 'Assami';

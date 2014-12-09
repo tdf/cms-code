@@ -46,7 +46,7 @@ $lang['pt_PT']['DownloadSimplePage.ss']['ChangeVersion']  = 'Mudar versão:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['pt_PT']['DownloadSimplePage.ss']['ChangeOS']       = 'Mudar <abbr title="Operating System">sistema operativo</abbr>:';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informações';
-$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Verifique o md5sum e a lista de repositórios do ficheiro';
+$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Verifique o md5sum e a lista de repositórios para o ficheiro';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Instalador principal';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Ajuda interna do LibreOffice';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Interface de utilizador traduzida';
@@ -56,7 +56,7 @@ $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsAppStoreHeader'] = 'Instalaç�
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsAppStoreText'] = 'Instalar o LibreOffice %s através da loja Intel AppUp.';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPackagesHeader'] = 'Pacotes';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPortableHeader'] = 'PortableApps';
-$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'Uma versão portátil do LibreOffice no formato PortableApps.com para poder levar todos os documentos e o que precisar para trabalhar num disco USB, na nuvem ou disco local. Aceda a <a href="http://portableapps.com/">PortableApps.com</a> para mais informações.';
+$lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPortableText'] = 'Uma versão portátil do LibreOffice no formato PortableApps.com para poder levar todos os seus documentos e o que precisar para trabalhar num disco USB, na nuvem ou disco local. Aceda a <a href="http://portableapps.com/">PortableApps.com</a> para mais informações.';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsPrereleaseWarning'] = 'Esta é uma versão de testes e não é deve ser utilizada em ambientes de produção.';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsRelatedRessources'] = 'Recursos úteis';
 $lang['pt_PT']['DownloadSimplePage.ss']['DownloadsSdkHeader'] = 'Conjunto de desenvolvimento de aplicações (SDK)';
@@ -71,18 +71,18 @@ $lang['pt_PT']['DownloadSimplePage.ss']['TypeOr'] = 'ou transfira';
 $lang['pt_PT']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Versões de teste:';
 $lang['pt_PT']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recomendado';
 
-$lang['pt_PT']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['pt_PT']['FancyPage.ss']['NOSCRIPT'] = 'O Javascript está desativado no seu navegador.';
 $lang['pt_PT']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
-$lang['pt_PT']['FancyPage.ss']['DISCOVER'] = 'Discover it';
-$lang['pt_PT']['FancyPage.ss']['DONATE']   = 'Donate';
-$lang['pt_PT']['FancyPage.ss']['MAINSITE'] = 'Main website';
-$lang['pt_PT']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
-$lang['pt_PT']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
-$lang['pt_PT']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
-$lang['pt_PT']['FancyPage.ss']['FUN_H']    = 'Fun project';
-$lang['pt_PT']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
-$lang['pt_PT']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
-$lang['pt_PT']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
+$lang['pt_PT']['FancyPage.ss']['DISCOVER'] = 'Descobrir';
+$lang['pt_PT']['FancyPage.ss']['DONATE']   = 'Donativos';
+$lang['pt_PT']['FancyPage.ss']['MAINSITE'] = 'Sítio web principal';
+$lang['pt_PT']['FancyPage.ss']['DLBADGE']  = 'Transferir o<br/><strong>Libre</strong>Office<br/>agora&nbsp;!';
+$lang['pt_PT']['FancyPage.ss']['SUITE_H']  = 'Pacote de produtividade livre';
+$lang['pt_PT']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: o conjunto de aplicações que a comunidade estava à espera há doze anos.';
+$lang['pt_PT']['FancyPage.ss']['FUN_H']    = 'Projeto divertido';
+$lang['pt_PT']['FancyPage.ss']['FUN']      = 'LibreOffice é um dos projetos com maior crescimento e divertido no mundo dos programas de código livre (FOSS). Nós Comprometemo-nos a criar uma aplicação verdadeiramente livre e profissional.<br/><a href="https://www.documentfoundation.org/foundation/">Descubra mais sobre a nossa missão e valores.</a>';
+$lang['pt_PT']['FancyPage.ss']['PEOPLE_H'] = 'Pessoas fantásticas';
+$lang['pt_PT']['FancyPage.ss']['PEOPLE']   = 'O LibreOffice é muito mais do que uma aplicação. Está inteirmente relacionado com as pessoas, culturas, criação, partilha e colaboração.<br/>A nossa organização só pode existir e crescer em virtude da colaboração dos voluntários que trabalham no projeto. Temos diversas tarefas para si, que podem ir desde engenharia informática passando pela tradução, apoio à comunidade, trabalho criativo e muito mais.<br/><a href="https://www.libreoffice.org/get-involved/">Junte-se a nós!</a>';
 
 $lang['pt_PT']['LocaleName']['af'] = 'Africânder';
 $lang['pt_PT']['LocaleName']['ar'] = 'Árabe';

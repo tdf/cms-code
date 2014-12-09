@@ -15,7 +15,7 @@ $lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR20']='1000';
 $lang['ru_RU']['DonatePage']['DEFAULT_AMOUNT_EUR50']='2000';
 $lang['ru_RU']['DonatePage']['DEFAULT_CURRENCY']    ='RUB';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['ru_RU']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['ru_RU']['DonatePage']['DLRefreshMsg']= 'Загрузка %s скоро начнется. Пожалуйста, нажмите на ссылку в случае если загрузка не началась.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
 $lang['ru_RU']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
 
@@ -70,6 +70,19 @@ $lang['ru_RU']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Пожалу
 $lang['ru_RU']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
 $lang['ru_RU']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
 $lang['ru_RU']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Рекомендовано';
+
+$lang['ru_RU']['FancyPage.ss']['NOSCRIPT'] = 'Javascript отключен в вашем браузере.';
+$lang['ru_RU']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['ru_RU']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['ru_RU']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['ru_RU']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['ru_RU']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['ru_RU']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['ru_RU']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['ru_RU']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['ru_RU']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['ru_RU']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['ru_RU']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['ru_RU']['LocaleName']['af'] = 'Afrikaans';
 $lang['ru_RU']['LocaleName']['ar'] = 'Arabic';

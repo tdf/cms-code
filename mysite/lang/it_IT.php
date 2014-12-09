@@ -71,6 +71,19 @@ $lang['it_IT']['DownloadSimplePage.ss']['TypeOr'] = 'o download';
 $lang['it_IT']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-release:';
 $lang['it_IT']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Consigliato';
 
+$lang['it_IT']['FancyPage.ss']['NOSCRIPT'] = 'Javascript è disabilitato nel vostro browser web.';
+$lang['it_IT']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['it_IT']['FancyPage.ss']['DISCOVER'] = 'Scoprila';
+$lang['it_IT']['FancyPage.ss']['DONATE']   = 'Dona';
+$lang['it_IT']['FancyPage.ss']['MAINSITE'] = 'Sito web principale';
+$lang['it_IT']['FancyPage.ss']['DLBADGE']  = 'Scarica<br/><strong>Libre</strong>Office<br/>ora&nbsp;!';
+$lang['it_IT']['FancyPage.ss']['SUITE_H']  = 'Suite per Uffico gratuita';
+$lang['it_IT']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: La suite per ufficio gratuita sognata dalla comunità per dodici anni.';
+$lang['it_IT']['FancyPage.ss']['FUN_H']    = 'Un progetto divertente';
+$lang['it_IT']['FancyPage.ss']['FUN']      = 'LibreOffice è uno dei progetti più attivi nel mondo del software open source e libero. La comunità si impegna a creare un software libero e dalle ottime prestazioni.<br/><a href="https://www.documentfoundation.org/foundation/">Scoprite altre informazioni sulla nostra comunità e sui nostri valori</a>';
+$lang['it_IT']['FancyPage.ss']['PEOPLE_H'] = 'Persone fantastiche';
+$lang['it_IT']['FancyPage.ss']['PEOPLE']   = 'LibreOffice è molto più di un software. È una comunità di persone, è cultura, è creazione, condivisione e collaborazione.<br/>La nostra comunità esiste e cresce grazie ai volontari del progetto LibreOffice. È possibile partecipare in molti modi, sviluppando codice, supportando la comunità e svolgendo lavori creativi.<br/><a href="https://www.libreoffice.org/get-involved/">Entrate a far parte della comunità!</a>';
+
 $lang['it_IT']['LocaleName']['af'] = 'Afrikaans';
 $lang['it_IT']['LocaleName']['ar'] = 'Arabo';
 $lang['it_IT']['LocaleName']['as'] = 'Assamese';

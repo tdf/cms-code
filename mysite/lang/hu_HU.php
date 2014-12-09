@@ -71,6 +71,19 @@ $lang['hu_HU']['DownloadSimplePage.ss']['TypeOr'] = 'vagy letölthet:';
 $lang['hu_HU']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Előzetes kiadások:';
 $lang['hu_HU']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Ajánlott';
 
+$lang['hu_HU']['FancyPage.ss']['NOSCRIPT'] = 'A JavaScript le van tiltva a böngészőjében.';
+$lang['hu_HU']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['hu_HU']['FancyPage.ss']['DISCOVER'] = 'Fedezze fel';
+$lang['hu_HU']['FancyPage.ss']['DONATE']   = 'Támogassa';
+$lang['hu_HU']['FancyPage.ss']['MAINSITE'] = 'Főoldal';
+$lang['hu_HU']['FancyPage.ss']['DLBADGE']  = 'Töltse le a <br/><strong>Libre</strong>Office-t<br/>most&nbsp;!';
+$lang['hu_HU']['FancyPage.ss']['SUITE_H']  = 'Szabad irodai csomag';
+$lang['hu_HU']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: A szabad irodai csomag, amelyről a közösség tizenkét éve álmodott.';
+$lang['hu_HU']['FancyPage.ss']['FUN_H']    = 'Vidám projekt';
+$lang['hu_HU']['FancyPage.ss']['FUN']      = 'A LibreOffice az egyik legbarátságosabb és leggyorsabban növekvő projekt a szabad és nyílt forrású világban. Elkötelezettek vagyunk az igazán nagyszerű és szabad szoftverek előállítása iránt.<br/><a href="https://www.documentfoundation.org/foundation/">Tudjon meg többet rólunk, és értékeinkről</a>';
+$lang['hu_HU']['FancyPage.ss']['PEOPLE_H'] = 'Fantasztikus emberek';
+$lang['hu_HU']['FancyPage.ss']['PEOPLE']   = 'A LibreOffice a szoftvernél többről szól. Az emberekről, a kultúráról, az alkotásról, a megosztásról és együttműködésről.<br/>Csak a LibreOffice projekt önkénteseinek köszönhetően tudunk létezni és növekedni. Számos módon segíthet, mérnöki feladatoktól a közösségi támogatáson át a kreatív munkáig.<br/><a href="https://www.libreoffice.org/get-involved/">Csatlakozzon még ma!</a>';
+
 $lang['hu_HU']['LocaleName']['af'] = 'Afrikaans';
 $lang['hu_HU']['LocaleName']['ar'] = 'Arab';
 $lang['hu_HU']['LocaleName']['as'] = 'Asszámi';

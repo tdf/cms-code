@@ -71,6 +71,19 @@ $lang['eo_XX']['DownloadSimplePage.ss']['TypeOr'] = 'aŭ elŝuti';
 $lang['eo_XX']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'internajn eldonojn:';
 $lang['eo_XX']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Rekomendita';
 
+$lang['eo_XX']['FancyPage.ss']['NOSCRIPT'] = 'Ĝavaskripto estas malaktivigita en via TTT-legilo';
+$lang['eo_XX']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['eo_XX']['FancyPage.ss']['DISCOVER'] = 'Malkovri ĝin';
+$lang['eo_XX']['FancyPage.ss']['DONATE']   = 'Donaci';
+$lang['eo_XX']['FancyPage.ss']['MAINSITE'] = 'ĉefa retejo';
+$lang['eo_XX']['FancyPage.ss']['DLBADGE']  = 'Elŝuti je <br/><strong>Libre</strong>Office<br/>nun&nbsp;!';
+$lang['eo_XX']['FancyPage.ss']['SUITE_H']  = 'Libera oficeja programaro';
+$lang['eo_XX']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: la libera oficeja programaro pri kiu la komunumo revis dum dekdu jaroj.';
+$lang['eo_XX']['FancyPage.ss']['FUN_H']    = 'Amuza projekto';
+$lang['eo_XX']['FancyPage.ss']['FUN']      = 'LibreOffice estas iu el la plej konvenaj kaj plej rapide kreskantaj projektoj en la mondo de liberaj programaroj. Ni dediĉas nin produkti vere bonegajn kaj liberajn programojn. <br/><a href="https://www.documentfoundation.org/foundation/">Malkovri pli pri ni kaj pri niaj etikoj.</a>';
+$lang['eo_XX']['FancyPage.ss']['PEOPLE_H'] = 'Bonegaj homoj';
+$lang['eo_XX']['FancyPage.ss']['PEOPLE']   = 'LibreOffice temas pri pli ol programaroj. Temas pri homoj, pri kulturo, pri kunkreado, kunhavado kaj kunlaborado.<br/>Ni povas ekzisti kaj kreski nur danke al la volontuloj de la LibreOffice-projekto. Ni havas multajn rolojn por vi, ek de inĝenieraj taskoj ĝis komunuma subtenado kaj krea laboro.<br/><a href="https://www.libreoffice.org/get-involved/">Aliĝu al ni hodiaŭ !</a>';
+
 $lang['eo_XX']['LocaleName']['af'] = 'Afrikansa';
 $lang['eo_XX']['LocaleName']['ar'] = 'Araba';
 $lang['eo_XX']['LocaleName']['as'] = 'Asama';

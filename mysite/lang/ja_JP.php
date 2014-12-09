@@ -71,6 +71,19 @@ $lang['ja_JP']['DownloadSimplePage.ss']['TypeOr'] = 'またはダウンロード
 $lang['ja_JP']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = '開発版';
 $lang['ja_JP']['DownloadSimplePage.ss']['VersionsRecommended'] = '推奨';
 
+$lang['ja_JP']['FancyPage.ss']['NOSCRIPT'] = 'お使いのwebブラウザでJavascriptが無効になっています。';
+$lang['ja_JP']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['ja_JP']['FancyPage.ss']['DISCOVER'] = '発見する';
+$lang['ja_JP']['FancyPage.ss']['DONATE']   = '寄付する';
+$lang['ja_JP']['FancyPage.ss']['MAINSITE'] = 'メインのwebサイト';
+$lang['ja_JP']['FancyPage.ss']['DLBADGE']  = '今すぐ<br/><strong>Libre</strong>Office<br/>をダウンロード&nbsp;!';
+$lang['ja_JP']['FancyPage.ss']['SUITE_H']  = 'フリーのオフィススイート';
+$lang['ja_JP']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: コミュニティが12年もの間夢見てきたフリーのオフィススイート。';
+$lang['ja_JP']['FancyPage.ss']['FUN_H']    = '楽しいプロジェクト';
+$lang['ja_JP']['FancyPage.ss']['FUN']      = 'LibreOfficeはフリーおよびオープンソースの世界で最も親しみやすく、最も成長しつつあるプロジェクトの1つです。 私たちは真に偉大で自由なソフトウェアを作り上げることを目指し努めています。<br/><a href="https://www.documentfoundation.org/foundation/">私たちと私たちの考える価値についてもっと知るには、こちらをご覧ください</a>';
+$lang['ja_JP']['FancyPage.ss']['PEOPLE_H'] = '素晴らしい人々';
+$lang['ja_JP']['FancyPage.ss']['PEOPLE']   = 'LibreOfficeは単なるソフトウェア以上のものです。LibreOfficeはそれに関わる人々、そして文化であり、創造することと共有すること、そして協同による活動です。<br/>LibreOfficeプロジェクトのボランティアがあって初めて私たちは存在でき、成長できます。私たちのところには、エンジニアリングの作業からコミュニティのサポートや創造的な活動にいたるまで、たくさんの役割があなたを待っています。<br/><a href="https://www.libreoffice.org/get-involved/">今すぐ参加してみませんか!</a>';
+
 $lang['ja_JP']['LocaleName']['af'] = 'アフリカーンス語';
 $lang['ja_JP']['LocaleName']['ar'] = 'アラビア語';
 $lang['ja_JP']['LocaleName']['as'] = 'アッサム語';

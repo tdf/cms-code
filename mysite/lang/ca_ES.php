@@ -35,7 +35,7 @@ $lang['ca_ES']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Heu de baixar 
 $lang['ca_ES']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Desenvolupadors';
 /* %s will be replaced with OS/arch, version, language */
 $lang['ca_ES']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selecció: LibreOffice <b>%s</b>';
-$lang['ca_ES']['DownloadSimplePage.ss']['NotWanted']      = 'No és la versio que voleu?';
+$lang['ca_ES']['DownloadSimplePage.ss']['NotWanted']      = 'No és la versió que voleu?';
 /* will be displayed instead of the dl-buttons */
 $lang['ca_ES']['DownloadSimplePage.ss']['NoRegularDL']    = 'No hi ha fitxers d\'instal·lació disponibles.<br/>Canvieu la selecció o trieu alguna de les baixades següents.';
 /* watch out for proper quoting */
@@ -70,6 +70,19 @@ $lang['ca_ES']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Seleccioneu 
 $lang['ca_ES']['DownloadSimplePage.ss']['TypeOr'] = 'o baixeu';
 $lang['ca_ES']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Versions preliminars:';
 $lang['ca_ES']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Recomanat';
+
+$lang['ca_ES']['FancyPage.ss']['NOSCRIPT'] = 'El Javascript està inhabilitat al navegador web.';
+$lang['ca_ES']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['ca_ES']['FancyPage.ss']['DISCOVER'] = 'Descobriu-lo';
+$lang['ca_ES']['FancyPage.ss']['DONATE']   = 'Donatiu';
+$lang['ca_ES']['FancyPage.ss']['MAINSITE'] = 'Lloc web principal';
+$lang['ca_ES']['FancyPage.ss']['DLBADGE']  = 'Baixa el <br/><strong>Libre</strong>Office<br/>ara!';
+$lang['ca_ES']['FancyPage.ss']['SUITE_H']  = 'Paquet ofimàtic lliure';
+$lang['ca_ES']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: el paquet ofimàtic lliure que la comunitat ha somiat durant dotze anys.';
+$lang['ca_ES']['FancyPage.ss']['FUN_H']    = 'Un projecte divertit';
+$lang['ca_ES']['FancyPage.ss']['FUN']      = 'El LibreOffice és un dels projectes més amistós i amb més creixement del món del programari lliure. Estem compromesos en produir programari lliure i de qualitat.<br/><a href="https://www.documentfoundation.org/foundation/">Descobriu més sobre nosaltres i els nostres valors</a>';
+$lang['ca_ES']['FancyPage.ss']['PEOPLE_H'] = 'Gent fantàstica';
+$lang['ca_ES']['FancyPage.ss']['PEOPLE']   = 'El LibreOffice és més que programari. Hi ha persones, cultura, creació i col·laboració.<br/>Només podem existir i créixer gràcies als voluntaris del projectes LibreOffice. Tenim molts rols per a vosaltres, des de tasques d\'enginyeria a suport a la comunitat i feina creatiuva.<br/><a href="https://www.libreoffice.org/get-involved/">Uniu-vos-hi ara!</a>';
 
 $lang['ca_ES']['LocaleName']['af'] = 'afrikaans';
 $lang['ca_ES']['LocaleName']['ar'] = 'àrab';

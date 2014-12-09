@@ -7,7 +7,7 @@ $lang['cs_CZ']['Donationpage']['AMOUNT']='Obnos:';
 $lang['cs_CZ']['DonatePage']['BUTTON_CARD']   ='Přispět kreditní kartou';
 $lang['cs_CZ']['DonatePage']['BUTTON_PAYPAL'] ='Přispět přes PayPal';
 $lang['cs_CZ']['DonatePage']['CHOICE_DEFAULT']='Vyberte jednu z nastavených hodnot';
-$lang['cs_CZ']['DonatePage']['CUSTOM_CHOICE'] ='Nebo zadejte vlastní množství a měnu<br>(pro PayPal lze použít pouze měny označené *)';
+$lang['cs_CZ']['DonatePage']['CUSTOM_CHOICE'] ='Nebo zadejte vlastní množství a měnu<br/>(pro PayPal lze použít pouze měny označené *)';
 $lang['cs_CZ']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='500';
 $lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '100';
 $lang['cs_CZ']['DonatePage']['DEFAULT_AMOUNT_EUR10']='200';
@@ -70,6 +70,19 @@ $lang['cs_CZ']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Zvolte jazyk
 $lang['cs_CZ']['DownloadSimplePage.ss']['TypeOr'] = 'nebo stáhnout';
 $lang['cs_CZ']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Testovací verze:';
 $lang['cs_CZ']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Doporučeno';
+
+$lang['cs_CZ']['FancyPage.ss']['NOSCRIPT'] = 'Webový prohlížeč má vypnutý Javascript.';
+$lang['cs_CZ']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['cs_CZ']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['cs_CZ']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['cs_CZ']['FancyPage.ss']['MAINSITE'] = 'Hlavní stránky';
+$lang['cs_CZ']['FancyPage.ss']['DLBADGE']  = 'Stáhnout<br/><strong>Libre</strong>Office<br/>nyní&nbsp;!';
+$lang['cs_CZ']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['cs_CZ']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['cs_CZ']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['cs_CZ']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['cs_CZ']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['cs_CZ']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['cs_CZ']['LocaleName']['af'] = 'afrikánština';
 $lang['cs_CZ']['LocaleName']['ar'] = 'arabština';
@@ -157,7 +170,7 @@ $lang['cs_CZ']['LocaleName']['si'] = 'sinhálština';
 $lang['cs_CZ']['LocaleName']['sk'] = 'slovenština';
 $lang['cs_CZ']['LocaleName']['sl'] = 'slovinština';
 $lang['cs_CZ']['LocaleName']['sq'] = 'albánština';
-$lang['cs_CZ']['LocaleName']['sr'] = 'srbština (cyrilika)';
+$lang['cs_CZ']['LocaleName']['sr'] = 'srbština (cyrilice)';
 $lang['cs_CZ']['LocaleName']['ss'] = 'svazijština';
 $lang['cs_CZ']['LocaleName']['st'] = 'jihosotština';
 $lang['cs_CZ']['LocaleName']['sv'] = 'švédština';

@@ -7,7 +7,7 @@ $lang['zh_CN']['Donationpage']['AMOUNT']='金额：';
 $lang['zh_CN']['DonatePage']['BUTTON_CARD']   ='通过信用卡捐款';
 $lang['zh_CN']['DonatePage']['BUTTON_PAYPAL'] ='通过 PayPal 捐款';
 $lang['zh_CN']['DonatePage']['CHOICE_DEFAULT']='请选择下面默认值中的一项';
-$lang['zh_CN']['DonatePage']['CUSTOM_CHOICE'] ='或输入自定义金额及货币<br/>(只有标记有 * 的货币可以通过 PayPal 捐赠)';
+$lang['zh_CN']['DonatePage']['CUSTOM_CHOICE'] ='或输入自定义金额及币种<br/>(只有标记有 * 的币种才能通过 PayPal 捐赠)';
 $lang['zh_CN']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
 $lang['zh_CN']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
 $lang['zh_CN']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
@@ -15,16 +15,16 @@ $lang['zh_CN']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['zh_CN']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['zh_CN']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['zh_CN']['DonatePage']['DLRefreshMsg']= '您的下载 %s 将在稍后开始。若没有开始，请点击链接。';
+$lang['zh_CN']['DonatePage']['DLRefreshMsg']= '您的下载 %s 将马上开始。若没有开始，请点击该链接。';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['zh_CN']['DonatePage']['DLOptional']  = '您可以在左侧找到可选下载项。';
+$lang['zh_CN']['DonatePage']['DLOptional']  = '您可以在左侧找到可选的下载项。';
 
 $lang['zh_CN']['Downloadpage']['BITTORRENT']='通过 BitTorrent 下载';
 $lang['zh_CN']['Downloadpage']['DETAILLINK']='获取文件详情 (md5 校验码等)';
-$lang['zh_CN']['Downloadpage']['DLSDK']     ='下载用于开发扩展及外部工具的 SDK';
-$lang['zh_CN']['Downloadpage']['DLSOURCE']  ='下载源码自己编译安装程序';
-$lang['zh_CN']['Downloadpage']['DLSUITE']   ='其他下载 LibreOffice 生产力套件的途径';
-$lang['zh_CN']['Downloadpage']['NOTESTBUILDS']='目前尚无测试版本可供下载。';
+$lang['zh_CN']['Downloadpage']['DLSDK']     ='下载SDK, 用于开发扩展及外部工具';
+$lang['zh_CN']['Downloadpage']['DLSOURCE']  ='下载源代码，用于自己编译安装';
+$lang['zh_CN']['Downloadpage']['DLSUITE']   ='其他下载 LibreOffice 办公套件的途径';
+$lang['zh_CN']['Downloadpage']['NOTESTBUILDS']='目前尚无开发测试版可供下载。';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['zh_CN']['Navigation']['GOTOPAGE']  ='"访问 %s 页面"';
@@ -41,7 +41,7 @@ $lang['zh_CN']['DownloadSimplePage.ss']['NoRegularDL']    = '没有可用的常�
 /* watch out for proper quoting */
 $lang['zh_CN']['DownloadSimplePage.ss']['ViewDLArchive']  = '若需要较早的版本，请访问我们的<a href="http://downloadarchive.documentfoundation.org/libreoffice/old">下载归档</a>。';
 /* will be formatted as link */
-$lang['zh_CN']['DownloadSimplePage.ss']['ChangeLanguage'] = '更换语言';
+$lang['zh_CN']['DownloadSimplePage.ss']['ChangeLanguage'] = '更改语言';
 $lang['zh_CN']['DownloadSimplePage.ss']['ChangeVersion']  = '更改版本：';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['zh_CN']['DownloadSimplePage.ss']['ChangeOS']       = '更改<abbr title="Operating System">操作系统</abbr>：';
@@ -71,18 +71,18 @@ $lang['zh_CN']['DownloadSimplePage.ss']['TypeOr'] = '或者下载';
 $lang['zh_CN']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = '预发行版本：';
 $lang['zh_CN']['DownloadSimplePage.ss']['VersionsRecommended'] = '推荐';
 
-$lang['zh_CN']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['zh_CN']['FancyPage.ss']['NOSCRIPT'] = '您的浏览器禁用了Javascript 。';
 $lang['zh_CN']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
-$lang['zh_CN']['FancyPage.ss']['DISCOVER'] = 'Discover it';
-$lang['zh_CN']['FancyPage.ss']['DONATE']   = 'Donate';
-$lang['zh_CN']['FancyPage.ss']['MAINSITE'] = 'Main website';
-$lang['zh_CN']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
-$lang['zh_CN']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
-$lang['zh_CN']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
-$lang['zh_CN']['FancyPage.ss']['FUN_H']    = 'Fun project';
-$lang['zh_CN']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
-$lang['zh_CN']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
-$lang['zh_CN']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
+$lang['zh_CN']['FancyPage.ss']['DISCOVER'] = '发现它';
+$lang['zh_CN']['FancyPage.ss']['DONATE']   = '捐赠';
+$lang['zh_CN']['FancyPage.ss']['MAINSITE'] = '主站';
+$lang['zh_CN']['FancyPage.ss']['DLBADGE']  = '现在下载<br/><strong>Libre</strong>Office<br/>！';
+$lang['zh_CN']['FancyPage.ss']['SUITE_H']  = '自由免费的办公套件';
+$lang['zh_CN']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: 我们的社区期待了12年的办公套件。';
+$lang['zh_CN']['FancyPage.ss']['FUN_H']    = '有趣的项目';
+$lang['zh_CN']['FancyPage.ss']['FUN']      = 'LibreOffice是免费开源软件世界中最友好、发展最快的项目之一。我们致力于创造真正惊艳、绝对自由的免费软件。<br/><a href="https://www.documentfoundation.org/foundation/">深入了解我们，并探索我们的价值</a>';
+$lang['zh_CN']['FancyPage.ss']['PEOPLE_H'] = '超棒的社区';
+$lang['zh_CN']['FancyPage.ss']['PEOPLE']   = 'LibreOffice不只是一款软件。它是关于人，关于文化，关于创造，关于分享与协作。<br/>感谢LibreOffice项目的所有志愿者，有了他们我们才能存在存在并发展。我们有很多角色能够交给你，从工程设计方面的任务，到社区支持以及创造性的工作。<br/><a href="https://www.libreoffice.org/get-involved/">现在就加入我们！</a>';
 
 $lang['zh_CN']['LocaleName']['af'] = '南非荷兰语';
 $lang['zh_CN']['LocaleName']['ar'] = '阿拉伯语';

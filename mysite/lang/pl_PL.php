@@ -71,6 +71,19 @@ $lang['pl_PL']['DownloadSimplePage.ss']['TypeOr'] = 'lub pobierz';
 $lang['pl_PL']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Wersje rozwojowe:';
 $lang['pl_PL']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Zalecane';
 
+$lang['pl_PL']['FancyPage.ss']['NOSCRIPT'] = 'Javascript jest wyłączony w Twojej przeglądarce internetowej.';
+$lang['pl_PL']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['pl_PL']['FancyPage.ss']['DISCOVER'] = 'Odkryj to';
+$lang['pl_PL']['FancyPage.ss']['DONATE']   = 'Donacja';
+$lang['pl_PL']['FancyPage.ss']['MAINSITE'] = 'Strona główna';
+$lang['pl_PL']['FancyPage.ss']['DLBADGE']  = 'Pobierz<br/><strong>Libre</strong>Office<br/>teraz&nbsp;!';
+$lang['pl_PL']['FancyPage.ss']['SUITE_H']  = 'Wolny pakiet biurowy';
+$lang['pl_PL']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: Wolny pakiet biurowy, o którym społeczność marzyła przez dwanaście lat.';
+$lang['pl_PL']['FancyPage.ss']['FUN_H']    = 'Projekt realizowany z radością';
+$lang['pl_PL']['FancyPage.ss']['FUN']      = 'LibreOffice jest jednym z najprzyjaźniejszych i najszybciej rosnących projektów w świecie Wolnego i Otwartego Oprogramowania. Angażujemy siebie, aby stworzyć prawdziwie wspaniałe i wolne oprogramowanie. <br/><a href="https://www.documentfoundation.org/foundation/">Dowiedz się więcej o nas i naszych wartościach</a>';
+$lang['pl_PL']['FancyPage.ss']['PEOPLE_H'] = 'Fantastyczni ludzie';
+$lang['pl_PL']['FancyPage.ss']['PEOPLE']   = 'LibreOffice to więcej niż oprogramowanie. To ludzie, to kultura, to proces tworzenia, dzielenia się i współpracy/<br/>Możemy istnieć i rosnąć tylko dzięki wolontariuszom. Dysponujemy wieloma rolami dla Ciebie, od prac inżynierskich to wsparcia społeczności i prac kreatywnych. <br/><a href="https://www.libreoffice.org/get-involved/">Dołącz do nas już dzisiaj!</a>';
+
 $lang['pl_PL']['LocaleName']['af'] = 'Afrikaans';
 $lang['pl_PL']['LocaleName']['ar'] = 'Arabski';
 $lang['pl_PL']['LocaleName']['as'] = 'Asamski';

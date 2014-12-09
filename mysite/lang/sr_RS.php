@@ -71,6 +71,19 @@ $lang['sr_RS']['DownloadSimplePage.ss']['TypeOr'] = 'или преузмите';
 $lang['sr_RS']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Пробна предиздања:';
 $lang['sr_RS']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Препоручено';
 
+$lang['sr_RS']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['sr_RS']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['sr_RS']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['sr_RS']['FancyPage.ss']['DONATE']   = 'Donate';
+$lang['sr_RS']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['sr_RS']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
+$lang['sr_RS']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
+$lang['sr_RS']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['sr_RS']['FancyPage.ss']['FUN_H']    = 'Fun project';
+$lang['sr_RS']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['sr_RS']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
+$lang['sr_RS']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
+
 $lang['sr_RS']['LocaleName']['af'] = 'африканс';
 $lang['sr_RS']['LocaleName']['ar'] = 'арапски';
 $lang['sr_RS']['LocaleName']['as'] = 'Assamese';

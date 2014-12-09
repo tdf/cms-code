@@ -1,13 +1,13 @@
 <?php
 global $lang;
 
-$lang['is_IS']['Donationpage']['AMOUNT']='Magn:';
+$lang['is_IS']['Donationpage']['AMOUNT']='Upphæð:';
 
 
-$lang['is_IS']['DonatePage']['BUTTON_CARD']   ='Donate via Credit Card';
-$lang['is_IS']['DonatePage']['BUTTON_PAYPAL'] ='Donate via PayPal';
-$lang['is_IS']['DonatePage']['CHOICE_DEFAULT']='Select one of the default values';
-$lang['is_IS']['DonatePage']['CUSTOM_CHOICE'] ='Or enter a custom amount and currency<br/>(only those marked with * are also available via PayPal)';
+$lang['is_IS']['DonatePage']['BUTTON_CARD']   ='Styrkja með kreditkorti';
+$lang['is_IS']['DonatePage']['BUTTON_PAYPAL'] ='Styrkja með PayPal';
+$lang['is_IS']['DonatePage']['CHOICE_DEFAULT']='Veldu eitt af sjálfgefnu gildunum';
+$lang['is_IS']['DonatePage']['CUSTOM_CHOICE'] ='Eða settu inn upphæð og gjaldmiðil að eigin vali<br/>(einungis þeir sem merktir eru með * eru einnig tiltækir á PayPal)';
 $lang['is_IS']['DonatePage']['CUSTOM_AMOUNT_VALUE'] ='25';
 $lang['is_IS']['DonatePage']['DEFAULT_AMOUNT_EUR05']= '5';
 $lang['is_IS']['DonatePage']['DEFAULT_AMOUNT_EUR10']='10';
@@ -15,16 +15,16 @@ $lang['is_IS']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['is_IS']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['is_IS']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['is_IS']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
+$lang['is_IS']['DonatePage']['DLRefreshMsg']= 'Niðurhalið þitt %s ætti að hefjast innan skamms. Smelltu á tengilinn ef það ræsist ekki sjálfkrafa.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['is_IS']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['is_IS']['DonatePage']['DLOptional']  = 'Þú getur fundið aukaniðurhalspakka hér til vinstri.';
 
 $lang['is_IS']['Downloadpage']['BITTORRENT']='Sækja með BitTorrent';
 $lang['is_IS']['Downloadpage']['DETAILLINK']='Ná í nánari upplýsingar (md5sum,…)';
 $lang['is_IS']['Downloadpage']['DLSDK']     ='Ná í SDK til að þróa viðbætur og meðvirkandi ytri tól';
 $lang['is_IS']['Downloadpage']['DLSOURCE']  ='Ná í upprunakóða til að byggja þína eigin uppsetningu';
 $lang['is_IS']['Downloadpage']['DLSUITE']   ='Aðrar leiðir til að ná í LibreOffice skrifstofuvöndulinn';
-$lang['is_IS']['Downloadpage']['NOTESTBUILDS']='There are no testing builds available at the moment.';
+$lang['is_IS']['Downloadpage']['NOTESTBUILDS']='Í augnablikinu er engar prófunarútgáfur tiltækar.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
 $lang['is_IS']['Navigation']['GOTOPAGE']  ='"Fara á %s síðuna"';
@@ -34,17 +34,17 @@ $lang['is_IS']['Navigation']['TOTOP']     ='⬆ fara efst';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadNeededFiles'] = 'Þú þarft að ná í þessar skrár og setja upp í réttri röð:';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsDevelopersHeader'] = 'Hönnuðir';
 /* %s will be replaced with OS/arch, version, language */
-$lang['is_IS']['DownloadSimplePage.ss']['DownloadsHeader']= 'Selected: LibreOffice <b>%s</b>';
-$lang['is_IS']['DownloadSimplePage.ss']['NotWanted']      = 'Not the version you wanted?';
+$lang['is_IS']['DownloadSimplePage.ss']['DownloadsHeader']= 'Valið: LibreOffice <b>%s</b>';
+$lang['is_IS']['DownloadSimplePage.ss']['NotWanted']      = 'Ekki sú útgáfa sem þú vildir?';
 /* will be displayed instead of the dl-buttons */
-$lang['is_IS']['DownloadSimplePage.ss']['NoRegularDL']    = 'No regular installation files are available.<br/>Please change your selection or pick one from the additional downloads below.';
+$lang['is_IS']['DownloadSimplePage.ss']['NoRegularDL']    = 'Engar venjulegar uppsetningaskrár eru tiltækar.<br/>Breyttu valinu þínu eða veldu eitthvað af aukapökkunum hér fyrir neðan.';
 /* watch out for proper quoting */
-$lang['is_IS']['DownloadSimplePage.ss']['ViewDLArchive']  = 'If you\'re looking for old versions, please visit our <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">download archive</a>.';
+$lang['is_IS']['DownloadSimplePage.ss']['ViewDLArchive']  = 'Ef þú ert að leita að eldri útgáfum, skoðaðu endilega <a href="http://downloadarchive.documentfoundation.org/libreoffice/old">niðurhalssafnið</a>.';
 /* will be formatted as link */
-$lang['is_IS']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language';
-$lang['is_IS']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
+$lang['is_IS']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Breyta tungumáli';
+$lang['is_IS']['DownloadSimplePage.ss']['ChangeVersion']  = 'Breyta útgáfu:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
-$lang['is_IS']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
+$lang['is_IS']['DownloadSimplePage.ss']['ChangeOS']       = 'Breyta <abbr title="Stýrikerfi">stýrikerfi</abbr>:';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Upplýsingar';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Skoða md5 gátsummu og lista yfir niðurhalsspegla skrárinnar';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Aðal-uppsetningarforrit';
@@ -67,9 +67,22 @@ $lang['is_IS']['DownloadSimplePage.ss']['DownloadsTorrentLink'] = 'Torrent-skrá
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Sækja skrárnar með BitTorrent';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsVersion'] = 'útgáfa %s';
 $lang['is_IS']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Veldu tungumálið sem þú vilt nota';
-$lang['is_IS']['DownloadSimplePage.ss']['TypeOr'] = 'or download';
-$lang['is_IS']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Pre-releases:';
+$lang['is_IS']['DownloadSimplePage.ss']['TypeOr'] = 'eða ná í';
+$lang['is_IS']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Forútgáfur:';
 $lang['is_IS']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Mælt með þessu';
+
+$lang['is_IS']['FancyPage.ss']['NOSCRIPT'] = 'Javascript er óvirkt í vafranum þínum.';
+$lang['is_IS']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['is_IS']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['is_IS']['FancyPage.ss']['DONATE']   = 'Styrkja';
+$lang['is_IS']['FancyPage.ss']['MAINSITE'] = 'Aðalvefsvæði';
+$lang['is_IS']['FancyPage.ss']['DLBADGE']  = 'Náðu í<br/><strong>Libre</strong>Office<br/>núna&nbsp;!';
+$lang['is_IS']['FancyPage.ss']['SUITE_H']  = 'Frjáls skjalavinnsluforrit';
+$lang['is_IS']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['is_IS']['FancyPage.ss']['FUN_H']    = 'Skemmtilegt verkefni';
+$lang['is_IS']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['is_IS']['FancyPage.ss']['PEOPLE_H'] = 'Frábært fólk';
+$lang['is_IS']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
 
 $lang['is_IS']['LocaleName']['af'] = 'Afrikaans';
 $lang['is_IS']['LocaleName']['ar'] = 'Arabíska';

@@ -71,6 +71,19 @@ $lang['el_GR']['DownloadSimplePage.ss']['TypeOr'] = 'ή μεταφόρτωση';
 $lang['el_GR']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Προεκδόσεις:';
 $lang['el_GR']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Συνιστώμενο';
 
+$lang['el_GR']['FancyPage.ss']['NOSCRIPT'] = 'To Javascript είναι ανενεργό στο περιηγητή ιστού σας.';
+$lang['el_GR']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['el_GR']['FancyPage.ss']['DISCOVER'] = 'Ανακαλύψτε το';
+$lang['el_GR']['FancyPage.ss']['DONATE']   = 'Δωρεά';
+$lang['el_GR']['FancyPage.ss']['MAINSITE'] = 'Κύριος ιστότοπος';
+$lang['el_GR']['FancyPage.ss']['DLBADGE']  = 'Κατεβάστε το <br/><strong>Libre</strong>Office<br/> τώρα&nbsp;!';
+$lang['el_GR']['FancyPage.ss']['SUITE_H']  = 'Ελεύθερη σειρά γραφείου';
+$lang['el_GR']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: Η ελεύθερη σειρά γραφείου που ονειρευόταν η κοινότητα για δώδεκα έτη.';
+$lang['el_GR']['FancyPage.ss']['FUN_H']    = 'Κεφάτο έργο';
+$lang['el_GR']['FancyPage.ss']['FUN']      = 'Το LibreOffice είναι ένα από τα φιλικότερα και γρηγορότερα αναπτυσσόμενα έργα στον κόσμο του ελεύθερου και ανοικτού λογισμικού. Δεσμευόμαστε να παράξουμε αληθινά μεγάλο και ελεύθερο λογισμικό.<br/><a href="https://www.documentfoundation.org/foundation/">Ανακαλύψτε περισσότερα για μας και τις αξίες μας</a>';
+$lang['el_GR']['FancyPage.ss']['PEOPLE_H'] = 'Φανταστικά άτομα';
+$lang['el_GR']['FancyPage.ss']['PEOPLE']   = 'Το LibreOffice είναι περισσότερο από το λογισμικό. Είναι οι άνθρωποι, ο πολιτισμός, η δημιουργία, το μοίρασμα και η συνεργασία.<br/> Μπορούμε να υπάρχουμε και να αναπτυχθούμε μόνο χάρη στους εθελοντές του έργου LibreOffice. Έχουμε πολλούς ρόλους για σας, από εργασίες μηχανικών μέχρι υποστήριξη κοινότητας και δημιουργική εργασία.<br/><a href="https://www.libreoffice.org/get-involved/"> Συμμετάσχετε σήμερα μαζί μας!</a>';
+
 $lang['el_GR']['LocaleName']['af'] = 'Αφρικάανς';
 $lang['el_GR']['LocaleName']['ar'] = 'Αραβικά';
 $lang['el_GR']['LocaleName']['as'] = 'Ασαμικά';

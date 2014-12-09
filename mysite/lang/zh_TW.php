@@ -71,6 +71,19 @@ $lang['zh_TW']['DownloadSimplePage.ss']['TypeOr'] = '或是下載';
 $lang['zh_TW']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = '預先發行版：';
 $lang['zh_TW']['DownloadSimplePage.ss']['VersionsRecommended'] = '推薦';
 
+$lang['zh_TW']['FancyPage.ss']['NOSCRIPT'] = '您的瀏覽器已停用 Javascript';
+$lang['zh_TW']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
+$lang['zh_TW']['FancyPage.ss']['DISCOVER'] = '探索';
+$lang['zh_TW']['FancyPage.ss']['DONATE']   = '捐款';
+$lang['zh_TW']['FancyPage.ss']['MAINSITE'] = '主網站';
+$lang['zh_TW']['FancyPage.ss']['DLBADGE']  = '現在就<br/>下載<br/><strong>Libre</strong>Office<br/>&nbsp;！';
+$lang['zh_TW']['FancyPage.ss']['SUITE_H']  = '自由的辦公軟體';
+$lang['zh_TW']['FancyPage.ss']['SUITE']    = 'LibreOffice 4：';
+$lang['zh_TW']['FancyPage.ss']['FUN_H']    = '有趣的專案';
+$lang['zh_TW']['FancyPage.ss']['FUN']      = 'LibreOffice 是自由與開源軟體世界中最友善、成長最快的專案之一。我們致力於打造絕對驚艷、絕對自由的軟體。<br/><a href="https://www.documentfoundation.org/foundation/">深入瞭解我們與探尋我們的價值</a>';
+$lang['zh_TW']['FancyPage.ss']['PEOPLE_H'] = '超棒的社群';
+$lang['zh_TW']['FancyPage.ss']['PEOPLE']   = 'LibreOffice 可不只是軟體；它也是人群，它還是文化，它是更創造、分享、合作。<br/>我們之所以能夠存在並且成長茁壯，都歸功於 LibreOffice 專案志工。有許多角色可供您擔任，包括程式設計工程、社群支援、創意設計等。<br/><a href="https://www.libreoffice.org/get-involved/">今天就加入我們的行列！</a>';
+
 $lang['zh_TW']['LocaleName']['af'] = '南非荷蘭文';
 $lang['zh_TW']['LocaleName']['ar'] = '阿拉伯文';
 $lang['zh_TW']['LocaleName']['as'] = '阿薩姆文';

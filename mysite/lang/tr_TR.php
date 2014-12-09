@@ -15,7 +15,7 @@ $lang['tr_TR']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['tr_TR']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['tr_TR']['DonatePage']['DEFAULT_CURRENCY']    ='TRY';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['tr_TR']['DonatePage']['DLRefreshMsg']= '%s kısa süre içinde indilmeye başlanacak. Başlamazsa lütfen bağlantıya tıklayın.';
+$lang['tr_TR']['DonatePage']['DLRefreshMsg']= '%s kısa süre içinde indirilmeye başlanacak. Başlamazsa lütfen bağlantıya tıklayın.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
 $lang['tr_TR']['DonatePage']['DLOptional']  = 'Seçimsel indirmeleri sol tarafta bulabilirsiniz.';
 
