@@ -73,16 +73,16 @@ $lang['is_IS']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Mælt með þe
 
 $lang['is_IS']['FancyPage.ss']['NOSCRIPT'] = 'Javascript er óvirkt í vafranum þínum.';
 $lang['is_IS']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
-$lang['is_IS']['FancyPage.ss']['DISCOVER'] = 'Discover it';
+$lang['is_IS']['FancyPage.ss']['DISCOVER'] = 'Skoðaðu það';
 $lang['is_IS']['FancyPage.ss']['DONATE']   = 'Styrkja';
 $lang['is_IS']['FancyPage.ss']['MAINSITE'] = 'Aðalvefsvæði';
 $lang['is_IS']['FancyPage.ss']['DLBADGE']  = 'Náðu í<br/><strong>Libre</strong>Office<br/>núna&nbsp;!';
 $lang['is_IS']['FancyPage.ss']['SUITE_H']  = 'Frjáls skjalavinnsluforrit';
-$lang['is_IS']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
+$lang['is_IS']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: Frjálsi skrifstofuhugbúnaðurinn sem samfélagið dreymdi um í mörg ár.';
 $lang['is_IS']['FancyPage.ss']['FUN_H']    = 'Skemmtilegt verkefni';
-$lang['is_IS']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['is_IS']['FancyPage.ss']['FUN']      = 'LibreOffice er eitt vinalegasta verkefnið, og það sem vex hvað hraðast, í heimi frjáls og opins hugbúnaðar. Við helgum okkur hugsjóninni um að búa til sannlega frjálsan og frábæran hugbúnað.<br/><a href="https://www.documentfoundation.org/foundation/">Uppgötvaðu fleira um okkur og þau gildi sem við fylgjum</a>';
 $lang['is_IS']['FancyPage.ss']['PEOPLE_H'] = 'Frábært fólk';
-$lang['is_IS']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
+$lang['is_IS']['FancyPage.ss']['PEOPLE']   = 'LibreOffice er um meira en hugbúnað. Það er um fólk, það er um menningu, það er um sköpun, miðlun og samstarf.<br/>Við erum einungis til og döfnum vegna allra sjálfboðaliðanna sem koma að LibreOffice verkefninu. Þér bjóðast allskyns hlutverk, allt frá verkfræðilegum viðfangsefnum til notendastuðnings og skapandi hugmyndavinnu.<br/><a href="https://www.libreoffice.org/get-involved/">Gakktu í hópinn sem fyrst !</a>';
 
 $lang['is_IS']['LocaleName']['af'] = 'Afrikaans';
 $lang['is_IS']['LocaleName']['ar'] = 'Arabíska';

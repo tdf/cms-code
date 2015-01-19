@@ -15,15 +15,15 @@ $lang['cy_GB']['DonatePage']['DEFAULT_AMOUNT_EUR20']='20';
 $lang['cy_GB']['DonatePage']['DEFAULT_AMOUNT_EUR50']='50';
 $lang['cy_GB']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
-$lang['cy_GB']['DonatePage']['DLRefreshMsg']= 'Dylai llwytho i lawr %s yn dechrau cyn bo hir. Cliciwch ar y ddolen os na fydd yn cychwyn.';
+$lang['cy_GB']['DonatePage']['DLRefreshMsg']= 'Dylai llwytho %s  i lawr yn dechrau cyn bo hir. Cliciwch ar y ddolen os na fydd yn cychwyn.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
 $lang['cy_GB']['DonatePage']['DLOptional']  = 'Gallwch ddod o hyd i\'r llwytho i lawr dewisol ar y chwith.';
 
 $lang['cy_GB']['Downloadpage']['BITTORRENT']='Llwytho i lawr gyda BitTorrent';
 $lang['cy_GB']['Downloadpage']['DETAILLINK']='Manylion (md5sum,…)';
-$lang['cy_GB']['Downloadpage']['DLSDK']     ='Llwythwch i lawr yr SDK ar gyfer datblygu estyniadau ag offer allanol';
+$lang['cy_GB']['Downloadpage']['DLSDK']     ='Llwythwch yr SDK i lawr ar gyfer datblygu estyniadau ag offer allanol';
 $lang['cy_GB']['Downloadpage']['DLSOURCE']  ='Llwythwch y cod ffynhonnell i lawr i adeiladu eich gosodwr eich hun';
-$lang['cy_GB']['Downloadpage']['DLSUITE']   ='Ffordd arall i lwytho i lawr LibreOffice, y casgliad cynhyrchiol';
+$lang['cy_GB']['Downloadpage']['DLSUITE']   ='Ffordd arall i lwytho i lawr y casgliad cynhyrchiol, LibreOffice';
 $lang['cy_GB']['Downloadpage']['NOTESTBUILDS']='Nid oes fersiynau prawf ar gael ar hyn o bryd.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
@@ -45,8 +45,8 @@ $lang['cy_GB']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Newid yr iaith';
 $lang['cy_GB']['DownloadSimplePage.ss']['ChangeVersion']  = 'Newid y fersiwn:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['cy_GB']['DownloadSimplePage.ss']['ChangeOS']       = 'Newid <abbr title="Operating System">System Weithredu</abbr>:';
-$lang['cy_GB']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Gwybodaeth';
-$lang['cy_GB']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Gweld y md5sum a rhestr o ddrychau llwytho i lawr y ffeil';
+$lang['cy_GB']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Manylion';
+$lang['cy_GB']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Gweld y md5sum a rhestr o ddrychau llwytho\'r ffeil i lawr';
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Prif osodwr';
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Cymorth mewnol LibreOffice';
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Rhyngwyneb defnyddiwr wedi ei gyfieithu';
@@ -68,14 +68,14 @@ $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsTorrentTitle'] = 'Llwytho i la
 $lang['cy_GB']['DownloadSimplePage.ss']['DownloadsVersion'] = 'fersiwn %s';
 $lang['cy_GB']['DownloadSimplePage.ss']['LanguagesPleaseSelect'] = 'Dewiswch eich iaith';
 $lang['cy_GB']['DownloadSimplePage.ss']['TypeOr'] = 'neu lwytho i lawr';
-$lang['cy_GB']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Rhag ryddhad:';
+$lang['cy_GB']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Cyn-rhyddhau:';
 $lang['cy_GB']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Argymhellir';
 
-$lang['cy_GB']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['cy_GB']['FancyPage.ss']['NOSCRIPT'] = 'Mae Javascript wedi ei analluogi ar eich porwr gwe.';
 $lang['cy_GB']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
-$lang['cy_GB']['FancyPage.ss']['DISCOVER'] = 'Discover it';
-$lang['cy_GB']['FancyPage.ss']['DONATE']   = 'Donate';
-$lang['cy_GB']['FancyPage.ss']['MAINSITE'] = 'Main website';
+$lang['cy_GB']['FancyPage.ss']['DISCOVER'] = 'Darganfod';
+$lang['cy_GB']['FancyPage.ss']['DONATE']   = 'Cyfrannu';
+$lang['cy_GB']['FancyPage.ss']['MAINSITE'] = 'Prif wefan';
 $lang['cy_GB']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
 $lang['cy_GB']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
 $lang['cy_GB']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';

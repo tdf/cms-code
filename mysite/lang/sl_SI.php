@@ -27,7 +27,7 @@ $lang['sl_SI']['Downloadpage']['DLSUITE']   ='Drugi načini prenosa pisarniškeg
 $lang['sl_SI']['Downloadpage']['NOTESTBUILDS']='Trenutno ni poskusnih gradenj.';
 
 /* Localizers: this string HAS to be enclosed in either single or double ASCII quotes! It is a title attribute of a link. */
-$lang['sl_SI']['Navigation']['GOTOPAGE']  ='"Pojdi na stran %s"';
+$lang['sl_SI']['Navigation']['GOTOPAGE']  ='»Pojdi na stran %s«';
 $lang['sl_SI']['Navigation']['TOTOPTITLE']='pojdi na vrh strani';
 $lang['sl_SI']['Navigation']['TOTOP']     ='⬆ na vrh';
 
@@ -71,18 +71,18 @@ $lang['sl_SI']['DownloadSimplePage.ss']['TypeOr'] = 'ali prenesite';
 $lang['sl_SI']['DownloadSimplePage.ss']['VersionsPrereleaseHeader'] = 'Predizdaje:';
 $lang['sl_SI']['DownloadSimplePage.ss']['VersionsRecommended'] = 'Priporočeno';
 
-$lang['sl_SI']['FancyPage.ss']['NOSCRIPT'] = 'Javascript is disabled in your web browser.';
+$lang['sl_SI']['FancyPage.ss']['NOSCRIPT'] = 'Javascript je v vašem brskalniku onemogočen.';
 $lang['sl_SI']['FancyPage.ss']['FANCYLABEL'] = 'LibreOffice 4';
-$lang['sl_SI']['FancyPage.ss']['DISCOVER'] = 'Discover it';
-$lang['sl_SI']['FancyPage.ss']['DONATE']   = 'Donate';
-$lang['sl_SI']['FancyPage.ss']['MAINSITE'] = 'Main website';
-$lang['sl_SI']['FancyPage.ss']['DLBADGE']  = 'Download<br/><strong>Libre</strong>Office<br/>now&nbsp;!';
-$lang['sl_SI']['FancyPage.ss']['SUITE_H']  = 'Free Office Suite';
-$lang['sl_SI']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: The free office suite the community has been dreaming of for twelve years.';
-$lang['sl_SI']['FancyPage.ss']['FUN_H']    = 'Fun project';
-$lang['sl_SI']['FancyPage.ss']['FUN']      = 'LibreOffice is one of the friendliest and fastest growing projects in the free and open source software world. We commit ourselves to produce truly great and free software.<br/><a href="https://www.documentfoundation.org/foundation/">Discover more about us and our values</a>';
+$lang['sl_SI']['FancyPage.ss']['DISCOVER'] = 'Odkrijte ga!';
+$lang['sl_SI']['FancyPage.ss']['DONATE']   = 'Donirajte';
+$lang['sl_SI']['FancyPage.ss']['MAINSITE'] = 'Glavno spletišče';
+$lang['sl_SI']['FancyPage.ss']['DLBADGE']  = 'Prenesite<br/><strong>Libre</strong>Office<br/>zdaj&nbsp;!';
+$lang['sl_SI']['FancyPage.ss']['SUITE_H']  = 'Prost pisarniški paket';
+$lang['sl_SI']['FancyPage.ss']['SUITE']    = 'LibreOffice 4: prost in brezplačen pisarniški paket, o katerem so uporabniki sanjali dvanajst let.';
+$lang['sl_SI']['FancyPage.ss']['FUN_H']    = 'Zabaven projekt';
+$lang['sl_SI']['FancyPage.ss']['FUN']      = 'LibreOffice je eden najbolj prijaznih in najhitreje rastočih projektov v svetu brezplačnega programja in odprte kode. Zavezani smo k izdelovanju resnično izjemnega in prostega programja.<br/><a href="https://www.documentfoundation.org/foundation/">Več o nas in naših vrednotah</a>';
 $lang['sl_SI']['FancyPage.ss']['PEOPLE_H'] = 'Fantastic people';
-$lang['sl_SI']['FancyPage.ss']['PEOPLE']   = 'LibreOffice is about more than software. It\'s about people, it\'s about culture, it\'s about creation, sharing and collaboration.<br/>We can only exist and grow thanks to the volunteers of the LibreOffice project. We have many roles for you, from engineering tasks to community support and creative work.<br/><a href="https://www.libreoffice.org/get-involved/">Join us today !</a>';
+$lang['sl_SI']['FancyPage.ss']['PEOPLE']   = 'LibreOffice je več kot program. To smo ljudje, kultura, ustvarjanje, skupna raba in sodelovanje<br/>Obstajamo in rastemo lahko le zahvaljujoč prostovoljcem projekta LibreOffice. Ponudimo vam lahko več vlog, od inženirskih nalog do podpore skupnosti in ustvarjalnega dela.<br/><a href="https://www.libreoffice.org/get-involved/">Pridružite se nam še danes!!</a>';
 
 $lang['sl_SI']['LocaleName']['af'] = 'afrikanski';
 $lang['sl_SI']['LocaleName']['ar'] = 'arabski';
