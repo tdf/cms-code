@@ -14,7 +14,7 @@ $(document).ready(function() {
 	if (navplatform == "win32") {
 		platform = "winx86";
 	} else if (navplatform == "macintel") {
-		platform="macx86" ;
+		platform="macx86_64" ;
 	} else if (navplatform == "macppc") {
 		platform = "macpp";
 	} else if (navplatform.substring(0,5) == "linux") {
@@ -59,22 +59,11 @@ $(document).ready(function() {
 			var helppack = "";
 			var langpack = "";
 			var version = $(this).html();
-			/* nso and ns are both used - nso is preferred, be-BY and be are both used, be is preferred */
-			if (version.indexOf("3.4.6") >= 0) { return; /* 3.4.6 has security-flaw */}
-			if (version.indexOf("3.3.") >= 0) {
-				if (sel == "nso") {
-					sel="ns";
-				} else if (sel == "be") {
-					sel="be-BY";
-				}
-			}
+			if (version.indexOf("4.4.") >= 0 && platform == "macx86") {
+				filteredoutput += '<p>LibreOffice 4.4.x is not available in 32bit or Mac, please choose 64bit version.</p>';return; /* no 4.4.x for mac 32bit */}
 
 			if (platform == "winx86") {
-				if ( !(version.indexOf("3.3.") >= 0) || $.inArray( sel, multilangs ) > -1 ) {
-					fullinstall = "<li>"+$(this).next("ul").find("ul.winx86 > li.install.multi").html()+"</li>";
-				} else {
-					fullinstall = "<li>"+$(this).next("ul").find("ul.winx86 > li.install.all").html()+"</li>";
-				}
+				fullinstall = "<li>"+$(this).next("ul").find("ul.winx86 > li.install").html()+"</li>";
 			} else {
 				fullinstall = "<li>"+$(this).next("ul").find("ul."+platform+" >li.install").html()+"</li>";
 				if (sel != "en-US") {
@@ -86,10 +75,6 @@ $(document).ready(function() {
 			helppack = (platform.indexOf("mac") >= 0) ? "" : $(this).next("ul").find("ul."+platform+" ul li.help."+sel).length ? "<li>"+$(this).next("ul").find("ul."+platform+" ul li.help."+sel).html()+"</li>" : "<li>"+$(this).next("ul").find("ul."+platform+" ul li.help.en-US").html() + " (fallback)</li>";
 			filteredoutput += "<!-- "+downloadnote+' --><ul class="'+ ((version.indexOf("beta") >= 0 || version.indexOf("rc") >= 0 || version.indexOf("3.6.0") >= 0 ) ? "warning" : (version == "3.6.1" ? "information" : "tick")) +'">'+fullinstall+langpack+helppack+"</ul>";
 		});
-		if (sel == "pt-BR" && platform == "winx86") {
-			/* special treatment for BrOffice - phased out with 3.4 */
-			filteredoutput = filteredoutput.replace(/LibO_3.3/g, "BrOffice_3.3");
-		}
 		$("div#filtered").html(filteredoutput);
 		$("div#filtered a").each(function() { try { piwikTracker.addListener(this); } catch(err) {} });
 		}).change();
