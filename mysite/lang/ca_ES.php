@@ -45,8 +45,8 @@ $lang['ca_ES']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Canvia la llengua';
 $lang['ca_ES']['DownloadSimplePage.ss']['ChangeVersion']  = 'Canvia la versió:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['ca_ES']['DownloadSimplePage.ss']['ChangeOS']       = 'Canvia el<abbr title="sistema operatiu">SO</abbr>:';
-$lang['ca_ES']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informació';
-$lang['ca_ES']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Mostra la suma de verificació md5 i la llista dels miralls per al fitxer';
+$lang['ca_ES']['DownloadButton.ss']['DownloadsInfoLink'] = 'Informació';
+$lang['ca_ES']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Mostra la suma de verificació md5 i la llista dels miralls per al fitxer';
 $lang['ca_ES']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Instal·lador principal';
 $lang['ca_ES']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Ajuda incorporada del LibreOffice';
 $lang['ca_ES']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Interfície d\'usuari traduïda';

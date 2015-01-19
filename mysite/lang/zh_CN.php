@@ -45,8 +45,8 @@ $lang['zh_CN']['DownloadSimplePage.ss']['ChangeLanguage'] = '更改语言';
 $lang['zh_CN']['DownloadSimplePage.ss']['ChangeVersion']  = '更改版本：';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['zh_CN']['DownloadSimplePage.ss']['ChangeOS']       = '更改<abbr title="Operating System">操作系统</abbr>：';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInfoLink'] = '信息';
-$lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = '查看该文件的 md5 校验码及镜像下载点列表';
+$lang['zh_CN']['DownloadButton.ss']['DownloadsInfoLink'] = '信息';
+$lang['zh_CN']['DownloadButton.ss']['DownloadsInfoTitle'] = '查看该文件的 md5 校验码及镜像下载点列表';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = '主安装程序';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice 内置帮助';
 $lang['zh_CN']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = '已翻译的用户界面';

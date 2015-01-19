@@ -45,8 +45,8 @@ $lang['ta_IN']['DownloadSimplePage.ss']['ChangeLanguage'] = 'மொழியை 
 $lang['ta_IN']['DownloadSimplePage.ss']['ChangeVersion']  = 'பதிப்பை மாற்று:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['ta_IN']['DownloadSimplePage.ss']['ChangeOS']       = '<abbr title="Operating System">இயங்குதளத்தை</abbr> மாற்று:';
-$lang['ta_IN']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'தகவல்';
-$lang['ta_IN']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'கோப்புக்கான md5sum ஐயும் பதிவிறக்கக் கண்ணாடிகளையும் பாருங்கள்';
+$lang['ta_IN']['DownloadButton.ss']['DownloadsInfoLink'] = 'தகவல்';
+$lang['ta_IN']['DownloadButton.ss']['DownloadsInfoTitle'] = 'கோப்புக்கான md5sum ஐயும் பதிவிறக்கக் கண்ணாடிகளையும் பாருங்கள்';
 $lang['ta_IN']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'முக்கிய நிறுவி';
 $lang['ta_IN']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice உள்ளுக்கு அமைந்த உதவி';
 $lang['ta_IN']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'மொழிபெயர்த்த பயனர் முகப்பு';

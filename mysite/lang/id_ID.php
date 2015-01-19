@@ -45,8 +45,8 @@ $lang['id_ID']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Ubah bahasa';
 $lang['id_ID']['DownloadSimplePage.ss']['ChangeVersion']  = 'Ubah versi:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['id_ID']['DownloadSimplePage.ss']['ChangeOS']       = 'Ubah <abbr title="Operating System">OS</abbr>:';
-$lang['id_ID']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
-$lang['id_ID']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Lihat md5sum dan daftar cermin unduhan bagi berkas';
+$lang['id_ID']['DownloadButton.ss']['DownloadsInfoLink'] = 'Info';
+$lang['id_ID']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Lihat md5sum dan daftar cermin unduhan bagi berkas';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Pemasang utama';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Bantuan bawaan LibreOffice';
 $lang['id_ID']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Antar muka pengguna yang diterjemahkan';

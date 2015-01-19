@@ -45,8 +45,8 @@ $lang['ka_GE']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language
 $lang['ka_GE']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['ka_GE']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
-$lang['ka_GE']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'ინფორმაცია';
-$lang['ka_GE']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'md5sum და გადმოსაწერი ალტერნატიული საიტების (სარკეების) ჩვენება';
+$lang['ka_GE']['DownloadButton.ss']['DownloadsInfoLink'] = 'ინფორმაცია';
+$lang['ka_GE']['DownloadButton.ss']['DownloadsInfoTitle'] = 'md5sum და გადმოსაწერი ალტერნატიული საიტების (სარკეების) ჩვენება';
 $lang['ka_GE']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'მთავარი საინსტალაციო';
 $lang['ka_GE']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice ოფლაინ დახმარება';
 $lang['ka_GE']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'ნათარგმნი სამომხმარებლო მხარე';

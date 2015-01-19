@@ -45,8 +45,8 @@ $lang['br_FR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Kemmañ ar yezh';
 $lang['br_FR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Kemmañ an handelv :';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['br_FR']['DownloadSimplePage.ss']['ChangeOS']       = 'Kemmañ ar <abbr title="Operating System">reizhiad korvoiñ</abbr>:';
-$lang['br_FR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Titouroù';
-$lang['br_FR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Gwelout ar md5sum hag ur roll melezourioù pellgargañ evit ar restr';
+$lang['br_FR']['DownloadButton.ss']['DownloadsInfoLink'] = 'Titouroù';
+$lang['br_FR']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Gwelout ar md5sum hag ur roll melezourioù pellgargañ evit ar restr';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Meziant staliañ pennañ';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Skoazell enkorfet LibreOffice';
 $lang['br_FR']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Ketal an arveriaded troet';

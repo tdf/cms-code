@@ -45,8 +45,8 @@ $lang['hr_HR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language
 $lang['hr_HR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['hr_HR']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
-$lang['hr_HR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informacije';
-$lang['hr_HR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Pogledajte md5sum i popis dodatnih izvora za preuzimanje ove datoteke';
+$lang['hr_HR']['DownloadButton.ss']['DownloadsInfoLink'] = 'Informacije';
+$lang['hr_HR']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Pogledajte md5sum i popis dodatnih izvora za preuzimanje ove datoteke';
 $lang['hr_HR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Glavni instalacijski paket';
 $lang['hr_HR']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Pomoć ugrađena u LibreOffice sučelje';
 $lang['hr_HR']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Prevedeno korisničko sučelje';

@@ -45,8 +45,8 @@ $lang['kk_KZ']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Тілді өзге
 $lang['kk_KZ']['DownloadSimplePage.ss']['ChangeVersion']  = 'Нұсқасын өзгерту:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['kk_KZ']['DownloadSimplePage.ss']['ChangeOS']       = '<abbr title="Операциялық Жүйе">ОЖ</abbr> өзгерту:';
-$lang['kk_KZ']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Ақпараты';
-$lang['kk_KZ']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'md5sum және файлды жүктеп алу үшін айналар тізімі';
+$lang['kk_KZ']['DownloadButton.ss']['DownloadsInfoLink'] = 'Ақпараты';
+$lang['kk_KZ']['DownloadButton.ss']['DownloadsInfoTitle'] = 'md5sum және файлды жүктеп алу үшін айналар тізімі';
 $lang['kk_KZ']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Негізгі орнатқыш';
 $lang['kk_KZ']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice құрамындағы көмек';
 $lang['kk_KZ']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Тілдік дестесі';

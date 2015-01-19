@@ -45,8 +45,8 @@ $lang['pl_PL']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Zmień język';
 $lang['pl_PL']['DownloadSimplePage.ss']['ChangeVersion']  = 'Zmień wersję:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['pl_PL']['DownloadSimplePage.ss']['ChangeOS']       = 'Zmień <abbr title="Operating System">system operacyjny</abbr>:';
-$lang['pl_PL']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informacje';
-$lang['pl_PL']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Zobacz sumę md5 i listę serwerów lustrzanych w poszukiwaniu pliku';
+$lang['pl_PL']['DownloadButton.ss']['DownloadsInfoLink'] = 'Informacje';
+$lang['pl_PL']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Zobacz sumę md5 i listę serwerów lustrzanych w poszukiwaniu pliku';
 $lang['pl_PL']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Główny instalator';
 $lang['pl_PL']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Wbudowana pomoc LibreOffice';
 $lang['pl_PL']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Przetłumaczony interfejs użytkownika';

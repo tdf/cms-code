@@ -45,8 +45,8 @@ $lang['gd_GB']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language
 $lang['gd_GB']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['gd_GB']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
-$lang['gd_GB']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Fiosrachadh';
-$lang['gd_GB']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Seall an md5sumb agus liosta nam frithealaichean-sgàthain airson an fhaidhle';
+$lang['gd_GB']['DownloadButton.ss']['DownloadsInfoLink'] = 'Fiosrachadh';
+$lang['gd_GB']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Seall an md5sumb agus liosta nam frithealaichean-sgàthain airson an fhaidhle';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Prìomh-stàlaichear';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Cobhair am broinn LibreOffice';
 $lang['gd_GB']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Eadar-theangachadh eadar-aghaidh nan cleachdaichean';

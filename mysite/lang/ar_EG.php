@@ -45,8 +45,8 @@ $lang['ar_EG']['DownloadSimplePage.ss']['ChangeLanguage'] = 'غيّر اللغة
 $lang['ar_EG']['DownloadSimplePage.ss']['ChangeVersion']  = 'غيّر الإصدار:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['ar_EG']['DownloadSimplePage.ss']['ChangeOS']       = 'غيّر <abbr title="Operating System">نظام التشغيل</abbr>:';
-$lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'معلومات';
-$lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'اطّلع على مجموع md5 وقائمة مستضيفي الملف';
+$lang['ar_EG']['DownloadButton.ss']['DownloadsInfoLink'] = 'معلومات';
+$lang['ar_EG']['DownloadButton.ss']['DownloadsInfoTitle'] = 'اطّلع على مجموع md5 وقائمة مستضيفي الملف';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'المثبت الرئيسي';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'مساعدة ليبر أوفيس المضمّنة';
 $lang['ar_EG']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'واجهة المستخدم المترجمة';

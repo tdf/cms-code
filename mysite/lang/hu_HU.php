@@ -45,8 +45,8 @@ $lang['hu_HU']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Nyelv módosítása
 $lang['hu_HU']['DownloadSimplePage.ss']['ChangeVersion']  = 'Verzió módosítása:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['hu_HU']['DownloadSimplePage.ss']['ChangeOS']       = 'Operációs rendszer módosítása:';
-$lang['hu_HU']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Információ';
-$lang['hu_HU']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'A fájl letöltése helyeinek és md5 ellenőrzőösszegének megtekintése';
+$lang['hu_HU']['DownloadButton.ss']['DownloadsInfoLink'] = 'Információ';
+$lang['hu_HU']['DownloadButton.ss']['DownloadsInfoTitle'] = 'A fájl letöltése helyeinek és md5 ellenőrzőösszegének megtekintése';
 $lang['hu_HU']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Fő telepítőkészlet';
 $lang['hu_HU']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice súgó';
 $lang['hu_HU']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Lefordított felhasználói felület';

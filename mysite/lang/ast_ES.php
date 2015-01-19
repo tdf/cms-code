@@ -45,8 +45,8 @@ $lang['ast_ES']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Camudar la llingua
 $lang['ast_ES']['DownloadSimplePage.ss']['ChangeVersion']  = 'Camudar la versión:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['ast_ES']['DownloadSimplePage.ss']['ChangeOS']       = 'Camudar el <abbr title="Sistema operativu">S.O.</abbr>:';
-$lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
-$lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Ver la suma md5 y la llista d\'espeyos de descarga pal ficheru';
+$lang['ast_ES']['DownloadButton.ss']['DownloadsInfoLink'] = 'Info';
+$lang['ast_ES']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Ver la suma md5 y la llista d\'espeyos de descarga pal ficheru';
 $lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Instalador principal';
 $lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Ayuda incorporada de LibreOffice';
 $lang['ast_ES']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Interfaz traducida d\'usuariu';

@@ -45,8 +45,8 @@ $lang['da_DK']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Skift sprog';
 $lang['da_DK']['DownloadSimplePage.ss']['ChangeVersion']  = 'Skift version:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['da_DK']['DownloadSimplePage.ss']['ChangeOS']       = 'Skift <abbr title="Operating System">OS</abbr>:';
-$lang['da_DK']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Information';
-$lang['da_DK']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Se md5sum og en liste over spejlservere for filen';
+$lang['da_DK']['DownloadButton.ss']['DownloadsInfoLink'] = 'Information';
+$lang['da_DK']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Se md5sum og en liste over spejlservere for filen';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Hovedinstallationsprogram';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Indbygget hjælp til LibreOffice';
 $lang['da_DK']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Oversat brugergrænseflade';

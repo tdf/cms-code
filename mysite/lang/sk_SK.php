@@ -45,8 +45,8 @@ $lang['sk_SK']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Zmeniť jazyk';
 $lang['sk_SK']['DownloadSimplePage.ss']['ChangeVersion']  = 'Zmeniť verziu:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['sk_SK']['DownloadSimplePage.ss']['ChangeOS']       = 'Zmeniť <abbr title="operačný systém">OS</abbr>:';
-$lang['sk_SK']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informácie';
-$lang['sk_SK']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Zobraziť kontrolný súčet a zoznam zrkadlových serverov';
+$lang['sk_SK']['DownloadButton.ss']['DownloadsInfoLink'] = 'Informácie';
+$lang['sk_SK']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Zobraziť kontrolný súčet a zoznam zrkadlových serverov';
 $lang['sk_SK']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Základný inštalačný balíček';
 $lang['sk_SK']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Inštalačný balíček pomocníka';
 $lang['sk_SK']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Jazykový balíček';

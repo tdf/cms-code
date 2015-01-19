@@ -45,8 +45,8 @@ $lang['fi_FI']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Vaihda kieli';
 $lang['fi_FI']['DownloadSimplePage.ss']['ChangeVersion']  = 'Vaihda versio:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['fi_FI']['DownloadSimplePage.ss']['ChangeOS']       = 'Vaihda käyttöjärjestelmä:';
-$lang['fi_FI']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Tietoja';
-$lang['fi_FI']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Näytä tiedoston md5sum-tarkiste ja luettelo palvelimista, joista tiedoston voi ladata';
+$lang['fi_FI']['DownloadButton.ss']['DownloadsInfoLink'] = 'Tietoja';
+$lang['fi_FI']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Näytä tiedoston md5sum-tarkiste ja luettelo palvelimista, joista tiedoston voi ladata';
 $lang['fi_FI']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Asennuspaketti';
 $lang['fi_FI']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOfficen sisäiset ohjeet';
 $lang['fi_FI']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Käyttöliittymän kielipaketti';

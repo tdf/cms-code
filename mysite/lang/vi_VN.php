@@ -45,8 +45,8 @@ $lang['vi_VN']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Đổi ngôn ngữ'
 $lang['vi_VN']['DownloadSimplePage.ss']['ChangeVersion']  = 'Đổi phiên bản:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['vi_VN']['DownloadSimplePage.ss']['ChangeOS']       = 'Đổi <abbr title="Hệ điều hành">Hệ điều hành</abbr>:';
-$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Thông tin';
-$lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Xem mã md5sum và danh sách các máy chủ của tập tin';
+$lang['vi_VN']['DownloadButton.ss']['DownloadsInfoLink'] = 'Thông tin';
+$lang['vi_VN']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Xem mã md5sum và danh sách các máy chủ của tập tin';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Bộ cài đặt chính';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Trợ giúp của LibreOffice';
 $lang['vi_VN']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Giao diện đã được dịch';

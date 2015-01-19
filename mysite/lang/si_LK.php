@@ -45,8 +45,8 @@ $lang['si_LK']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language
 $lang['si_LK']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['si_LK']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
-$lang['si_LK']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
-$lang['si_LK']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'See the md5sum and list of download mirrors for the file';
+$lang['si_LK']['DownloadButton.ss']['DownloadsInfoLink'] = 'Info';
+$lang['si_LK']['DownloadButton.ss']['DownloadsInfoTitle'] = 'See the md5sum and list of download mirrors for the file';
 $lang['si_LK']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Main installer';
 $lang['si_LK']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice built-in help';
 $lang['si_LK']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Translated user interface';

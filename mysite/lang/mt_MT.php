@@ -45,8 +45,8 @@ $lang['mt_MT']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language
 $lang['mt_MT']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['mt_MT']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
-$lang['mt_MT']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informazzjoni';
-$lang['mt_MT']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Ara l-md5sum u lista ta \'mirja download għall-fajl';
+$lang['mt_MT']['DownloadButton.ss']['DownloadsInfoLink'] = 'Informazzjoni';
+$lang['mt_MT']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Ara l-md5sum u lista ta \'mirja download għall-fajl';
 $lang['mt_MT']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'installatur prinċipali';
 $lang['mt_MT']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice mibnija fil-għajnuna';
 $lang['mt_MT']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'User interface tradotti';

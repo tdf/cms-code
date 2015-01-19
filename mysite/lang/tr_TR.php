@@ -45,8 +45,8 @@ $lang['tr_TR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Dili değiştir';
 $lang['tr_TR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Sürümü değiştir:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['tr_TR']['DownloadSimplePage.ss']['ChangeOS']       = '<abbr title="Operating System">İşletim Sistemini</abbr> değiştir:';
-$lang['tr_TR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Bilgi';
-$lang['tr_TR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Dosya için md5sum ve indirme yansılarının listesine bakın';
+$lang['tr_TR']['DownloadButton.ss']['DownloadsInfoLink'] = 'Bilgi';
+$lang['tr_TR']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Dosya için md5sum ve indirme yansılarının listesine bakın';
 $lang['tr_TR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Ana kurucu';
 $lang['tr_TR']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice gömülü yardım';
 $lang['tr_TR']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Çevrilmiş kullanıcı arayüzü';

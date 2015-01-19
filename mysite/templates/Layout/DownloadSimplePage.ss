@@ -9,6 +9,7 @@
 <!--
 $DebugInfo
 -->
+<% cached "Downloads", Aggregate(Download).Max(LastEdited), SubsiteID, Type, Lang, Version %>
 <style>
 table.columns {
 	border-collapse: collapse;
@@ -99,7 +100,7 @@ ul.osarch > li:not(:last-child):after { content: " |"; }
 #versionlist > li:first-child {padding-left: 0;}
 #versionlist ul, #versionlist li { display: inline; padding: 0 0.3em; }
 #versionlist li.other   { display: none;/* hide for now, maybe float: right; */}
-#versionlist li.other ul { display: none; }
+/* #versionlist li.other ul, #versionlist li.testing { display: none; } */
 #versionlist li.other:before   { content: "Other Versions (hover to show):"; }
 #versionlist li.testing:before { content: "<% _t('VersionsPrereleaseHeader', 'Pre-Release:') %>"; }
 #versionlist li.other:hover { position: relative;  height: 3em; }
@@ -177,7 +178,7 @@ Detailierte Beschreibung: <a href="http://www.libreoffice-na.us/" target="_blank
 	<li id="win-x86"><a href="$Top.Link?type=win-x86&version=$Top.Version&lang=$Top.Lang">Windows</a></li>
 	<li class="relative">Mac OS X:<ul>
 		<li id="mac-x86"><a href="$Top.Link?type=mac-x86&version=$Top.Version&lang=$Top.Lang">Intel</a></li>
-		<li id="mac-ppc"><a href="$Top.Link?type=mac-ppc&version=$Top.Version&lang=$Top.Lang">PPC</a></li>
+		<li id="mac-x86_64"><a href="$Top.Link?type=mac-x86_64&version=$Top.Version&lang=$Top.Lang">Intel <small>(64bit, &gt;= 10.8)</small></a></li>
 	</ul></li>
 	<li class="relative">Linux:<ul>
 		<li id="rpm-x86"   ><a href="$Top.Link?version=$Top.Version&lang=$Top.Lang&type=rpm-x86"   >rpm (x86)</a></li>
@@ -196,11 +197,11 @@ Detailierte Beschreibung: <a href="http://www.libreoffice-na.us/" target="_blank
   <h1><% _t('DownloadsPackagesHeader','Packages') %></h1>
   <ul class="libreoffice">
    <% if DownloadPortables %><% control DownloadPortables %>
-    <li><h2><a href="{$Top.getDonatePageLink}dl/portable/$Version/$ID/$Filename" class="piwik_download"><% _t('DownloadsPortableHeader','PortableApps') %></a> $SizeNice</h2>
+    <li><h2><a href="<% if Top.getDonatePageLink %>{$Top.getDonatePageLink}dl/portable/$Version/$ID/$Filename<% else %>http://download.documentfoundation.org/$Fullpath<% end_if %>" class="piwik_download"><% _t('DownloadsPortableHeader','PortableApps') %></a> $SizeNice</h2>
         <p><% _t('DownloadsPortableText','A portable version of LibreOffice packaged in PortableApps.com Format, so you can take all your documents and everything you need to work from a USB, cloud or local drive. See <a href="http://portableapps.com/">PortableApps.com</a> for more information.') %></p></li>
    <% end_control %><% end_if %>
    <% if DownloadIsos %><% control DownloadIsos %>
-    <li><h2><a href="{$Top.getDonatePageLink}dl/box/$Version/multi/$Filename<% if TotalItems %>?idx=$Pos<% end_if %>" class="piwik_download">$Filename (<% sprintf(_t('DownloadsIsoHeader','%s image'),$InstallMedia) %>)</a> $SizeNice</h2>
+    <li><h2><a href="<% if Top.getDonatePageLink %>{$Top.getDonatePageLink}dl/box/$Version/multi/$Filename<% if TotalItems %>?idx=$Pos<% end_if %><% else %>http://download.documentfoundation.org/$Fullpath<% end_if %>" class="piwik_download">$Filename (<% sprintf(_t('DownloadsIsoHeader','%s image'),$InstallMedia) %>)</a> $SizeNice</h2>
         <p><% _t('DownloadsIsoText','Download an ISO-file to create an installation media') %>.</p></li>
    <% end_control %><% end_if %>
    <% if DownloadAppStores %><% control DownloadAppStores %>
@@ -214,7 +215,7 @@ Detailierte Beschreibung: <a href="http://www.libreoffice-na.us/" target="_blank
    <h1><% _t('DownloadsDevelopersHeader','Developers') %></h1>
    <ul class="libreoffice">
     <% if DownloadSdks %><% control DownloadSdks %>
-     <li><h2><a href='{$Top.getDonatePageLink}dl/SDK/$Version/$ID/$Filename' class="piwik_download"><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
+     <li><h2><a href='<% if Top.getDonatePageLink %>{$Top.getDonatePageLink}dl/SDK/$Version/$ID/$Filename<% else %>http://download.documentfoundation.org/$Fullpath<% end_if %>' class="piwik_download"><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
          <p><% _t('DownloadsSdkText','Download the SDK for developing extensions and external tools.') %></li>
     <% end_control %><% end_if %>
     <% if DownloadSources %>
@@ -227,7 +228,7 @@ Detailierte Beschreibung: <a href="http://www.libreoffice-na.us/" target="_blank
 <% else %>
  <div class="HalfBlockLeft">
   <% if DownloadSdks %><% control DownloadSdks %><ul class="libreoffice">
-    <li><h2><a href='{$Top.getDonatePageLink}dl/SDK/$Version/$ID/$Filename' class="piwik_download"><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
+    <li><h2><a href='<% if Top.getDonatePageLink %>{$Top.getDonatePageLink}dl/SDK/$Version/$ID/$Filename<% else %>http://download.documentfoundation.org/$Fullpath<% end_if %>' class="piwik_download"><% _t('DownloadsSdkHeader','Software development kit (SDK)') %></a> $SizeNice</h2>
         <p><% _t('DownloadsSdkText','Download the SDK for developing extensions and external tools.') %></li>
   </ul><% end_control %><% end_if %>
  </div>
@@ -256,9 +257,6 @@ Detailierte Beschreibung: <a href="http://www.libreoffice-na.us/" target="_blank
 
 <% end_if %>
 
-
-		$Form
-		$PageComments
-
+<% end_cached %>
 </div>
 <% if IsFullWidth %><% else %></div><% end_if %>

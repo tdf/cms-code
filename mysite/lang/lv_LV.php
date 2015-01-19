@@ -45,8 +45,8 @@ $lang['lv_LV']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language
 $lang['lv_LV']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['lv_LV']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
-$lang['lv_LV']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informācija';
-$lang['lv_LV']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Skatiet md5sum un sarakstu ar faila lejupielāžu spoguļiem';
+$lang['lv_LV']['DownloadButton.ss']['DownloadsInfoLink'] = 'Informācija';
+$lang['lv_LV']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Skatiet md5sum un sarakstu ar faila lejupielāžu spoguļiem';
 $lang['lv_LV']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Galvenais instalators';
 $lang['lv_LV']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice iebūvētā palīdzība';
 $lang['lv_LV']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Tulkotā lietotāja saskarne';

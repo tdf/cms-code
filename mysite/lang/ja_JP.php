@@ -45,8 +45,8 @@ $lang['ja_JP']['DownloadSimplePage.ss']['ChangeLanguage'] = '言語の変更';
 $lang['ja_JP']['DownloadSimplePage.ss']['ChangeVersion']  = 'バージョンの変更:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['ja_JP']['DownloadSimplePage.ss']['ChangeOS']       = '<abbr title="Operating System">OS</abbr>の変更:';
-$lang['ja_JP']['DownloadSimplePage.ss']['DownloadsInfoLink'] = '情報';
-$lang['ja_JP']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'MD5チェックサムとこのファイルのダウンロードミラーの一覧を見る';
+$lang['ja_JP']['DownloadButton.ss']['DownloadsInfoLink'] = '情報';
+$lang['ja_JP']['DownloadButton.ss']['DownloadsInfoTitle'] = 'MD5チェックサムとこのファイルのダウンロードミラーの一覧を見る';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'メイン・インストールパッケージ';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice ヘルプパッケージ';
 $lang['ja_JP']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = '言語パッケージ';

@@ -45,8 +45,8 @@ $lang['fa_IR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'تغيير زبان
 $lang['fa_IR']['DownloadSimplePage.ss']['ChangeVersion']  = 'تغيير نسخه';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['fa_IR']['DownloadSimplePage.ss']['ChangeOS']       = 'تغییر <abbr title="Operating System">سیستم عامل</abbr>:';
-$lang['fa_IR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'اطلاعات';
-$lang['fa_IR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'جمع کنترلی md5 و فهرست آینه‌های بارگیری پرونده را مشاهده کنید';
+$lang['fa_IR']['DownloadButton.ss']['DownloadsInfoLink'] = 'اطلاعات';
+$lang['fa_IR']['DownloadButton.ss']['DownloadsInfoTitle'] = 'جمع کنترلی md5 و فهرست آینه‌های بارگیری پرونده را مشاهده کنید';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'نصب کننده اصلی';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'راهنمای توکار لیبره آفیس';
 $lang['fa_IR']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'رابط کاربری ترجمه شده';

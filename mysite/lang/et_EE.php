@@ -45,8 +45,8 @@ $lang['et_EE']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Muuda keelt';
 $lang['et_EE']['DownloadSimplePage.ss']['ChangeVersion']  = 'Versioon:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['et_EE']['DownloadSimplePage.ss']['ChangeOS']       = 'Operatsioonisüsteem:';
-$lang['et_EE']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'info';
-$lang['et_EE']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Kuvab faili kontrollsummad ja loetleb peegelserverid';
+$lang['et_EE']['DownloadButton.ss']['DownloadsInfoLink'] = 'info';
+$lang['et_EE']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Kuvab faili kontrollsummad ja loetleb peegelserverid';
 $lang['et_EE']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Põhipaigaldus';
 $lang['et_EE']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice\'i abimaterjal';
 $lang['et_EE']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Tõlgitud kasutajaliides';

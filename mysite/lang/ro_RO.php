@@ -45,8 +45,8 @@ $lang['ro_RO']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Alegeți limba';
 $lang['ro_RO']['DownloadSimplePage.ss']['ChangeVersion']  = 'Alegeți versiunea:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['ro_RO']['DownloadSimplePage.ss']['ChangeOS']       = 'Alegeți sistemul de operare:';
-$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informații';
-$lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Afișare md5sum și lista serverelor alternative pentru descărcarea fișierului';
+$lang['ro_RO']['DownloadButton.ss']['DownloadsInfoLink'] = 'Informații';
+$lang['ro_RO']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Afișare md5sum și lista serverelor alternative pentru descărcarea fișierului';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Kit de instalare principal';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Ajutorul integrat în LibreOffice';
 $lang['ro_RO']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Interfață utilizator tradus';

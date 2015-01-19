@@ -45,8 +45,8 @@ $lang['lt_LT']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Keisti kalbą';
 $lang['lt_LT']['DownloadSimplePage.ss']['ChangeVersion']  = 'Keisti versiją:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['lt_LT']['DownloadSimplePage.ss']['ChangeOS']       = 'Keisti <abbr title="operacinę sistemą">OS</abbr>:';
-$lang['lt_LT']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informacija';
-$lang['lt_LT']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Failo kontrolinės sumos ir serverių, iš kurių jį galite parsisiųsti, sąrašas';
+$lang['lt_LT']['DownloadButton.ss']['DownloadsInfoLink'] = 'Informacija';
+$lang['lt_LT']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Failo kontrolinės sumos ir serverių, iš kurių jį galite parsisiųsti, sąrašas';
 $lang['lt_LT']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Pagrindinis įdiegiklis';
 $lang['lt_LT']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = '„LibreOffice“ įtaisytasis žinynas';
 $lang['lt_LT']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Naudotojo sąsajos vertimas';

@@ -17,7 +17,7 @@ $lang['en_US']['DonatePage']['DEFAULT_CURRENCY']    ='USD';
 /* %s is a regular downloadlink, with the filename as label */
 $lang['en_US']['DonatePage']['DLRefreshMsg']= 'Your download %s should begin shortly. Please click the link in case it doesn\'t start.';
 /* supplemental downloads for that version, i.e. Helppack and/or Languagepack */
-$lang['en_US']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the left.';
+$lang['en_US']['DonatePage']['DLOptional']  = 'You can find the optional downloads on the right.';
 
 $lang['en_US']['Downloadpage']['BITTORRENT']='Download using BitTorrent';
 $lang['en_US']['Downloadpage']['DETAILLINK']='Get details (md5sum,…)';
@@ -45,8 +45,8 @@ $lang['en_US']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the language
 $lang['en_US']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['en_US']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
-$lang['en_US']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Info';
-$lang['en_US']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'See the md5sum and list of download mirrors for the file';
+$lang['en_US']['DownloadButton.ss']['DownloadsInfoLink'] = 'Info and Hashes';
+$lang['en_US']['DownloadButton.ss']['DownloadsInfoTitle'] = 'See the md5sum and list of download mirrors for the file';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Main installer';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'LibreOffice built-in help';
 $lang['en_US']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Translated user interface';
@@ -96,7 +96,7 @@ $lang['en_US']['LocaleName']['br'] = 'Breton';
 $lang['en_US']['LocaleName']['brx'] = 'Bodo (India)';
 $lang['en_US']['LocaleName']['bs'] = 'Bosnian';
 $lang['en_US']['LocaleName']['ca'] = 'Catalan';
-$lang['en_US']['LocaleName']['ca-XV'] = 'Catalan valencian';
+$lang['en_US']['LocaleName']['ca-XV'] = 'Catalan (Valencian)';
 $lang['en_US']['LocaleName']['cs'] = 'Czech';
 $lang['en_US']['LocaleName']['cy'] = 'Welsh';
 $lang['en_US']['LocaleName']['da'] = 'Danish';

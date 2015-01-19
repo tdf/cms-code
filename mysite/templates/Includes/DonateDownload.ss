@@ -2,6 +2,8 @@
 <style>
 div.DownloadsLeft {
 	display: inline-table;
+	margin-top: 0.5em;
+	margin-bottom: 1.5em;
 }
 div.DownloadsLeft p { display: table-cell; padding-left: 1em; vertical-align: middle;}
 div.DownloadsLeft ul { display: table-cell; }
@@ -42,6 +44,16 @@ div.DownloadsLeft li h2 {
 </style>
 <div  class="DownloadsLeft">
 <% if Downloads.full %><%-- only display block if there are matching downloads --%>
+<% if ButtonsOnRight %><%-- reverse order for english, give translators time to adapt their strings --%>
+<% control Downloads %>
+<p style="padding-left:0; padding-right: 1em;"><% sprintf(_t('DonatePage.DLRefreshMsg','Your download %s should begin shortly. Please click the link in case it doesn\'t start.'),$Top.RefreshTarget.PlainLink) %> <small><a href="http://download.documentfoundation.org/{$full.Fullpath}.mirrorlist">manually pick a mirror</a></small><% if langpack || helppack %><br/><% _t('DonatePage.DLOptional','You can find the optional downloads on the right.') %><% end_if %></p>
+  <ul>
+    <% control full %><% if Type = src %><%-- add source-packages, but skip the first --%><% if First %><% else %><% include DownloadButton %><% end_if %><% end_if %><% end_control %>
+    <% if langpack %><% control langpack %><% include DownloadButton %><% end_control %><% end_if %>
+    <% if helppack %><% control helppack %><% include DownloadButton %><% end_control %><% end_if %>
+  </ul>
+<% end_control %>
+<% else %>
 <% control Downloads %>
   <ul>
     <% control full %><% if Type = src %><%-- add source-packages, but skip the first --%><% if First %><% else %><% include DownloadButton %><% end_if %><% end_if %><% end_control %>
@@ -50,6 +62,7 @@ div.DownloadsLeft li h2 {
   </ul>
 <p><% sprintf(_t('DonatePage.DLRefreshMsg','Your download %s should begin shortly. Please click the link in case it doesn\'t start.'),$Top.RefreshTarget.PlainLink) %><% if langpack || helppack %><br/><% _t('DonatePage.DLOptional','You can find the optional downloads on the left.') %><% end_if %></p>
 <% end_control %>
+<% end_if %>
 <% end_if %>
 </div>
 <div class="clear"></div>

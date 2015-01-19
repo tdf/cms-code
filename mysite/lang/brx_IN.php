@@ -45,8 +45,8 @@ $lang['brx_IN']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Change the languag
 $lang['brx_IN']['DownloadSimplePage.ss']['ChangeVersion']  = 'Change the version:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['brx_IN']['DownloadSimplePage.ss']['ChangeOS']       = 'Change <abbr title="Operating System">OS</abbr>:';
-$lang['brx_IN']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'मोन्थिहोनाय';
-$lang['brx_IN']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'एमदिफाइब साम आरो फाइलनि दावनलद मिररनि लिस्टखौ नाइ';
+$lang['brx_IN']['DownloadButton.ss']['DownloadsInfoLink'] = 'मोन्थिहोनाय';
+$lang['brx_IN']['DownloadButton.ss']['DownloadsInfoTitle'] = 'एमदिफाइब साम आरो फाइलनि दावनलद मिररनि लिस्टखौ नाइ';
 $lang['brx_IN']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'गाहाइ इनस्टलार';
 $lang['brx_IN']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'लिबार अफिच बानाइजाबखानाइ हेफाजाब';
 $lang['brx_IN']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'इउजार इनथारफेचखौ राव सोलाइखांबाइ';

@@ -45,8 +45,8 @@ $lang['sr_RS']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Други јези
 $lang['sr_RS']['DownloadSimplePage.ss']['ChangeVersion']  = 'Друго издање:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['sr_RS']['DownloadSimplePage.ss']['ChangeOS']       = 'Други <abbr title="Оперативни систем">систем</abbr>:';
-$lang['sr_RS']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'детаљи';
-$lang['sr_RS']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Погледајте МД5 отисак и списак других сајтова за преузимање исте датотеке';
+$lang['sr_RS']['DownloadButton.ss']['DownloadsInfoLink'] = 'детаљи';
+$lang['sr_RS']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Погледајте МД5 отисак и списак других сајтова за преузимање исте датотеке';
 $lang['sr_RS']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Основна инсталација ';
 $lang['sr_RS']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Помоћ за Либреофис';
 $lang['sr_RS']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Превод програма';

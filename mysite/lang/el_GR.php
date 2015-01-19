@@ -45,8 +45,8 @@ $lang['el_GR']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Αλλαγή γλώ
 $lang['el_GR']['DownloadSimplePage.ss']['ChangeVersion']  = 'Αλλαγή έκδοσης:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['el_GR']['DownloadSimplePage.ss']['ChangeOS']       = 'Αλλαγή <abbr title="Operating System">Λειτουργικού συστήματος</abbr>:';
-$lang['el_GR']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Πληροφορίες';
-$lang['el_GR']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Δείτε το md5sum και σημειώστε τους καθρέφτες λήψης για το αρχείο';
+$lang['el_GR']['DownloadButton.ss']['DownloadsInfoLink'] = 'Πληροφορίες';
+$lang['el_GR']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Δείτε το md5sum και σημειώστε τους καθρέφτες λήψης για το αρχείο';
 $lang['el_GR']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Βασική εγκατάσταση';
 $lang['el_GR']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Ενσωματωμένη βοήθεια του LibreOffice';
 $lang['el_GR']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Μεταφρασμένη διεπαφή χρήστη';

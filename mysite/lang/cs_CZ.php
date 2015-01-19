@@ -45,8 +45,8 @@ $lang['cs_CZ']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Změnit jazyk';
 $lang['cs_CZ']['DownloadSimplePage.ss']['ChangeVersion']  = 'Změnit verzi:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['cs_CZ']['DownloadSimplePage.ss']['ChangeOS']       = 'Změnit <abbr title="operační systém">OS</abbr>:';
-$lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Informace';
-$lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Zobrazit kontrolní součet a seznam zrcadlových serverů';
+$lang['cs_CZ']['DownloadButton.ss']['DownloadsInfoLink'] = 'Informace';
+$lang['cs_CZ']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Zobrazit kontrolní součet a seznam zrcadlových serverů';
 $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Základní instalační balíček';
 $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Instalační balíček nápovědy';
 $lang['cs_CZ']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Jazykový balíček';

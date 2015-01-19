@@ -45,8 +45,8 @@ $lang['sl_SI']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Spremeni jezik';
 $lang['sl_SI']['DownloadSimplePage.ss']['ChangeVersion']  = 'Spremeni različico:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['sl_SI']['DownloadSimplePage.ss']['ChangeOS']       = 'Spremeni <abbr title="Operating System">op. sistem</abbr>:';
-$lang['sl_SI']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'informacije';
-$lang['sl_SI']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Oglejte si md5sum in seznam zrcalnih strežnikov za prenos datoteke';
+$lang['sl_SI']['DownloadButton.ss']['DownloadsInfoLink'] = 'informacije';
+$lang['sl_SI']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Oglejte si md5sum in seznam zrcalnih strežnikov za prenos datoteke';
 $lang['sl_SI']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Glavni namestitveni program';
 $lang['sl_SI']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Vgrajena pomoč za LibreOffice';
 $lang['sl_SI']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Preveden uporabniški vmesnik';

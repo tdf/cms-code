@@ -45,8 +45,8 @@ $lang['is_IS']['DownloadSimplePage.ss']['ChangeLanguage'] = 'Breyta tungumáli';
 $lang['is_IS']['DownloadSimplePage.ss']['ChangeVersion']  = 'Breyta útgáfu:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['is_IS']['DownloadSimplePage.ss']['ChangeOS']       = 'Breyta <abbr title="Stýrikerfi">stýrikerfi</abbr>:';
-$lang['is_IS']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'Upplýsingar';
-$lang['is_IS']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'Skoða md5 gátsummu og lista yfir niðurhalsspegla skrárinnar';
+$lang['is_IS']['DownloadButton.ss']['DownloadsInfoLink'] = 'Upplýsingar';
+$lang['is_IS']['DownloadButton.ss']['DownloadsInfoTitle'] = 'Skoða md5 gátsummu og lista yfir niðurhalsspegla skrárinnar';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'Aðal-uppsetningarforrit';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'Innbyggð LibreOffice hjálp';
 $lang['is_IS']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'Þýtt notendaviðmót';

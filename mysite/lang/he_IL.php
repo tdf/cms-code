@@ -45,8 +45,8 @@ $lang['he_IL']['DownloadSimplePage.ss']['ChangeLanguage'] = 'החלפת השפה
 $lang['he_IL']['DownloadSimplePage.ss']['ChangeVersion']  = 'החלפת הגרסה:';
 /* watch out to escape quotes if necessary - no need to use the abbreviation if it doesn't apply to your language */
 $lang['he_IL']['DownloadSimplePage.ss']['ChangeOS']       = 'החלפת מערכת ההפעלה:';
-$lang['he_IL']['DownloadSimplePage.ss']['DownloadsInfoLink'] = 'מידע';
-$lang['he_IL']['DownloadSimplePage.ss']['DownloadsInfoTitle'] = 'הצגת מחרוזת ה־md5sum ואת רשימת האתרים שמהם ניתן להוריד את הקובץ';
+$lang['he_IL']['DownloadButton.ss']['DownloadsInfoLink'] = 'מידע';
+$lang['he_IL']['DownloadButton.ss']['DownloadsInfoTitle'] = 'הצגת מחרוזת ה־md5sum ואת רשימת האתרים שמהם ניתן להוריד את הקובץ';
 $lang['he_IL']['DownloadSimplePage.ss']['DownloadsInstallTypeFull'] = 'תכנית ההתקנה הראשית';
 $lang['he_IL']['DownloadSimplePage.ss']['DownloadsInstallTypeHelppack'] = 'עזרה מובנית של LibreOffice';
 $lang['he_IL']['DownloadSimplePage.ss']['DownloadsInstallTypeLanguagepack'] = 'מנשקי משתמש מתורגמים';
